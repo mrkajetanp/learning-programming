@@ -1,0 +1,32 @@
+extends layout.pug
+
+block title
+  include includes/head.pug
+
+block content
+  h1 My article
+  article
+    p Good Troll!
+    - var msg = "not my inside voice";
+    //- You can use JavaScript expressions in string interpolation
+    p This is #{msg.toUpperCase()}
+    p Lorem ipsum dolor sit #[em amet], consectetur #[strong adipisicing] elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    include includes/foot.pug
+  article
+    ul
+      each val in [1, 2, 3]
+        li= val
+    ul
+      each val, index in ["zero", "one", "two"]
+        li= index + ': ' + val
+    - var values = [];
+    ul
+      each val in values.length ? values : ["There are no values"]
+        li= val
+    ul
+      each val, index in {1:'one', 2:'two', 3:'three'}
+        li= index + ': ' + val
+    - var n = 0;
+    ul
+      while n < 2
+        li= n++

@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/main.ts"],"names":[],"mappings":";AAAA,yCAAqC,mCAAmC,CAAC,CAAA;AACzE,2BAAwB,cAAc,CAAC,CAAA;AAEvC,iDAAsB,EAAE,CAAC,eAAe,CAAC,sBAAS,CAAC,CAAC","file":"main.js","sourcesContent":["import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';\nimport {AppModule} from './app.module';\n\nplatformBrowserDynamic().bootstrapModule(AppModule);\n"]}

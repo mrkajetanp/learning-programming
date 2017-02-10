@@ -1,0 +1,28 @@
+Proofs of Correctness
+
+Prove the correctness of the following recursive algorithm to multiply two natural numbers, for all integer constants c >= 2
+
+function multiply(y, z)
+         // Return the product of yz
+         if z = 0
+            return 0
+         else
+            return multiply(cy, [z/c]) + y * (z % c)
+
+
+// horner's method for evaluating a polynominal
+P(x) = anxn + an−1xn−1 + . . . + a1x + a0
+
+function horner(A, x)
+         p = An
+         for i from n − 1 to 0
+             p = p ∗ x + Ai
+         return p
+
+// Bubble Sort
+bubblesort(A : list[1...n]):
+             var int i, j
+             for i from n to 1:
+                 for j from 1 to i-1
+                     if (A[j] > A[j+1])
+                        swap the values of A[j] and A[j+1]

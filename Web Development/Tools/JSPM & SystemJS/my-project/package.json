@@ -1,0 +1,41 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jspm": "^0.16.47"
+  },
+  "jspm": {
+    "dependencies": {
+      "@angular/common": "npm:@angular/common@^2.1.2",
+      "@angular/compiler": "npm:@angular/compiler@^2.1.2",
+      "@angular/core": "npm:@angular/core@^2.1.2",
+      "@angular/forms": "npm:@angular/forms@^2.1.2",
+      "@angular/http": "npm:@angular/http@^2.1.2",
+      "@angular/platform-browser": "npm:@angular/platform-browser@^2.1.2",
+      "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@^2.1.2",
+      "@angular/router": "npm:@angular/router@^3.1.2",
+      "@angular/upgrade": "npm:@angular/upgrade@^2.1.2",
+      "angular-in-memory-web-api": "npm:angular-in-memory-web-api@^0.1.14",
+      "core-js": "npm:core-js@^2.4.1",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.8",
+      "rxjs": "npm:rxjs@^5.0.0-rc.1",
+      "systemjs": "npm:systemjs@^0.19.40",
+      "zone.js": "npm:zone.js@^0.6.26"
+    },
+    "devDependencies": {
+      "@types/core-js": "npm:@types/core-js@^0.9.34",
+      "@types/node": "npm:@types/node@^6.0.46",
+      "concurrently": "npm:concurrently@^3.1.0",
+      "lite-server": "npm:lite-server@^2.2.2",
+      "typescript": "npm:typescript@^1.6.2"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+".source.ts, .source.js":
+  "console.dir":
+    "prefix": "cdir"
+    "body": "console.dir(${1:obj});"
+  "console.error":
+    "prefix": "cerr"
+    "body": "console.error(${1:err});"
+  "console.warn":
+    "prefix": "cwarn"
+    "body": "console.warn(${1:obj});"
+  "console.log":
+    "prefix": "clog"
+    "body": "console.log(${1:obj});"
+  "function":
+    "prefix": "fn"
+    "body": """
+    function ${1:methodName} (${2:arguments}) {
+    \t${0:// body...}
+    }
+    """
+  "arrow function":
+    "prefix": "arfn"
+    "body": """
+    ${1:arguments} => {
+    \t${0:// body...}
+    }
+    """
+  "generator function":
+    "prefix": "gfn"
+    "body": """
+    function * ${1:methodName} (${2:arguments}) {
+    \t${0:// body...}
+    }
+    """
+  "anonymous function":
+    "prefix": "afn"
+    "body": """
+    function (${1:arguments}) {
+    \t${0:// body...}
+    }
+    """
+  "anonymous generator function":
+    "prefix": "agfn"
+    "body": """
+    function * (${1:arguments}) {
+    \t${0:// body...}
+    }
+    """
+  "prototype":
+    "prefix": "prototype"
+    "body": """
+    ${1:ClassName}.prototype.${2:methodName} = function(${3:arguments}) {
+    \t${0:// body...}
+    };
+    """
+  "onerror function":
+    "prefix": "onerrorfn"
+    "body": """
+    function onerror (err) {
+      ${0:// body...}
+    }
+    """
+  "Clear Timeout":
+    "prefix": "ct"
+    "body": "clearTimeout(${1:timeout});"
+  "Import Require":
+    "prefix": "importr"
+    "body": 'import $1 = require("$1");'
+  "On (Node)":
+    "prefix": "on"
+    "body": """
+    ${1:emitter}.on("${2:event}", (${3:arguments}) => {
+    \t${4:// body...}
+    });
+    """

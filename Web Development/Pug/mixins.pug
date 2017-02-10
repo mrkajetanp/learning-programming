@@ -1,0 +1,50 @@
+extends layout.pug
+
+block title
+  title Hello
+
+block content
+  //- Declaration
+  mixin list
+    ul
+      li foo
+      li bar
+      li baz
+
+  //- Usage
+  +list
+  +list
+
+  mixin pet(name)
+    li.pet= name
+
+  ul
+    +pet('cat')
+    +pet('dog')
+    +pet('pig')
+
+  mixin article(title)
+    .article
+      .article-wrapper
+        h1= title
+        if block
+          block
+        else
+          p No content provided
+
+  +article('Hi!')
+  +article('Hello World!')
+    p This is my
+    p Amazing article
+
+  mixin link(href, name)
+    a(class!=attributes.class href=href)= name
+
+  +link('/foo', 'foo')(class="btn")
+
+  mixin list(id, ...items)
+    ul(id=id)
+      each item in items
+        li= item
+
+  +list('my-list', 1, 2, 3, 4)

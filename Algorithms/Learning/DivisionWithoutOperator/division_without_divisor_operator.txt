@@ -1,0 +1,17 @@
+Division without divisor operator is based on Substraction:
+
+Div(10,2): 10-2-2-2-2-2=0 ; thus Div(10,2) = 1+1+1+1+1=5
+
+Naive solution:
+      Keep (divident-divisor)
+           until the remainder is less than divisor
+      performance is slow, e.g 10000000/1
+
+Improved solution:
+         When remainder > divisor for each substraction
+              double divisor to speed up
+         when remainder < divisor
+              half the divisor
+         e.g.
+              Div(10,2):10-2-4-4=0, thus Div(10,2) = 1+2+2=5
+              

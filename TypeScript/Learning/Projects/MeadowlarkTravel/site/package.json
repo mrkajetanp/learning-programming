@@ -1,0 +1,40 @@
+{
+  "name": "meadowlark",
+  "version": "1.0.0",
+  "description": "MeadowlarkTravel website for learning purposes.",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "grunt default",
+    "start": "node meadowlark.js",
+    "dev": "nodemon meadowlark.js"
+  },
+  "author": "Cajetan Puchalski",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "formidable": "^1.0.17",
+    "hbs": "^4.0.1",
+    "jquery-file-upload-middleware": "^0.1.8",
+    "moment": "^2.15.2",
+    "typescript": "^2.0.6",
+    "typings": "^1.4.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-cafe-mocha": "^0.1.13",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^1.0.1",
+    "grunt-nodemon": "^0.4.2",
+    "grunt-ts": "^6.0.0-beta.3",
+    "grunt-tslint": "^3.3.0",
+    "mocha": "^3.1.2",
+    "nodemon": "^1.11.0",
+    "tslint": "^3.15.1",
+    "zombie": "^4.3.0"
+  }
+}
