@@ -1,0 +1,8 @@
+/Users/cajetan/Programming/Learning/Build Systems/CMake/build/CMakeFiles/rebuild_cache.dir
+/Users/cajetan/Programming/Learning/Build Systems/CMake/build/CMakeFiles/edit_cache.dir
+/Users/cajetan/Programming/Learning/Build Systems/CMake/build/CMakeFiles/test.dir
+/Users/cajetan/Programming/Learning/Build Systems/CMake/build/CMakeFiles/toDo.dir
+/Users/cajetan/Programming/Learning/Build Systems/CMake/build/ToDoCore/CMakeFiles/rebuild_cache.dir
+/Users/cajetan/Programming/Learning/Build Systems/CMake/build/ToDoCore/CMakeFiles/edit_cache.dir
+/Users/cajetan/Programming/Learning/Build Systems/CMake/build/ToDoCore/CMakeFiles/test.dir
+/Users/cajetan/Programming/Learning/Build Systems/CMake/build/ToDoCore/CMakeFiles/toDoCore.dir
