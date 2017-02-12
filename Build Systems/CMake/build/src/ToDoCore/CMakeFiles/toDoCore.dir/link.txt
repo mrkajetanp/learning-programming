@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libtoDoCore.a  CMakeFiles/toDoCore.dir/ToDo.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libtoDoCore.a
