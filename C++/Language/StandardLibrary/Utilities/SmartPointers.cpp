@@ -9,6 +9,7 @@ using std::cin;
 using std::string;
 
 void sharedPtrs () {
+	std::cout << std::endl << "*** Shared Pointers ***" << std::endl;
 	// two shared pointers representing two people by their name
 	std::shared_ptr<string> pNico = std::make_shared<string> ("nico"); // a better way
 	std::shared_ptr<string> pJutta (new string ("jutta"));
@@ -63,13 +64,6 @@ void sharedPtrs () {
 	//	std::shared_ptr<int[]> p3 (new int[10]); // does not compile
 }
 
-void uniquePtrs () {
-	std::unique_ptr<int[]> p (new int[10]); // OK, unique_ptr to an array of ints
-	std::unique_ptr<int, void(*)(int*)> p2 (new int[10], [] (int* p) { // custom deleter
-																delete[] p;
-															});
-}
-
 class Person {
 	public:
 		string name;
@@ -120,24 +114,43 @@ void weakPtrs () {
 	}
 }
 
-int main () {
-	sharedPtrs ();
-	uniquePtrs ();
-	weakPtrs ();
-	return 0;
+void uniquePtrs () {
+//	std::unique_ptr<int[]> p (new int[10]); // OK, unique_ptr to an array of ints
+//	std::unique_ptr<int, void(*)(int*)> p2 (new int[10], [] (int* p) { // custom deleter
+//			delete[] p;
+//			});
+	std::cout << std::endl << "*** Unique Pointers ***" << std::endl;
+	std::unique_ptr<std::string> sUp1 (new std::string ("nico"));
+	(*sUp1)[0] = 'N';
+	sUp1->append ("lai");
+	if (sUp1)
+		std::cout << *sUp1 << std::endl;
+
+	sUp1.release ();
+
+	if (sUp1)
+		std::cout << *sUp1 << std::endl;
+
+	std::unique_ptr<int> up2 (new int (10));
+	//	std::unique_ptr<int> up3 (up2); // not possible, copy constructor won't work
+	std::unique_ptr<int> up3 (std::move(up2));
+	std::cout << *up3 << std::endl;
+
+	std::unique_ptr<int> up4 (new int (5));
+	std::unique_ptr<int> up5;
+	//	up5 = up4; // can't copy unique_ptr
+	up5 = std::move (up4);
+	std::cout << *up5 << std::endl;
+
+	std::unique_ptr<int[]> up6 (new int[10]); // automatically handles deletion
+	up6[2] = 3;
+	std::cout << up6[2] << std::endl;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+int main () {
+	sharedPtrs ();
+	weakPtrs ();
+	uniquePtrs ();
+	return 0;
+}
 

@@ -28,15 +28,15 @@ endif()
 # include subdirectories from cmake source dir
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-add_subdirectory (ToDoCore)
+add_subdirectory (src)
 
 # program executable
-add_executable (toDo main.cpp)
+# add_executable (toDo main.cpp)
 
 # link library to main executable
-target_link_libraries (toDo toDoCore)
+# target_link_libraries (toDo toDoCore)
 
 # test executable
-add_test (toDoTest toDo)
+# add_test (toDoTest toDo)
 
 set (CONFIGURED_ONCE TRUE CACHE INTERNAL "A flag showing that CMake has configured at least once.")
