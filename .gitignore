@@ -3,6 +3,7 @@
 *.swp
 *.o
 *.a
+build
 node_modules
 jspm_packages
 typings
