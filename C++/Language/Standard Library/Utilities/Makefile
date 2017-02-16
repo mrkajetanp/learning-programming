@@ -3,15 +3,15 @@ CPPFLAGS += -std=c++14
 
 CXXFLAGS += -g -Wall -Wextra
 
-TARGETS = SmartPointers
+TARGETS = NLimitsTypeTraitsUtils
 
 all : $(TARGETS)
 
 clean :
-	rm -f SmartPointers
+	rm -f NLimitsTypeTraitsUtils
 
 run :
-	./SmartPointers
+	./NLimitsTypeTraitsUtils
 
-SmartPointers : SmartPointers.cpp
+NLimitsTypeTraitsUtils : NLimitsTypeTraitsUtils.cpp
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $@ $@.cpp
