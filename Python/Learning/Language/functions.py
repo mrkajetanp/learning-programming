@@ -7,6 +7,7 @@ def print_two(arg1):
 def print_none():
 	print("Nothing. Just empty.")
 
+
 print_one("ArOne", "AreTwo")
 print_two("ArOneOne")
 print_none()
