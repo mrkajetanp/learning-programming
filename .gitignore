@@ -7,5 +7,6 @@ build
 node_modules
 jspm_packages
 typings
+target
 /C++/NetBeans Projects/TestNetBeansApplication/build/
 /C++/NetBeans Projects/TestNetBeansApplication/dist/
