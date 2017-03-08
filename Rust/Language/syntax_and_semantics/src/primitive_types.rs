@@ -19,11 +19,14 @@ fn booleans() {
     println!("x: {}", x);
     println!("y: {}", y);
 
+    println!("");
 }
 
 fn chars() {
     let x = 'c';
     println!("x: {}", x);
+
+    println!("");
 }
 
 fn numeric_types() {
@@ -31,6 +34,9 @@ fn numeric_types() {
     let y = 1.1; // y: f64
     println!("x: {}", x);
     println!("y: {}", y);
+
+
+    println!("");
 }
 
 fn arrays() {
@@ -45,6 +51,8 @@ fn arrays() {
     println!("m[1] = {}", m[1]);
 
     println!("b[8] = {}", b[8]);
+
+    println!("");
 }
 
 fn slices() {
@@ -55,6 +63,8 @@ fn slices() {
     println!("slice[0] = {}", slice[0]);
     println!("complete len = {}", complete.len());
     println!("slice len = {}", slice.len());
+
+    println!("");
 }
 
 fn tuples() {
@@ -71,6 +81,8 @@ fn tuples() {
     println!("it is {} {} {}", x1, y1, z1);
 
     // (0,) // a single element tuple
+
+    println!("");
 }
 
 
