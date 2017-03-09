@@ -1,1 +1,0 @@
-{"version":3,"file":"fortune.js","sourceRoot":"","sources":["fortune.ts"],"names":[],"mappings":";AAAA,IAAI,cAAc,GAAG;IACnB,8CAA8C;IAC9C,sBAAsB;IACtB,kCAAkC;IAClC,mCAAmC;IACnC,oCAAoC;CACrC,CAAC;AAEF;IACE,MAAM,CAAC,cAAc,CAAC,IAAI,CAAC,KAAK,CAAC,IAAI,CAAC,MAAM,EAAE,GAAG,cAAc,CAAC,MAAM,CAAC,CAAC,CAAC;AAC3E,CAAC;AAFe,kBAAU,aAEzB,CAAA"}
