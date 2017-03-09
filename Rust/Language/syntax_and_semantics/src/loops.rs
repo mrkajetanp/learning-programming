@@ -52,10 +52,10 @@ fn loops_one() {
     // break and continue work as expected
 
     // labels
-    'outer: for x in 0..4 {
-        'inner: for y in 0..4 {
-            if x % 2 == 0 { continue 'outer; } // Continues the loop over `x`.
-            if y % 2 == 0 { continue 'inner; } // Continues the loop over `y`.
+    'outer: for x in 0..5 {
+        'inner: for y in 0..5 {
+            if x % 2 == 0 { continue 'outer; } // continues the outer loop
+            if y % 2 == 0 { continue 'inner; } // continues the inner loop
             println!("x: {}, y: {}", x, y);
         }
     }

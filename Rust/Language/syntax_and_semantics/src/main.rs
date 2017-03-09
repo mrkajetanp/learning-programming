@@ -3,6 +3,9 @@ mod functions;
 mod primitive_types;
 mod ifs;
 mod loops;
+mod vectors;
+mod ownership;
+mod references_and_borrowing;
 
 ///! how does it work?
 
@@ -15,4 +18,7 @@ fn main() {
     primitive_types::primitive_types();
     ifs::ifs();
     loops::loops();
+    vectors::vectors();
+    ownership::ownership();
+    references_and_borrowing::references_and_borrowing();
 }
