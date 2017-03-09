@@ -6,6 +6,8 @@ mod loops;
 mod vectors;
 mod ownership;
 mod references_and_borrowing;
+mod lifetimes;
+mod mutability;
 
 ///! how does it work?
 
@@ -21,4 +23,6 @@ fn main() {
     vectors::vectors();
     ownership::ownership();
     references_and_borrowing::references_and_borrowing();
+    lifetimes::lifetimes();
+    mutability::mutability();
 }
