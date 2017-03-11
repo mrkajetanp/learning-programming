@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "memoryLeakTest.h"
+#include "memory_leak_test.h"
 
 int *alTest () {
 	int *p = (int*)malloc(sizeof(int));
