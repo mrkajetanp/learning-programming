@@ -12,6 +12,8 @@ mod structs;
 // mod enums;
 mod matches;
 mod patterns;
+mod methods;
+mod strings;
 
 ///! how does it work?
 
@@ -33,4 +35,6 @@ fn main() {
     // enums::enums();
     matches::matches();
     patterns::patterns();
+    methods::methods();
+    strings::strings();
 }
