@@ -14,6 +14,8 @@ mod matches;
 mod patterns;
 mod methods;
 mod strings;
+mod generics;
+mod traits;
 
 ///! how does it work?
 
@@ -37,4 +39,6 @@ fn main() {
     patterns::patterns();
     methods::methods();
     strings::strings();
+    generics::generics();
+    traits::traits();
 }
