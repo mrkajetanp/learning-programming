@@ -16,6 +16,8 @@ mod methods;
 mod strings;
 mod generics;
 mod traits;
+mod drop;
+mod if_let;
 
 ///! how does it work?
 
@@ -41,4 +43,6 @@ fn main() {
     strings::strings();
     generics::generics();
     traits::traits();
+    drop::drop();
+    if_let::if_let();
 }
