@@ -18,6 +18,8 @@ mod generics;
 mod traits;
 mod drop;
 mod if_let;
+mod trait_objects;
+mod closures;
 
 ///! how does it work?
 
@@ -45,4 +47,6 @@ fn main() {
     traits::traits();
     drop::drop();
     if_let::if_let();
+    trait_objects::trait_objects();
+    closures::closures();
 }
