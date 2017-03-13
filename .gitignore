@@ -8,5 +8,6 @@ node_modules
 jspm_packages
 typings
 target
+workbench.xmi
 /C++/NetBeans Projects/TestNetBeansApplication/build/
 /C++/NetBeans Projects/TestNetBeansApplication/dist/

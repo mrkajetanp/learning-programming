@@ -8,6 +8,18 @@ mod ownership;
 mod references_and_borrowing;
 mod lifetimes;
 mod mutability;
+mod structs;
+// mod enums;
+mod matches;
+mod patterns;
+mod methods;
+mod strings;
+mod generics;
+mod traits;
+mod drop;
+mod if_let;
+mod trait_objects;
+mod closures;
 
 ///! how does it work?
 
@@ -25,4 +37,16 @@ fn main() {
     references_and_borrowing::references_and_borrowing();
     lifetimes::lifetimes();
     mutability::mutability();
+    structs::structs();
+    // enums::enums();
+    matches::matches();
+    patterns::patterns();
+    methods::methods();
+    strings::strings();
+    generics::generics();
+    traits::traits();
+    drop::drop();
+    if_let::if_let();
+    trait_objects::trait_objects();
+    closures::closures();
 }
