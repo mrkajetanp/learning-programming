@@ -21,6 +21,8 @@ mod if_let;
 mod trait_objects;
 mod closures;
 mod universal_fn_syntax_call;
+mod const_and_static;
+mod attributes;
 
 ///! how does it work?
 
@@ -51,4 +53,6 @@ fn main() {
     trait_objects::trait_objects();
     closures::closures();
     universal_fn_syntax_call::universal_fn_syntax_call();
+    const_and_static::const_and_static();
+    attributes::attributes();
 }
