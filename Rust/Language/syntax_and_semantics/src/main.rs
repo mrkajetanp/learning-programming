@@ -20,6 +20,7 @@ mod drop;
 mod if_let;
 mod trait_objects;
 mod closures;
+mod universal_fn_syntax_call;
 
 ///! how does it work?
 
@@ -49,4 +50,5 @@ fn main() {
     if_let::if_let();
     trait_objects::trait_objects();
     closures::closures();
+    universal_fn_syntax_call::universal_fn_syntax_call();
 }
