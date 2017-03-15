@@ -1,6 +1,7 @@
 .DS_Store
 *.class
 *.swp
+a.out
 *.o
 *.a
 build
