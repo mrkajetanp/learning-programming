@@ -23,6 +23,8 @@ mod closures;
 mod universal_fn_syntax_call;
 mod const_and_static;
 mod attributes;
+mod type_aliases;
+mod casting;
 
 ///! how does it work?
 
@@ -55,4 +57,6 @@ fn main() {
     universal_fn_syntax_call::universal_fn_syntax_call();
     const_and_static::const_and_static();
     attributes::attributes();
+    type_aliases::type_aliases();
+    casting::casting();
 }
