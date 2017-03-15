@@ -25,6 +25,8 @@ mod const_and_static;
 mod attributes;
 mod type_aliases;
 mod casting;
+mod associated_types;
+mod unsized_types;
 
 ///! how does it work?
 
@@ -59,4 +61,6 @@ fn main() {
     attributes::attributes();
     type_aliases::type_aliases();
     casting::casting();
+    associated_types::associated_types();
+    unsized_types::unsized_types();
 }
