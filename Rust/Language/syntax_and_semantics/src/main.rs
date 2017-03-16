@@ -30,6 +30,8 @@ mod unsized_types;
 mod operators_and_overloading;
 mod deref_coercions;
 mod macros;
+mod raw_pointers;
+mod unsafes;
 
 ///! how does it work?
 
@@ -69,4 +71,6 @@ fn main() {
     operators_and_overloading::operators_and_overloading();
     deref_coercions::deref_coercions();
     macros::macros();
+    raw_pointers::raw_pointers();
+    unsafes::unsafes();
 }
