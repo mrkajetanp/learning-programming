@@ -27,6 +27,8 @@ mod type_aliases;
 mod casting;
 mod associated_types;
 mod unsized_types;
+mod operators_and_overloading;
+mod deref_coercions;
 
 ///! how does it work?
 
@@ -63,4 +65,6 @@ fn main() {
     casting::casting();
     associated_types::associated_types();
     unsized_types::unsized_types();
+    operators_and_overloading::operators_and_overloading();
+    deref_coercions::deref_coercions();
 }
