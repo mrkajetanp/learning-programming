@@ -29,6 +29,7 @@ mod associated_types;
 mod unsized_types;
 mod operators_and_overloading;
 mod deref_coercions;
+mod macros;
 
 ///! how does it work?
 
@@ -67,4 +68,5 @@ fn main() {
     unsized_types::unsized_types();
     operators_and_overloading::operators_and_overloading();
     deref_coercions::deref_coercions();
+    macros::macros();
 }
