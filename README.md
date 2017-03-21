@@ -8,16 +8,15 @@ Repository with source files I created while learning to program.
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
 
-- [Code Learning](#code-learning)
-    - [Languages](#languages)
-        - [C](#c)
-            - [Language](#language)
-            - [Frameworks](#frameworks)
-                - [GUI](#gui)
-                - [Unit Test](#unit-test)
-        - [C++](#c)
-        - [Rust](#rust)
-        - [Java](#java)
+- [Languages](#languages)
+    - [C](#c)
+        - [Language](#language)
+        - [Frameworks](#frameworks)
+        - [GUI](#gui)
+        - [Unit Test](#unit-test)
+    - [C++](#c)
+    - [Rust](#rust)
+    - [Java](#java)
 
 <!-- markdown-toc end -->
 
@@ -35,7 +34,7 @@ Repository with source files I created while learning to program.
 
 ##### GUI #####
 
-* Ncurses (demo only)
+* Ncurses
 * GTK (basic only)
 
 ##### Unit Test #####
