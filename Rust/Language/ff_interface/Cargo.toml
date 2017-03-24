@@ -1,0 +1,7 @@
+[package]
+name = "ff_interface"
+version = "0.1.0"
+authors = ["Cajetan Puchalski <cajetan.puchalski@gmail.com>"]
+
+[dependencies]
+libc = "0.2.0"
