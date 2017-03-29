@@ -5,6 +5,7 @@ mod variable_bindings;
 mod casting;
 mod expressions;
 mod flow_control;
+mod functions;
 
 fn main() {
     formatted_print::formatted_print();
@@ -14,4 +15,5 @@ fn main() {
     casting::casting();
     expressions::expressions();
     flow_control::flow_control();
+    functions::functions();
 }
