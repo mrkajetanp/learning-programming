@@ -1,14 +1,15 @@
 #![allow(dead_code)]
 
-mod formatted_print;
-mod primitives;
-mod custom_types;
-mod variable_bindings;
-mod casting;
-mod expressions;
-mod flow_control;
-mod functions;
-mod generics;
+// mod formatted_print;
+// mod primitives;
+// mod custom_types;
+// mod variable_bindings;
+// mod casting;
+// mod expressions;
+// mod flow_control;
+// mod functions;
+// mod generics;
+mod scoping;
 
 fn main() {
 
@@ -20,6 +21,6 @@ fn main() {
     // expressions::expressions();
     // flow_control::flow_control();
     // functions::functions();
-    generics::generics();
-
+    // generics::generics();
+    scoping::scoping();
 }
