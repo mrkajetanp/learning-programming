@@ -9,7 +9,8 @@
 // mod flow_control;
 // mod functions;
 // mod generics;
-mod scoping;
+// mod scoping;
+mod traits;
 
 fn main() {
 
@@ -22,5 +23,6 @@ fn main() {
     // flow_control::flow_control();
     // functions::functions();
     // generics::generics();
-    scoping::scoping();
+    // scoping::scoping();
+    traits::traits();
 }
