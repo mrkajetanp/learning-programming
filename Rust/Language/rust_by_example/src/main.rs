@@ -10,7 +10,8 @@
 // mod functions;
 // mod generics;
 // mod scoping;
-mod traits;
+// mod traits;
+mod macros;
 
 fn main() {
 
@@ -24,5 +25,6 @@ fn main() {
     // functions::functions();
     // generics::generics();
     // scoping::scoping();
-    traits::traits();
+    // traits::traits();
+    macros::macros();
 }
