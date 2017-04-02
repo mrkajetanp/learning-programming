@@ -11,7 +11,8 @@
 // mod generics;
 // mod scoping;
 // mod traits;
-mod macros;
+// mod macros;
+mod error_handling;
 
 fn main() {
 
@@ -26,5 +27,6 @@ fn main() {
     // generics::generics();
     // scoping::scoping();
     // traits::traits();
-    macros::macros();
+    // macros::macros();
+    error_handling::error_handling();
 }
