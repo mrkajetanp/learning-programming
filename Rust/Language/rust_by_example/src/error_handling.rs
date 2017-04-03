@@ -3,6 +3,11 @@ pub fn error_handling() {
 
     panics();
     options_unwraps();
+    results();
+    multiple_error_types();
+    defining_error_types();
+    other_try();
+    boxing_errors();
 
     println!("");
 }
@@ -177,3 +182,334 @@ fn options_unwraps() {
     }
 }
 
+fn results() {
+    {
+        fn double_number(number_str: &str) -> i32 {
+            2 * number_str.parse::<i32>().unwrap()
+        }
+
+        let twenty = double_number("10");
+        println!("double is {}", twenty);
+
+        // panics!
+        // let tt = double_number("t");
+        // println!("double is {}", tt);
+
+    }
+    /* map for Result */
+    {
+        use std::num::ParseIntError;
+
+        fn double_number(number_str: &str) -> Result<i32, ParseIntError> {
+            match number_str.parse::<i32>() {
+                Ok(n) => Ok(2 * n),
+                Err(e) => Err(e),
+            }
+        }
+
+        /* identical as the function above */
+
+        fn double_number_map(number_str: &str) -> Result<i32, ParseIntError> {
+            number_str.parse::<i32>().map(|n| 2 * n)
+        }
+
+        fn print(result: Result<i32, ParseIntError>) {
+            match result {
+                Ok(n) => println!("n is {}", n),
+                Err(e) => println!("Error: {}", e),
+            }
+        }
+
+        let twenty = double_number("10");
+        print(twenty);
+
+        let tt = double_number_map("t");
+        print(tt);
+    }
+
+    /* aliases for Result */
+    {
+        use std::num::ParseIntError;
+
+        // generic alias for a Result with the error type ParseIntError
+        type AliasedResult<T> = Result<T, ParseIntError>;
+
+        fn double_number(number_str: &str) -> AliasedResult<i32> {
+            number_str.parse::<i32>().map(|n| 2 * n)
+        }
+
+        fn print(result: AliasedResult<i32>) {
+            match result {
+                Ok(n) => println!("n is: {}", n),
+                Err(e) => println!("Error: {}", e),
+            }
+        }
+
+        print(double_number("10"));
+        print(double_number("t"));
+    }
+}
+
+use std;
+
+fn multiple_error_types() {
+    type Result<T> = std::result::Result<T, String>;
+
+    fn double_first(vec: Vec<&str>) -> Result<i32> {
+        vec.first()
+        // convert the option to a Result if there is a value
+        // otherwise provide an Err containing a string
+            .ok_or("Please use a vector with at least one element.".to_owned())
+        .and_then(|s| s.parse::<i32>()
+                  // map any error parse yields to string
+                  .map_err(|e| e.to_string())
+                  // Result<T, String> is the new return type
+                  // we can now double the number inside
+                  .map(|i| 2 * i))
+    }
+
+    fn print(result: Result<i32>) {
+        match result {
+            Ok(n) => println!("The first doubled is {}", n),
+            Err(e) => println!("Error: {}", e),
+        }
+    }
+
+    let empty = vec![];
+    let strings = vec!["tofu", "93", "18"];
+
+    print(double_first(empty));
+    print(double_first(strings));
+
+    /* early returns */
+    {
+        type Result<T> = std::result::Result<T, String>;
+
+        fn double_first(vec: Vec<&str>) -> Result<i32> {
+            // Option -> Result if there is a value
+            // otherwise - provide Err containing this String
+            let first = match vec.first() {
+                Some(first) => first,
+                None => return Err("Please use a vector with at least one element.".to_owned()),
+            };
+
+            // double the number inside if parse works fine
+            // otherwise, map any errors that parse yields to String
+            match first.parse::<i32>() {
+                Ok(i) => Ok(2 * i),
+                Err(e) => Err(e.to_string()),
+            }
+        }
+
+        fn print(result: Result<i32>) {
+            match result {
+                Ok(n) => println!("The first doubled is: {}", n),
+                Err(e) => println!("Error: {}", e),
+            }
+        }
+
+        let empty = vec![];
+        let strings = vec!["tofu", "93", "18"];
+
+        print(double_first(empty));
+        print(double_first(strings));
+    }
+
+    /* try! macro */
+    {
+        type Result<T> = std::result::Result<T, String>;
+
+        fn double_first(vec: Vec<&str>) -> Result<i32> {
+            let first = try!(vec.first()
+            .ok_or("Please use a vector with at least one element.".to_owned()));
+
+            let value = try!(first.parse::<i32>()
+            .map_err(|e| e.to_string()));
+
+            Ok(2 * value)
+        }
+
+        fn print(result: Result<i32>) {
+            match result {
+                Ok(n) => println!("The first doubled is {}", n),
+                Err(e) => println!("Error: {}", e),
+            }
+        }
+
+        let empty = vec![];
+        let strings = vec!["tofu", "93", "18"];
+
+        print(double_first(empty));
+        print(double_first(strings));
+    }
+}
+
+fn defining_error_types() {
+    use std::num::ParseIntError;
+    use std::fmt;
+
+    type Result<T> = std::result::Result<T, DoubleError>;
+
+    #[derive(Debug)]
+    enum DoubleError {
+        EmptyVec,
+        Parse(ParseIntError),
+    }
+
+    impl fmt::Display for DoubleError {
+        fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+            match *self {
+                DoubleError::EmptyVec =>
+                    write!(f, "please use a vector with at least one element"),
+                DoubleError::Parse(ref e) => e.fmt(f),
+            }
+        }
+    }
+
+    fn double_first(vec: Vec<&str>) -> Result<i32> {
+        vec.first()
+            // change the error to our new type
+            .ok_or(DoubleError::EmptyVec)
+            .and_then(|s| s.parse::<i32>()
+                      // update to a new error type here also
+                      .map_err(DoubleError::Parse)
+                      .map(|i| 2 * i))
+    }
+
+    fn print(result: Result<i32>) {
+        match result {
+            Ok(n) => println!("The first doubled is: {}", n),
+            Err(e) => println!("Error: {}", e),
+        }
+    }
+
+    let numbers = vec!["98", "13"];
+    let empty = vec![];
+    let strings = vec!["tofu", "178"];
+
+    print(double_first(numbers));
+    print(double_first(empty));
+    print(double_first(strings));
+}
+
+fn other_try() {
+    use std::num::ParseIntError;
+    use std::fmt;
+
+    type Result<T> = std::result::Result<T, DoubleError>;
+
+    #[derive(Debug)]
+    enum DoubleError {
+        EmptyVec,
+        Parse(ParseIntError),
+    }
+
+    // conversion ParseIntError -> DoubleError
+    // this will be automatically called by try!
+    // if there is a need for conversion
+    impl From<ParseIntError> for DoubleError {
+        fn from(err: ParseIntError) -> DoubleError {
+            DoubleError::Parse(err)
+        }
+    }
+
+    impl fmt::Display for DoubleError {
+        fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+            match *self {
+                DoubleError::EmptyVec =>
+                    write!(f, "please use a vector with at least one element"),
+                DoubleError::Parse(ref e) => e.fmt(f),
+            }
+        }
+    }
+
+    fn double_first(vec: Vec<&str>) -> Result<i32> {
+        let first = try!(vec.first().ok_or(DoubleError::EmptyVec));
+        let parsed = try!(first.parse::<i32>());
+
+        Ok(2 * parsed)
+    }
+
+    fn print(result: Result<i32>) {
+        match result {
+            Ok(n) => println!("The first doubled is {}", n),
+            Err(e) => println!("Error: {}", e),
+        }
+    }
+
+    let numbers = vec!["94", "18"];
+    let empty = vec![];
+    let strings = vec!["tofu", "93"];
+
+    print(double_first(numbers));
+    print(double_first(empty));
+    print(double_first(strings));
+}
+
+fn boxing_errors() {
+    use std::error;
+    use std::fmt;
+    use std::num::ParseIntError;
+
+    type Result<T> = std::result::Result<T, Box<error::Error>>;
+
+    #[derive(Debug)]
+    enum DoubleError {
+        EmptyVec,
+        Parse(ParseIntError),
+    }
+
+    impl From<ParseIntError> for DoubleError {
+        fn from(err: ParseIntError) -> DoubleError {
+            DoubleError::Parse(err)
+        }
+    }
+
+    impl fmt::Display for DoubleError {
+        fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+            match *self {
+                DoubleError::EmptyVec =>
+                    write!(f, "please use a vector with at least one element"),
+                DoubleError::Parse(ref e) => e.fmt(f),
+            }
+        }
+    }
+
+    impl error::Error for DoubleError {
+        fn description(&self) -> &str {
+            match *self {
+                DoubleError::EmptyVec => "empty vectors not allowed",
+                DoubleError::Parse(ref e) => e.description(),
+            }
+        }
+
+        fn cause(&self) -> Option<&error::Error> {
+            match *self {
+                DoubleError::EmptyVec => None,
+                DoubleError::Parse(ref e) => Some(e),
+            }
+        }
+    }
+
+    fn double_first(vec: Vec<&str>) -> Result<i32> {
+        let first = try!(vec.first().ok_or(DoubleError::EmptyVec));
+        let parsed = try!(first.parse::<i32>());
+
+        Ok(2 * parsed)
+    }
+
+    fn print(result: Result<i32>) {
+        match result {
+            Ok(n) => println!("The first doubled is {}", n),
+            Err(e) => println!("Error: {}", e),
+        }
+    }
+
+    let numbers = vec!["93", "83"];
+    let empty = vec![];
+    let strings = vec!["tofu", "83"];
+
+    print(double_first(numbers));
+    print(double_first(empty));
+    print(double_first(strings));
+}
