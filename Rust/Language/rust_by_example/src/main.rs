@@ -1,4 +1,4 @@
-#![allow(dead_code)]
+#![allow(dead_code, unused_variables)]
 
 // mod formatted_print;
 // mod primitives;
@@ -12,7 +12,8 @@
 // mod scoping;
 // mod traits;
 // mod macros;
-mod error_handling;
+// mod error_handling;
+mod std_library_types;
 
 fn main() {
 
@@ -28,5 +29,6 @@ fn main() {
     // scoping::scoping();
     // traits::traits();
     // macros::macros();
-    error_handling::error_handling();
+    // error_handling::error_handling();
+    std_library_types::std_library_types();
 }
