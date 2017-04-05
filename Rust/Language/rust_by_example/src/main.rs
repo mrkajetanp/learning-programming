@@ -13,7 +13,8 @@
 // mod traits;
 // mod macros;
 // mod error_handling;
-mod std_library_types;
+// mod std_library_types;
+mod std_misc;
 
 fn main() {
 
@@ -30,5 +31,6 @@ fn main() {
     // traits::traits();
     // macros::macros();
     // error_handling::error_handling();
-    std_library_types::std_library_types();
+    // std_library_types::std_library_types();
+    std_misc::std_misc();
 }
