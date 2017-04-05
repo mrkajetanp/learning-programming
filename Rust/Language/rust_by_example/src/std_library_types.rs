@@ -5,6 +5,9 @@ pub fn std_library_types() {
     vectors();
     strings();
     options();
+    results();
+    panics();
+    hash_map();
 
     println!("");
 }
@@ -176,4 +179,278 @@ fn options() {
 
     // panic!
     // println!("{:?} unwraps to {:?}", none, none.unwrap());
+}
+
+fn results() {
+    /* basics */
+    {
+        mod checked {
+            // Mathematical "errors" we want to catch
+            #[derive(Debug)]
+            pub enum MathError {
+                DivisionByZero,
+                NonPositiveLogarithm,
+                NegativeSquareRoot,
+            }
+
+            pub type MathResult = Result<f64, MathError>;
+
+            pub fn div(x: f64, y: f64) -> MathResult {
+                if y == 0.0 {
+                    Err(MathError::DivisionByZero)
+                } else {
+                    Ok(x / y)
+                }
+            }
+
+            pub fn sqrt(x: f64) -> MathResult {
+                if x < 0.0 {
+                    Err(MathError::NegativeSquareRoot)
+                } else {
+                    Ok(x.sqrt())
+                }
+            }
+
+            pub fn ln(x: f64) -> MathResult {
+                if x <= 0.0 {
+                    Err(MathError::NonPositiveLogarithm)
+                } else {
+                    Ok(x.ln())
+                }
+            }
+        }
+
+        fn op(x: f64, y: f64) -> f64 {
+            match checked::div(x, y) {
+                Err(why) => panic!("{:?}", why),
+                Ok(ratio) => match checked::ln(ratio) {
+                    Err(why) => panic!("{:?}", why),
+                    Ok(ln) => match checked::sqrt(ln) {
+                        Err(why) => panic!("{:?}", why),
+                        Ok(sqrt) => sqrt,
+                    },
+                },
+            }
+        }
+    }
+
+    // println!("{}", op(1.0, 10.0));
+
+    /* try! */
+    {
+        mod checked {
+            #[derive(Debug)]
+            enum MathError {
+                DivisionByZero,
+                NegativeLogarithm,
+                NegativeSquareRoot,
+            }
+
+            type MathResult = Result<f64, MathError>;
+
+            fn div(x: f64, y: f64) -> MathResult {
+                if y == 0.0 {
+                    Err(MathError::DivisionByZero)
+                } else {
+                    Ok(x / y)
+                }
+            }
+
+            fn sqrt(x: f64) -> MathResult {
+                if x < 0.0 {
+                    Err(MathError::NegativeSquareRoot)
+                } else {
+                    Ok(x.sqrt())
+                }
+            }
+
+            fn ln(x: f64) -> MathResult {
+                if x < 0.0 {
+                    Err(MathError::NegativeSquareRoot)
+                } else {
+                    Ok(x.ln())
+                }
+            }
+
+            // intermediate function
+            fn op_(x: f64, y: f64) -> MathResult {
+                // if division fails, then DivisionByZero will be returned
+                let ratio = try!(div(x, y));
+
+                // if ln fails, the NegativeLogarithm will be returned
+                let ln = try!(ln(ratio));
+
+                sqrt(ln)
+            }
+
+            pub fn op(x: f64, y: f64) {
+                match op_(x, y) {
+                    Err(why) => panic!(match why {
+                        MathError::NegativeLogarithm
+                            => "Logarithm of a negative number.",
+                        MathError::DivisionByZero
+                            => "Division by zero",
+                        MathError::NegativeSquareRoot
+                            => "square root of a negative number",
+                    }),
+                    Ok(value) => println!("{}", value),
+                }
+            }
+        }
+        // checked::op(1.0, 10.0);
+    }
+}
+
+fn panics() {
+    // panic unwinds current thread's stack so it'll free all of its resources
+    fn divison(divident: i32, divisor: i32) -> i32 {
+        if divisor == 0 {
+            panic!("division by zero");
+        } else {
+            divident / divisor
+        }
+    }
+
+    let _x = Box::new(0_i32);
+
+    // this will panic
+    // divison(3, 0);
+
+    // this point won't be reached
+
+    // _x should be destroyed at this point
+}
+
+fn hash_map() {
+    /* basics */
+    {
+        use std::collections::HashMap;
+
+        fn call(number: &str) -> &str {
+            match number {
+                "798-1364" => "Sorry, this call could not be completed",
+                "645-7689" => "Hello, pizza here.",
+                _ => "Who is this again?",
+            }
+        }
+
+        let mut contacts = HashMap::new();
+
+        contacts.insert("Daniel", "798-1364");
+        contacts.insert("Ashley", "645-7689");
+        contacts.insert("Katie", "435-8291");
+        contacts.insert("Robert", "956-1745");
+
+        // Takes a reference and return Option<&V>
+        match contacts.get(&"Daniel") {
+            Some(&number) => println!("Calling Daniel: {}", call(number)),
+            _ => println!("Don't have Daniel's number."),
+        }
+
+        // HashMap::insert() return None
+        // if the inserted value is now, Some(value) otherwise
+        contacts.insert("Daniel", "164-6743");
+
+        match contacts.get(&"Ashley") {
+            Some(&number) => println!("Calling Ashley: {}", call(number)),
+            _ => println!("Don't have Ashley's number."),
+        }
+
+        contacts.remove(&"Ashley");
+
+        println!("> Iter now:");
+
+        // HashMap::iter() return an iterator that yields
+        // (&'a key, &'a value) pairs in arbitrary order
+        for (contact, &number) in contacts.iter() {
+            println!("Calling {}: {}", contact, call(number));
+        }
+    }
+
+    /* custom key types */
+    {
+        use std::collections::HashMap;
+
+        #[derive(PartialEq, Eq, Hash)]
+        struct Account<'a> {
+            username: &'a str,
+            password: &'a str,
+        }
+
+        struct AccountInfo<'a> {
+            name: &'a str,
+            email: &'a str,
+        }
+
+        type Accounts<'a> = HashMap<Account<'a>, AccountInfo<'a>>;
+
+        fn try_logon<'a>(accounts: &Accounts<'a>,
+                         username: &'a str, password: &'a str) {
+            println!("Username: {}", username);
+            println!("Password: {}", password);
+            println!("Attempting logon..");
+
+            let logon = Account {
+                username: username,
+                password: password,
+            };
+
+            match accounts.get(&logon) {
+                Some(account_info) => {
+                    println!("Successful logon!");
+                    println!("Name: {}", account_info.name);
+                    println!("Email: {}", account_info.email);
+                },
+                _ => println!("Login failed"),
+            }
+        }
+
+        let mut accounts: Accounts = HashMap::new();
+
+        let account = Account {
+            username: "j.everyman",
+            password: "password123",
+        };
+
+        let account_info = AccountInfo {
+            name: "John Everyman",
+            email: "j.everyman@email.com",
+        };
+
+        accounts.insert(account, account_info);
+
+        try_logon(&accounts, "j.everyman", "psawword123");
+        try_logon(&accounts, "j.everyman", "password123");
+    }
+
+    /* hash set */
+    {
+        use std::collections::HashSet;
+
+        let mut a: HashSet<i32> = vec!(1_i32, 2, 3).into_iter().collect();
+        let mut b: HashSet<i32> = vec!(2_i32, 3, 4).into_iter().collect();
+
+        assert!(a.insert(4));
+        assert!(a.contains(&4));
+
+        // HashSet::insert() returns false
+        // if there was a value already present
+        // assert!(b.insert(4), "Value 4 is already in set B");
+
+        b.insert(5);
+
+        // if a collection's element type implement Debug
+        // then the collection implements Debug
+        println!("A: {:?}", a);
+        println!("B: {:?}", b);
+
+        println!("Union: {:?}", a.union(&b).collect::<Vec<&i32>>());
+
+        println!("Difference: {:?}", a.difference(&b).collect::<Vec<&i32>>());
+
+        println!("Intersection: {:?}", a.intersection(&b).collect::<Vec<&i32>>());
+
+        println!("Symmetric difference: {:?}",
+                 a.symmetric_difference(&b).collect::<Vec<&i32>>());
+    }
 }
