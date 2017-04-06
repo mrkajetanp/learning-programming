@@ -1,4 +1,4 @@
-#![allow(dead_code, unused_variables)]
+#![allow(dead_code, unused_variables, unused_attributes)]
 
 // mod formatted_print;
 // mod primitives;
@@ -14,10 +14,11 @@
 // mod macros;
 // mod error_handling;
 // mod std_library_types;
-mod std_misc;
+// mod std_misc;
+// mod meta;
+mod unsafes;
 
 fn main() {
-
     // formatted_print::formatted_print();
     // primitives::primitives();
     // custom_types::custom_types();
@@ -32,5 +33,7 @@ fn main() {
     // macros::macros();
     // error_handling::error_handling();
     // std_library_types::std_library_types();
-    std_misc::std_misc();
+    // std_misc::std_misc();
+    // meta::meta();
+    unsafes::unsafes();
 }
