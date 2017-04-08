@@ -4,6 +4,7 @@ pub fn primitive_types_main() {
     arrays();
     bools();
     chars();
+    f32s();
 
     println!("");
 }
@@ -144,6 +145,140 @@ fn chars() {
 
     println!("'a' to uppercase is: {}", 'a'.to_uppercase());
     assert_eq!('a'.to_uppercase().to_string(), "A");
+
+    println!("");
+}
+
+fn f32s() {
+    println!("*** f32 ***");
+
+    use std::f32;
+
+    let nan = f32::NAN;
+    assert!(nan.is_nan());
+    assert!(!89_f32.is_nan());
+
+    let inf = f32::INFINITY;
+    let n_inf = f32::NEG_INFINITY;
+
+    assert!(!89_f32.is_infinite());
+    assert!(!nan.is_infinite());
+
+    assert!(inf.is_infinite());
+    assert!(n_inf.is_infinite());
+
+    assert!(89_f32.is_finite());
+    assert!(!inf.is_finite());
+    assert!(!n_inf.is_finite());
+    assert!(!nan.is_finite());
+
+    let min = f32::MIN_POSITIVE;
+    let max = f32::MAX;
+
+    let lower_than_min = 1.0e-40_f32;
+    let zero = 0.0_f32;
+
+    assert!(min.is_normal());
+    assert!(max.is_normal());
+
+    assert!(!zero.is_normal());
+    assert!(!f32::NAN.is_normal());
+    assert!(!f32::INFINITY.is_normal());
+
+    // values between 0 and min are Subnormal
+    assert!(!lower_than_min.is_normal());
+
+    use std::num::FpCategory;
+
+    assert_eq!(12.4_f32.classify(), FpCategory::Normal);
+    assert_eq!(f32::INFINITY.classify(), FpCategory::Infinite);
+
+    assert_eq!(3.99_f32.floor(), 3.0);
+
+    assert_eq!(3.01_f32.ceil(), 4.0);
+
+    assert_eq!(3.3_f32.round(), 3.0);
+    assert_eq!(3.5_f32.round(), 4.0);
+
+    assert_eq!(3.3_f32.trunc(), 3.0);
+    assert_eq!(3.9_f32.trunc(), 3.0);
+
+    assert_eq!(3.5_f32.fract(), 0.5);
+    assert_eq!(3.0_f32.fract(), 0.0);
+
+    assert_eq!(3.5_f32.abs(), 3.5);
+    assert_eq!((-3.5_f32).abs(), 3.5);
+
+    assert_eq!(1.0, 3.5_f32.signum());
+    assert_eq!(-1.0, (-3.5_f32).signum());
+
+    assert!(f32::NAN.signum().is_nan());
+
+    assert!(7.0_f32.is_sign_positive());
+    assert!(!(-7.0_f32).is_sign_positive());
+
+    assert!((-7.0_f32).is_sign_negative());
+    assert!(!7.0_f32.is_sign_negative());
+
+    assert!(!f32::NAN.is_sign_positive() && !f32::NAN.is_sign_negative());
+
+    println!("10.0 * 2.0 + 0.5 = {}", 10.0_f32.mul_add(2.0, 0.5));
+
+    assert_eq!(0.25, 4.0_f32.recip());
+
+    assert_eq!(32.0, 2.0_f32.powi(5));
+
+    assert_eq!(32.0, 2.0_f32.powf(5.0));
+
+    assert_eq!(4.0, 16.0_f32.sqrt());
+
+    println!("e^2 = {}", 2.0_f32.exp());
+
+    println!("2^6 = {}", 6.0_f32.exp2());
+
+    // natural logarithm
+    println!("ln(10) = {}", 10.0_f32.ln());
+
+    println!("log(10, 2) = {}", 10.0_f32.log(2.0));
+
+    println!("log2(10) = {}", 10.0_f32.log2());
+
+    println!("log10(20) = {}", 20.0_f32.log10());
+
+    println!("pi to degrees: {}", f32::consts::PI.to_degrees());
+
+    println!("180 deg to radians: {}", 180.0_f32.to_radians());
+
+    assert_eq!(3.0, 1.0_f32.max(3.0));
+    assert_eq!(1.0, 1.0_f32.min(3.0));
+
+    assert_eq!(3.0, 27.0_f32.cbrt());
+
+    println!("hypot of 2.0 and 3.0 = {}", 2.0_f32.hypot(3.0));
+
+    // radians
+    println!("sin of 3: {}", 3.0_f32.sin());
+    println!("cos of 3: {}", 3.0_f32.cos());
+    println!("tan of 3: {}", 3.0_f32.tan());
+
+    println!("asin of 0.8: {}", 0.8_f32.asin());
+    println!("acos of 0.8: {}", 0.8_f32.acos());
+    println!("atan of 0.8: {}", 0.8_f32.atan());
+    println!("atan2 of 3.0 and 0.5: {}", 3.0_f32.atan2(0.5));
+
+    println!("sin and cos of 3: {:?}", 3.0_f32.sin_cos());
+
+    println!("e^2-1 is {}", 2.0_f32.exp_m1());
+
+    println!("ln_1p of 2.5: {}", 2.5_f32.ln_1p());
+
+    println!("sinh of 3: {}", 3.0_f32.sinh());
+    println!("cosh of 3: {}", 3.0_f32.cosh());
+    println!("tanh of 3: {}", 3.0_f32.tanh());
+
+    println!("asinh of 3: {}", 3.0_f32.asinh());
+    println!("acosh of 3: {}", 3.0_f32.acosh());
+    println!("atanh of 0.8: {}", 0.8_f32.atanh());
 
     println!("");
 }
