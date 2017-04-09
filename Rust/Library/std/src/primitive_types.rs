@@ -6,6 +6,7 @@ pub fn primitive_types_main() {
     chars();
     f32s();
     i32s();
+    raw_pointers();
 
     println!("");
 }
@@ -354,4 +355,82 @@ fn i32s() {
     assert!((-10_i8).is_negative());
 
     println!("");
+}
+
+fn raw_pointers() {
+    /* creating raw pointers */
+
+    // coercion
+    let my_num: i32 = 10;
+    let my_num_ptr: *const i32 = &my_num;
+
+    let mut my_speed: i32 = 88;
+    let my_speed_ptr: *mut i32 = &mut my_speed;
+
+    // ptr to a boxed value
+
+    let my_num: Box<i32> = Box::new(10);
+    let my_num_ptr: *const i32 = &*my_num;
+
+    let mut my_speed: Box<i32> = Box::new(88);
+    let my_speed_ptr: *mut i32 = &mut *my_speed;
+
+    // consuming a box
+
+    let my_speed: Box<i32> = Box::new(99);
+    let my_speed: *mut i32 = Box::into_raw(my_speed);
+
+    // we took ownership, so we have to destroy it
+    unsafe {
+        drop(Box::from_raw(my_speed));
+    }
+
+    // pointer from C
+
+    use std::mem;
+    use libc;
+
+    unsafe {
+        let my_num: *mut i32 = libc::malloc(mem::size_of::<i32>()) as *mut i32;
+        *my_num = 7;
+        if my_num.is_null() {
+            panic!("failed to allocate memory!");
+        }
+        println!("my_num points to: {}", *my_num);
+        libc::free(my_num as *mut libc::c_void);
+    }
+
+    let s: &str = "follow the rabbit";
+    let ptr: *const u8 = s.as_ptr();
+    assert!(!ptr.is_null());
+
+    let val: *const u8 = &10_u8 as *const u8;
+
+    unsafe {
+        if let Some(val_back) = val.as_ref() {
+            println!("we got back the value: {}", val_back);
+        }
+    }
+
+    // offset from a pointer in units
+
+    let s: &str = "123";
+    let ptr: *const u8 = s.as_ptr();
+    unsafe {
+        println!("{}", *ptr.offset(0) as char);
+        println!("{}", *ptr.offset(1) as char);
+        println!("{}", *ptr.offset(2) as char);
+    }
+
+    // there is a wrapping offset, too
+
+    let mut s = [1, 2, 3];
+    println!("s: {:?}", s);
+    let ptr: *mut u32 = s.as_mut_ptr();
+    let first_value = unsafe { ptr.as_mut().unwrap() };
+    *first_value = 4;
+    let second_value = unsafe { ptr.offset(2).as_mut().unwrap() };
+    *second_value = 8;
+    println!("s: {:?}", s);
+
 }
