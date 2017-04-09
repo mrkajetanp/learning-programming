@@ -5,6 +5,7 @@ pub fn primitive_types_main() {
     bools();
     chars();
     f32s();
+    i32s();
 
     println!("");
 }
@@ -279,6 +280,78 @@ fn f32s() {
     println!("asinh of 3: {}", 3.0_f32.asinh());
     println!("acosh of 3: {}", 3.0_f32.acosh());
     println!("atanh of 0.8: {}", 0.8_f32.atanh());
+
+    println!("");
+}
+
+fn i32s() {
+    println!("*** i32s ***");
+
+    assert_eq!(i8::min_value(), -128);
+    assert_eq!(i8::max_value(), 127);
+
+    assert_eq!(i32::from_str_radix("A", 16), Ok(10));
+
+    assert_eq!(1, (-0b1000_0000i8).count_ones());
+    assert_eq!(7, (-0b1000_0000i8).count_zeros());
+
+    assert_eq!(0, (-1_i16).leading_zeros());
+    assert_eq!(2, (-4_i8).trailing_zeros());
+
+    println!("{:b}", (0b1001010_i64).rotate_left(1));
+    println!("{:b}", (0b1001010_i64).rotate_right(1));
+
+    println!("{:x}", 0x01234567i64.swap_bytes());
+
+    assert_eq!(Some(32767), 7_i16.checked_add(32760));
+    assert_eq!(None, 8_i16.checked_add(32760));
+
+    assert_eq!(Some(-128), (-127_i8).checked_sub(1));
+    assert_eq!(None, (-128_i8).checked_sub(1));
+
+    assert_eq!(Some(126), 6_i8.checked_mul(21));
+    assert_eq!(Some(127), (-127_i8).checked_div(-1));
+    assert_eq!((1_i8).checked_div(0), None);
+
+    assert_eq!(Some(1), 5_i32.checked_rem(2));
+    assert_eq!(None, 5_i32.checked_rem(0));
+
+    use std::i32;
+
+    assert_eq!(Some(-5), 5_i32.checked_neg());
+    assert_eq!(None, i32::MIN.checked_neg());
+
+    assert_eq!(Some(0x100), 0x10_i32.checked_shl(4));
+    assert_eq!(Some(0x1), 0x10_i32.checked_shr(4));
+
+    assert_eq!(Some(5), (-5_i32).checked_abs());
+
+    assert_eq!(100_i8.saturating_add(1), 101);
+    assert_eq!(100_i8.saturating_add(127), 127);
+
+    // there are saturating variants for everything else too
+
+    assert_eq!(100_i8.wrapping_add(27), 127);
+    assert_eq!(100_i8.wrapping_add(127), -29);
+
+    // there are wrapping variants for everything else too
+
+    assert_eq!((7, false), 5_i32.overflowing_add(2));
+    assert_eq!((i32::MIN, true), i32::MAX.overflowing_add(1));
+
+    // there are overflowing variants for everything else too
+
+    assert_eq!(16, 2_i32.pow(4));
+    assert_eq!(7, 7_i32.abs());
+    assert_eq!(7, (-7_i32).abs());
+
+    assert_eq!(1, 10_i8.signum());
+    assert_eq!(0, 0_i8.signum());
+    assert_eq!(-1, (-10_i8).signum());
+
+    assert!(10_i8.is_positive());
+
+    assert!((-10_i8).is_negative());
 
     println!("");
 }
