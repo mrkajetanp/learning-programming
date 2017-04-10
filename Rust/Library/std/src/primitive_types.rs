@@ -9,6 +9,8 @@ pub fn primitive_types_main() {
     raw_pointers();
     slices();
     strs();
+    tuples();
+    u32s();
 
     println!("");
 }
@@ -761,4 +763,30 @@ fn strs() {
     assert_eq!(boxed_str.into_string(), string);
 
     assert_eq!("abc".repeat(2), String::from("abcabc"));
+}
+
+fn tuples() {
+    fn point() -> (i32, i32) {
+        (4, 5)
+    }
+
+    let pt = point();
+    assert_eq!(4, pt.0);
+    assert_eq!(5, pt.1);
+
+    let (x, y) = point();
+
+    assert_eq!(4, x);
+    assert_eq!(5, y);
+}
+
+fn u32s() {
+    assert!(16_u8.is_power_of_two());
+
+    assert_eq!(2, 2_u8.next_power_of_two());
+    assert_eq!(2, 2_u8.next_power_of_two());
+
+    assert_eq!(Some(2), 2_u8.checked_next_power_of_two());
+    assert_eq!(Some(4), 3_u8.checked_next_power_of_two());
+    assert_eq!(None, 200_u8.checked_next_power_of_two());
 }
