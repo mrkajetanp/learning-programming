@@ -7,6 +7,7 @@ pub fn primitive_types_main() {
     f32s();
     i32s();
     raw_pointers();
+    slices();
 
     println!("");
 }
@@ -433,4 +434,174 @@ fn raw_pointers() {
     *second_value = 8;
     println!("s: {:?}", s);
 
+}
+
+fn slices() {
+    let v1 = vec![1, 2, 3];
+    let int_slice = &v1[..];
+
+    let str_slice: &[&str] = &["one", "two", "three"];
+
+    println!("{:?}", str_slice);
+
+    let x = &mut [1, 2, 3];
+    x[1] = 7;
+    assert_eq!(x, &[1, 7, 3]);
+
+    let a = [1, 2, 3];
+
+    assert_eq!(3, a.len());
+    assert!(!a.is_empty());
+
+    assert_eq!(Some(&1), a.first());
+
+    let x = &mut [0, 1, 2];
+
+    if let Some(first) = x.first_mut() {
+        *first = 5;
+    }
+    assert_eq!(&[5, 1, 2], x);
+
+    let x = &[0, 1, 2];
+    if let Some((first, elems)) = x.split_first() {
+        assert_eq!(&0, first);
+        assert_eq!(&[1, 2], elems);
+    }
+
+    // x.split_first_mut()
+
+    if let Some((last, elems)) = x.split_last() {
+        assert_eq!(&2, last);
+        assert_eq!(&[0, 1], elems);
+    }
+
+    // x.split_last_mut()
+
+    assert_eq!(Some(&2), x.last());
+
+    // x.last_mut()
+
+    let v = [10, 40, 30];
+    assert_eq!(Some(&40), v.get(1));
+    assert_eq!(Some(&[10, 40][..]), v.get(0..2));
+    assert_eq!(None, v.get(3));
+    assert_eq!(None, v.get(0..4));
+
+    // x.get_mut(2)
+
+    // x.get_unchecked(2)
+    // x.get_unchecked_mut(2)
+
+    let x = &[1, 2, 4];
+    let x_ptr = x.as_ptr();
+
+    unsafe {
+        for i in 0..x.len() {
+            assert_eq!(x.get_unchecked(i), &*x_ptr.offset(i as isize));
+        }
+    }
+
+    // x.as_mut_ptr()
+
+    let mut v = ["a", "b", "c"];
+    v.swap(0, 2);
+    assert_eq!(["c", "b", "a"], v);
+
+    let mut v = [1, 2, 3];
+    v.reverse();
+    println!("{:?}", v);
+
+    let x = &[1, 2, 4];
+    let mut iterator = x.iter();
+
+    assert_eq!(Some(&1), iterator.next());
+    assert_eq!(Some(&2), iterator.next());
+    assert_eq!(Some(&4), iterator.next());
+    assert_eq!(None, iterator.next());
+
+    // x.iter_mut()
+
+    let sl = ['r', 'u', 's', 't'];
+    let mut iter = sl.windows(2);
+    assert_eq!(&['r', 'u'], iter.next().unwrap());
+    assert_eq!(&['u', 's'], iter.next().unwrap());
+    assert_eq!(&['s', 't'], iter.next().unwrap());
+    assert!(iter.next().is_none());
+
+    let slice = ['l', 'o', 'r', 'e', 'm'];
+    let mut iter = slice.chunks(2);
+
+    assert_eq!(&['l', 'o'], iter.next().unwrap());
+    assert_eq!(&['r', 'e'], iter.next().unwrap());
+    assert_eq!(&['m'], iter.next().unwrap());
+
+    // x.chunks_mut(2);
+
+    let v = [10, 40, 30, 20, 50];
+    let (v1, v2) = v.split_at(2);
+
+    assert_eq!([10, 40], v1);
+    assert_eq!([30, 20, 50], v2);
+
+    // v.split_at_mut(2);
+
+    let slice = [10, 40, 33, 20];
+    let mut iter = slice.split(|num| num % 3 == 0);
+
+    assert_eq!(&[10, 40], iter.next().unwrap());
+    assert_eq!(&[20], iter.next().unwrap());
+    assert!(iter.next().is_none());
+
+    // let mut iter = slice.split_mut(|num| num % 3 == 0);
+
+    // let mut iter = slice.splitn(2, |num| num % 3 == 0);
+    // let mut iter = slice.splitn_mut(2, |num| num % 3 == 0);
+
+    // let mut iter = slice.rsplitn(2, |num| num % 3 == 0);
+    // let mut iter = slice.rsplitn_mut(2, |num| num % 3 == 0);
+
+    let v = [10, 40, 30];
+    assert!(v.contains(&30));
+    assert!(!v.contains(&50));
+
+    let v = vec![10, 20, 30];
+    assert!(v.contains(&30));
+    assert!(!v.contains(&50));
+
+    assert!(v.starts_with(&[10]));
+    assert!(v.starts_with(&[10, 20]));
+
+    // v.ends_with()
+
+    // v.binary_search(&20);
+    // v.binary_search_by(|x| fn..);
+    // v.binary_search_by_key(..);
+
+    let mut v = [-2, 4, 1, -5, 3];
+    v.sort();
+    println!("sorted v: {:?}", v);
+
+    // v.sort_by_key(|k| k.abs());
+    // v.sort_by(|a, b| a.cmp(b));
+    // v.sort_by(|a, b| b.cmp(a));
+
+    let mut dst = [0, 0, 0];
+    let src = [1, 2, 3];
+
+    dst.clone_from_slice(&src);
+    assert!(dst == [1, 2, 3]);
+
+    let mut dst = [0, 0, 0];
+    dst.copy_from_slice(&src);
+    assert_eq!(src, dst);
+
+    let s = [10, 40, 50];
+    let x = s.to_vec();
+    // s and x can be modified independently
+
+    let s: Box<[i32]> = Box::new([10, 40, 30]);
+    let x = s.into_vec();
+    // s cannot be used anymore, it's been converted
+
+    assert_eq!(x , vec![10, 40, 30]);
 }
