@@ -8,6 +8,7 @@ pub fn primitive_types_main() {
     i32s();
     raw_pointers();
     slices();
+    strs();
 
     println!("");
 }
@@ -604,4 +605,160 @@ fn slices() {
     // s cannot be used anymore, it's been converted
 
     assert_eq!(x , vec![10, 40, 30]);
+}
+
+fn strs() {
+    use std::slice;
+    use std::str;
+
+    let story = "Once upon a time..";
+    let ptr = story.as_ptr();
+    let len = story.len();
+
+    assert_eq!(18, len);
+
+    // we can re-build a str out of ptr and len
+    let s = unsafe {
+        // build a &[u8]
+        let slice = slice::from_raw_parts(ptr, len);
+
+        // .. and convert that slice into a string slice
+        str::from_utf8(slice)
+    };
+
+    assert_eq!(Ok(story), s);
+
+    let s = "";
+    assert!(s.is_empty());
+
+    let s = "test";
+    assert!(s.is_char_boundary(1));
+    assert!(s.is_char_boundary(2));
+
+    let bytes = "bors".as_bytes();
+    assert_eq!(b"bors", bytes);
+
+
+    let s = "Hello, world!";
+    unsafe {
+        assert_eq!("world", s.slice_unchecked(7, 12));
+        // assert_eq!("world", s.slice_mut_unchecked(7, 12));
+    }
+
+    let s = "Cajetan Puchalski";
+    let (name, surname) = s.split_at(7);
+    // let (name, surname) = s.split_at_mut(7);
+
+    assert_eq!("Cajetan", name);
+    assert_eq!(" Puchalski", surname);
+
+    let test = "a test";
+
+    for c in test.chars() {
+        print!("{} ", c);
+    }
+    println!("");
+
+    for (i, c) in test.char_indices() {
+        println!("{}: {}", i, c);
+    }
+
+    for b in test.bytes() {
+        println!("{} ", b);
+    }
+    println!("");
+
+    let sentence = "let's test me";
+    for word in sentence.split_whitespace() {
+        println!("{}", word);
+    }
+
+    let paragraph = "lorem ipsum\ndolor sit amet\nconsectetur adipiscing elit";
+    for line in paragraph.lines() {
+        println!("{}", line);
+    }
+
+    for s in test.encode_utf16() {
+        print!("{} ", s);
+    }
+    println!("");
+
+    let bananas = "bananas";
+    assert!(bananas.contains("nana"));
+    assert!(!bananas.contains("apples"));
+
+    assert!(bananas.starts_with("ban"));
+    assert!(bananas.ends_with("nas"));
+
+    println!("{:?}", bananas.find('n'));
+    println!("{:?}", bananas.rfind('n'));
+
+    let v: Vec<&str> = "Mary had a little lamb".split(' ').collect();
+    println!("{:?}", v);
+
+    let v: Vec<&str> = "lionXtigerXleopard".split(char::is_uppercase).collect();
+    println!("{:?}", v);
+
+    let v: Vec<&str> = "abc1defXghi".split(|c| c == '1' || c == 'X').collect();
+    println!("{:?}", v);
+
+    let v: Vec<&str> = "Mary had a little lamb".rsplit(' ').collect();
+    println!("{:?}", v);
+
+    let v: Vec<&str> = "A.B.".split_terminator('.').collect();
+    println!("{:?}", v);
+
+    // let v: Vec<&str> = "A..B..".split_terminator('.').collect();
+    // println!("{:?}", v);
+
+    // let v: Vec<&str> = "A.B.".rsplit_terminator('.').collect();
+    // println!("{:?}", v);
+
+    // splitn
+    // rsplitn
+
+    let v: Vec<&str> = "abcXXXabcYYYabc".matches("abc").collect();
+    println!("{:?}", v);
+
+    let v: Vec<&str> = "1abc2abc3".matches(char::is_numeric).collect();
+    println!("{:?}", v);
+
+    // rmatches
+
+    // match_indices
+    // rmatch_indices
+
+    let test = "   hehehe   ";
+    println!("test: |{}|", test);
+    println!("test: |{}|", test.trim());
+
+    // trim_left
+    // trim_right
+
+    let test2 = "111test1test111";
+    println!("test2 trimmed: {}", test2.trim_matches('1'));
+
+    // trim_left_matches
+    // trim_right_matches
+
+    let four: u32 = "4".parse().unwrap();
+    assert_eq!(4, four);
+
+    let four = "4".parse::<u32>();
+    assert_eq!(Ok(4), four);
+
+    let phr = "this is old";
+    assert_eq!("this is new", phr.replace("old", "new"));
+
+    // replacen
+
+    // to_lowercase
+    // to_uppercase
+
+    let string = String::from("birthday gift");
+    let boxed_str = string.clone().into_boxed_str();
+
+    assert_eq!(boxed_str.into_string(), string);
+
+    assert_eq!("abc".repeat(2), String::from("abcabc"));
 }
