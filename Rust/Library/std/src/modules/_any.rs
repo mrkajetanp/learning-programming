@@ -1,5 +1,5 @@
 pub fn _any() {
-    println!("*** Any ***", );
+    println!("*** any ***", );
 
     basic();
     typeid_struct();
