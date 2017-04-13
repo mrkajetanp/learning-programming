@@ -52,16 +52,7 @@ fn typeid_struct() {
 
 fn any_trait() {
 
-    use std::any::{Any, TypeId};
-
-    {
-        fn is_string(s: &Any) -> bool {
-            TypeId::of::<String>() == s.get_type_id()
-        }
-
-        assert_eq!(false, is_string(&0));
-        assert_eq!(true, is_string(&"test".to_string()));
-    }
+    use std::any::Any;
 
     {
         fn is_string(s: &Any) -> bool {
