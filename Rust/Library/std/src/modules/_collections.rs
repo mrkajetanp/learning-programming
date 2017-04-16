@@ -5,6 +5,7 @@ pub fn _collections() {
     entries();
 
     binary_heap();
+    btree_map();
 
     println!("");
 }
@@ -131,4 +132,86 @@ fn binary_heap() {
 
         assert!(b.is_empty());
     }
+}
+
+fn btree_map() {
+    // general example
+    {
+        use std::collections::BTreeMap;
+
+        let mut movie_reviews = BTreeMap::new();
+
+        // review some movies
+        movie_reviews.insert("Pulp Fiction", "Masterpiece");
+        movie_reviews.insert("The Godfather", "Very enjoyable");
+        movie_reviews.insert("The Blues Brothers", "Eye lyked it alot");
+
+        // check for a specific one
+        if !movie_reviews.contains_key("Les Misérables") {
+            println!("We've got {} reviews, but Les Misérables ain't one.",
+                     movie_reviews.len());
+        }
+
+        // this one has spelling mistakes
+        movie_reviews.remove("The Blues Brothers");
+
+        // look up the values associated with some keys
+        let to_find = ["Up!", "The Godfather"];
+
+        for book in &to_find {
+            match movie_reviews.get(book) {
+                Some(review) => println!("{}: {}", book, review),
+                None => println!("{} is unreviewed.", book),
+            }
+        }
+
+        // iterate over everything
+        for (movie, review) in &movie_reviews {
+            println!("{}: \"{}\"", movie, review);
+
+        }
+    }
+
+    // entry api
+    {
+        use std::collections::BTreeMap;
+
+        let mut player_stats = BTreeMap::new();
+
+        fn random_stat_buff() -> u8 {
+            42
+        }
+
+        // insert a key only if it doesn't exist
+        player_stats.entry("health").or_insert(100);
+
+        // same, just using a function
+        player_stats.entry("defence").or_insert_with(random_stat_buff);
+
+        // update a key guarding against it possibly not being set
+        let stat = player_stats.entry("attack").or_insert(100);
+        *stat += random_stat_buff();
+    }
+
+    // methods on a BTreeMap
+    {
+        use std::collections::BTreeMap;
+
+        let mut map = BTreeMap::new();
+
+        map.insert(1, "a");
+
+        if let Some(x) = map.get_mut(&1) {
+            *x = "b";
+        }
+
+        assert_eq!(map.entry(1).key(), &1);
+
+        map.clear();
+        assert!(map.is_empty());
+
+        // methods on entry struct
+
+    }
+
 }
