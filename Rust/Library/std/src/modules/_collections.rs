@@ -6,6 +6,7 @@ pub fn _collections() {
 
     binary_heap();
     btree_map();
+    btree_set();
 
     println!("");
 }
@@ -211,7 +212,79 @@ fn btree_map() {
         assert!(map.is_empty());
 
         // methods on entry struct
+    }
+}
 
+fn btree_set() {
+    // general example
+    {
+        use std::collections::BTreeSet;
+
+        let mut books = BTreeSet::new();
+
+        books.insert("A Dance with Dragons");
+        books.insert("To Kill a Mockingbird");
+        books.insert("The Odyssey");
+        books.insert("The Great Gatsby");
+
+        // check for a specific one
+        if !books.contains("The Winds of Winter") {
+            println!("We have {} books, but The Winds of Winter ain't one.",
+                     books.len());
+        }
+
+        books.remove("The Odyssey");
+
+        for book in &books {
+            println!("{}, ", book);
+        }
+        println!("");
     }
 
+    // methods
+    {
+        use std::collections::BTreeSet;
+
+        let mut a = BTreeSet::new();
+        a.insert(1);
+        a.insert(2);
+
+        let mut b = BTreeSet::new();
+        b.insert(2);
+        b.insert(3);
+
+        println!("Diff: {:?}", a.difference(&b).cloned().collect::<Vec<i32>>());
+        println!("Sym diff: {:?}",
+                 a.symmetric_difference(&b).cloned().collect::<Vec<i32>>());
+        println!("Inter: {:?}", a.intersection(&b).cloned().collect::<Vec<i32>>());
+        println!("Union: {:?}", a.union(&b).cloned().collect::<Vec<i32>>());
+
+        if let Some(x) = a.get(&2) {
+            println!("Got {} from set!", x);
+        }
+
+        assert!(a.contains(&2), true);
+
+        b.remove(&2);
+        assert!(a.is_disjoint(&b));
+
+        a.insert(3);
+        assert!(a.is_superset(&b));
+        assert!(b.is_subset(&a));
+
+        assert_eq!(Some(3), a.replace(3));
+        assert_eq!(None, a.replace(8));
+
+        assert_eq!(Some(3), a.take(&3));
+        assert!(!a.contains(&3));
+
+        // append sets
+        // split_off
+
+        // sub, bitor, bitxor, bitand operators
+        // into_iter (moves out)
+
+        a.clear();
+        assert!(a.is_empty());
+    }
 }
