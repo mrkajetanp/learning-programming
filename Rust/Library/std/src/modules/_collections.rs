@@ -8,6 +8,9 @@ pub fn _collections() {
     btree_map();
     btree_set();
 
+    hash_map();
+    // hash set looks the same as btree_set..
+
     println!("");
 }
 
@@ -287,4 +290,41 @@ fn btree_set() {
         a.clear();
         assert!(a.is_empty());
     }
+}
+
+fn hash_map() {
+    use std::collections::HashMap;
+
+    let mut book_reviews = HashMap::new();
+
+    book_reviews.insert("Grimm's Fairy Tales", "Masterpiece.");
+    book_reviews.insert("A Game of Thrones", "Exceptional.");
+    book_reviews.insert("The Adventures of Sherlock Holmes", "Eye lyked it alot.");
+
+    if !book_reviews.contains_key("Les Misérables") {
+        println!("We've got {} reviews, but Les Misérables ain't one.",
+                 book_reviews.len());
+    }
+
+    book_reviews.remove("The Adventures of Sherlock Holmes");
+
+    let to_find = ["A Game of Thrones", "Harry Potter"];
+    for book in &to_find {
+        match book_reviews.get(book) {
+            Some(review) => println!("{}: {}", book, review),
+            None => println!("{} is unreviewed.", book),
+        }
+    }
+
+    for (book, review) in &book_reviews {
+        println!("{}: {}", book, review);
+    }
+
+    // hash_map implements the entry api
+
+    // to use types in a HashMap, derive Eq, PartialEq & Hash
+
+    let timber_resources: HashMap<&str, i32> =
+        [("Norway", 100), ("Denmark", 50), ("Iceland", 10)]
+        .iter().cloned().collect();
 }
