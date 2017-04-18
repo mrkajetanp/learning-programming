@@ -10,6 +10,7 @@ pub fn _collections() {
 
     hash_map();
     // hash set looks the same as btree_set..
+    linked_list();
 
     println!("");
 }
@@ -327,4 +328,39 @@ fn hash_map() {
     let timber_resources: HashMap<&str, i32> =
         [("Norway", 100), ("Denmark", 50), ("Iceland", 10)]
         .iter().cloned().collect();
+}
+
+fn linked_list() {
+    use std::collections::LinkedList;
+
+    let mut list: LinkedList<u32> = LinkedList::new();
+    // appending lists possible..
+    // iter & iter_mut
+
+    list.push_front(3);
+    list.push_front(5);
+    list.push_front(8);
+
+    assert_eq!(list.front().unwrap(), &8);
+    assert_eq!(list.back().unwrap(), &3);
+
+    list.push_back(4);
+    list.push_back(2);
+    list.push_back(1);
+
+    assert_eq!(list.front().unwrap(), &8);
+    assert_eq!(list.back().unwrap(), &1);
+
+    assert_eq!(6, list.len());
+
+    assert!(list.contains(&2));
+    assert!(!list.contains(&99));
+
+    list.pop_back();
+    assert_eq!(list.back().unwrap(), &2);
+
+    list.clear();
+    assert!(list.is_empty());
+
+    // split_off
 }
