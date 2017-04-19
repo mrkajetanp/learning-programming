@@ -13,6 +13,7 @@ mod _clone;
 #[cfg(off)]
 mod _cmp;
 mod _convert;
+mod _default;
 
 mod _collections;
 
@@ -26,4 +27,5 @@ pub fn modules_main() {
     // _cmp::_cmp();
     _collections::_collections();
     _convert::convert();
+    _default::default();
 }
