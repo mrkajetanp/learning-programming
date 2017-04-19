@@ -12,6 +12,7 @@ mod _cell;
 mod _clone;
 #[cfg(off)]
 mod _cmp;
+mod _convert;
 
 mod _collections;
 
@@ -24,4 +25,5 @@ pub fn modules_main() {
     // _clone::_clone();
     // _cmp::_cmp();
     _collections::_collections();
+    _convert::convert();
 }
