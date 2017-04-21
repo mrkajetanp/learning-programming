@@ -20,7 +20,10 @@ mod _default;
 mod _collections;
 #[cfg(off)]
 mod _env;
+#[cfg(off)]
 mod _error;
+// same with f64 module
+mod _f32;
 
 pub fn modules_main() {
     // _any::_any();
@@ -34,5 +37,6 @@ pub fn modules_main() {
     // _convert::convert();
     // _default::default();
     // _env::env();
-    _error::error();
+    // _error::error();
+    _f32::_f32();
 }
