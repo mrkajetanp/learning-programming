@@ -23,7 +23,9 @@ mod _env;
 #[cfg(off)]
 mod _error;
 // same with f64 module
+#[cfg(off)]
 mod _f32;
+mod _ffi;
 
 pub fn modules_main() {
     // _any::_any();
@@ -38,5 +40,6 @@ pub fn modules_main() {
     // _default::default();
     // _env::env();
     // _error::error();
-    _f32::_f32();
+    // _f32::_f32();
+    _ffi::ffi();
 }
