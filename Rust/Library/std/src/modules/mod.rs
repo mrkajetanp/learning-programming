@@ -25,7 +25,9 @@ mod _error;
 // same with f64 module
 #[cfg(off)]
 mod _f32;
+#[cfg(off)]
 mod _ffi;
+mod _fmt;
 
 pub fn modules_main() {
     // _any::_any();
@@ -41,5 +43,6 @@ pub fn modules_main() {
     // _env::env();
     // _error::error();
     // _f32::_f32();
-    _ffi::ffi();
+    // _ffi::ffi();
+    _fmt::fmt();
 }
