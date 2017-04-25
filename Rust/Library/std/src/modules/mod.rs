@@ -31,7 +31,9 @@ mod _ffi;
 mod _fmt;
 #[cfg(off)]
 mod _hash;
+#[cfg(off)]
 mod _io;
+mod _iter;
 
 pub fn modules_main() {
     // _any::_any();
@@ -50,5 +52,6 @@ pub fn modules_main() {
     // _ffi::ffi();
     // _fmt::fmt();
     // _hash::_hash();
-    _io::_io();
+    // _io::_io();
+    _iter::_iter();
 }
