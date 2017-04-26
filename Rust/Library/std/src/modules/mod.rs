@@ -35,7 +35,9 @@ mod _hash;
 mod _io;
 #[cfg(off)]
 mod _iter;
+#[cfg(off)]
 mod _marker;
+mod _mem;
 
 pub fn modules_main() {
     // _any::_any();
@@ -56,5 +58,6 @@ pub fn modules_main() {
     // _hash::_hash();
     // _io::_io();
     // _iter::_iter();
-    _marker::_marker();
+    // _marker::_marker();
+    _mem::_mem();
 }
