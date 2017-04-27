@@ -39,7 +39,9 @@ mod _iter;
 mod _marker;
 #[cfg(off)]
 mod _mem;
+#[cfg(off)]
 mod _num;
+mod _ops;
 
 pub fn modules_main() {
     // _any::_any();
@@ -62,5 +64,6 @@ pub fn modules_main() {
     // _iter::_iter();
     // _marker::_marker();
     // _mem::_mem();
-    _num::_num();
+    // _num::_num();
+    _ops::_ops();
 }
