@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.ArrayList;
+
 /**
  * Created by cajetan on 30/04/2017.
  */
@@ -68,19 +71,43 @@ class CenteredRectangle extends Rectangle implements Centered {
     }
 }
 
-public class TheJavaTypeSystem {
-    public static void run() {
-        System.out.println("*** The Java Type System ***");
+interface Box<T> {
+    void box(T t);
+    T unbox();
+}
+
+class Utils {
+    public static <T> T comma(T a, T b) {
+        return a;
     }
 }
 
 
+public class TheJavaTypeSystem {
+    public static void run() {
+        System.out.println("*** The Java Type System ***");
 
+        generics();
+    }
 
+    static void generics() {
+        // List<CenteredRectangle> shapes = new ArrayList<CenteredRectangle>();
+        List<CenteredRectangle> shapes = new ArrayList<>();
+        shapes.add(new CenteredRectangle(2, 4, 1, 1));
+        shapes.add(new CenteredRectangle(4, 8, 3, 2));
 
+        System.out.println("shapes.get(0).area() = " + shapes.get(0).area());
+        System.out.println("shapes.get(1).area() = " + shapes.get(1).area());
 
+        ArrayList<String> myList = new ArrayList<>();
+        myList.add("one");
+        myList.add("two");
 
+        ArrayList<?> mysteryList = myList;
+        System.out.println("(String)mysteryList.get(0) = " + (String)mysteryList.get(0));
 
-
-
-
+        // need casting to insert anything other than a null
+        ((ArrayList<String>)mysteryList).add("test_test");
+        System.out.println("(String)mysteryList.get(2) = " + (String)mysteryList.get(2));
+    }
+}
