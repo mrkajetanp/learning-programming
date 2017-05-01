@@ -29,7 +29,21 @@ mod _f32;
 mod _ffi;
 #[cfg(off)]
 mod _fmt;
+#[cfg(off)]
 mod _hash;
+#[cfg(off)]
+mod _io;
+#[cfg(off)]
+mod _iter;
+#[cfg(off)]
+mod _marker;
+#[cfg(off)]
+mod _mem;
+#[cfg(off)]
+mod _num;
+#[cfg(off)]
+mod _ops;
+mod _option;
 
 pub fn modules_main() {
     // _any::_any();
@@ -47,5 +61,12 @@ pub fn modules_main() {
     // _f32::_f32();
     // _ffi::ffi();
     // _fmt::fmt();
-    _hash::_hash();
+    // _hash::_hash();
+    // _io::_io();
+    // _iter::_iter();
+    // _marker::_marker();
+    // _mem::_mem();
+    // _num::_num();
+    // _ops::_ops();
+    _option::_option();
 }

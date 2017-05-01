@@ -1,6 +1,7 @@
-#![allow(unused_variables, dead_code)]
+#![allow(unused_variables, dead_code, unused_must_use)]
 
 // #![feature(get_type_id)]
+// #![feature(iter_rfind)]
 
 extern crate libc;
 
