@@ -90,6 +90,7 @@ class B extends A {
     int i;
     int f() {
         i = super.i + 1;
+
         return super.f() + i;
     }
 }
