@@ -47,7 +47,9 @@ mod _ops;
 mod _option;
 #[cfg(off)]
 mod _process;
+#[cfg(off)]
 mod _ptr;
+mod _rc;
 
 pub fn modules_main() {
     // _any::_any();
@@ -74,5 +76,6 @@ pub fn modules_main() {
     // _ops::_ops();
     // _option::_option();
     // _process::process();
-    _ptr::ptr();
+    // _ptr::ptr();
+    _rc::rc();
 }
