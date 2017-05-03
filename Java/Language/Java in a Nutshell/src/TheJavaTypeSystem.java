@@ -90,6 +90,8 @@ public class TheJavaTypeSystem {
         generics();
     }
 
+
+
     static void generics() {
         // List<CenteredRectangle> shapes = new ArrayList<CenteredRectangle>();
         List<CenteredRectangle> shapes = new ArrayList<>();
@@ -104,10 +106,10 @@ public class TheJavaTypeSystem {
         myList.add("two");
 
         ArrayList<?> mysteryList = myList;
-        System.out.println("(String)mysteryList.get(0) = " + (String)mysteryList.get(0));
+        System.out.println("(String)mysteryList.get(0) = " + mysteryList.get(0));
 
         // need casting to insert anything other than a null
         ((ArrayList<String>)mysteryList).add("test_test");
-        System.out.println("(String)mysteryList.get(2) = " + (String)mysteryList.get(2));
+        System.out.println("(String)mysteryList.get(2) = " + mysteryList.get(2));
     }
 }

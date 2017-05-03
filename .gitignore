@@ -10,5 +10,6 @@ jspm_packages
 typings
 target
 workbench.xmi
+workspace.xml
 /C++/NetBeans Projects/TestNetBeansApplication/build/
 /C++/NetBeans Projects/TestNetBeansApplication/dist/
