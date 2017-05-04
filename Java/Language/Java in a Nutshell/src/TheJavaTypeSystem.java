@@ -1,3 +1,9 @@
+import com.sun.istack.internal.NotNull;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -82,15 +88,75 @@ class Utils {
     }
 }
 
+enum PrimaryColor {
+    RED, GREEN, BLUE
+}
+
+class Shape {
+    public double area() {
+        return 2.0;
+    }
+}
+
+class Triangle extends Shape {
+    public Triangle(int one, int two, int three, int aOne, int aTwo, int aThree) {
+
+    }
+}
+
+class MyRectangle2 extends Shape {
+    public MyRectangle2(int a, int b) {
+
+    }
+}
+
+enum RegularPolygon {
+    TRIANGLE(3), SQUARE(4), PENTAGON(5), HEXAGON(6);
+
+    private Shape shape;
+
+    public Shape getShape() {
+        return shape;
+    }
+
+    RegularPolygon(int sides) {
+        switch (sides) {
+            case 3:
+                shape = new Triangle(1, 1, 1, 60, 60, 60);
+                break;
+            case 4:
+                shape = new MyRectangle2(10, 20);
+                break;
+            case 5:
+                // ...
+                break;
+            case 6:
+                // ...
+                break;
+        }
+    }
+}
+
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+@interface Nickname {
+    String[] value() default {};
+}
+
+class TestAnnotation {
+    @Nickname(value = "heyFunction")
+    public static void testAnnotation() {
+    }
+}
 
 public class TheJavaTypeSystem {
     public static void run() {
         System.out.println("*** The Java Type System ***");
 
+        // ?? @NotNull String = "I'm sure I'm not null..";
+
         generics();
     }
-
-
 
     static void generics() {
         // List<CenteredRectangle> shapes = new ArrayList<CenteredRectangle>();
