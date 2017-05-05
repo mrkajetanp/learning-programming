@@ -51,7 +51,9 @@ mod _process;
 mod _ptr;
 #[cfg(off)]
 mod _rc;
+#[cfg(off)]
 mod _result;
+mod _slice;
 
 pub fn modules_main() {
     // _any::_any();
@@ -80,5 +82,6 @@ pub fn modules_main() {
     // _process::process();
     // _ptr::ptr();
     // _rc::rc();
-    _result::result();
+    // _result::result();
+    _slice::slice();
 }
