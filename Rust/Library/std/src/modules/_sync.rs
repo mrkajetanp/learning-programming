@@ -1,6 +1,7 @@
 pub fn sync() {
     atomic_module();
     mpsc_module();
+    arc_struct();
 }
 
 fn atomic_module() {
@@ -96,4 +97,37 @@ fn mpsc_module() {
         tx.send(53).unwrap();
     });
     rx.recv().unwrap();
+}
+
+fn arc_struct() {
+    use std::sync::Arc;
+    use std::sync::atomic::{AtomicUsize, Ordering};
+    use std::thread;
+
+    let five = Arc::new(5);
+
+    for _ in 0..10 {
+        let five = five.clone();
+
+        thread::spawn(move || {
+            println!("{:?}", five);
+        });
+    }
+
+    println!("", );
+
+    let val = Arc::new(AtomicUsize::new(5));
+
+    for _ in 0..10 {
+        let val = val.clone();
+
+        thread::spawn(move || {
+            let v = val.fetch_add(1, Ordering::SeqCst);
+            println!("{:?}", v);
+        });
+    }
+
+    let five = Arc::new(5);
+
+    let weak_five = Arc::downgrade(&five);
 }
