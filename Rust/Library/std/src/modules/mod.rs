@@ -55,7 +55,9 @@ mod _rc;
 mod _result;
 #[cfg(off)]
 mod _slice;
+#[cfg(off)]
 mod _string;
+mod _sync;
 
 pub fn modules_main() {
     // _any::_any();
@@ -86,5 +88,6 @@ pub fn modules_main() {
     // _rc::rc();
     // _result::result();
     // _slice::slice();
-    _string::string();
+    // _string::string();
+    _sync::sync();
 }
