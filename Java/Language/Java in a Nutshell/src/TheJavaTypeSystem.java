@@ -1,6 +1,7 @@
 import com.sun.istack.internal.NotNull;
 import sun.awt.image.ImageWatched;
 
+import java.io.File;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -387,6 +388,28 @@ class Weird {
     }
 }
 
+class Lambdas {
+
+    interface MathOperation {
+        int operation(int a, int b);
+    }
+
+    private static int operate(int a, int b, MathOperation mathOperation) {
+        return mathOperation.operation(a, b);
+    }
+
+    public static void run() {
+        File dir = new File("src");
+        String[] fileList = dir.list((f, s) -> s.endsWith(".java"));
+
+        MathOperation addition = (int a, int b) -> a + b;
+        MathOperation subtraction = (a, b) -> a - b;
+
+        System.out.println("10 + 5 = " + operate(10, 5, addition));
+        System.out.println("10 - 5 = " + operate(10, 5, subtraction));
+    }
+}
+
 public class TheJavaTypeSystem {
     public static void run() {
         System.out.println("*** The Java Type System ***");
@@ -394,8 +417,9 @@ public class TheJavaTypeSystem {
         // ?? @NotNull String = "I'm sure I'm not null..";
 
         generics();
-
         Weird.run();
+
+        Lambdas.run();
     }
 
     static void generics() {
