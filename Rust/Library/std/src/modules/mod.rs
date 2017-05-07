@@ -59,7 +59,9 @@ mod _slice;
 mod _string;
 #[cfg(off)]
 mod _sync;
+#[cfg(off)]
 mod _thread;
+mod _time;
 
 pub fn modules_main() {
     // _any::_any();
@@ -92,5 +94,6 @@ pub fn modules_main() {
     // _slice::slice();
     // _string::string();
     // _sync::sync();
-    _thread::thread();
+    // _thread::thread();
+    _time::time();
 }
