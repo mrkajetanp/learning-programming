@@ -418,8 +418,9 @@ public class TheJavaTypeSystem {
 
         generics();
         Weird.run();
-
         Lambdas.run();
+
+        System.out.println("");
     }
 
     static void generics() {
