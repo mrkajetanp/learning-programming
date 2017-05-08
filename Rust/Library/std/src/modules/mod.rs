@@ -61,7 +61,9 @@ mod _string;
 mod _sync;
 #[cfg(off)]
 mod _thread;
+#[cfg(off)]
 mod _time;
+mod _vec;
 
 pub fn modules_main() {
     // _any::_any();
@@ -95,5 +97,6 @@ pub fn modules_main() {
     // _string::string();
     // _sync::sync();
     // _thread::thread();
-    _time::time();
+    // _time::time();
+    _vec::vec();
 }
