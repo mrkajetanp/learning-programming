@@ -2,6 +2,29 @@
  * Created by cajetan on 5/8/17.
  */
 
+class Singleton {
+    private final static Singleton instance = new Singleton();
+    private static boolean isInitialized = false;
+
+    private Singleton() {
+        super();
+    }
+
+    private void init() {
+        // initialization here
+    }
+
+    // only way to get a reference to the instance
+    public static synchronized Singleton getInstance() {
+        if (isInitialized)
+            return instance;
+
+        instance.init();
+        isInitialized = true;
+        return instance;
+    }
+}
+
 class CircleD implements Comparable<CircleD> {
     private final int x;
     private final int y;
