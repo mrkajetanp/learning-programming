@@ -102,5 +102,6 @@ public class ObjectOrientedDesign {
         System.out.println("*** Object-Oriented Design ***");
         CircleD test = new CircleD(2, 2, 3);
         System.out.println("test.toString(): " + test.toString());
+        System.out.println();
     }
 }

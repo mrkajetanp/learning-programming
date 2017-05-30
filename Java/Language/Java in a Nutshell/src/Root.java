@@ -11,6 +11,7 @@ public class Root {
         ObjectOrientedProgramming.run();
         TheJavaTypeSystem.run();
         ObjectOrientedDesign.run();
+        MemoryAndConcurrency.run();
 
         System.out.println("");
     }
