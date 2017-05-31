@@ -21,6 +21,8 @@ public class MemoryAndConcurrency {
         System.out.println("*** Memory and Concurrency ***");
 
         concurrencyBasics();
+
+        System.out.println();
     }
 
     static void concurrencyBasics() {

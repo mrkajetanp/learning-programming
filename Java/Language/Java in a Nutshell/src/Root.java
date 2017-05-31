@@ -12,6 +12,7 @@ public class Root {
         TheJavaTypeSystem.run();
         ObjectOrientedDesign.run();
         MemoryAndConcurrency.run();
+        Conventions.run();
 
         System.out.println("");
     }
