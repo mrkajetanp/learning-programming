@@ -54,6 +54,6 @@ public class MemoryAndConcurrency {
                     e.getStackTrace()[0].getFileName());
         });
 
-        handleThread.start();
+        // handleThread.start();
     }
 }
