@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="58c01d33-dec3-4b03-b68f-71ba4f19f02d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JavaCollections.java" afterPath="$PROJECT_DIR$/src/JavaCollections.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -568,7 +567,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496868834383</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="[Java] Java in a Nutshell - Working with Java Collections #2&#10;&#10;* Queue and Blocking Queue&#10;* Wrappers&#10;* Utility Methods&#10;* Arrays and Helper Methods">
+      <created>1497554289386</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1497554289386</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -665,7 +671,8 @@
     <MESSAGE value="[Java] Java in a Nutshell - Java's Approach to Memory and Concurrency&#10;&#10;* Concurrency" />
     <MESSAGE value="[Java] Java in a Nutshell - Programming and Documentation Conventions&#10;&#10;* Java Doc Comments&#10;* Complete" />
     <MESSAGE value="[Java] Java in a Nutshell - Working with Java Collections #1&#10;&#10;* Map" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Java] Java in a Nutshell - Working with Java Collections #1&#10;&#10;* Map" />
+    <MESSAGE value="[Java] Java in a Nutshell - Working with Java Collections #2&#10;&#10;* Queue and Blocking Queue&#10;* Wrappers&#10;* Utility Methods&#10;* Arrays and Helper Methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Java] Java in a Nutshell - Working with Java Collections #2&#10;&#10;* Queue and Blocking Queue&#10;* Wrappers&#10;* Utility Methods&#10;* Arrays and Helper Methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
