@@ -4,6 +4,9 @@ import java.awt.*;
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Created by cajetan on 6/7/17.
@@ -13,6 +16,10 @@ public class JavaCollections {
         System.out.println("*** Collections ***");
 
         maps();
+        wrappers();
+        utilities();
+        arraysAndHelpers();
+        lambdaExpressions();
 
         System.out.println();
     }
@@ -150,5 +157,34 @@ public class JavaCollections {
         if (type.isArray()) {
             Class elementType = type.getComponentType();
         }
+    }
+
+    public static void lambdaExpressions() {
+        String[] input = {"tiger", "cat", "TIGER", "Tiger", "leopard"};
+        List<String> cats = Arrays.asList(input);
+        String search = "tiger";
+        String tigers = cats.stream()
+                .filter(s -> s.equalsIgnoreCase(search))
+                .collect(Collectors.joining(", "));
+        System.out.println(tigers);
+
+        Predicate<String> p = s -> s.equalsIgnoreCase(search);
+        Predicate<String> combined = p.or(s-> s.equalsIgnoreCase("leopard"));
+        String pride = cats.stream()
+                .filter(combined)
+                .collect(Collectors.joining(", "));
+        System.out.println(pride);
+
+        List<Integer> namesLength = cats.stream()
+                .map(String::length)
+                .collect(Collectors.toList());
+        System.out.println(namesLength);
+
+        List<String> pets = Arrays.asList("dog", "cat", "fish", "iguana", "ferret");
+        pets.forEach(System.out::println);
+
+        double sumPrimes = ((double) Stream.of(2, 3, 5, 7, 11, 13, 17, 19, 23)
+                .reduce(0, (x, y) -> x+y ));
+        System.out.println("sumPrimes = " + sumPrimes);
     }
 }
