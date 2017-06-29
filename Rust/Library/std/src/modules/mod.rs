@@ -51,7 +51,19 @@ mod _process;
 mod _ptr;
 #[cfg(off)]
 mod _rc;
+#[cfg(off)]
 mod _result;
+#[cfg(off)]
+mod _slice;
+#[cfg(off)]
+mod _string;
+#[cfg(off)]
+mod _sync;
+#[cfg(off)]
+mod _thread;
+#[cfg(off)]
+mod _time;
+mod _vec;
 
 pub fn modules_main() {
     // _any::_any();
@@ -80,5 +92,11 @@ pub fn modules_main() {
     // _process::process();
     // _ptr::ptr();
     // _rc::rc();
-    _result::result();
+    // _result::result();
+    // _slice::slice();
+    // _string::string();
+    // _sync::sync();
+    // _thread::thread();
+    // _time::time();
+    _vec::vec();
 }

@@ -13,3 +13,7 @@ workbench.xmi
 workspace.xml
 /C++/NetBeans Projects/TestNetBeansApplication/build/
 /C++/NetBeans Projects/TestNetBeansApplication/dist/
+.idea
+.idea/
+*.xml
+*.xmi
