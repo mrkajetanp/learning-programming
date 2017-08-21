@@ -1,7 +1,11 @@
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.Arrays;
-import java.util.List;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.Period;
+import java.time.YearMonth;
+import java.time.temporal.*;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -15,9 +19,11 @@ public class HandlingCommonDataFormats {
 
         strings();
         numbersAndMaths();
+        dateAndTime();
 
         System.out.println();
     }
+
 
     static void strings() {
         // string literals
@@ -92,6 +98,129 @@ public class HandlingCommonDataFormats {
         }
         System.out.println("bd = " + bd);
     }
+
+    enum Quarter {
+        FIRST, SECOND, THIRD, FOURTH
+    }
+
+    static void dateAndTime() {
+        class BirthdayDiary {
+            private Map<String, LocalDate> birthdays;
+
+            public BirthdayDiary() {
+                this.birthdays = new HashMap<>();
+            }
+
+            public LocalDate addBirthday(String name, int day, int month, int year) {
+                LocalDate birthday = LocalDate.of(year, month, day);
+                birthdays.put(name, birthday);
+                return birthday;
+            }
+
+            public LocalDate getBirthdayFor(String name) {
+                return birthdays.get(name);
+            }
+
+            public int getAgeInYear(String name, int year) {
+                Period period = Period.between(birthdays.get(name), birthdays.get(name).withYear(year));
+                return period.getYears();
+            }
+
+            public Set<String> getFriendsOfAgeIn(int age, int year) {
+                return birthdays.keySet().stream()
+                        .filter(p -> getAgeInYear(p, year) == age)
+                        .collect(Collectors.toSet());
+            }
+
+            public int getDaysUntilBirthday(String name) {
+                Period period = Period.between(LocalDate.now(), birthdays.get(name));
+                return period.getDays();
+            }
+
+            public Set<String> getBirthdaysIn(Month month) {
+                return birthdays.entrySet().stream()
+                        .filter(p -> p.getValue().getMonth() == month)
+                        .map(p -> p.getKey())
+                        .collect(Collectors.toSet());
+            }
+
+            public int totalAgeInYears() {
+                return birthdays.keySet().stream()
+                        .mapToInt(p -> getAgeInYear(p, LocalDate.now().getYear()))
+                        .sum();
+            }
+
+        }
+
+        LocalDate today = LocalDate.now();
+        Month currentMonth = today.getMonth();
+        Month firstMonthOfQuarter = currentMonth.firstMonthOfQuarter();
+
+        class QuarterOfYearQuery implements TemporalQuery<Quarter> {
+            @Override
+            public Quarter queryFrom(TemporalAccessor temporal) {
+                LocalDate now = LocalDate.from(temporal);
+
+                if (now.isBefore(now.with(Month.APRIL).withDayOfMonth(1)))
+                    return Quarter.FIRST;
+                else if (now.isBefore(now.with(Month.JULY).withDayOfMonth(1)))
+                    return Quarter.SECOND;
+                else if (now.isBefore(now.with(Month.NOVEMBER).withDayOfMonth(1)))
+                    return Quarter.THIRD;
+                else
+                    return Quarter.FOURTH;
+            }
+        }
+
+        QuarterOfYearQuery q = new QuarterOfYearQuery();
+
+        // Direct
+        Quarter quarter = q.queryFrom(LocalDate.now());
+        System.out.println(quarter);
+
+        // Indirect
+
+        quarter = LocalDate.now().query(q);
+        System.out.println(quarter);
+
+        /* Adjusters */
+
+        class FirstDayOfTheQuarter implements TemporalAdjuster {
+            @Override
+            public Temporal adjustInto(Temporal temporal) {
+                final int currentQuarter = YearMonth.from(temporal).get(IsoFields.QUARTER_OF_YEAR);
+
+                switch (currentQuarter) {
+                    case 1:
+                        return LocalDate.from(temporal)
+                                .with(TemporalAdjusters.firstDayOfYear());
+
+                    case 2:
+                        return LocalDate.from(temporal)
+                                .withMonth(Month.APRIL.getValue())
+                                .with(TemporalAdjusters.firstDayOfMonth());
+
+                    case 3:
+                        return LocalDate.from(temporal)
+                                .withMonth(Month.JULY.getValue())
+                                .with(TemporalAdjusters.firstDayOfMonth());
+
+                    case 4:
+                        return LocalDate.from(temporal)
+                                .withMonth(Month.OCTOBER.getValue())
+                                .with(TemporalAdjusters.firstDayOfMonth());
+
+                    default:
+                        return null;
+                }
+            }
+        }
+
+        LocalDate now = LocalDate.now();
+        Temporal fdoq = now.with(new FirstDayOfTheQuarter());
+        System.out.println(fdoq);
+    }
+
 }
 
 
