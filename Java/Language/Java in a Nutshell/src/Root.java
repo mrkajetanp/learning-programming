@@ -14,6 +14,7 @@ public class Root {
         MemoryAndConcurrency.run();
         Conventions.run();
         JavaCollections.run();
+        HandlingCommonDataFormats.run();
 
         System.out.println("");
     }
