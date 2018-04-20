@@ -1,16 +1,26 @@
+
 def print_one(arg1, arg2):
-	print("Function 1:", arg1, arg2)
+    print("Function 1:", arg1, arg2)
+
 
 def print_two(arg1):
-	print("F2:", arg1)
+    print("F2:", arg1)
+
 
 def print_none():
-	print("Nothing. Just empty.")
+    print("Nothing. Just empty.")
+
+
+def lambdas():
+        a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        print(list(filter(lambda x, l=3, h=7: l < x <= h, a_list)))
 
 
 print_one("ArOne", "AreTwo")
 print_two("ArOneOne")
 print_none()
+
+lambdas()
 
 """
 def cheese_and_crackers(cheese_count, boxes_of_crackers):
