@@ -16,11 +16,18 @@ def lambdas():
         print(list(filter(lambda x, l=3, h=7: l < x <= h, a_list)))
 
 
+def updown(n):
+    for x in range(1, n): yield x
+    for x in range(n, 0, -1): yield x
+
+
+
 print_one("ArOne", "AreTwo")
 print_two("ArOneOne")
 print_none()
 
 lambdas()
+print(list(updown(8)))
 
 """
 def cheese_and_crackers(cheese_count, boxes_of_crackers):
