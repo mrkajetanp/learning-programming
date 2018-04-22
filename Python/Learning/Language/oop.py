@@ -34,6 +34,14 @@ class Singleton(object):
         return 3*self.x
 
 
+class Node(object):
+    def __init__(self, id):
+        self.id = id
+
+    def __str__(self):
+        return str("Node id: {}".format(self.id))
+
+
 print(C1.x)
 C1.method_one()
 inst = C2(21)
@@ -44,3 +52,6 @@ x = Singleton(8)
 print(x.double_value())
 y = Singleton(9)
 print(x.double_value(), y.double_value())
+
+n = Node(8)
+print(n)
