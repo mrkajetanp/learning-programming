@@ -2,6 +2,7 @@ from collections import defaultdict
 from collections import OrderedDict
 from collections import Counter
 from collections import deque
+from collections import namedtuple
 
 favourites = defaultdict(list)
 favourites['hello'].append("there")
@@ -47,3 +48,8 @@ d.pop()
 print(d)
 
 d = deque(maxlen=30)
+
+Animal = namedtuple('Animal', 'name age type')
+perry = Animal(name='Perry', age=31, type='Cat')
+print(perry.name, perry.age, perry.type)
+print(perry[0], perry[1], perry[2])
