@@ -1,6 +1,7 @@
 from collections import defaultdict
 from collections import OrderedDict
 from collections import Counter
+from collections import deque
 
 favourites = defaultdict(list)
 favourites['hello'].append("there")
@@ -28,3 +29,21 @@ colours = (
 
 favs = Counter(name for name, colour in colours)
 print(favs)
+
+d = deque()
+d.append('1')
+d.append('2')
+d.append('3')
+
+print(len(d))
+print(d[0])
+print(d[-1])
+
+d = deque(range(5))
+print(d)
+d.popleft()
+print(d)
+d.pop()
+print(d)
+
+d = deque(maxlen=30)
