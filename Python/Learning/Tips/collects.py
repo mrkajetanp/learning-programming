@@ -3,6 +3,7 @@ from collections import OrderedDict
 from collections import Counter
 from collections import deque
 from collections import namedtuple
+from enum import Enum
 
 favourites = defaultdict(list)
 favourites['hello'].append("there")
@@ -53,3 +54,16 @@ Animal = namedtuple('Animal', 'name age type')
 perry = Animal(name='Perry', age=31, type='Cat')
 print(perry.name, perry.age, perry.type)
 print(perry[0], perry[1], perry[2])
+
+
+class Species(Enum):
+    cat = 1
+    dog = 2
+    horse = 3
+    owl = 4
+    kitten = 1
+
+
+print(Species(1))
+print(Species.cat)
+print(Species['cat'])
