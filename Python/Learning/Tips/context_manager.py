@@ -1,4 +1,4 @@
-
+from contextlib import contextmanager
 
 class File(object):
     def __init__(self, file_name, method):
@@ -11,3 +11,10 @@ class File(object):
 
 with File('demo.txt', 'w') as opened_file:
     opened_file.write("hello there!")
+
+
+@contextmanager
+def open_file(name):
+    f = open(file, 'w')
+    yield f
+    f.close()
