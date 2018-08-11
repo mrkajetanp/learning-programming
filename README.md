@@ -51,4 +51,7 @@ Repository with source files I created while learning to program.
 ### Java ###
 
 * Java here
-* Also android
+
+### Android ###
+
+* Android here
