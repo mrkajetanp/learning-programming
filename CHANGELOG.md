@@ -2,6 +2,10 @@
 
 ---
 
+#### 12.08.2018
+
+* [Android] Android basics
+
 #### 11.08.2018
 
 * [General] Readme improvement
