@@ -4,6 +4,7 @@
 
 #### 12.08.2018
 
+* [Android] Further first app basics 
 * [Android] Android basics
 
 #### 11.08.2018
