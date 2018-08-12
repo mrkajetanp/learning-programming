@@ -2,6 +2,10 @@
 
 ---
 
+#### 13.08.2018
+
+* [General] Fixed gitignore
+
 #### 12.08.2018
 
 * [Android] Further first app basics 

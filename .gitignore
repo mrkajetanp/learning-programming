@@ -15,5 +15,4 @@ workspace.xml
 /C++/NetBeans Projects/TestNetBeansApplication/dist/
 .idea
 .idea/
-*.xml
 *.xmi
