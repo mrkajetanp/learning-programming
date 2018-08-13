@@ -4,6 +4,7 @@
 
 #### 13.08.2018
 
+* [Android] Basic constraints and layout 
 * [General] Fixed gitignore
 
 #### 12.08.2018
