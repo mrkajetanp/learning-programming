@@ -4,6 +4,7 @@
 
 #### 14.08.2018
 
+* [Android] Getting and setting views
 * [Android] Toast & onClick
 
 #### 13.08.2018
