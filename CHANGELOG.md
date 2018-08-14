@@ -2,6 +2,10 @@
 
 ---
 
+#### 14.08.2018
+
+* [Android] Toast & onClick
+
 #### 13.08.2018
 
 * [Android] Basic constraints and layout 
