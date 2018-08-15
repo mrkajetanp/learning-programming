@@ -4,6 +4,7 @@
 
 #### 15.08.2018
 
+* [Android] Second activity design preparation
 * [Android] Second activity
 
 #### 14.08.2018
