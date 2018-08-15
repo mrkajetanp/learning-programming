@@ -2,6 +2,10 @@
 
 ---
 
+#### 15.08.2018
+
+* [Android] Second activity
+
 #### 14.08.2018
 
 * [Android] Getting and setting views
