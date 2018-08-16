@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.util.Locale;
 import java.util.Random;
 
 public class SecondActivity extends AppCompatActivity {
@@ -22,7 +23,7 @@ public class SecondActivity extends AppCompatActivity {
         if (count > 0)
             randomInt = random.nextInt(count);
 
-        randomView.setText(Integer.toString(randomInt));
+        randomView.setText(String.format(Locale.getDefault(), "%d", randomInt));
         headingView.setText(getString(R.string.random_heading, count));
     }
 
