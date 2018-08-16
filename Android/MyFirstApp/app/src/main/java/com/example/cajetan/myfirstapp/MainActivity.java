@@ -1,5 +1,6 @@
 package com.example.cajetan.myfirstapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,8 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TOTAL_COUNT = "total_count";
 
     /**
      * Show a toast
@@ -29,12 +32,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void randomMe(View view) {
-        TextView numberField = findViewById(R.id.textView);
+        Intent randomIntent = new Intent(this, SecondActivity.class);
 
-        Random rn = new Random();
-        numberField.setText(
-                String.format(Locale.getDefault(), "%d", rn.nextInt(100)+1)
-        );
+        TextView showCountTextView = findViewById(R.id.textView);
+        int count = Integer.parseInt(showCountTextView.getText().toString());
+        randomIntent.putExtra(TOTAL_COUNT, count);
+
+        startActivity(randomIntent);
     }
 
     @Override

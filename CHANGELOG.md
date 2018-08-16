@@ -2,6 +2,10 @@
 
 ---
 
+#### 16.08.2018
+
+* [Android] Second activity with Intent
+
 #### 15.08.2018
 
 * [Android] Second activity design preparation

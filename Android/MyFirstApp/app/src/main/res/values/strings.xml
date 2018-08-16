@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MyFirstApp</string>
     <string name="start_num">0</string>
+    <string name="random_heading">Here is a random number between 0 and %1d</string>
 </resources>

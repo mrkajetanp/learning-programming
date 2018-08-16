@@ -8,15 +8,15 @@
     tools:context=".SecondActivity">
 
     <TextView
+        android:id="@+id/textview_heading"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:text="Here is a random number between 0 and %1d"
-        android:id="@+id/textview_label"
+        android:text="@string/random_heading"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
