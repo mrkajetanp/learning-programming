@@ -2,6 +2,10 @@
 
 ---
 
+#### 17.08.2018
+
+* [Android] Created FavouriteToys
+
 #### 16.08.2018
 
 * [Android] Final FirstApp improvements
