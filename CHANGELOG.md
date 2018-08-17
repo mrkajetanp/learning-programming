@@ -4,6 +4,7 @@
 
 #### 17.08.2018
 
+* [Android] Learning about theory 
 * [Android] Created FavouriteToys
 
 #### 16.08.2018
