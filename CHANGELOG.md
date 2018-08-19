@@ -4,6 +4,7 @@
 
 #### 19.08.2018
 
+* [Android] FavouriteToys scroll view 
 * [Android] Basic FavouriteToys app
 
 #### 17.08.2018
