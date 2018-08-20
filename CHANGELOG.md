@@ -4,6 +4,7 @@
 
 #### 20.08.2018
 
+* [Android] Sunshine with mock data 
 * [Android] Sunshine basic setup
 
 #### 19.08.2018
