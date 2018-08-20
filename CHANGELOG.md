@@ -2,6 +2,10 @@
 
 ---
 
+#### 20.08.2018
+
+* [Android] Sunshine basic setup
+
 #### 19.08.2018
 
 * [Android] FavouriteToys scroll view 
