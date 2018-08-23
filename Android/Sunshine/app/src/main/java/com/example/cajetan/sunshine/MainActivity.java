@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         mWeatherTextView = findViewById(R.id.tv_weather_data);
 
         String[] dummyWeatherData = {
+                "Tested, working",
                 "Today, May 17 - Clear - 17°C / 15°C",
                 "Tomorrow - Cloudy - 19°C / 15°C",
                 "Thursday - Rainy- 30°C / 11°C",
