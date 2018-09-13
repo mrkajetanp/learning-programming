@@ -2,6 +2,14 @@
 
 ---
 
+#### 13.09.2018
+
+* [Android] Docs: App Components
+
+#### 23.08.2018
+
+* [Android] Android Studio Linux setup
+
 #### 20.08.2018
 
 * [Android] Sunshine with mock data 
