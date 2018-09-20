@@ -2,6 +2,10 @@
 
 ---
 
+#### 20.09.2018
+
+* [Android] Docs: The Manifest
+
 #### 13.09.2018
 
 * [Android] Docs: App Components
