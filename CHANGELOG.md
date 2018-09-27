@@ -2,6 +2,10 @@
 
 ---
 
+#### 27.09.2018
+
+* [Android] Docs: General reading
+
 #### 20.09.2018
 
 * [Android] Docs: The Manifest
