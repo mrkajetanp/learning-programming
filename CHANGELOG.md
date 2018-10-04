@@ -2,6 +2,10 @@
 
 ---
 
+#### 4.10.2018
+
+* [Android] Docs: App resources overview
+
 #### 27.09.2018
 
 * [Android] Docs: General reading
