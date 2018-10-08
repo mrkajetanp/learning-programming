@@ -2,6 +2,10 @@
 
 ---
 
+#### 8.10.2018
+
+* [Android] General: Learning about libraries
+
 #### 5.10.2018
 
 * [Android] Docs: General reading
