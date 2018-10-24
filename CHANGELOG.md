@@ -2,6 +2,10 @@
 
 ---
 
+#### 24.10.2018
+
+* [Android] Docs: App fundamentals
+
 #### 23.10.2018
 
 * [Android] Docs: General
