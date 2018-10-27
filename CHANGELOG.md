@@ -2,6 +2,10 @@
 
 ---
 
+#### 27.10.2018
+
+* [Android] WebView Basics
+
 #### 24.10.2018
 
 * [Android] Docs: App fundamentals
