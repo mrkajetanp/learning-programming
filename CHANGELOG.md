@@ -4,6 +4,7 @@
 
 #### 27.10.2018
 
+* [Android] WebView JS support & navigation
 * [Android] WebView Basics
 
 #### 24.10.2018
