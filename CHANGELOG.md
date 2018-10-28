@@ -2,6 +2,10 @@
 
 ---
 
+#### 28.10.2018
+
+* [Android] WebView extension to play videos in the background
+
 #### 27.10.2018
 
 * [Android] WebView JS support & navigation
