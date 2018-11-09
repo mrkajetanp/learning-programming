@@ -12,6 +12,7 @@ import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.util.ExponentialBackOff;
 
+import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.YouTubeScopes;
 
 import com.google.api.services.youtube.model.*;
@@ -41,6 +42,7 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 import pub.devrel.easypermissions.AfterPermissionGranted;
@@ -362,19 +364,24 @@ public class MainActivity extends Activity
          * @throws IOException
          */
         private List<String> getDataFromApi() throws IOException {
-            // Get a list of up to 10 files.
-            List<String> channelInfo = new ArrayList<String>();
-            ChannelListResponse result = mService.channels().list("snippet,contentDetails,statistics")
-                    .setForUsername("GoogleDevelopers")
-                    .execute();
-            List<Channel> channels = result.getItems();
-            if (channels != null) {
-                Channel channel = channels.get(0);
-                channelInfo.add("This channel's ID is " + channel.getId() + ". " +
-                        "Its title is '" + channel.getSnippet().getTitle() + ", " +
-                        "and it has " + channel.getStatistics().getViewCount() + " views.");
+
+            HashMap<String, String> parameters = new HashMap<>();
+            parameters.put("part", "snippet,contentDetails,statistics");
+            parameters.put("id", "Bcqb7kzekoc");
+
+            YouTube.Videos.List videosListByIdRequest = mService.videos().list(parameters.get("part"));
+            if (parameters.containsKey("id") && parameters.get("id") != "") {
+                videosListByIdRequest.setId(parameters.get("id"));
             }
-            return channelInfo;
+
+            VideoListResponse response = videosListByIdRequest.execute();
+            System.out.println(response);
+
+            List<String> result = new ArrayList<>();
+            result.add(response.getItems().get(0).getSnippet().getTitle());
+            result.add(response.getItems().get(0).getSnippet().getChannelTitle());
+
+            return result;
         }
 
 

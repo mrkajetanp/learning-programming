@@ -4,6 +4,7 @@
 
 #### 9.11.2018
 
+* [Android] YouTube Data API Video Data
 * [Android] YouTube Data API Example
 
 #### 28.10.2018
