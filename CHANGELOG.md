@@ -2,6 +2,10 @@
 
 ---
 
+#### 10.11.2018
+
+* [Android] Trying to implement YouTubeData into youtube-plus
+
 #### 9.11.2018
 
 * [Android] YouTube Data API Video Data
