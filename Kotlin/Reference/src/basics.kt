@@ -154,7 +154,7 @@ class Rectangle(var height: Double, var length: Double) : RectangleProperties {
     }
 }
 
-fun main(args: Array<String>) {
+fun basics() {
     functions()
     variables()
     stringTemplates()
@@ -172,9 +172,9 @@ fun main(args: Array<String>) {
 
     loops()
     collections()
+
+    val rect = Rectangle(8.0, 8.0)
+
+
+    println()
 }
-
-
-
-
-

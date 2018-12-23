@@ -4,6 +4,7 @@
 
 #### 23.12.2018
 
+* [Kotlin] Idioms
 * [Kotlin] Basics
 
 #### 10.11.2018
