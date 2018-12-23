@@ -2,16 +2,16 @@ package com.cajetan.maintestingapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Base64;
 import android.view.KeyEvent;
 import android.webkit.WebSettings;
-import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.cajetan.maintestingapp.media.MediaWebView;
 
 public class WebViewActivity extends AppCompatActivity {
 
     // TODO: extend WebView to try to listen for lifecycle events
-    WebView mWebView;
+    MediaWebView mWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

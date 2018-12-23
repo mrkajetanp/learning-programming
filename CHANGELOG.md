@@ -6,6 +6,19 @@
 
 * [Kotlin] Basics
 
+#### 10.11.2018
+
+* [Android] Trying to implement YouTubeData into youtube-plus
+
+#### 9.11.2018
+
+* [Android] YouTube Data API Video Data
+* [Android] YouTube Data API Example
+
+#### 28.10.2018
+
+* [Android] WebView extension to play videos in the background
+
 #### 27.10.2018
 
 * [Android] WebView JS support & navigation
