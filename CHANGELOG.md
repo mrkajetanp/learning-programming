@@ -2,6 +2,10 @@
 
 ---
 
+#### 23.12.2018
+
+* [Kotlin] Basics
+
 #### 27.10.2018
 
 * [Android] WebView JS support & navigation
