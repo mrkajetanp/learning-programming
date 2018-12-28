@@ -9,7 +9,9 @@ fun main(args: Array<String>) = runBlocking {
     launch { doTask(1000, "Hello")}
 
     coroutineScope {
-        launch { doTask(500, "World") }
+        launch(Dispatchers.Default + CoroutineName("test")) {
+            doTask(500, "World")
+        }
 
         delay(100L)
         println("Task from coroutine scope")

@@ -4,6 +4,7 @@
 
 #### 28.12.2018
 
+* [Kotlin] Coroutines: Context and dispatchers
 * [Kotlin] Coroutines: Basics
 
 #### 23.12.2018
