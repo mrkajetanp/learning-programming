@@ -2,6 +2,10 @@
 
 ---
 
+#### 28.12.2018
+
+* [Kotlin] Coroutines: Basics
+
 #### 23.12.2018
 
 * [Kotlin] Idioms
