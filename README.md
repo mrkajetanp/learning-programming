@@ -42,16 +42,16 @@ Repository with source files I created while learning to program.
 * Check (simple_check only)
 
 ### C++ ###
-* C++ here
+* C++ ...
 
 ### Rust ###
 
-* Rust here
+* Rust ...
 
 ### Java ###
 
-* Java here
+* Java ...
 
 ### Android ###
 
-* Android here
+* Android ...
