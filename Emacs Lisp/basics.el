@@ -36,3 +36,47 @@
   (decf x))
 
 total ;; 55
+
+(require 'cl)  ; get lots of Common Lisp goodies
+
+(setq x 0 total 0)
+(catch 'break
+  (while t
+    (incf total x)
+    (if (> (incf x) 10)
+        (throw 'break total))))
+
+(setq x 0 total 0)
+(while (< x 100)
+  (catch 'continue
+    (incf x)
+    (if (zerop (% x 5))
+        (throw 'continue nil))
+    (incf total x)))
+
+total
+
+(setq x 0 total 0)
+(catch 'break
+  (while t
+    (catch 'continue
+      (incf x)
+      (if (>= x 100)
+          (throw 'break nil))
+      (if (zerop (% x 5))
+          (throw 'continue nil))
+      (incf total x))))
+
+total
+
+(setq x 0)
+
+(loop do
+      (setq x (1+ x))
+      while
+      (< x 10))
+
+x
+
+(loop for i in '(1 2 3 4 5 6)
+      collect (* i i))
