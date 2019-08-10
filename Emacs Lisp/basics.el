@@ -74,9 +74,37 @@ total
 (loop do
       (setq x (1+ x))
       while
-      (< x 10))
+      (< x 1))
 
 x
 
 (loop for i in '(1 2 3 4 5 6)
       collect (* i i))
+
+(setq y 0)
+(incf y 5)
+(decf y)
+
+y
+
+(defun bar()
+  (setq x 8))
+
+(defun foo()
+  (let ((x 6))
+  (bar)
+  x))
+
+(foo)
+
+(if (zerop 1)
+    (message "zeroo")
+  (message "non zero"))
+
+(condition-case nil
+    (message "case here")
+  (error
+   (message "error")))
+
+(ignore-errors
+  (message "ignoring errors in this code"))
