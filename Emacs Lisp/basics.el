@@ -1,3 +1,4 @@
+(require 'cl)  ; get lots of Common Lisp goodies
 
 (concat "foo" "baz" "bar")
 (string= "foo" "bar") ;; false
@@ -36,8 +37,6 @@
   (decf x))
 
 total ;; 55
-
-(require 'cl)  ; get lots of Common Lisp goodies
 
 (setq x 0 total 0)
 (catch 'break
@@ -108,3 +107,31 @@ y
 
 (ignore-errors
   (message "ignoring errors in this code"))
+
+
+(defstruct person
+  "A person structure"
+  name
+  (age 0)
+  (height 0.0))
+
+(make-person)
+(make-person :age 39)
+(make-person :name "Steve" :height 5.83 :age 39)
+
+(defstruct (employee
+            (:include person))
+  "An employee structure"
+  company
+  (level 1)
+  (title "noob"))
+
+(defconst pi 3.14 "Approximation of PI")
+pi
+
+(setq e (make-employee))
+(setf (employee-name e) "Steve"
+      (employee-age e) 39
+      (employee-company e) "Google"
+      (employee-title e) "Janitor")
+e
