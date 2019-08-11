@@ -135,3 +135,91 @@ pi
       (employee-company e) "Google"
       (employee-title e) "Janitor")
 e
+
+(let* ((x 1)
+       (y x)))
+
+x
+y
+
+(expt 2 5)
+(integerp 3)
+(floatp 3.4)
+(floatp 3)
+
+(truncate 3.5)
+(floor 3.3)
+(ceiling 3.3)
+(round 4.3)
+(round 4.6)
+
+(string-to-number "3")
+(number-to-string 3)
+
+(if nil "yes" "no")
+(if t "yes" "no")
+
+(and t nil)
+(or t nil)
+(and t t t nil t)
+
+(string-equal "abc" "abc")
+(string-equal "abc" "Abc")
+(string-equal "abc" 'abc)
+
+(equal 3 3)
+(equal 3 3.3)
+
+(equal '(3 4 5) '(3 4 5))
+
+(setq x "XXX")
+x
+
+;; checks whether it's the same lisp object
+(eq "e" "e")
+(eq x x)
+
+(not (= 3 4)) ;; t
+
+(setq n 8)
+(= (% n 2) 0)
+(zerop (% n 2))
+
+(setq a 3 b 5)
+(+ a b)
+
+(let ((a 9) (b 12))
+  ;; (setq a 4)
+  ;; (setq b 8)
+  (+ a b)
+)
+
+(if (< 3 2)
+  7
+  8
+)
+
+(if (= 2 3)
+  (progn
+    (message "true")
+  )
+  (progn
+    (message "false")
+  )
+)
+
+(defun yay()
+  "Insert yay"
+  (interactive)
+  (insert "Yay!"))
+
+(defun myCommand()
+  "One sentence summary
+
+  More detailed documentation here."
+  (interactive)
+  (let (localVar1 localVar2)
+    ;; do something
+    ;; return last expression
+  )
+)
