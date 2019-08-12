@@ -88,7 +88,41 @@
       )
 )
 
-<testing bloody hell>
-(oh mate)
-[holy shit]
+(defun delete-current-file()
+  (interactive)
+  (let ((currentFile (buffer-file-name)))
+    (when (yes-or-no-p (concat "Delete file?: " currentFile))
+      (kill-buffer (current-buffer))
+      (when currentFile
+        (delete-file currentFile)
+      )
+    )
+  )
+)
+
+(defun highlite-it()
+  (interactive)
+  (if (equal "log" (file-name-extension (buffer-file-name)))
+      (progn
+        (highlight-lines-matching-regexp "ERROR:" 'hi-red-b)
+        (highlight-lines-matching-regexp "NOTE:" 'hi-blue-b)
+      )
+  )
+)
+
+(add-hook 'find-file-hook 'highlite-it)
+
+(defun insert-column-counter(n)
+  (interactive "nEnter the max integer: ")
+  (let ((i 1) colpos)
+    (setq colpos (- (point) (line-beginning-position)))
+    (while (<= i n)
+      (insert (number-to-string i))
+      (forward-line)
+      (beginning-of-line)
+      (forward-char colpos)
+      (setq i (1+ i))
+    )
+  )
+)
 
