@@ -223,3 +223,6 @@ x
     ;; return last expression
   )
 )
+
+(abs 1)
+(abs -1)
