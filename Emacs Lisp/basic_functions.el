@@ -47,6 +47,27 @@
 (string-trim-right "  test  ")
 (string-remove-prefix "test" "testMe")
 
+;; Buffer functions
 
+(save-current-buffer
+  (set-buffer "*scratch*")
+  (insert "test")
+)
+
+(with-current-buffer "*scratch*"
+  (insert "hello there")
+)
+
+(with-temp-buffer
+  (insert "testing friend")
+  (message "%s" (buffer-string))
+)
+
+(setq newBuf (generate-new-buffer "xyz"))
+(save-current-buffer
+  (set-buffer "xyz")
+  ;; (insert "ohh")
+  (message "%s" (buffer-string))
+)
 
 
