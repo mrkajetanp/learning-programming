@@ -35,7 +35,18 @@
   )
 )
 
-"okay_then_my_friedn"
+;; String functions
+
+(match-string 1 "testing ouay")
+(split-string "okay_there_my_friend" "_")
+(string-reverse "oh my god")
+(string-blank-p "  ")
+(string-empty-p "")
+(string-trim "  test  ")
+(string-trim-right "  test  ")
+(string-trim-right "  test  ")
+(string-remove-prefix "test" "testMe")
+
 
 
 
