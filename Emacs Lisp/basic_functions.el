@@ -70,4 +70,22 @@
   (message "%s" (buffer-string))
 )
 
+;; Read/Write File
+
+(find-file "~/.spacemacs")
+(write-region (point-min) (point-max) "text.txt")
+(save-buffer)
+(write-file "test.txt")
+(append-to-file 100 200 "text.txt")
+(kill-buffer "text.txt")
+(find-file "test.t")
+
+(with-temp-file "okay.txt"
+  (insert "test")
+)
+
+(delete-file "okay.txt")
+(delete-file "text.txt")
+(delete-file "test2.txt")
+(delete-file "test.t")
 
