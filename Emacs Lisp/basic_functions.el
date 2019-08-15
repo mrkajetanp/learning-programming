@@ -85,7 +85,25 @@
 )
 
 (delete-file "okay.txt")
-(delete-file "text.txt")
+(delete-file "test.txt")
 (delete-file "test2.txt")
 (delete-file "test.t")
+
+;; File and Directory Functions
+
+(file-exists-p "okay.txt")
+(rename-file "okay.txt" "test.txt")
+(copy-file "test.txt" "test2.txt")
+
+(directory-files ".")
+(make-directory "test")
+(delete-directory "test")
+
+(file-name-directory (buffer-file-name))
+(file-name-nondirectory (buffer-file-name))
+(file-name-extension (buffer-file-name))
+(file-name-sans-extension (buffer-file-name))
+(file-relative-name (buffer-file-name))
+(expand-file-name "basic_functions.el")
+
 
