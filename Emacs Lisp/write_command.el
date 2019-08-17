@@ -72,3 +72,27 @@ and don't indent them."
   )
 )
 
+;; Functions on line
+
+(line-move-visual 3)
+
+(move-beginning-of-line nil)
+(move-end-of-line nil) ;; etsetoe
+
+(beginning-of-line)
+(end-of-line) ;; test
+
+(line-beginning-position)
+(line-end-position)
+
+(forward-line)
+(forward-line 1)
+(forward-line -1)
+
+(next-line)
+(previous-line)
+
+(setq myLine (buffer-substring-no-properties (line-beginning-position) (line-end-position)))
+(message myLine)
+
+
