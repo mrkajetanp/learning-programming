@@ -95,4 +95,27 @@ and don't indent them."
 (setq myLine (buffer-substring-no-properties (line-beginning-position) (line-end-position)))
 (message myLine)
 
+;; Cut Copy Paste to/from kill-ring
 
+(line-beginning-position)
+(line-end-position)
+
+(kill-region 1869 1914)
+(copy-region-as-kill 1869 1914)
+
+(kill-new "cute cat")
+(kill-append " hello there " t)
+
+(yank)
+
+(defun my-select-text-in-quote()
+  "Select text between the nearest left and right quotes."
+  (interactive)
+  (let ($pos ($skipChars "^\""))
+    (skip-chars-backward $skipChars)
+    (setq $pos (point))
+    (skip-chars-forward $skipChars)
+    (push-mark $pos)
+    (setq mark-active t)
+  )
+)
