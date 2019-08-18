@@ -155,3 +155,29 @@ and don't indent them."
     (message "Chosen no")
   )
 )
+
+;; Interactive Form
+
+(defun ask-name (x)
+  (interactive "sEnter your name: ")
+  (message "Name: %s" x)
+)
+
+(defun ask-age (x)
+  (interactive "nEnter your age: ")
+  (message "Age: %d" x)
+)
+
+(defun do-something (x y)
+  (interactive (list "Mary" 22))
+  (message "Name is: %s, age is: %d" x y)
+)
+
+(defun ask-name-and-age (x y)
+  "Ask name and age"
+  (interactive "sEnter your name: 
+nEnter your age: ")
+  (message "Name is: %s, Age is: %d" x y)
+)
+
+
