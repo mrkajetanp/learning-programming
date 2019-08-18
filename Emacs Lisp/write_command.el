@@ -119,3 +119,39 @@ and don't indent them."
     (setq mark-active t)
   )
 )
+
+;; Get User Input
+
+(read-string "Input name: ")
+(read-file-name "Input file name: ")
+(read-directory-name "Directory: ")
+(read-regexp "Regexp: ")
+
+(defun ff-file-name()
+  (interactive)
+  (message "String is %s" (read-file-name "Enter file name: "))
+)
+
+(defun ff-string()
+  (interactive)
+  (message "String is %s" (read-string "Enter string: "))
+)
+
+(require 'ido)
+
+(defun my-pick-one()
+  "Prompt user to pick a choice from the list"
+  (interactive)
+  (let ((choices '("cat" "dog" "dragon" "tiger")))
+    (message "%s" (ido-completing-read "Open bookmark:" choices))
+  )
+)
+
+(if (y-or-n-p "Do it?")
+    (progn
+      (message "Chosen yes")
+    )
+  (progn
+    (message "Chosen no")
+  )
+)
