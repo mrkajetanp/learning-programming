@@ -180,4 +180,50 @@ nEnter your age: ")
   (message "Name is: %s, Age is: %d" x y)
 )
 
+;; Get universal-argument
+
+(defun univ-1 (x)
+  (interactive "P")
+  (message "%s" x)
+  ;; value of x is from universal argument
+)
+
+(defun univ-2 (x)
+  (interactive "p")
+  (message "%s" x)
+  ;; value of x is from universal argument
+)
+
+(defun guniv ()
+  (interactive)
+  (message "%s" current-prefix-arg)
+)
+
+(guniv)
+
+(defun utest (arg1 &optional arg2 arg3)
+  "Sample command to test `universal-argument'."
+  (interactive
+   (cond
+    ((equal current-prefix-arg nil)
+     (list 1 nil nil))
+    ((equal current-prefix-arg '(4))
+     (list 1 2 nil))
+    ((equal current-prefix-arg 2)
+     (list 1 2 3))
+    ;; more special cases
+
+    (t
+     (list
+      (read-string "arg1:")
+      (read-string "arg2:")
+      (read-string "arg3:" )))))
+
+  ;; function body
+  (message "args are: %s %s %s" arg1 arg2 arg3)
+)
+
+(utest 4)
+(utest 4 5)
+(utest 4 5 6)
 
