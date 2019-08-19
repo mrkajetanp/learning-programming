@@ -227,3 +227,36 @@ nEnter your age: ")
 (utest 4 5)
 (utest 4 5 6)
 
+;; Find Replace String in Buffer
+
+;; string replacement in buffer
+
+;; patrickx
+;; mystr1x
+;; myStr2
+
+;; (let ((case-fold-search nil)) ;; case sensitive
+(let ((case-fold-search t))
+  (goto-char (point-min))
+  (while (search-forward "myStr1" nil t)
+    (replace-match "myReplaceStr1"))
+  (goto-char (point-min))
+  (while (search-forward "myStr2" nil t)
+    (replace-match "myReplaceStr2"))
+  )
+
+(replace-match "TEST")
+(match-string 2)
+
+;; idiom for string replacement within a region
+(save-restriction
+  (narrow-to-region pos1 pos2)
+
+  (goto-char (point-min))
+  (while (search-forward "myStr1" nil t)
+    (replace-match "myReplaceStr1"))
+
+  ;; repeat for other string pairs
+  )
+
+
