@@ -259,4 +259,24 @@ nEnter your age: ")
   ;; repeat for other string pairs
   )
 
+;; Using thing-at-point
+
+(defun print-word ()
+  (interactive)
+  (message "%s" (thing-at-point 'word))
+  )
+
+(defun get-boundary-and-thing ()
+  (interactive)
+  (let (bounds pos1 pos2 mything)
+    (setq bounds (bounds-of-thing-at-point 'symbol))
+    (setq pos1 (car bounds))
+    (setq pos2 (cdr bounds))
+    (setq mything (buffer-substring-no-properties pos1 pos2))
+    ;; (delete-region pos1 pos2)
+    (message "begin: [%s], end: [%s], thing: [%s]" pos1 pos2 mything)
+    )
+  )
+
+
 
