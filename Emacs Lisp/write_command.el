@@ -278,5 +278,17 @@ nEnter your age: ")
     )
   )
 
+;; Get Dired Marked File List
+
+(defun myProcessFile (s)
+  (message "path: %s" s)
+  )
+
+(defun dired-my-process-file ()
+  (interactive)
+  (require 'dired)
+  (mapc 'myProcessFile (dired-get-marked-files))
+  )
+
 
 
