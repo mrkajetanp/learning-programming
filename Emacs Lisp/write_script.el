@@ -4,3 +4,9 @@
 (message "argv 2: %s" (elt argv 2))
 (message "argv 3: %s" (elt argv 3))
 
+(with-temp-buffer
+  (insert-file-contents "write_script.el")
+  (message (buffer-string 1 100))
+  )
+
+
