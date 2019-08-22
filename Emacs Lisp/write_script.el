@@ -9,4 +9,9 @@
   (message (buffer-string 1 100))
   )
 
+;; Write File
+
+(write-region (point-min) (point-max) "~/temp.el")
+(append-to-file (point-min) (point-max) "filePath")
+
 
