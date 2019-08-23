@@ -33,3 +33,9 @@
   (print "abc"))
 
 (switch-to-buffer xbuff )
+
+;; String Format
+
+(message (format "%04d-%02d-%02d" 2012 4 10))
+
+
