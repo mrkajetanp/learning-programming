@@ -38,4 +38,16 @@
 
 (message (format "%04d-%02d-%02d" 2012 4 10))
 
+;; Call Shell Command
 
+(shell-command "touch new.txt")
+(shell-command "rm new.txt")
+(shell-command-to-string "ls")
+
+;; open files in Linux desktop
+
+(mapc
+ (lambda (x)
+   (let ((process-connection-type nil))
+     (start-process "" nil "xdg-open" x)) )
+ filePathList)
