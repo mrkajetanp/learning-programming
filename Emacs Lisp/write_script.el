@@ -51,3 +51,16 @@
    (let ((process-connection-type nil))
      (start-process "" nil "xdg-open" x)) )
  filePathList)
+
+;; Get Script Name at Runtime
+
+;; (or nil 2)
+;; (or 2 nil)
+;; (or 3 2)
+
+(or load-file-name buffer-file-name)
+
+(defun get-full-path (@file-relative-path)
+  (concat (file-name-directory (or load-file-name buffer-file-name)) @file-relative-path)
+  )
+
