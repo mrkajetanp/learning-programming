@@ -65,3 +65,35 @@
 (append [1 2 3] [4 5])
 (append [1 2 3] [4 5] nil)
 (append [1 2 3] [4 5] '(6))
+
+;; Sequence Functions
+
+(number-sequence 1 8 2)
+(vconcat (number-sequence 1 3) (number-sequence 3 1 -1))
+
+(append (list 1 2 3) [3 2 1] nil)
+(append (list 1 2 3) [3 2 1])
+(cons 1 (list 4 5 6))
+
+(sequencep 1)
+(sequencep '(1))
+(elt '(1 2 3 4 5) 1)
+(reverse '(1 2 3))
+
+(defun predicate-rising(a b)
+  (< a b))
+
+(defun double(a)
+  (* a 2))
+
+(sort '(6 3 8 7 2) 'predicate-rising)
+(seq-map 'double '(2 3 4 5 6))
+
+(defun positive(a)
+  (> a 0))
+
+(seq-filter 'positive '(2 3 -1 0 8 -4 5))
+(member "4" '("3" "4" "5" "6"))
+
+(setq xx '(3 4 5 3 2 3 5 1))
+(sort (delete-dups xx) 'predicate-rising)
