@@ -42,3 +42,26 @@
 (mapconcat 'identity '("a" "b" "c") ",")
 
 (substring (format "%s" '(1 "two" 3)) 1 -1)
+
+;; Vector
+
+(make-vector 5 0)
+(vector 3 4 5)
+
+(setq x 7)
+(vector 1 2 x)
+[3 n 5]
+(setq aa [3 4 5])
+(fillarray aa nil)
+(length (vector 7 5 3))
+(aref ["a" "b" "c"] 0)
+(elt ["a" "b" "c"] 1)
+(aset aa 0 "b")
+
+(vconcat [3 4] ["a" "b"])
+(vconcat [3 4] "ab")
+
+(append [1 2 3] nil)
+(append [1 2 3] [4 5])
+(append [1 2 3] [4 5] nil)
+(append [1 2 3] [4 5] '(6))
