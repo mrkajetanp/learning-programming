@@ -139,3 +139,45 @@
   (insert (format "%d" (elt v i)))
   (setq i (1+ i)))
 
+;; Exit Loop/Function, catch/throw
+
+(defun test-exit-f ()
+  (interactive)
+  (catch 'aaa
+    (if (y-or-n-p "exit?")
+        (progn
+          (message "existing")
+          (throw 'aaa 3) ; if yes, exit right away, return 3 to catch
+          )
+      (progn ; else, go on
+        (message "went on")
+        4 ; return 4
+        ))))
+
+(defun test-exit-f2 ()
+  (interactive)
+  (if (y-or-n-p "invoke user-error to exit?")
+      (user-error "Error, because: %s" "you said so!")
+    (progn ; else go on
+      (message "went on")
+      )))
+
+(setq myList [0 1 2 3 4 5])
+
+(catch 'bbb
+  (mapc
+   (lambda (x)
+     (insert (number-to-string x))
+     (when (equal x 3) (throw 'bbb x)))
+   myList)
+  nil
+  )
+
+(while (and (not foundFlag-p) (<= i (length myList)))
+  (when (equal (elt myList i) 3)
+    (setq foundFlag-p t))
+
+  (message "value: %s" i)
+  (setq i (1+ i)))
+
+
