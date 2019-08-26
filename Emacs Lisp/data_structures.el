@@ -97,3 +97,45 @@
 
 (setq xx '(3 4 5 3 2 3 5 1))
 (sort (delete-dups xx) 'predicate-rising)
+
+;; Map List/Vector
+
+(1+ 2)
+(mapcar '1+ '(1 2 3))
+(mapcar 'car '((1 2) (3 4) (5 6)))
+
+(mapcar
+ (lambda (x) (elt x 1))
+ [[1 2] [3 4] [5 6]])
+
+(mapcar
+ (lambda (x) (+ x 1))
+ (list 1 2 3 4))
+
+(mapc
+ (lambda (x) (insert (number-to-string (aref x 0))))
+ [[1 2] [3 4]])
+
+(let ( (xlist (number-sequence 97 122)) )
+  (dolist (n xlist) (insert n)))
+
+(dotimes (i 4)
+  (insert (number-to-string i)))
+
+(let ((v [3 4 5 6 7]))
+  (dotimes (i (length v))
+    (insert
+     (number-to-string
+      (elt v i)))))
+
+(let ((myList '(1 2 3 4)))
+  (while myList
+    (insert (number-to-string (pop myList)))))
+
+(setq v [3 4 5])
+(setq i 0)
+
+(while (< i (length v))
+  (insert (format "%d" (elt v i)))
+  (setq i (1+ i)))
+
