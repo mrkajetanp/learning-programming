@@ -180,4 +180,20 @@
   (message "value: %s" i)
   (setq i (1+ i)))
 
+;; Association List
+
+(setq x
+      '(("mary" . 23)
+        ("john" . 24)
+        ("james" . 26)
+        ("smith" . 33)))
+
+x
+
+(assoc "john" x)
+(car (assoc "john" x))
+(cdr (assoc "john" x))
+
+(rassoc 24 x)
+(rassoc 27 x)
 
