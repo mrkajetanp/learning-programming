@@ -197,3 +197,15 @@ x
 (rassoc 24 x)
 (rassoc 27 x)
 
+;; Property List
+
+(plist-get '(x 1 y 2) 'y)
+(plist-get '(x 1 y 2) 'x)
+(plist-get '(x 1 y 2) 'b)
+
+(setq xx '(a 1 b 2))
+(setq xx (plist-put xx 'b 4))
+(setq xx (plist-put xx 'c 3))
+
+(plist-get xx 'b)
+(plist-member xx 'b)
