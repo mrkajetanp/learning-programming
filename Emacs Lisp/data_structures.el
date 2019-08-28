@@ -216,3 +216,59 @@ x
 (get 'ff 'xx)
 (symbol-plist 'ff)
 (setplist 'ff '(a 1 b 2))
+
+;; Hash Table
+
+(setq myHash (make-hash-table :test 'equal))
+
+(setq myHash
+      #s(hash-table
+         size 30
+         test equal
+         data (
+               "joe" 3
+               "jane" 9
+               "liz" 5 )))
+
+;; test
+(gethash "joe" myHash ) ; 3
+
+(puthash "joe" 19 myHash)
+(puthash "john" 22 myHash)
+(gethash "joe" myHash)
+(gethash "joex" myHash 8)
+(remhash "joe" myHash )
+
+(hash-table-count myHash)
+(clrhash myHash)
+
+(maphash
+ (lambda (k v)
+   (princ (format "%s , %s" k v))
+   (princ "\n"))
+ myHash
+ )
+
+(require 'subr-x)
+(hash-table-keys myHash)
+(hash-table-values myHash)
+
+;; (let ($result)
+;;   (maphash
+;;    (lambda (k v)
+;;      (push (list k v) $result))
+;;    myHash)
+;;   $result)
+
+(print myHash)
+
+(defun my-print-hash (hashtable)
+  "Prints the hashtable, each line is key, val"
+  (maphash
+   (lambda (k v)
+     (princ (format "%s , %s" k v))
+     (princ "\n"))
+   hashtable
+   ))
+
+(my-print-hash myHash)
