@@ -209,3 +209,10 @@ x
 
 (plist-get xx 'b)
 (plist-member xx 'b)
+
+;; Symbol Property List
+
+(put 'ff 'xx 5)
+(get 'ff 'xx)
+(symbol-plist 'ff)
+(setplist 'ff '(a 1 b 2))
