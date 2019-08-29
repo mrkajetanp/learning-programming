@@ -28,3 +28,8 @@
 (intern "x")
 (intern-soft "x")
 
+;; Lisp Special Form
+
+(and t nil)
+(defmacro)
+
