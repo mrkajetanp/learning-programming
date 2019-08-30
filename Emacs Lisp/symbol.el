@@ -33,3 +33,14 @@
 (and t nil)
 (defmacro)
 
+;; What's a Function
+
+(special-form-p 'progn)
+(macrop 'when)
+(commandp 'count-words)
+(functionp 'buffer-file-name)
+(boundp 'buffer-file-name)
+
+(subrp (symbol-function 'list))
+
+
