@@ -43,4 +43,16 @@
 
 (subrp (symbol-function 'list))
 
+;; Is X Defined
+
+(fboundp 'info)
+(fboundp 'setq)
+(fboundp 'xyz)
+
+(boundp 'nil)
+(boundp 'xyz)
+
+(featurep 'ibuffer)
+(featurep 'xyz)
+
 
