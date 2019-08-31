@@ -18,3 +18,53 @@
 
 (format-time-string "%Y-%j")
 
+;; Parsing Date Time
+
+(require 'parse-time)
+
+(equal
+ (parse-time-string "Date: Mon, 01 Aug 2011 12:24:51 -0400")
+ '(51 24 12 1 8 2011 1 nil -14400))
+
+;; (SEC MIN HOUR DAY MON YEAR DOW DST TZ)
+
+(equal
+ (parse-time-string "2007, August 1")
+ '(nil nil nil 1 8 2007 nil nil nil))
+
+(equal
+ (parse-time-string "August 1, 2007")
+ '(nil nil nil 1 8 2007 nil nil nil))
+
+(equal
+ (parse-time-string "august 1, 2007")
+ '(nil nil nil 1 8 2007 nil nil nil))
+
+(equal
+ (parse-time-string "August 1st, 2007")
+ '(nil nil nil nil 8 2007 nil nil nil))
+
+(equal
+ (parse-time-string "aug 1, 2007")
+ '(nil nil nil 1 8 2007 nil nil nil))
+
+(equal
+ (parse-time-string "1 aug, 2007")
+ '(nil nil nil 1 8 2007 nil nil nil))
+
+(equal
+ (parse-time-string "2007-08-01")
+ '(nil nil nil 1 8 2007 nil nil nil))
+
+(equal
+ (parse-time-string "2007")
+ '(nil nil nil nil nil 2007 nil nil nil))
+
+(equal
+ (parse-time-string "2007-08")
+ '(nil nil nil nil nil nil nil nil nil))
+
+(equal
+ (parse-time-string "2011-08-01T11:55:37-07:00")
+ '(nil nil nil nil nil nil nil nil nil))
+
