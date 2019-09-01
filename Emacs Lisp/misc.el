@@ -68,7 +68,7 @@
  (parse-time-string "2011-08-01T11:55:37-07:00")
  '(nil nil nil nil nil nil nil nil nil))
 
-;; Funcction Optional Parameters
+;; Function Optional Parameters
 
 (defun myfun (aa bb &optional cc dd)
   "test optional arguments"
@@ -85,3 +85,8 @@
 
 ;; test
 (ff "1" "2" "3" "4")
+
+;; Regex
+
+(re-search-forward
+ "<img src=\"\\([^\"]+?\\)\" alt=\"\\([^\"]+?\\)\" width=\"\\([0-9]+\\)\" height=\"\\([0-9]+\\)\" />" )
