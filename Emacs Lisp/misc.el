@@ -68,3 +68,20 @@
  (parse-time-string "2011-08-01T11:55:37-07:00")
  '(nil nil nil nil nil nil nil nil nil))
 
+;; Funcction Optional Parameters
+
+(defun myfun (aa bb &optional cc dd)
+  "test optional arguments"
+  (insert aa bb cc dd)
+  )
+
+;; call it
+(myfun "1" "2" "3" "4")
+
+(defun ff (aa bb &rest cc)
+  "test rest arguments"
+  (message "%s" cc) ; cc is a list
+  )
+
+;; test
+(ff "1" "2" "3" "4")
