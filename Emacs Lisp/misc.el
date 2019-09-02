@@ -90,3 +90,19 @@
 
 (re-search-forward
  "<img src=\"\\([^\"]+?\\)\" alt=\"\\([^\"]+?\\)\" width=\"\\([0-9]+\\)\" height=\"\\([0-9]+\\)\" />" )
+
+;; Docstring Markup
+
+(defun xlsl-mode ()
+  "See URL `http://xahsl.org/sl/ls-emacs.html'."
+  )
+
+(defun xx ()
+  "See Info node `(emacs) Dired'."
+  )
+
+(defun read-lines (file-path)
+  "Return a list of lines of a file at FILE-PATH."
+  (with-temp-buffer
+    (insert-file-contents file)
+    (split-string (buffer-string) "\n" t)))
