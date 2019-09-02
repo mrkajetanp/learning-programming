@@ -106,3 +106,16 @@
   (with-temp-buffer
     (insert-file-contents file)
     (split-string (buffer-string) "\n" t)))
+
+;; Unicode Escape Sequence
+
+;; lower case “a”
+(search-forward "\u0061" )
+
+;; ♥ BLACK HEART SUIT codepoint 9829, #x2665
+(search-forward "\u2665" )
+
+;; 😸 GRINNING CAT FACE WITH SMILING EYES codepoint 128568, #x1f638
+(search-forward "\U0001f638" )
+
+;; ♥ 😸
