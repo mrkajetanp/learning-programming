@@ -164,3 +164,67 @@ Version 2019-06-21"
 
           (goto-char (point-min)))))))
 
+
+(defun xah-cycle-hyphen-underscore-space ( &optional @begin @end )
+  "Cycle {underscore, space, hypen} chars in selection or inside quote/bracket or line.
+When called repeatedly, this command cycles the {“_”, “-”, “ ”} characters, in that order.
+
+The region to work on is by this order:
+ ① if there's active region (text selection), use that.
+ ② If cursor is string quote or any type of bracket, and is within current line, work on that region.
+ ③ else, work on current line.
+
+URL `http://ergoemacs.org/emacs/elisp_change_space-hyphen_underscore.html'
+Version 2017-01-27"
+  (interactive)
+  ;; this function sets a property 「'state」. Possible values are 0 to length of -charArray.
+  (let ($p1 $p2)
+    (if (and @begin @end)
+        (progn (setq $p1 @begin $p2 @end))
+      (if (use-region-p)
+          (setq $p1 (region-beginning) $p2 (region-end))
+        (if (nth 3 (syntax-ppss))
+            (save-excursion
+              (skip-chars-backward "^\"")
+              (setq $p1 (point))
+              (skip-chars-forward "^\"")
+              (setq $p2 (point)))
+          (let (
+                ($skipChars
+                 (if (boundp 'xah-brackets)
+                     (concat "^\"" xah-brackets)
+                   "^\"<>(){}[]“”‘’‹›«»「」『』【】〖〗《》〈〉〔〕（）")))
+            (skip-chars-backward $skipChars (line-beginning-position))
+            (setq $p1 (point))
+            (skip-chars-forward $skipChars (line-end-position))
+            (setq $p2 (point))
+            (set-mark $p1)))))
+    (let* (
+           ($charArray ["_" "-" " "])
+           ($length (length $charArray))
+           ($regionWasActive-p (region-active-p))
+           ($nowState
+            (if (equal last-command this-command )
+                (get 'xah-cycle-hyphen-underscore-space 'state)
+              0 ))
+           ($changeTo (elt $charArray $nowState)))
+      (save-excursion
+        (save-restriction
+          (narrow-to-region $p1 $p2)
+          (goto-char (point-min))
+          (while
+              (re-search-forward
+               (elt $charArray (% (+ $nowState 2) $length))
+               ;; (concat
+               ;;  (elt -charArray (% (+ -nowState 1) -length))
+               ;;  "\\|"
+               ;;  (elt -charArray (% (+ -nowState 2) -length)))
+               (point-max)
+               "NOERROR")
+            (replace-match $changeTo "FIXEDCASE" "LITERAL"))))
+      (when (or (string= $changeTo " ") $regionWasActive-p)
+        (goto-char $p2)
+        (set-mark $p1)
+        (setq deactivate-mark nil))
+      (put 'xah-cycle-hyphen-underscore-space 'state (% (+ $nowState 1) $length)))))
+
