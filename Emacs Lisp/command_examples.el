@@ -228,3 +228,16 @@ Version 2017-01-27"
         (setq deactivate-mark nil))
       (put 'xah-cycle-hyphen-underscore-space 'state (% (+ $nowState 1) $length)))))
 
+(defun xah-underscore-to-space-region (@begin @end)
+  "Change underscore char to space.
+URL `http://ergoemacs.org/emacs/elisp_change_space-hyphen_underscore.html'
+Version 2017-01-11"
+  (interactive "r")
+  (save-excursion
+    (save-restriction
+      (narrow-to-region @begin @end)
+      (goto-char (point-min))
+      (while
+          (re-search-forward "_" (point-max) "NOERROR")
+        (replace-match " " "FIXEDCASE" "LITERAL")))))
+
