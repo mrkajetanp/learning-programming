@@ -534,3 +534,51 @@ Version 2018-03-31"
                     (overlay-put (make-overlay (match-beginning 0) (match-end 0)) 'face 'highlight)
                     (replace-match $toRight "FIXEDCASE" "LITERAL")))))))))))
 
+(defun xah-asciify-text (&optional @begin @end)
+  "Remove accents in some letters and some
+Change European language characters into equivalent ASCII ones, e.g. “café” ⇒ “cafe”.
+When called interactively, work on current line or text selection.
+
+URL `http://ergoemacs.org/emacs/emacs_zap_gremlins.html'
+Version 2018-11-12"
+  (interactive)
+  (let (($charMap
+         [
+          ["ß" "ss"]
+          ["á\\|à\\|â\\|ä\\|ā\\|ǎ\\|ã\\|å\\|ą\\|ă\\|ạ\\|ả\\|ả\\|ấ\\|ầ\\|ẩ\\|ẫ\\|ậ\\|ắ\\|ằ\\|ẳ\\|ặ" "a"]
+          ["æ" "ae"]
+          ["ç\\|č\\|ć" "c"]
+          ["é\\|è\\|ê\\|ë\\|ē\\|ě\\|ę\\|ẹ\\|ẻ\\|ẽ\\|ế\\|ề\\|ể\\|ễ\\|ệ" "e"]
+          ["í\\|ì\\|î\\|ï\\|ī\\|ǐ\\|ỉ\\|ị" "i"]
+          ["ñ\\|ň\\|ń" "n"]
+          ["ó\\|ò\\|ô\\|ö\\|õ\\|ǒ\\|ø\\|ō\\|ồ\\|ơ\\|ọ\\|ỏ\\|ố\\|ổ\\|ỗ\\|ộ\\|ớ\\|ờ\\|ở\\|ợ" "o"]
+          ["ú\\|ù\\|û\\|ü\\|ū\\|ũ\\|ư\\|ụ\\|ủ\\|ứ\\|ừ\\|ử\\|ữ\\|ự"     "u"]
+          ["ý\\|ÿ\\|ỳ\\|ỷ\\|ỹ"     "y"]
+          ["þ" "th"]
+          ["ď\\|ð\\|đ" "d"]
+          ["ĩ" "i"]
+          ["ľ\\|ĺ\\|ł" "l"]
+          ["ř\\|ŕ" "r"]
+          ["š\\|ś" "s"]
+          ["ť" "t"]
+          ["ž\\|ź\\|ż" "z"]
+          [" " " "]       ; thin space etc
+          ["–" "-"]       ; dash
+          ["—\\|一" "--"] ; em dash etc
+          ])
+        $begin $end
+        )
+    (if (null @begin)
+        (if (use-region-p)
+            (setq $begin (region-beginning) $end (region-end))
+          (setq $begin (line-beginning-position) $end (line-end-position)))
+      (setq $begin @begin $end @end))
+    (let ((case-fold-search t))
+      (save-restriction
+        (narrow-to-region $begin $end)
+        (mapc
+         (lambda ($pair)
+           (goto-char (point-min))
+           (while (search-forward-regexp (elt $pair 0) (point-max) t)
+             (replace-match (elt $pair 1))))
+         $charMap)))))
