@@ -582,3 +582,178 @@ Version 2018-11-12"
            (while (search-forward-regexp (elt $pair 0) (point-max) t)
              (replace-match (elt $pair 1))))
          $charMap)))))
+
+(defun xah-replace-straight-quotes (@begin @end)
+  "Replace straight double quotes to curly ones, and others.
+Works on current text block or selection.
+
+Examples of changes:
+ 「\"…\"」 → 「“…”」
+ 「...」 → 「…」
+ 「I’m」 → 「I'm」
+ 「--」 → 「—」
+ 「~=」 → 「≈」
+
+When called in lisp code, @begin and @end are region begin/end positions.
+
+WARNING: this command does not guarantee 100% correct conversion of quotes, because it impossible. You should double check highlighted places after.
+
+URL `http://ergoemacs.org/emacs/elisp_straight_curly_quotes.html'
+Version 2018-03-02"
+  ;; some examples for debug
+  ;; do "‘em all -- done..."
+  ;; I’am not
+  ;; said "can’t have it, can’t, just can’t"
+  ;; ‘I’ve can’t’
+  (interactive
+   (if (use-region-p)
+       (list (region-beginning) (region-end))
+     (let ($p1 $p2)
+       (save-excursion
+         (if (re-search-backward "\n[ \t]*\n" nil "move")
+             (progn (re-search-forward "\n[ \t]*\n")
+                    (setq $p1 (point)))
+           (setq $p1 (point)))
+         (if (re-search-forward "\n[ \t]*\n" nil "move")
+             (progn (re-search-backward "\n[ \t]*\n")
+                    (setq $p2 (point)))
+           (setq $p2 (point))))
+       (list $p1 $p2))))
+
+  (let ( (case-fold-search nil))
+    (save-excursion
+      (save-restriction
+        (narrow-to-region @begin @end )
+        ;; Note: order is important since this is huristic.
+        (xah-replace-pairs-region
+         (point-min) (point-max)
+         [
+          ;; dash and ellipsis etc
+          ["--" " — "]
+          ["—" " — "]
+          ["..." "…"]
+          [" & " " ＆ "]
+          [" :)" " ☺"]
+          [" :(" " ☹"]
+          [" ;)" " 😉"]
+          ["~=" "≈"]
+          [" --> " " ⟶ "]
+          [" , " ", "]
+          ;; fix GNU style ASCII quotes
+          ["``" "“"]
+          ["''" "”"]
+          ;; double straight quote → double curly quotes
+          ["\n\"" "\n“"]
+          [">\"" ">“"]
+          ["(\"" "(“"]
+          [" \"" " “"]
+          ["\" " "” "]
+
+          ["\", " "”, "]
+          ["\",\n" "”,\n"]
+
+          ["\". " "”. "]
+          ["\".\n" "”.\n"]
+          ["\"?" "”?"]
+          ["\";" "”;"]
+          ["\":" "”:"]
+          ["\")" "”)"]
+          ["\"]" "”]"]
+
+          ;; ["\"[" "\”["]
+
+          [".\"" ".”"]
+          [",\"" ",”"]
+          ["!\"" "!”"]
+          ["?\"" "?”"]
+          ["\"<" "”<"]
+          ["\"\n" "”\n"]
+          ] "REPORT" "HILIGHT")
+
+        (xah-replace-pairs-region
+         (point-min) (point-max)
+         [
+          ["  —  " " — "] ; rid of extra space in em-dash
+          ] "REPORT" "HILIGHT")
+
+        (xah-replace-pairs-region
+         (point-min) (point-max)
+         [
+          [" —-> " " ⟶ "]
+          [" <= " " ≤ "]
+          [" >= " " ≥ "]
+          ] "REPORT" "HILIGHT")
+
+        ;; fix straight double quotes by regex
+        (xah-replace-regexp-pairs-region
+         (point-min) (point-max)
+         [
+          ["\\`\"" "“"]
+          ] "FIXEDCASE" "LITERAL-P" "HILIGHT")
+
+        ;; fix single quotes to curly
+        (xah-replace-pairs-region
+         (point-min) (point-max)
+         [
+          [">\'" ">‘"]
+          [" \'" " ‘"]
+          ["\' " "’ "]
+          ["\'," "’,"]
+          [".\'" ".’"]
+          ["!\'" "!’"]
+          ["?\'" "?’"]
+          ["(\'" "(‘"]
+          ["\')" "’)"]
+          ["\']" "’]"]
+          ] "REPORT" "HILIGHT")
+
+        (xah-replace-regexp-pairs-region
+         (point-min) (point-max)
+         [
+          ["\\bcan’t\\b" "can't"]
+          ["\\bdon’t\\b" "don't"]
+          ["\\bdoesn’t\\b" "doesn't"]
+          ["\\bwon’t\\b" "won't"]
+          ["\\bisn’t\\b" "isn't"]
+          ["\\baren’t\\b" "aren't"]
+          ["\\bain’t\\b" "ain't"]
+          ["\\bdidn’t\\b" "didn't"]
+          ["\\baren’t\\b" "aren't"]
+          ["\\bwasn’t\\b" "wasn't"]
+          ["\\bweren’t\\b" "weren't"]
+          ["\\bcouldn’t\\b" "couldn't"]
+          ["\\bshouldn’t\\b" "shouldn't"]
+
+          ["\\b’ve\\b" "'ve"]
+          ["\\b’re\\b" "'re"]
+          ["\\b‘em\\b" "'em"]
+          ["\\b’ll\\b" "'ll"]
+          ["\\b’m\\b" "'m"]
+          ["\\b’d\\b" "'d"]
+          ["\\b’s\\b" "'s"]
+          ["s’ " "s' "]
+          ["s’\n" "s'\n"]
+
+          ["\"$" "”"]
+          ] "FIXEDCASE" "LITERAL-P" "HILIGHT")
+
+        ;; fix back escaped quotes in code
+        (xah-replace-pairs-region
+         (point-min) (point-max)
+         [
+          ["\\”" "\\\""]
+          ["\\”" "\\\""]
+          ] "REPORT" "HILIGHT")
+
+        ;; fix back. quotes in HTML code
+        (xah-replace-regexp-pairs-region
+         (point-min) (point-max)
+         [
+          ["” \\([-a-z]+\\)="       "\" \\1="] ; any 「” some-thing=」
+          ["=”" "=\""]
+          ["/” " "/\" "]
+          ["\\([0-9]+\\)” "     "\\1\" "]
+          ] "FIXEDCASE" nil "HILIGHT"
+         )
+
+        ))))
