@@ -837,3 +837,43 @@ Version 2015-10-05"
           ((string= @to-direction "chinese") $replacePairs)
           ((string= @to-direction "english") (mapcar (lambda (x) (vector (elt x 1) (elt x 0))) $replacePairs))
           (t (user-error "Your 3rd argument 「%s」 isn't valid" @to-direction))))))))
+
+
+
+
+
+(defun what-hexadecimal-value ()
+  "Prints the decimal value of a hexadecimal string under cursor.
+Samples of valid input:
+
+  ffff
+  0xffff
+  #xffff
+  FFFF
+  0xFFFF
+  #xFFFF
+
+Test cases
+  64*0xc8+#x12c 190*0x1f4+#x258
+  100 200 300   400 500 600"
+  (interactive )
+
+  (let (inputStr tempStr p1 p2 )
+    (save-excursion
+      (re-search-backward "[^0-9A-Fa-fx#]" nil t)
+      (forward-char)
+      (setq p1 (point) )
+      (re-search-forward "[^0-9A-Fa-fx#]" nil t)
+      (backward-char)
+      (setq p2 (point) ) )
+
+    (setq inputStr (buffer-substring-no-properties p1 p2) )
+
+    (let ((case-fold-search nil) )
+      (setq tempStr (replace-regexp-in-string "^0x" "" inputStr )) ; C, Perl, …
+      (setq tempStr (replace-regexp-in-string "^#x" "" tempStr )) ; elisp …
+      (setq tempStr (replace-regexp-in-string "^#" "" tempStr ))  ; CSS …
+      )
+
+    (message "Hex %s is %d" tempStr (string-to-number tempStr 16 ) )
+    ))
