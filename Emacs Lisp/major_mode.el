@@ -45,3 +45,17 @@
 
 ;; add the mode to the `features' list
 (provide 'mylsl-mode)
+
+
+;; Font Lock Mode
+
+
+(defvar myhtml-highlights nil "first element for `font-lock-defaults'")
+
+(setq myhtml-highlights
+      '(("<h1>\\|</h1>" . font-lock-function-name-face)
+        ("<h1>\\([^<]+?\\)</h1>" . (1 font-lock-constant-face))))
+
+(define-derived-mode myhtml-mode fundamental-mode "myhtml"
+  "major mode for editing myhtml language code."
+  (setq font-lock-defaults '(myhtml-highlights)))
