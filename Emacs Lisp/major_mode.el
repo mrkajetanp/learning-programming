@@ -59,3 +59,21 @@
 (define-derived-mode myhtml-mode fundamental-mode "myhtml"
   "major mode for editing myhtml language code."
   (setq font-lock-defaults '(myhtml-highlights)))
+
+;; Define Face
+
+(defface my-lang-phi-word
+  '((t :foreground "black"
+       :background "aquamarine"
+       :weight bold
+       :underline t
+       ))
+  "Face for function parameters."
+  :group 'my-lang-mode )
+
+(defface my-lang-gamma-word
+  '((t :foreground "red"
+       :background "#f5f5f5"
+       ))
+  "Face for global variables."
+  :group 'my-lang-mode )
