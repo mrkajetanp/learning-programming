@@ -114,3 +114,19 @@
   (set-syntax-table xpy-mode-syntax-table)
   ;; actually no need, because our syntax table name is “xpy-mode” + “-syntax-table”, so define-derived-mode will find it and set it
   )
+
+
+;; Java Style Comments
+
+(defvar xjv-mode-syntax-table nil "Syntax table for `xjv-mode'.")
+
+(setq xjv-mode-syntax-table
+      (let ( (synTable (make-syntax-table)))
+        ;; comment style “/* … */”
+        (modify-syntax-entry ?\/ ". 14" synTable)
+        (modify-syntax-entry ?* ". 23" synTable)
+        synTable))
+
+(define-derived-mode xjv-mode prog-mode "xjv"
+  "xjv-mode is a major mode for editing language xjv."
+  (setq font-lock-defaults (list nil)))
