@@ -130,3 +130,19 @@
 (define-derived-mode xjv-mode prog-mode "xjv"
   "xjv-mode is a major mode for editing language xjv."
   (setq font-lock-defaults (list nil)))
+
+;; Comment Command
+
+(define-derived-mode css-mode fundamental-mode "CSS"
+  "Major mode to edit Cascading Style Sheets."
+
+  (setq-local font-lock-defaults css-font-lock-defaults)
+
+  (setq-local comment-start "/*")
+  (setq-local comment-start-skip "/\\*+[ \t]*")
+  (setq-local comment-end "*/")
+  (setq-local comment-end-skip "[ \t]*\\*+/")
+
+  ;; ...
+
+  )
