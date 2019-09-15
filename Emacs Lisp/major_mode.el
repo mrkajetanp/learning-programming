@@ -236,3 +236,29 @@
 (define-derived-mode xyz-mode c-mode "xyz"
   "Major mode for editing xyz lang code …"
   (add-hook 'completion-at-point-functions 'xyz-completion-at-point nil 'local))
+
+(defun xyz-complete-symbol ()
+  "Perform keyword completion on word before cursor."
+  (interactive)
+  (let ((posEnd (point))
+        (meat (thing-at-point 'symbol))
+        maxMatchResult)
+
+    ;; when nil, set it to empty string, so user can see all lang's keywords.
+    ;; if not done, try-completion on nil result lisp error.
+    (when (not meat) (setq meat ""))
+    (setq maxMatchResult (try-completion meat xyz-keywords))
+
+    (cond ((eq maxMatchResult t))
+          ((null maxMatchResult)
+           (message "Can't find completion for “%s”" meat)
+           (ding))
+          ((not (string= meat maxMatchResult))
+           (delete-region (- posEnd (length meat)) posEnd)
+           (insert maxMatchResult))
+          (t (message "Making completion list…")
+             (with-output-to-temp-buffer "*Completions*"
+               (display-completion-list
+                (all-completions meat xyz-keywords)
+                meat))
+             (message "Making completion list…%s" "done")))))
