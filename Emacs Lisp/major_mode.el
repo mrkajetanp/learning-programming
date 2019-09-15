@@ -213,3 +213,26 @@
       (while (>= (point) p1)
         (my-uncomment-current-line)
         (previous-line) )) ))
+
+;; this is your lang's keywords
+(setq xyz-keywords
+      '("touch"
+        "touch_start"
+        "touch_end"
+        "for"
+        "foreach"
+        "forall"
+        ))
+
+(defun xyz-completion-at-point ()
+  "This is the function to be used for the hook `completion-at-point-functions'."
+  (interactive)
+  (let* (
+         (bds (bounds-of-thing-at-point 'symbol))
+         (start (car bds))
+         (end (cdr bds)))
+    (list start end xyz-keywords . nil )))
+
+(define-derived-mode xyz-mode c-mode "xyz"
+  "Major mode for editing xyz lang code …"
+  (add-hook 'completion-at-point-functions 'xyz-completion-at-point nil 'local))
