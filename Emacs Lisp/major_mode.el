@@ -295,6 +295,7 @@
 
 p
 
-
-
-
+(defun x-make-word-red (begin end)
+  "make current region colored red, using text properties"
+  (interactive "r")
+  (put-text-property begin end 'font-lock-face '(:foreground "red")))
