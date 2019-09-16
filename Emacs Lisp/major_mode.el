@@ -262,3 +262,39 @@
                 (all-completions meat xyz-keywords)
                 meat))
              (message "Making completion list…%s" "done")))))
+
+
+(setq xem-abbrev-table nil)
+
+(define-abbrev-table 'xem-abbrev-table
+  '(
+    ("d" "(defun f▮ ()\n  \"DOCSTRING\"\n  (interactive)\n  (let (VAR)\n\n  ))" )
+    ("i" "(insert ▮)" )
+    ("l" "(let (x▮)\n x\n)" )
+    ("m" "(message \"%s▮\" ARGS)" )
+    ("p" "(point)" )
+    ("s" "(setq ▮ VAL)" )
+    ("w" "(when ▮)" )
+    ("bsnp" "(buffer-substring-no-properties START▮ END)" )
+    ;; hundreds more
+    )
+  "Abbrev table for `xem'"
+  )
+
+(abbrev-table-put xem-abbrev-table :regexp "\\([_-*0-9A-Za-z]+\\)")
+(abbrev-table-put xem-abbrev-table :case-fixed t)
+(abbrev-table-put xem-abbrev-table :system t)
+
+(define-derived-mode xem prog-mode "∑lisp"
+  "A major mode for emacs lisp...."
+
+  (abbrev-mode 1)
+
+  :abbrev-table xem-abbrev-table ; actually, we don't need this line, because our name is “xem” + “-abbrev-table” so define-derived-mode will find it and set for us
+  )
+
+p
+
+
+
+
