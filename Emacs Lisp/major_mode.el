@@ -313,3 +313,17 @@
   (interactive "r")
   (put-text-property begin end 'font-lock-face '(:foreground "blue"))
   (put-text-property begin end 'keymap x-keymap))
+
+(defun xah-make-overlay-bold-region (@begin @end)
+  "make the region bold, using overlay.
+Version 2016-11-01"
+  (interactive "r")
+  (progn
+    (overlay-put (make-overlay @begin @end) 'face 'bold)
+    (setq mark-active nil )))
+
+(defun xah-remove-overlays-region (@begin @end)
+  "Remove overlays.
+Version 2016-11-01"
+  (interactive "r")
+  (remove-overlays @begin @end))
