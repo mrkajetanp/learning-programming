@@ -293,9 +293,23 @@
   :abbrev-table xem-abbrev-table ; actually, we don't need this line, because our name is “xem” + “-abbrev-table” so define-derived-mode will find it and set for us
   )
 
-p
-
 (defun x-make-word-red (begin end)
   "make current region colored red, using text properties"
   (interactive "r")
   (put-text-property begin end 'font-lock-face '(:foreground "red")))
+
+(defun x-open-me ()
+  "open a file, using current line as file name/path"
+  (interactive)
+  (find-file
+   (buffer-substring-no-properties (line-beginning-position) (line-end-position))))
+
+(defvar x-keymap nil "sample keymap")
+(setq x-keymap (make-sparse-keymap))
+(define-key x-keymap (kbd "RET") 'x-open-me)
+
+(defun x-add-prop (begin end)
+  "add text properties to a region."
+  (interactive "r")
+  (put-text-property begin end 'font-lock-face '(:foreground "blue"))
+  (put-text-property begin end 'keymap x-keymap))
