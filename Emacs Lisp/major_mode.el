@@ -347,3 +347,24 @@ This command switches to browser."
     (browse-url (concat "http://en.wikipedia.org/wiki/" word))
     ;; (eww myUrl) ; emacs's own browser
     ))
+
+;; Syntax Table
+
+;; typical way to create and set syntax table
+
+(defvar xpy-mode-syntax-table nil "Syntax table for `xpy-mode'.")
+
+(setq xpy-mode-syntax-table
+      (let ( (synTable (make-syntax-table)))
+
+        ;; set/modify each char's class
+        (modify-syntax-entry ?# "<" synTable)
+        (modify-syntax-entry ?\n ">" synTable)
+        ;; more lines here ...
+
+        ;; return it
+        synTable))
+
+;; then, have this line inside your mode definition. So that, when user calls your major mode, it will set syntax table for whatever is the current buffer of user
+(set-syntax-table xpy-mode-syntax-table)
+
