@@ -368,3 +368,5 @@ This command switches to browser."
 ;; then, have this line inside your mode definition. So that, when user calls your major mode, it will set syntax table for whatever is the current buffer of user
 (set-syntax-table xpy-mode-syntax-table)
 
+
+
