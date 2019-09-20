@@ -8,4 +8,4 @@ a_list.extend(['d', 'e', 'f'])
 
 a_list = ['aa', 'bb', 'cc', 'dd', 'aa']
 
-print(a_list.count('aa'))
+print("Count: {}".format(a_list.count('aa')))
