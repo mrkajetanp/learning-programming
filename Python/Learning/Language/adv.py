@@ -29,3 +29,14 @@ print(a_set)
 print(b_set)
 
 print(b_set.intersection(a_set))
+
+import os
+
+print(os.path.expanduser('~'))
+
+pathname = '/Users/pilgrim/diveintopython3/examples/humansize.py'
+
+(dirname, filename) = os.path.split(pathname)
+print(os.path.splitext(filename))
+
+print(os.getcwd())
