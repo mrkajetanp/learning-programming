@@ -40,3 +40,13 @@ pathname = '/Users/pilgrim/diveintopython3/examples/humansize.py'
 print(os.path.splitext(filename))
 
 print(os.getcwd())
+
+pattern = "^M?M?"
+
+import re
+
+print(pattern)
+print(re.search(pattern, 'M'))
+
+phonePattern = re.compile(r'^(\d{3})-(\d{3})-(\d{4})-(\d+)$')
+print(phonePattern.search('800-555-1212-1234').groups())
