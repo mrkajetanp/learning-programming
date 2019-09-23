@@ -80,3 +80,9 @@ class Fib:
             raise StopIteration
         self.a, self.b = self.b, self.a + self.b
         return fib
+
+import itertools
+
+print(list(itertools.product('ABC', '123')))
+print(list(range(0, 3)))
+print(list(zip(range(0, 3), range(10, 13))))
