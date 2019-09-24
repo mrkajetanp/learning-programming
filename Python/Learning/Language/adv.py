@@ -86,3 +86,5 @@ import itertools
 print(list(itertools.product('ABC', '123')))
 print(list(range(0, 3)))
 print(list(zip(range(0, 3), range(10, 13))))
+
+eval("__import__('math').sqrt(5)", {"__builtins__":None}, {})
