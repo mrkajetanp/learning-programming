@@ -171,3 +171,18 @@ def to_roman(n):
             result += numeral
             n -= integer
     return result
+
+def from_roman(s):
+    '''convert Roman numeral to integer'''
+    if not s:                                                                  
+        raise InvalidRomanNumeralError('Input can not be blank')
+    if not re.search(romanNumeralPattern, s):
+        raise InvalidRomanNumeralError('Invalid Roman numeral: {}'.format(s))  
+
+    result = 0
+    index = 0
+    for numeral, integer in romanNumeralMap:
+        while s[index:index+len(numeral)] == numeral:
+            result += integer
+            index += len(numeral)
+    return result
