@@ -162,8 +162,8 @@ if __name__ == '__main__':
 def to_roman(n):
     '''convert integer to Roman numeral'''
 
-    if not (0 < n < 4000):                                              
-        raise OutOfRangeError('number out of range (must be 1..3999)')  
+    if not (0 < n < 4000):
+        raise OutOfRangeError('number out of range (must be 1..3999)')
 
     result = ''
     for numeral, integer in roman_numeral_map:
@@ -186,3 +186,8 @@ def from_roman(s):
             result += integer
             index += len(numeral)
     return result
+
+with open('examples/chinese.txt', encoding='utf-8') as a_file:
+    a_file.seek(17)
+    a_character = a_file.read(1)
+    print(a_character)
