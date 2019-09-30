@@ -7,3 +7,5 @@ print(21 & 15 << 4 ^ 317)
 
 # [Lab] Basics - Variables and Expressions
 
+# [Lab] Basics - Classes and Operators
+
