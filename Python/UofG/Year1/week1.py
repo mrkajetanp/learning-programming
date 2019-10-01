@@ -9,3 +9,5 @@ print(21 & 15 << 4 ^ 317)
 
 # [Lab] Basics - Classes and Operators
 
+# [Lecture] CS1F - ER database diagrams
+
