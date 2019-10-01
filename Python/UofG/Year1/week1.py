@@ -11,3 +11,5 @@ print(21 & 15 << 4 ^ 317)
 
 # [Lecture] CS1F - ER database diagrams
 
+# [Lecture] CS1F - Database relationships
+
