@@ -9,5 +9,13 @@
 
 
 
+for i in range(0, 10, 2):
+    print(i)
+
 for i in range(10):
     print(i)
+
+    if i%3 == 0:
+        continue
+
+    print("*" * i)
