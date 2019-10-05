@@ -21,3 +21,5 @@ for i in range(10):
 
 
 # [Tutorial] CS1F - Database design
+
+# [Tutorial] CS1F - ER diagram
