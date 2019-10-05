@@ -8,7 +8,6 @@
 # [Lecture] CS1F - ER diagram exercises
 
 
-
 for i in range(0, 10, 2):
     print(i)
 
@@ -19,3 +18,6 @@ for i in range(10):
         continue
 
     print("*" * i)
+
+
+# [Tutorial] CS1F - Database design
