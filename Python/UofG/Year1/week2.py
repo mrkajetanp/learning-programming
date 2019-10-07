@@ -29,3 +29,5 @@ for i in range(10):
 # [Tutorial] CS1F - ER diagram - Relationships
 
 # [Lab] CS1P - Control flow statements
+
+# [Lab] CS1P - Monte Carlo approximation
