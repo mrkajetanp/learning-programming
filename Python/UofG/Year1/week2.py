@@ -27,3 +27,5 @@ for i in range(10):
 # [Tutorial] CS1F - ER diagram - Entities & attributes
 
 # [Tutorial] CS1F - ER diagram - Relationships
+
+# [Lab] CS1P - Control flow statements
