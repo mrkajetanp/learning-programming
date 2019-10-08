@@ -34,6 +34,8 @@ for i in range(10):
 
 # [Lecture] CS1F - ER diagram - Cardinality
 
+# [Lecture] CS1F - ER Diagram - Advanced
+
 # [Lecture] CS1P - Reasoning about the control flow
 
 # [Lecture] CS1P - Intricacies of loops
