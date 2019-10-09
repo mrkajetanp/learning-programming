@@ -33,3 +33,5 @@ for i in range(10):
 # [Lab] CS1P - Monte Carlo approximation
 
 # [Lecture] CS1F - ER diagram - Cardinality
+
+# [Lecture] CS1P - Reasoning about the control flow
