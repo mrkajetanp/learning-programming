@@ -39,3 +39,5 @@ for i in range(10):
 # [Lecture] CS1P - Reasoning about the control flow
 
 # [Lecture] CS1P - Intricacies of loops
+
+# [Lecture] CS1F - Database integrity
