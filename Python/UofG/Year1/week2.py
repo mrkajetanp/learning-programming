@@ -45,3 +45,5 @@ for i in range(10):
 # [Lecture] CS1F - Database constraints
 
 # [Lecture] CS1P - Elegance of code
+
+# [Lecture] CS1P - Functions & program structure
