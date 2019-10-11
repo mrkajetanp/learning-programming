@@ -43,3 +43,5 @@ for i in range(10):
 # [Lecture] CS1F - Database integrity
 
 # [Lecture] CS1F - Database constraints
+
+# [Lecture] CS1P - Elegance of code
