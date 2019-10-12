@@ -47,3 +47,11 @@ for i in range(10):
 # [Lecture] CS1P - Elegance of code
 
 # [Lecture] CS1P - Functions & program structure
+
+def test(a):
+    return a, a*2, a*3
+
+one, two, three = test(10)
+
+
+print("{} {} {}".format(one, two, three))
