@@ -52,6 +52,8 @@ def test(a):
     return a, a*2, a*3
 
 one, two, three = test(10)
-
+x = test(5)
 
 print("{} {} {}".format(one, two, three))
+print(x)
+
