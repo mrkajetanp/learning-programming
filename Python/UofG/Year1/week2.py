@@ -57,3 +57,4 @@ x = test(5)
 print("{} {} {}".format(one, two, three))
 print(x)
 
+print(list(sorted(reversed(test(3)))))
