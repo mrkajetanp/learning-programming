@@ -58,3 +58,4 @@ print("{} {} {}".format(one, two, three))
 print(x)
 
 print(list(sorted(reversed(test(3)))))
+print([(x/2)**2 for x in sorted(reversed(test(4)))])
