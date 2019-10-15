@@ -3,3 +3,5 @@
 # [Lab] CS1P - Recursion
 
 # [Lecture] CS1F - Set theory
+
+# [Lecture] CS1F - Database queries
