@@ -5,3 +5,5 @@
 # [Lecture] CS1F - Set theory
 
 # [Lecture] CS1F - Database queries
+
+# [Lecture] CS1P - Questions about functions
