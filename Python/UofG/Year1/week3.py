@@ -15,3 +15,5 @@
 # [Lecture] CS1F - Relational algebra - Advanced
 
 # [Lecture] CS1P - Lists
+
+# [Lecture] CS1P - Lists & slices
