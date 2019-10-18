@@ -11,5 +11,7 @@
 # [Lecture] CS1P - Designing functions
 
 # [Lecture] CS1F - Relational algebra
-w
+
 # [Lecture] CS1F - Relational algebra - Advanced
+
+# [Lecture] CS1P - Lists
