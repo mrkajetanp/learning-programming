@@ -20,3 +20,7 @@
 
 for i, c in enumerate(list("hello")):
     print("{} and {}".format(i, c))
+
+print([2] * 4)
+print([[3]] * 4)
+
