@@ -24,3 +24,7 @@ for i, c in enumerate(list("hello")):
 print([2] * 4)
 print([[3]] * 4)
 
+l1 = [4] * 5
+print(l1)
+print("{} ; {}".format(4 in l1, 5 in l1))
+
