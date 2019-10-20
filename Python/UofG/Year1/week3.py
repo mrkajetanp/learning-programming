@@ -17,3 +17,6 @@
 # [Lecture] CS1P - Lists
 
 # [Lecture] CS1P - Lists & slices
+
+for i, c in enumerate(list("hello")):
+    print("{} and {}".format(i, c))
