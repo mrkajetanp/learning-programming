@@ -28,3 +28,7 @@ l1 = [4] * 5
 print(l1)
 print("{} ; {}".format(4 in l1, 5 in l1))
 
+l2 = [[ 4 ]] * 3
+print(l2)
+print("{} ; {}".format(4 in l2, [4] in l2))
+
