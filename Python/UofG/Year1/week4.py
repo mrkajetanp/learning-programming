@@ -8,3 +8,5 @@
 # [Lecture] CS1F - Aspects of relational algebra
 
 # [Lecture] CS1P - Aspects of Lists
+
+# [Lecture] CS1P - Tuples
