@@ -6,3 +6,5 @@
 # [Lecture] CS1F - Relational algebra in SQL
 
 # [Lecture] CS1F - Aspects of relational algebra
+
+# [Lecture] CS1P - Aspects of Lists
