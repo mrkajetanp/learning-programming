@@ -17,3 +17,5 @@ print(x.pop(0))
 c in "abcdefghijklmnopqrsyxz"
 
 # [Lecture] CS1F - Databases - Others
+
+# [Lecture] CS1F - Databases - Miscellaneous
