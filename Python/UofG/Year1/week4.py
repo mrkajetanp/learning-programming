@@ -14,8 +14,16 @@
 x = [1, 2, 4]
 print(x.pop(0))
 
-c in "abcdefghijklmnopqrsyxz"
+'a' in "abcdefghijklmnopqrsyxz"
 
 # [Lecture] CS1F - Databases - Others
 
 # [Lecture] CS1F - Databases - Miscellaneous
+
+synonyms = { "chemistry": "science", "physics": "science", "tea": "drinks", "coffee": "drinks"}
+keywords = { "science": "upstairs", "drinks": "downstairs", "test": "nope" }
+
+print("science" in keywords)
+
+s = "drinks"
+print(keywords[synonyms[s]] if s in synonyms else keywords[s])
