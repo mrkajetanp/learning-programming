@@ -27,3 +27,8 @@ print("science" in keywords)
 
 s = "drinks"
 print(keywords[synonyms[s]] if s in synonyms else keywords[s])
+
+print()
+
+for x in keywords:
+    print("{} -> {}".format(x, keywords[x]))
