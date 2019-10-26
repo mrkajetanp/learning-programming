@@ -32,3 +32,5 @@ print()
 
 for x in keywords:
     print("{} -> {}".format(x, keywords[x]))
+
+print(len(keywords))
