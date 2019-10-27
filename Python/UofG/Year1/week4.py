@@ -37,3 +37,6 @@ print(len(keywords))
 
 for k, v in keywords.items():
     print("{} -> {}".format(k, v))
+
+tup = (0, 1, 2)
+print(tup[-1])
