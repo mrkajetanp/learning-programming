@@ -4,3 +4,5 @@
 # [Lab] CS1P - Operations on Tuples and Lists
 
 # [Lecture] CS1F - HCI - Basics and introduction
+
+# [Lecture] CS1F - HCI - Course structure
