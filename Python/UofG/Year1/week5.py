@@ -6,3 +6,5 @@
 # [Lecture] CS1F - HCI - Basics and introduction
 
 # [Lecture] CS1F - HCI - Course structure
+
+# [Lecture] CS1P - Hashing time complexity
