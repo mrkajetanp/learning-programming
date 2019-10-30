@@ -8,3 +8,5 @@
 # [Lecture] CS1F - HCI - Course structure
 
 # [Lecture] CS1P - Hashing time complexity
+
+# [Lecture] CS1P - Review and questions
