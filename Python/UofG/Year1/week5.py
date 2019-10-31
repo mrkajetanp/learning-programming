@@ -12,3 +12,5 @@
 # [Lecture] CS1P - Review and questions
 
 # [Lecture] CS1F - HCI Lecture 2
+
+# [Lecture] CS1F - HCI Lecture 2 - Details
