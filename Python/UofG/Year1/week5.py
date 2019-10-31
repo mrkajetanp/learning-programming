@@ -10,3 +10,5 @@
 # [Lecture] CS1P - Hashing time complexity
 
 # [Lecture] CS1P - Review and questions
+
+# [Lecture] CS1F - HCI Lecture 2
