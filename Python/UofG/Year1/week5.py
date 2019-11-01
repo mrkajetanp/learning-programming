@@ -16,3 +16,5 @@
 # [Lecture] CS1F - HCI Lecture 2 - Details
 
 # [Lecture] CS1P -  Details of strings
+
+# [Lecture] CS1P -  Unicode standard
