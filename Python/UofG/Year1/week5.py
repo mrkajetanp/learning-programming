@@ -18,3 +18,5 @@
 # [Lecture] CS1P -  Details of strings
 
 # [Lecture] CS1P -  Unicode standard
+
+# [Lab] CS1P - Reading files
