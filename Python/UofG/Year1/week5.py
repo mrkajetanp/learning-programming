@@ -20,3 +20,6 @@
 # [Lecture] CS1P -  Unicode standard
 
 # [Lab] CS1P - Reading files
+
+# [Lab] CS1P - Writing to files
+
