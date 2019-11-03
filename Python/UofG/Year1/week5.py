@@ -23,3 +23,5 @@
 
 # [Lab] CS1P - Writing to files
 
+# [Lab] CS1P - Operations on strings and data
+
