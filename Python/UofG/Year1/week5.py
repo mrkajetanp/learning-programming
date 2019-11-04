@@ -29,3 +29,5 @@
 
 # [Lab] CS1P - Letter frequency and ciphers
 
+# [Lab] CS1P - Basic cryptography
+
