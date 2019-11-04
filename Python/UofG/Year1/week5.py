@@ -27,3 +27,5 @@
 
 # [Lab] CS1P - ROT13
 
+# [Lab] CS1P - Letter frequency and ciphers
+
