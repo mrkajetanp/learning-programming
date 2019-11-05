@@ -31,3 +31,5 @@
 
 # [Lab] CS1P - Basic cryptography
 
+# [Lecture] CS1F - HCI - Interface Design
+
