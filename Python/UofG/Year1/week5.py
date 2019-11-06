@@ -1,4 +1,15 @@
 
+f = { "a":1, "b":1, "c":2, "d":3}
+g = {2:"d", 3:"a", 4:"b", 1:"c"}
+
+seen = {}
+x = "a"
+
+while x not in seen:
+    print(x, f[x])
+    seen[x] = True
+    x = g[f[x]]
+
 # [Lab] CS1P - Operations on Dictionaries
 
 # [Lab] CS1P - Operations on Tuples and Lists
@@ -36,4 +47,7 @@
 # [Lecture] CS1F - HCI - Usability
 
 # [Lecture] CS1P - Language features and memory management
+
+# [Lecture] CS1P - General iteration, dictonaries and data structures
+
 
