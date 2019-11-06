@@ -35,3 +35,5 @@
 
 # [Lecture] CS1F - HCI - Usability
 
+# [Lecture] CS1P - Language features and memory management
+
