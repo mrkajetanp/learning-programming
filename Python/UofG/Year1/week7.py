@@ -6,3 +6,8 @@
 # [Lecture] CS1P - Debugging
 
 # [Lecture] CS1P - Logging
+
+# [Lab] CS1P - Introduction to logging
+
+
+
