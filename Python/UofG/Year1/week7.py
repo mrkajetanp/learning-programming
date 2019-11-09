@@ -9,5 +9,7 @@
 
 # [Lab] CS1P - Introduction to logging
 
+# [Lab] CS1P - Introduction to optimising
+
 
 
