@@ -13,5 +13,7 @@
 
 # [Lab] CS1P - Debugging
 
+# [Lab] CS1P - Asserting
+
 
 
