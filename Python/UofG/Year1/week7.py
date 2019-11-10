@@ -11,5 +11,7 @@
 
 # [Lab] CS1P - Introduction to optimising
 
+# [Lab] CS1P - Debugging
+
 
 
