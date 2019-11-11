@@ -17,5 +17,7 @@
 
 # [Lab] CS1P - Optimisation
 
+# [Lab] CS1P - Puzzles
+
 
 
