@@ -15,5 +15,7 @@
 
 # [Lab] CS1P - Asserting
 
+# [Lab] CS1P - Optimisation
+
 
 
