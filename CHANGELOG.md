@@ -30,11 +30,11 @@
 #### 16.12.2019
 
 * [Python] Web Scraping: Basics
-
 * [Python] Web Scraping: Practical
 
 #### 17.11.2019
 
+* [Others] Lab Exercises 2
 * [Others] Lab Exercises 1
 
 #### 28.12.2018
