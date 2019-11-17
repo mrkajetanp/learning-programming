@@ -33,6 +33,10 @@
 
 * [Python] Web Scraping: Practical
 
+#### 17.11.2019
+
+* [Others] Lab Exercises 1
+
 #### 28.12.2018
 
 * [Kotlin] Coroutines: Context and dispatchers
