@@ -22,6 +22,10 @@
 * [Python] Web Scraping: Improvements
 * [Python] Web Scraping: Website down scenario
 
+#### 18.12.2019
+
+* [Others] Misc: Improvements and analysis
+
 #### 17.12.2019
 
 * [Python] Misc: Filename processor
