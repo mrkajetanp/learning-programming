@@ -19,5 +19,3 @@
 
 # [Lab] CS1P - Puzzles
 
-
-
