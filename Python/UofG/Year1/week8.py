@@ -3,3 +3,5 @@
 # [Lecture] CS1P - Sounds, gifs & array operations
 
 # [Lecture] CS1F - HCI - State machines
+
+# [Lecture] CS1F - HCI - State machines - Mistakes & errors
