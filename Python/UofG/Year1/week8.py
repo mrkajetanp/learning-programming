@@ -7,3 +7,5 @@
 # [Lecture] CS1F - HCI - State machines - Mistakes & errors
 
 # [Lecture] CS1P - Functional programming
+
+# [Lecture] CS1P - List comprehensions
