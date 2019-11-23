@@ -9,3 +9,5 @@
 # [Lecture] CS1P - Functional programming
 
 # [Lecture] CS1P - List comprehensions
+
+# [Lab] CS1P - Lab Exam Practice Problem
