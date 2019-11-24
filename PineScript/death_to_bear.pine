@@ -15,7 +15,7 @@ EX= input(title = "═════════ Extra ═════════
 
 on_symb= input(title = "Activate weapon symbols", defval = true, type = input.bool)
 mod_symb= input(defval= "EMOJI", title="🔹 Type of symbol = ", options=["EMOJI", "TEXT"])
-//
+
 length = 8
 mult = 2.0
 maj_qual = 6
@@ -30,7 +30,7 @@ buy_3 = 0.0
 buy_4 = 0.0
 buy_5 = 0.0
 buy_6 = 0.0
-// 
+
 upper_s = sum(volume * (change(hlc3) <= 0 ? 0 : hlc3), 14)
 lower_s = sum(volume * (change(hlc3) >= 0 ? 0 : hlc3), 14)
 xmf = rsi(upper_s, lower_s)
