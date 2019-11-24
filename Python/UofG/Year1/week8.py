@@ -13,3 +13,5 @@
 # [Lab] CS1P - Lab Exam Practice Problem
 
 # [Lab] CS1P - Lab Exam Practice Problem - Tests
+
+# [Lab] CS1P - Lab Exam Practice Problem - Optimisation
