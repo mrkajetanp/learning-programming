@@ -8,3 +8,5 @@
 # [Lecture] CS1P - Functional programming, recursion
 
 # [Lecture] CS1F - Debate on Software Engineering ethics
+
+# [Lecture] CS1F - Facebook, ethics & research
