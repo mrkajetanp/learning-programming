@@ -10,3 +10,5 @@
 # [Lecture] CS1F - Debate on Software Engineering ethics
 
 # [Lecture] CS1F - Facebook, ethics & research
+
+# [Lecture] CS1P - Exam and dictionary questions
