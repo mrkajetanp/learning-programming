@@ -12,3 +12,5 @@
 # [Lecture] CS1F - Facebook, ethics & research
 
 # [Lecture] CS1P - Exam and dictionary questions
+
+# [Lecture] CS1P - Hashing review
