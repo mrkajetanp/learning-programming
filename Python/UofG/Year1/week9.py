@@ -16,3 +16,5 @@
 # [Lecture] CS1P - Hashing review
 
 # [Lab] CS1F - Adapting the state machine to slider moves
+
+# [Lab] CS1F - Optimising user experience
