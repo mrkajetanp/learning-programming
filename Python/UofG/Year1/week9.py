@@ -14,3 +14,5 @@
 # [Lecture] CS1P - Exam and dictionary questions
 
 # [Lecture] CS1P - Hashing review
+
+# [Lab] CS1F - Adapting the state machine to slider moves
