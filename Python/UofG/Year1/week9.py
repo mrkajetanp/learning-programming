@@ -20,3 +20,5 @@
 # [Lab] CS1F - Optimising user experience
 
 # [Lab] CS1P - Lab exam preparation
+
+# [Lab] CS1P - Further lab exam adjustments
