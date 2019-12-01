@@ -18,3 +18,5 @@
 # [Lab] CS1F - Adapting the state machine to slider moves
 
 # [Lab] CS1F - Optimising user experience
+
+# [Lab] CS1P - Lab exam preparation
