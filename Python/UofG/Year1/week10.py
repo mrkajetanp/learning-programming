@@ -8,3 +8,5 @@
 # [Lecture] CS1F - Revision lecture - HCI 2
 
 # [Lecture] CS1P - Exam material - Introduction
+
+# [Lecture] CS1P - Exam material - Advanced
