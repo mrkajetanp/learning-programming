@@ -10,3 +10,5 @@
 # [Lecture] CS1P - Exam material - Introduction
 
 # [Lecture] CS1P - Exam material - Advanced
+
+# [Lecture] CS1F - Revision - SQL
