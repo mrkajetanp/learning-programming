@@ -12,3 +12,5 @@
 # [Lecture] CS1P - Exam material - Advanced
 
 # [Lecture] CS1F - Revision - SQL
+
+# [Lecture] CS1F - Revision - Relational Algebra
