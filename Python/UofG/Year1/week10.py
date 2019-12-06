@@ -16,3 +16,5 @@
 # [Lecture] CS1F - Revision - Relational Algebra
 
 # [Lecture] CS1P - Revision - Higher order functions
+
+# [Lecture] CS1P - Revision - Algorithms
