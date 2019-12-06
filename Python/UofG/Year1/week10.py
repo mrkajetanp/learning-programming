@@ -14,3 +14,5 @@
 # [Lecture] CS1F - Revision - SQL
 
 # [Lecture] CS1F - Revision - Relational Algebra
+
+# [Lecture] CS1P - Revision - Higher order functions
