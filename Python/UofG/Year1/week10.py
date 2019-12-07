@@ -20,3 +20,5 @@
 # [Lecture] CS1P - Revision - Algorithms
 
 # [Revision] CS1F - Relational Algebra Quiz
+
+# [Revision] CS1F - SQL Quiz
