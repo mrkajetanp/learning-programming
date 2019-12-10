@@ -29,6 +29,8 @@
 
 # [Revision] CS1F - HCI Research Material
 
+# [Revision] CS1F - HCI User Interface Material
+
 print([1, 2, 3][0:2])
 
 def certify(s, certification="CERTIFIED"):
