@@ -27,6 +27,7 @@
 
 # [Revision] CS1F - IM Practical Material
 
+# [Revision] CS1F - HCI Research Material
 
 print([1, 2, 3][0:2])
 
