@@ -10,3 +10,5 @@
 # [Other] CS1F - HCI Exam Review
 
 # [Other] CS1F - IM Exam Review
+
+# [Other] CS1P - Exam Review #1
