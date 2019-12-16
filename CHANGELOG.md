@@ -6,6 +6,8 @@
 
 * [Python] Web Scraping: Basics
 
+* [Python] Web Scraping: Practical
+
 #### 28.12.2018
 
 * [Kotlin] Coroutines: Context and dispatchers
