@@ -4,6 +4,7 @@
 
 #### 18.12.2019
 
+* [Python] Web Scraping: Improvements
 * [Python] Web Scraping: Website down scenario
 
 #### 17.12.2019
