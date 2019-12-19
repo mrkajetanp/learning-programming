@@ -4,6 +4,7 @@
 
 #### 19.12.2019
 
+* [Python] Web Scraping: Automation
 * [Python] Web Scraping: Analysis
 
 #### 18.12.2019
