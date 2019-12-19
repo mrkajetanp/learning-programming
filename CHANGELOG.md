@@ -2,6 +2,10 @@
 
 ---
 
+#### 19.12.2019
+
+* [Python] Web Scraping: Analysis
+
 #### 18.12.2019
 
 * [Python] Web Scraping: Improvements
