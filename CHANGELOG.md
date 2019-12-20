@@ -2,6 +2,10 @@
 
 ---
 
+#### 20.12.2019
+
+* [Python] Misc: libtorrent basics
+
 #### 19.12.2019
 
 * [Python] Web Scraping: Automation
