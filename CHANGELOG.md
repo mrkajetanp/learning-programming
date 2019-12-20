@@ -4,7 +4,8 @@
 
 #### 20.12.2019
 
-* [Python] Misc: libtorrent basics
+* [Python] Misc: libtorrent - Settings
+* [Python] Misc: libtorrent - Basics
 
 #### 19.12.2019
 
