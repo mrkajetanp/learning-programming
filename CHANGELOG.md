@@ -2,8 +2,9 @@
 
 ---
 
-#### 20.12.2019
+#### 21.12.2019
 
+* [Python] Misc: libtorrent - Structuring the script
 * [Python] Misc: libtorrent - Limiting seeding
 
 #### 20.12.2019
