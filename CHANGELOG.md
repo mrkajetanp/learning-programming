@@ -4,6 +4,10 @@
 
 #### 20.12.2019
 
+* [Python] Misc: libtorrent - Limiting seeding
+
+#### 20.12.2019
+
 * [Python] Misc: libtorrent - Settings
 * [Python] Misc: libtorrent - Basics
 
