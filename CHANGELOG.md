@@ -4,6 +4,7 @@
 
 #### 22.12.2019
 
+* [Python] Misc: libtorrent - Example - Fixes
 * [Python] Misc: libtorrent - Example
 
 #### 21.12.2019
