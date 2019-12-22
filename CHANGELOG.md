@@ -2,6 +2,10 @@
 
 ---
 
+#### 22.12.2019
+
+* [Python] Misc: libtorrent - Example
+
 #### 21.12.2019
 
 * [Python] Misc: libtorrent - Structuring the script
