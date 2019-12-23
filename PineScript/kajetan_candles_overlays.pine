@@ -1,0 +1,175 @@
+//@version=4
+// *** Candle Labels ***
+study(title="Kajetan's Candles & Overlays", overlay=true)
+
+DojiSize = input(0.05, minval=0.01, title="Doji size")
+data = abs(open - close) <= (high - low) * DojiSize
+plotchar(data, title="Doji", text='', color=color.white)
+
+data2 = close[2] > open[2] and min(open[1], close[1]) > close[2] and 
+   open < min(open[1], close[1]) and close < open
+plotshape(data2, title="Evening Star", color=color.red, style=shape.arrowdown, text="Evening\nStar")
+
+data3 = close[2] < open[2] and max(open[1], close[1]) < close[2] and 
+   open > max(open[1], close[1]) and close > open
+plotshape(data3, title="Morning Star", location=location.belowbar, color=color.lime, style=shape.arrowup, text="Morning\nStar")
+
+data4 = open[1] < close[1] and open > close[1] and 
+   high - max(open, close) >= abs(open - close) * 3 and 
+   min(close, open) - low <= abs(open - close)
+plotshape(data4, title="Shooting Star", color=color.red, style=shape.arrowdown, text="Shooting\nStar")
+
+data5 = high - low > 3 * (open - close) and (close - low) / (.001 + high - low) > 0.6 and 
+   (open - low) / (.001 + high - low) > 0.6
+plotshape(data5, title="Hammer", location=location.belowbar, color=color.white, style=shape.diamond)
+
+data5b = high - low > 3 * (open - close) and (high - close) / (.001 + high - low) > 0.6 and 
+   (high - open) / (.001 + high - low) > 0.6
+plotshape(data5b, title="Inverted Hammer", location=location.belowbar, color=color.white, style=shape.diamond)
+
+
+//data6=(close[1] > open[1] and open > close and open <= close[1] and open[1] <= close and open - close < close[1] - open[1] )
+//plotshape(data6, title= "Bearish Harami",  color=red, style=shape.arrowdown, text="Bearish\nHarami")
+
+//data7=(open[1] > close[1] and close > open and close <= open[1] and close[1] <= open and close - open < open[1] - close[1] )
+//plotshape(data7,  title= "Bullish Harami", location=location.belowbar, color=lime, style=shape.arrowup, text="Bullish\nHarami")
+
+data8 = close[1] > open[1] and open > close and open >= close[1] and open[1] >= close and 
+   open - close > close[1] - open[1]
+plotshape(data8, title="Bearish Engulfing", color=color.red, style=shape.triangledown, text="")
+
+data9 = open[1] > close[1] and close > open and close >= open[1] and close[1] >= open and 
+   close - open > open[1] - close[1]
+plotshape(data9, title="Bullish Engulfing", location=location.belowbar, color=color.lime, style=shape.triangleup, text="")
+
+upper = highest(10)[1]
+data10 = close[1] < open[1] and open < low[1] and 
+   close > close[1] + (open[1] - close[1]) / 2 and close < open[1]
+plotshape(data10, title="Piercing Line", location=location.belowbar, color=color.lime, style=shape.arrowup, text="Piercing\nLine")
+
+lower = lowest(10)[1]
+data11 = low == open and open < lower and open < close and 
+   close > (high[1] - low[1]) / 2 + low[1]
+plotshape(data11, title="Bullish Belt", location=location.belowbar, color=color.lime, style=shape.arrowup, text="Bullish\nBelt")
+
+data12 = open[1] > close[1] and open >= open[1] and close > open
+plotshape(data12, title="Bullish Kicker", location=location.belowbar, color=color.lime, style=shape.arrowup, text="Bullish\nKicker")
+
+data13 = open[1] < close[1] and open <= open[1] and close <= open
+plotshape(data13, title="Bearish Kicker", color=color.red, style=shape.arrowdown, text="Bearish\nKicker")
+
+data14 = high - low > 4 * (open - close) and (close - low) / (.001 + high - low) >= 0.75 and 
+   (open - low) / (.001 + high - low) >= 0.75 and high[1] < open and high[2] < open
+plotshape(data14, title="Hanging Man", color=color.red, style=shape.arrowdown, text="Hanging\nMan")
+
+data15 = close[1] > open[1] and (close[1] + open[1]) / 2 > close and open > close and 
+   open > close[1] and close > open[1] and 
+   (open - close) / (.001 + high - low) > 0.6
+plotshape(data15, title="Dark Cloud Cover", color=color.red, style=shape.arrowdown, text="Dark\nCloudCover")
+
+// *** SNAPBACK ***
+
+hps = input(true, title="High Probability Setup")
+
+// Inputs
+src = ohlc4
+len1 = 7
+len2 = 14
+len3 = 21
+
+// Moving Average (Mid Point Fair Value)
+ma1 = sma(src, len1)
+ma2 = sma(src, len2)
+ma3 = sma(src, len3)
+
+// ATR (Dynamic Volatility Units)
+rng1 = sma(tr, len1)
+rng2 = sma(tr, len2)
+rng3 = sma(tr, len3)
+
+// ATR deviation or Secret Sauce of the promoter
+up1 = ma1 + rng1 * 1.6
+up2 = ma2 + rng2 * 2.4
+up3 = ma2 + rng3 * 3.2
+
+dn1 = ma1 - rng1 * 1.6
+dn2 = ma2 - rng2 * 2.4
+dn3 = ma2 - rng2 * 3.2
+
+// High Probability Trade Setup
+ERhigh3 = high > up1 and high > up2 and high > up3 ? 1 : 0
+ERlow3 = low < dn1 and low < dn2 and low < dn3 ? 1 : 0
+
+// Plots Based on Selection
+HiPERh = hps and ERhigh3[1] != 1 and ERhigh3 ? 1 : 0
+HiPERl = hps and ERlow3[1] != 1 and ERlow3 ? 1 : 0
+
+// PLOT
+plotshape(HiPERh, style=shape.diamond, location=location.abovebar, color=#ff5d00, transp=0, size=size.tiny, title="High Probability Setup")
+plotshape(HiPERl, style=shape.diamond, location=location.belowbar, color=#ff5d00, transp=0, size=size.tiny, title="High Probability Setup")
+
+// *** Tops & Bottoms ***
+
+a = input(5, "Percent K Length")
+b = input(3, "Percent D Length")
+
+// Range Calculation
+ll = lowest(low, a)
+hh = highest(high, a)
+diff = hh - ll
+rdiff = close - (hh + ll) / 2
+
+// Nested Moving Average for smoother curves
+avgrel = ema(ema(rdiff, b), b)
+avgdiff = ema(ema(diff, b), b)
+
+// Momentum
+mom = (close - close[b]) / close[b] * 1000
+
+
+// SMI calculations
+SMI = avgdiff != 0 ? avgrel / (avgdiff / 2) * 100 : 0
+SMIsignal = ema(SMI, b)
+
+// Strategy Signals
+// Buy Setup
+long = SMI < -35 and mom > 0 and mom[1] < 0 ? 1 : 0
+
+plotshape(long, style=shape.circle, location=location.belowbar, color=color.yellow, transp=0, size=size.tiny)
+// Short Setup
+short = SMI > 35 and mom < 0 and mom[1] > 0 ? 1 : 0
+plotshape(short, style=shape.xcross, location=location.abovebar, color=color.yellow, transp=0, size=size.tiny)
+
+// *** UT Bot ***
+//CREDITS to HPotter for the orginal code. The guy trying to sell this as his own is a scammer lol. 
+
+// Inputs
+ut_a = input(4, title = "UT Bot Key Value")
+c = input(10, title = "UT Bot ATR Period")
+h = input(false, title = "UT Bot Signals from Heikin Ashi")
+
+xATR  = atr(c)
+nLoss = ut_a * xATR
+
+ut_src = h ? security(heikinashi(syminfo.tickerid), timeframe.period, close, lookahead = false) : close
+
+xATRTrailingStop = 0.0
+xATRTrailingStop := iff(ut_src > nz(xATRTrailingStop[1], 0) and ut_src[1] > nz(xATRTrailingStop[1], 0), max(nz(xATRTrailingStop[1]), ut_src - nLoss),
+   iff(ut_src < nz(xATRTrailingStop[1], 0) and ut_src[1] < nz(xATRTrailingStop[1], 0), min(nz(xATRTrailingStop[1]), ut_src + nLoss), 
+   iff(ut_src > nz(xATRTrailingStop[1], 0), ut_src - nLoss, ut_src + nLoss)))
+ 
+pos = 0   
+pos :=	iff(ut_src[1] < nz(xATRTrailingStop[1], 0) and ut_src > nz(xATRTrailingStop[1], 0), 1,
+   iff(ut_src[1] > nz(xATRTrailingStop[1], 0) and ut_src < nz(xATRTrailingStop[1], 0), -1, nz(pos[1], 0))) 
+   
+xcolor = pos == -1 ? color.red: pos == 1 ? color.green : color.blue 
+
+ema   = ema(ut_src,1)
+above = crossover(ema, xATRTrailingStop)
+below = crossover(xATRTrailingStop, ema)
+
+buy  = ut_src > xATRTrailingStop and above 
+sell = ut_src < xATRTrailingStop and below
+//
+plotshape(buy,  title = "UT Buy",  text = 'Buy',  style = shape.labelup,   location = location.belowbar, color= color.green, textcolor = color.white, transp = 0, size = size.tiny)
+plotshape(sell, title = "UT Sell", text = 'Sell', style = shape.labeldown, location = location.abovebar, color= color.red,   textcolor = color.white, transp = 0, size = size.tiny)
