@@ -1,0 +1,93 @@
+// © ChuckBanger
+//@version=4
+study("Wave Trend With Signals [ChuckBanger]", shorttitle="WTWS CB")
+
+n1 = input(title="Channel Length", type=input.integer, defval=10) //Channel Length
+n2 = input(title="Average Length", type=input.integer, defval=21) //Average Length
+obLevel1 = input(title="Over Bought Level 1", type=input.integer, defval=60) //Over Bought Level 1
+obLevel2 = input(title="Over Bought Level 2", type=input.integer, defval=53) //Over Bought Level 2
+osLevel1 = input(title="Over Sold Level 1", type=input.integer, defval=-60) //Over Sold Level 1
+osLevel2 = input(title="Over Sold Level 2", type=input.integer, defval=-53) //Over Sold Level 2
+
+div_reg_bull = input(title="Show Divergences Regular Bullish", defval=false)
+div_reg_bear = input(title="Show Divergences Regular Bearish", defval=false)
+div_hid_bull = input(title="Show Divergences Hidden Bullish", defval=false)
+div_hid_bear = input(title="Show Divergences Hidden Bearish", defval=false)
+
+useLag = input(title="Apply Laguerre Smoothing", type=input.bool, defval=true)
+gamma = input(title="Laguerre Gamma", type=input.float, defval=0.02)
+
+lag(g, p) => // Laguerre PPO Code from TheLark
+    L0=0.0, L0 := (1 - g)*p+g*nz(L0[1])
+    L1=0.0, L1 := -g*L0+nz(L0[1])+g*nz(L1[1])
+    L2=0.0, L2 := -g*L1+nz(L1[1])+g*nz(L2[1])
+    L3=0.0, L3 := -g*L2+nz(L2[1])+g*nz(L3[1])
+    (L0 + 2*L1 + 2*L2 + L3)/6
+
+ap = hlc3
+esa = ema(ap, n1) 
+apesa = abs(ap - esa)
+d = ema(apesa, n1)
+ci = (ap - esa) / (0.015 * d)
+tci = ema(ci, n2)
+
+
+output = lag(gamma, tci)
+wt1 = useLag ? output : tci
+wt2 = sma(wt1, 4)
+wt3 = (wt1 - wt2)
+
+plot(wt1)
+plot(wt2, color=color.orange)
+
+grow_above = #26A69A
+grow_below = #FFCDD2
+fall_above = #B2DFDB
+fall_below = #EF5350
+
+final_col = (wt3>=0 ? (wt3[1] < wt3 ? grow_above : fall_above) : (wt3[1] < wt3 ? grow_below : fall_below) )
+plot(wt3, color=final_col, style=plot.style_columns) //plot.style_columns, plot.style_histogram
+
+signal1 = crossover(wt1, wt2) and wt1 < osLevel2
+signal2 = crossunder(wt1, wt2) and wt1 > obLevel2
+
+plotshape(signal1 ? wt1 : na, style=shape.xcross, location=location.absolute, size=size.small, color=color.lime)
+plotshape(signal2 ? wt1 : na, style=shape.xcross, location=location.absolute, size=size.small, color=color.red)
+
+hline(obLevel1, linestyle=hline.style_solid)
+hline(obLevel2)
+hline(osLevel1, linestyle=hline.style_solid)
+hline(osLevel2)
+
+top_fractal(_src)=>_src[4] < _src[2] and _src[3] < _src[2] and _src[2] > _src[1] and _src[2] > _src[0]
+bot_fractal(_src)=>_src[4] > _src[2] and _src[3] > _src[2] and _src[2] < _src[1] and _src[2] < _src[0]
+fractalize(_src)=>top_fractal(_src) ? 1 : bot_fractal(_src) ? -1 : 0
+
+fractal_top = fractalize(wt1) > 0 ? wt1[2] : na
+fractal_bot = fractalize(wt1) < 0 ? wt1[2] : na
+
+high_prev  = valuewhen(fractal_top, wt1[2], 0)[2]
+high_price = valuewhen(fractal_top, high[2], 0)[2]
+low_prev   = valuewhen(fractal_bot, wt1[2], 0)[2]
+low_price  = valuewhen(fractal_bot, low[2], 0)[2]
+
+regular_bearish_div = fractal_top  and high[2] > high_price and wt1[2] < high_prev and div_reg_bear == true
+hidden_bearish_div  = fractal_top  and high[2] < high_price and wt1[2] > high_prev and div_hid_bear == true
+regular_bullish_div = fractal_bot  and low[2]  < low_price  and wt1[2] > low_prev and div_reg_bull == true
+hidden_bullish_div  = fractal_bot  and low[2]  > low_price  and wt1[2] < low_prev and div_hid_bull == true
+
+col1 = regular_bearish_div ? color.orange : hidden_bearish_div ? color.orange : na
+col2 = regular_bullish_div ? color.lime : hidden_bullish_div ? color.lime  : na
+
+plot(title='Divergence Bearish', series = fractal_top ? wt1[2] : na, color=col1, linewidth=2, offset=-2, transp=0)
+plot(title='Divergence Bullish', series = fractal_bot ? wt1[2] : na, color=col2, linewidth=2, offset=-2, transp=0)
+
+midpoint = (obLevel2 + osLevel2) / 2
+factor = (osLevel2 - midpoint) / 8
+
+plotshape(regular_bearish_div ? wt1[1] + factor*1 : na, title="Divergence Regular Bearish", text="🐻 R", location=location.absolute, style=shape.labeldown, size=size.tiny, color=color.orange, textcolor=color.white,offset=-2, transp=0)
+plotshape(hidden_bearish_div ? wt1[1] + factor*1 : na, title="Divergence Hidden Bearish", text="🐻 H", location=location.absolute, style=shape.labeldown, size=size.tiny, color=color.orange, textcolor=color.white,offset=-2, transp=0)
+
+plotshape(regular_bullish_div ? wt1[1] - factor*1 : na, title="Divergence Regular Bullish", text="🐂 R", location=location.absolute, style=shape.labelup, size=size.tiny, color=color.lime, textcolor=color.white,offset=-2, transp=0)
+plotshape(hidden_bullish_div ? wt1[1] - factor*1 : na, title="Divergence Hidden Bullish", text="🐂 H", location=location.absolute, style=shape.labelup, size=size.tiny, color=color.lime, textcolor=color.white,offset=-2, transp=0)
+
