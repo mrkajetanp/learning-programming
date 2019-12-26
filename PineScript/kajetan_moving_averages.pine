@@ -29,3 +29,82 @@ plot(wma(close, wma_length), linewidth=2, color=#9598a2, transp=0, title="WMA")
 
 // VWAP
 // plot(vwap(close), color=#ffffff, transp=0, linewidth=2, title="VWAP", trackprice=true)
+
+// *** Slingshot System ***
+
+enabled = input(true, title="Enable the Slingshot System")
+
+//Created us usgears on 10-7-2014
+//ChrisMoody contributed a few cosmetic options.
+sae = input(true, title="Show Aggressive Entry")
+sce = input(true, title="Show Conservative Entry")
+st = input(true, title="Show Trend Arrows at Top and Bottom")
+pa = input(true, title="Show Conservative Entry Arrows")
+
+ma1 = ema(close, 13)
+ma2 = ema(close, 21)
+ma3 = ema(close, 34)
+ma = ema(close, 89)
+
+range = tr
+rangema = ema(range, 89)
+upper = ma + rangema * 0.5
+lower = ma - rangema * 0.5
+midChan = (upper + lower) / 2
+//Trend Definition
+tr_up = ma1 > upper and ma2 > upper and ma3 > upper
+tr_down = ma1 < lower and ma2 < lower and ma3 < lower
+//Aggressive Entry
+pullbackUpT() =>
+    tr_up and close < upper
+pullbackDnT() =>
+    tr_down and close > lower
+//Conservative Entry
+entryUpT() =>
+    tr_up and close[1] < upper and close > upper
+entryDnT() =>
+    tr_down and close[1] > lower and close < lower
+//Conservative Entry True/False Condition
+entryUpTrend = ma1 > upper and ma2 > upper and ma3 > upper and close[1] < upper and 
+   close > upper ? 1 : 0
+entryDnTrend = ma1 < lower and ma2 < lower and ma3 < lower and close[1] > lower and 
+   close < lower ? 1 : 0
+
+//Define Up and Down Trend for Trend Arrows at Top and Bottom of Screen
+upTrend = ma1 > upper and ma2 > upper and ma3 > upper
+downTrend = ma1 < lower and ma2 < lower and ma3 < lower
+
+//Definition for Conseervative Entry Up and Down PlotArrows
+codiff = entryUpTrend == 1 ? entryUpTrend : 0
+codiff2 = entryDnTrend == 1 ? entryDnTrend : 0
+
+//Trend Color Definition for Moving Averages and Channel
+scolor = tr_up ? color.green : tr_down ? color.red : color.blue
+trend_num = tr_up ? 1 : tr_down ? -1 : 0
+
+alertcondition(change(trend_num), "Trend Change", "SlingShot Trend Change")
+
+pullbackDnT_1 = pullbackDnT()
+barcolor(enabled and sae and pullbackUpT() ? color.yellow : enabled and sae and pullbackDnT_1 ? color.yellow : na)
+entryDnT_1 = entryDnT()
+barcolor(enabled and sce and entryUpT() ? color.aqua : enabled and sce and entryDnT_1 ? color.aqua : na)
+//Plot 3 MA's
+plot(enabled ? ma1 : na, title="Fast MA", color=scolor, style=plot.style_circles, linewidth=1, transp=0)
+plot(enabled ? ma2 : na, title="Medium MA", color=scolor, style=plot.style_circles, linewidth=2, transp=0)
+plot(enabled ? ma3 : na, title="Slow MA", color=scolor, style=plot.style_circles, linewidth=3, transp=0)
+//Channel Plots
+p1 = plot(enabled ? upper : na, title="Upper Channel", color=scolor, style=plot.style_line, linewidth=3)
+p2 = plot(enabled ? midChan : na, title="Upper Channel", color=color.silver, style=plot.style_line, linewidth=1)
+p3 = plot(enabled ? lower : na, title="Lower Channel", color=scolor, style=plot.style_line, linewidth=3)
+fill(p1, p2, color=color.lime, transp=70)
+fill(p2, p3, color=color.red, transp=70)
+
+//Trend Triangles at Top and Bottom of Screen
+plotshape(enabled and st and upTrend ? upTrend : na, title="Conservative Buy Entry Triangle", style=shape.triangleup, location=location.bottom, color=color.lime, transp=0, offset=0)
+plotshape(enabled and st and downTrend ? downTrend : na, title="Conservative Short Entry Triangle", style=shape.triangledown, location=location.top, color=color.red, transp=0, offset=0)
+
+//Plot Arrows OR Letters ↑ and ↓ for Buy Sell Signals
+plotarrow(enabled and pa and codiff ? codiff : na, title="Up Entry Arrow", colorup=color.lime, maxheight=60, minheight=50, transp=0)
+plotarrow(enabled and pa and codiff2 * -1 ? codiff2 * -1 : na, title="Down Entry Arrow", colordown=color.red, maxheight=60, minheight=50, transp=0)
+// plotchar(enabled and sl and codiff ? low - tr : na, title="Buy Entry", offset=0, char='↑', location=location.absolute, color=color.lime, transp=0)
+// plotchar(enabled and sl and codiff2 ? high + tr : na, title="Short Entry", offset=0, char='↓', location=location.absolute, color=color.red, transp=0)
