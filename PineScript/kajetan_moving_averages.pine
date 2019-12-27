@@ -108,3 +108,7 @@ plotarrow(enabled and pa and codiff ? codiff : na, title="Up Entry Arrow", color
 plotarrow(enabled and pa and codiff2 * -1 ? codiff2 * -1 : na, title="Down Entry Arrow", colordown=color.red, maxheight=60, minheight=50, transp=0)
 // plotchar(enabled and sl and codiff ? low - tr : na, title="Buy Entry", offset=0, char='↑', location=location.absolute, color=color.lime, transp=0)
 // plotchar(enabled and sl and codiff2 ? high + tr : na, title="Short Entry", offset=0, char='↓', location=location.absolute, color=color.red, transp=0)
+
+// *** VWAP ***
+
+plot(vwap(hlc3), color=color.white, linewidth=2, trackprice=true, transp=0)
