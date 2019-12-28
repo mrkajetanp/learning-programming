@@ -136,13 +136,3 @@ if (buy_3 == 1)
    strategy.entry("Knife Long Entry", strategy.long, stop=close-, limit= comment="Knife")
    strategy.exit("SL/TP","Knife Long Entry", stop=stop_level, limit=take_level)
 
-
-// ALERTAS
-
-// alertcondition(buy_1 == 1,title="BOMB",message="BOMB")
-// alertcondition(buy_2 == 1,title="DYNAMITE",message="DYNAMITE")
-// alertcondition(buy_3 == 1,title="KNIFE",message="KNIFE")
-// alertcondition(buy_4 == 1,title="CHEMICAL",message="CHEMICAL")
-// alertcondition(buy_5 == 1,title="DAGGER",message="DAGGER")
-// alertcondition(buy_6 == 1,title="GUN",message="GUN")
-// alertcondition(buy_1 == 1 or buy_2 == 1 or buy_3 == 1 or buy_4 == 1 or buy_5 == 1 or buy_6 == 1,title="ANY WEAPON",message="ANY WEAPON")
