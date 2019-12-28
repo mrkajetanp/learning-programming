@@ -133,6 +133,5 @@ stop_level = strategy.position_avg_price * (1 - sl_inp)
 take_level = strategy.position_avg_price * (1 + tp_inp)
 
 if (buy_3 == 1)
-   strategy.entry("Knife Long Entry", strategy.long, stop=close-, limit= comment="Knife")
-   strategy.exit("SL/TP","Knife Long Entry", stop=stop_level, limit=take_level)
+   strategy.entry("Knife Long Entry", strategy.long, stop=stop_level, limit=take_level, comment="Knife")
 
