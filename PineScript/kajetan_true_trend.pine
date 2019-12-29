@@ -1,0 +1,6 @@
+//@version=4
+study(title="Kajetan's TrueTrend", shorttitle="TrueTrend", format=format.price, precision=2)
+length = input(70, minval=1)
+cci = (close - sma(close, length)) / (0.015 * dev(close, length))
+plot(0, color=color.black, transp=0)
+plot(cci, color=color.red, transp=0)
