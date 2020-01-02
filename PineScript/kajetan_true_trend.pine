@@ -1,12 +1,12 @@
 //@version=4
 study(title="Kajetan's TrueTrend", shorttitle="TrueTrend", format=format.price, precision=2)
+
+zero_line = 0
+plot(zero_line, color=#000000, transp=0, title="Zero Line")
+
 length = input(70, minval=1, title="Trend CCI Length")
 cci = (close - sma(close, length)) / (0.015 * dev(close, length))
 tt_colour = cci > 0 ? #00ff1c : #ff0000
-
-zero_line = 0
-
-plot(zero_line, color=#000000, transp=0, title="Zero Line")
 
 plot(cci, color=tt_colour, linewidth=2, transp=0, style=plot.style_histogram, title="Trend CCI")
 plot(cci, color=#c90000, linewidth=2, transp=0, title="Trend CCI Line")
@@ -19,3 +19,4 @@ entry_length = input(3, minval=1, title="Entry CCI Length")
 entry_cci = (close - sma(close, entry_length)) / (0.015 * dev(close, entry_length))
 plot(entry_cci, color=#00c0d8, transp=0, linewidth=2, title="Entry CCI")
 
+alertcondition(cross(cci, zero_line), title="Trend Change", message="TrueTrend Direction Change")
