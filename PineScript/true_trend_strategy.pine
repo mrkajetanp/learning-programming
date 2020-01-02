@@ -2,14 +2,12 @@
 // © cajetan.puchalski
 
 //@version=4
-strategy("My Strategy", overlay=true)
+strategy("TrueTrend Strategy", overlay=true)
 
 zero_line = 0
 
 length = input(70, minval=1, title="Trend CCI Length")
 cci = (close - sma(close, length)) / (0.015 * dev(close, length))
-
-alertcondition(cross(cci, zero_line), title="Trend Change", message="TrueTrend Direction Change")
 
 longCondition = crossover(cci, zero_line)
 if (longCondition)
