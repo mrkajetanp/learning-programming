@@ -1,0 +1,51 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © cajetan.puchalski
+
+//@version=4
+study("Basic Trend Screener", overlay=true)
+
+dt = time - time[1]
+if barstate.islast
+    // Cryptos
+    
+    label.new(time + 5*dt, 100, xloc=xloc.bar_time, text="BTC Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + 5*dt, 97, xloc=xloc.bar_time, text="ETH Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + 5*dt, 94, xloc=xloc.bar_time, text="XRP Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + 5*dt, 91, xloc=xloc.bar_time, text="EOS Label", size=size.large, style=label.style_none, textcolor=color.white)
+
+    // Major Indices
+    label.new(time + (-4)*dt, 100, xloc=xloc.bar_time, text="S&P 500 Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-4)*dt, 97, xloc=xloc.bar_time, text="NASDAQ Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-4)*dt, 94, xloc=xloc.bar_time, text="DJI Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-4)*dt, 91, xloc=xloc.bar_time, text="Russell 2000 Label", size=size.large, style=label.style_none, textcolor=color.white)
+    
+    label.new(time + (-13)*dt, 100, xloc=xloc.bar_time, text="FTSE 100 Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-13)*dt, 97, xloc=xloc.bar_time, text="DAX 30 Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-13)*dt, 94, xloc=xloc.bar_time, text="CAC 40 Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-13)*dt, 91, xloc=xloc.bar_time, text="ESP 35 Label", size=size.large, style=label.style_none, textcolor=color.white)
+    
+    label.new(time + (-22)*dt, 100, xloc=xloc.bar_time, text="Nikkei 225 Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-22)*dt, 97, xloc=xloc.bar_time, text="Hang Seng Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-22)*dt, 94, xloc=xloc.bar_time, text="AUS 200 Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-22)*dt, 91, xloc=xloc.bar_time, text="NL 25 Label", size=size.large, style=label.style_none, textcolor=color.white)
+    
+    // Forex Pairs
+    label.new(time + (-31)*dt, 100, xloc=xloc.bar_time, text="USDCAD Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-31)*dt, 97, xloc=xloc.bar_time, text="USDJPY Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-31)*dt, 94, xloc=xloc.bar_time, text="USDCHF Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-31)*dt, 91, xloc=xloc.bar_time, text="USDPLN Label", size=size.large, style=label.style_none, textcolor=color.white)
+    
+    label.new(time + (-40)*dt, 100, xloc=xloc.bar_time, text="EURUSD Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-40)*dt, 97, xloc=xloc.bar_time, text="GBPUSD Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-40)*dt, 94, xloc=xloc.bar_time, text="AUDUSD Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-40)*dt, 91, xloc=xloc.bar_time, text="NZDUSD Label", size=size.large, style=label.style_none, textcolor=color.white)
+    
+    label.new(time + (-49)*dt, 100, xloc=xloc.bar_time, text="Gold Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-49)*dt, 97, xloc=xloc.bar_time, text="Oil Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-49)*dt, 94, xloc=xloc.bar_time, text="Silver Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-49)*dt, 91, xloc=xloc.bar_time, text="NatGas Label", size=size.large, style=label.style_none, textcolor=color.white)
+    
+    label.new(time + (-58)*dt, 100, xloc=xloc.bar_time, text="NFLX Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-58)*dt, 97, xloc=xloc.bar_time, text="AAPL Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-58)*dt, 94, xloc=xloc.bar_time, text="AMZN Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-58)*dt, 91, xloc=xloc.bar_time, text="TSLA Label", size=size.large, style=label.style_none, textcolor=color.white)
