@@ -1,0 +1,11 @@
+//@version=4
+study(title="Kajetan's Chaikin Oscillator", shorttitle="Kajetan's Chaikin Osc", format=format.volume)
+
+short = input(3,minval=1), long = input(10,minval=1)
+osc = ema(accdist, short) - ema(accdist, long)
+
+colour = osc >= 0 ? #00ce23 : #ff0500
+line_colour = osc >= 0 ? #00ff1c : #ff0000
+plot(osc, style=plot.style_area, color=colour)
+plot(osc, style=plot.style_line, color=line_colour, transp=0)
+hline(0, color=color.black, linestyle=hline.style_solid)
