@@ -1,0 +1,11 @@
+//@version=4
+study(title="Kajetan's Choppiness Index", shorttitle="Kajetan's CHOP", format=format.price, precision=2)
+length = input(14, minval=1)
+ci = 100 * log10(sum(atr(1), length) / (highest(length) - lowest(length))) / log10(length)
+
+colour = #ff0057
+plot(ci, color=colour, linewidth=3)
+band61 = hline(61.8, color=colour, linestyle=hline.style_dashed)
+band50 = hline(50, color=colour, linestyle=hline.style_solid)
+band38 = hline(38.2, color=colour, linestyle=hline.style_dashed)
+band20 = hline(20.0, color=colour, linestyle=hline.style_dotted)
