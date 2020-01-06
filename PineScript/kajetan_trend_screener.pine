@@ -24,31 +24,55 @@ euro = security("FX:EURUSD", "1D", close)
 euro_colour = sma(euro, 10) > sma(euro, 20) ? color.green : color.red
 kiwi = security("FX:NZDUSD", "1D", close)
 kiwi_colour = sma(kiwi, 10) > sma(kiwi, 20) ? color.green : color.red
+pound = security("FX:GBPUSD", "1D", close)
+pound_colour = sma(pound, 10) > sma(pound, 20) ? color.green : color.red
+aussie = security("FX:AUDUSD", "1D", close)
+aussie_colour = sma(aussie, 10) > sma(aussie, 20) ? color.green : color.red
 
 cad = security("FX:USDCAD", "1D", close)
 cad_colour = sma(cad, 10) > sma(cad, 20) ? color.green : color.red
 pln = security("OANDA:USDPLN", "1D", close)
 pln_colour = sma(pln, 10) > sma(pln, 20) ? color.green : color.red
+jpy = security("FX:USDJPY", "1D", close)
+jpy_colour = sma(jpy, 10) > sma(jpy, 20) ? color.green : color.red
+chf = security("OANDA:USDCHF", "1D", close)
+chf_colour = sma(chf, 10) > sma(chf, 20) ? color.green : color.red
 
 gold = security("OANDA:XAUUSD", "1D", close)
 gold_colour = sma(gold, 10) > sma(gold, 20) ? color.green : color.red
 natgas = security("OANDA:NATGASUSD", "1D", close)
 natgas_colour = sma(natgas, 10) > sma(natgas, 20) ? color.green : color.red
+oil = security("TVC:USOIL", "1D", close)
+oil_colour = sma(oil, 10) > sma(oil, 20) ? color.green : color.red
+silver = security("OANDA:XAGUSD", "1D", close)
+silver_colour = sma(silver, 10) > sma(silver, 20) ? color.green : color.red
 
 spx = security("OANDA:SPX500USD", "1D", close)
 spx_colour = sma(spx, 10) > sma(spx, 20) ? color.green : color.red
 russell = security("OANDA:US2000USD", "1D", close)
 russell_colour = sma(russell, 10) > sma(russell, 20) ? color.green : color.red
+nasdaq = security("OANDA:NAS100USD", "1D", close)
+nasdaq_colour = sma(nasdaq, 10) > sma(nasdaq, 20) ? color.green : color.red
+dji = security("OANDA:US30USD", "1D", close)
+dji_colour = sma(dji, 10) > sma(dji, 20) ? color.green : color.red
 
 ftse = security("OANDA:UK100GBP", "1D", close)
 ftse_colour = sma(ftse, 10) > sma(ftse, 20) ? color.green : color.red
 esp = security("FOREXCOM:ESP35", "1D", close)
 esp_colour = sma(esp, 10) > sma(esp, 20) ? color.green : color.red
+dax = security("OANDA:DE30EUR", "1D", close)
+dax_colour = sma(dax, 10) > sma(dax, 20) ? color.green : color.red
+cac = security("OANDA:FR40EUR", "1D", close)
+cac_colour = sma(cac, 10) > sma(cac, 20) ? color.green : color.red
 
 nikkei = security("OANDA:JP225USD", "1D", close)
 nikkei_colour = sma(nikkei, 10) > sma(nikkei, 20) ? color.green : color.red
 nl = security("OANDA:NL25EUR", "1D", close)
 nl_colour = sma(nl, 10) > sma(nl, 20) ? color.green : color.red
+hk = security("OANDA:HK33HKD", "1D", close)
+hk_colour = sma(hk, 10) > sma(hk, 20) ? color.green : color.red
+aus = security("OANDA:AU200AUD", "1D", close)
+aus_colour = sma(aus, 10) > sma(aus, 20) ? color.green : color.red
 
 dt = time - time[1]
 if barstate.islast
@@ -60,37 +84,37 @@ if barstate.islast
 
     // Major Indices
     label.new(time + (-4)*dt, 100, xloc=xloc.bar_time, text="S&P 500 Label", size=size.large, style=label.style_none, textcolor=spx_colour)
-    label.new(time + (-4)*dt, 97, xloc=xloc.bar_time, text="NASDAQ Label", size=size.large, style=label.style_none, textcolor=color.white)
-    label.new(time + (-4)*dt, 94, xloc=xloc.bar_time, text="DJI Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-4)*dt, 97, xloc=xloc.bar_time, text="NASDAQ Label", size=size.large, style=label.style_none, textcolor=nasdaq_colour)
+    label.new(time + (-4)*dt, 94, xloc=xloc.bar_time, text="DJI Label", size=size.large, style=label.style_none, textcolor=dji_colour)
     label.new(time + (-4)*dt, 91, xloc=xloc.bar_time, text="Russell 2000 Label", size=size.large, style=label.style_none, textcolor=russell_colour)
     
     label.new(time + (-13)*dt, 100, xloc=xloc.bar_time, text="FTSE 100 Label", size=size.large, style=label.style_none, textcolor=ftse_colour)
-    label.new(time + (-13)*dt, 97, xloc=xloc.bar_time, text="DAX 30 Label", size=size.large, style=label.style_none, textcolor=color.white)
-    label.new(time + (-13)*dt, 94, xloc=xloc.bar_time, text="CAC 40 Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-13)*dt, 97, xloc=xloc.bar_time, text="DAX 30 Label", size=size.large, style=label.style_none, textcolor=dax_colour)
+    label.new(time + (-13)*dt, 94, xloc=xloc.bar_time, text="CAC 40 Label", size=size.large, style=label.style_none, textcolor=cac_colour)
     label.new(time + (-13)*dt, 91, xloc=xloc.bar_time, text="ESP 35 Label", size=size.large, style=label.style_none, textcolor=esp_colour)
     
     label.new(time + (-22)*dt, 100, xloc=xloc.bar_time, text="Nikkei 225 Label", size=size.large, style=label.style_none, textcolor=nikkei_colour)
-    label.new(time + (-22)*dt, 97, xloc=xloc.bar_time, text="Hang Seng Label", size=size.large, style=label.style_none, textcolor=color.white)
-    label.new(time + (-22)*dt, 94, xloc=xloc.bar_time, text="AUS 200 Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-22)*dt, 97, xloc=xloc.bar_time, text="Hang Seng Label", size=size.large, style=label.style_none, textcolor=hk_colour)
+    label.new(time + (-22)*dt, 94, xloc=xloc.bar_time, text="AUS 200 Label", size=size.large, style=label.style_none, textcolor=aus_colour)
     label.new(time + (-22)*dt, 91, xloc=xloc.bar_time, text="NL 25 Label", size=size.large, style=label.style_none, textcolor=nl_colour)
     
     // Forex Pairs
     label.new(time + (-31)*dt, 100, xloc=xloc.bar_time, text="USDCAD Label", size=size.large, style=label.style_none, textcolor=cad_colour)
-    label.new(time + (-31)*dt, 97, xloc=xloc.bar_time, text="USDJPY Label", size=size.large, style=label.style_none, textcolor=color.white)
-    label.new(time + (-31)*dt, 94, xloc=xloc.bar_time, text="USDCHF Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-31)*dt, 97, xloc=xloc.bar_time, text="USDJPY Label", size=size.large, style=label.style_none, textcolor=jpy_colour)
+    label.new(time + (-31)*dt, 94, xloc=xloc.bar_time, text="USDCHF Label", size=size.large, style=label.style_none, textcolor=chf_colour)
     label.new(time + (-31)*dt, 91, xloc=xloc.bar_time, text="USDPLN Label", size=size.large, style=label.style_none, textcolor=pln_colour)
     
     label.new(time + (-40)*dt, 100, xloc=xloc.bar_time, text="EURUSD Label", size=size.large, style=label.style_none, textcolor=euro_colour)
-    label.new(time + (-40)*dt, 97, xloc=xloc.bar_time, text="GBPUSD Label", size=size.large, style=label.style_none, textcolor=color.white)
-    label.new(time + (-40)*dt, 94, xloc=xloc.bar_time, text="AUDUSD Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-40)*dt, 97, xloc=xloc.bar_time, text="GBPUSD Label", size=size.large, style=label.style_none, textcolor=pound_colour)
+    label.new(time + (-40)*dt, 94, xloc=xloc.bar_time, text="AUDUSD Label", size=size.large, style=label.style_none, textcolor=aussie_colour)
     label.new(time + (-40)*dt, 91, xloc=xloc.bar_time, text="NZDUSD Label", size=size.large, style=label.style_none, textcolor=kiwi_colour)
     
     label.new(time + (-49)*dt, 100, xloc=xloc.bar_time, text="Gold Label", size=size.large, style=label.style_none, textcolor=gold_colour)
-    label.new(time + (-49)*dt, 97, xloc=xloc.bar_time, text="Oil Label", size=size.large, style=label.style_none, textcolor=color.white)
-    label.new(time + (-49)*dt, 94, xloc=xloc.bar_time, text="Silver Label", size=size.large, style=label.style_none, textcolor=color.white)
+    label.new(time + (-49)*dt, 97, xloc=xloc.bar_time, text="Oil Label", size=size.large, style=label.style_none, textcolor=oil_colour)
+    label.new(time + (-49)*dt, 94, xloc=xloc.bar_time, text="Silver Label", size=size.large, style=label.style_none, textcolor=silver_colour)
     label.new(time + (-49)*dt, 91, xloc=xloc.bar_time, text="NatGas Label", size=size.large, style=label.style_none, textcolor=natgas_colour)
     
-    label.new(time + (-58)*dt, 100, xloc=xloc.bar_time, text="NFLX Label", size=size.large, style=label.style_none, textcolor=nflx_colour)
-    label.new(time + (-58)*dt, 97, xloc=xloc.bar_time, text="AAPL Label", size=size.large, style=label.style_none, textcolor=aapl_colour)
-    label.new(time + (-58)*dt, 94, xloc=xloc.bar_time, text="AMZN Label", size=size.large, style=label.style_none, textcolor=amzn_colour)
-    label.new(time + (-58)*dt, 91, xloc=xloc.bar_time, text="TSLA Label", size=size.large, style=label.style_none, textcolor=tsla_colour)
+    label.new(time + (-58)*dt, 100, xloc=xloc.bar_time, text="Netflix", size=size.large, style=label.style_none, textcolor=nflx_colour)
+    label.new(time + (-58)*dt, 97, xloc=xloc.bar_time, text="Apple", size=size.large, style=label.style_none, textcolor=aapl_colour)
+    label.new(time + (-58)*dt, 94, xloc=xloc.bar_time, text="Amazon", size=size.large, style=label.style_none, textcolor=amzn_colour)
+    label.new(time + (-58)*dt, 91, xloc=xloc.bar_time, text="Tesla", size=size.large, style=label.style_none, textcolor=tsla_colour)
