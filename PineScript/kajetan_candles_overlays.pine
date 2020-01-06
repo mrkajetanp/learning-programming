@@ -75,10 +75,10 @@ short = SMI > 35 and mom < 0 and mom[1] > 0 ? 1 : 0
 plotshape(short, style=shape.xcross, location=location.abovebar, color=color.yellow, transp=0, size=size.tiny)
 
 // *** UT Bot ***
-//CREDITS to HPotter for the orginal code. The guy trying to sell this as his own is a scammer lol.
+//CREDITS to HPotter for the orginal code. The guy trying to sell this as his own is a scammer lol. 
 
 // Inputs
-ut_a = input(4, title = "UT Bot Key Value")
+ut_a = input(15, title = "UT Bot Key Value")
 c = input(10, title = "UT Bot ATR Period")
 h = input(false, title = "UT Bot Signals from Heikin Ashi")
 
@@ -116,7 +116,7 @@ plotshape(sell, title = "UT Sell", text = 'Sell', style = shape.labeldown, locat
 ///////////////////////////////////////////////////////////////////////////////
 
 TD= input(title="== TREND DIRECTION ==", defval=true)
-RISK= input(title="Risk", type=input.integer, defval=14)
+RISK= input(title="Risk", type=input.integer, defval=30)
 SIZE = input(title="Size", type=input.string, defval=size.small, options=[size.small, size.tiny,size.normal,size.large])
 text_up = input(title="TEXT Buy", defval="Long", type=input.string)
 text_dn = input(title="TEXT Sell", defval="Short", type=input.string)
@@ -268,7 +268,7 @@ if dn
 ///////////////////////////////////////////////////////////////////////////////
 
 
-showHHLL = input(title="Show Higher/Highs and Lower Lows labels", defval=true)
+showHHLL = input(title="Show Higher/Highs and Lower Lows labels", defval=false)
 //filterBW    = input(false, title="Filter Bill Williams Fractals")
 
 // isRegularFractal(mode) =>
@@ -301,8 +301,12 @@ A3=input(true, "🧨 DYNAMITE")
 A4=input(true, "🗡 DAGGER")
 A5=input(true, "🔫 GUN")
 A6=input(true, "🧪 CHEMICAL")
-min_level=input(defval=-30, title="🔹 Minimum Level = ", minval=-100)
+min_level=input(defval=0, title="🔹 Minimum Level = ", minval=-100)
 
+EX= input(title = "═════════ Extra ══════════", defval = true, type = input.bool)
+
+on_symb= input(title = "Activate weapon symbols", defval = true, type = input.bool)
+mod_symb= input(defval= "EMOJI", title="🔹 Type of symbol = ", options=["EMOJI", "TEXT"])
 //
 length = 8
 mult = 2.0
@@ -392,7 +396,7 @@ dtb_ema   = ema(dtb_src,1)
 dtb_above = crossover(dtb_ema, dtb_xATRTrailingStop)
 dtb_below = crossover(dtb_xATRTrailingStop, dtb_ema)
 dtb_buy_a  = dtb_src > dtb_xATRTrailingStop and dtb_above 
-
+//
 if (minor == 1 and min == true and reg_trend <= min_level and A1) or (major == 1 and maj == true and reg_trend <= min_level and A1) or  (major == 1 and maj == true and minor == 1 and min == true and reg_trend <= min_level and A1)
     buy_1 := 1
 if  reg_trend[0] > reg_trend[1] and reg_trend[1] > reg_trend[2] and reg_trend <= min_level and A3
@@ -413,7 +417,15 @@ plotshape(buy_4 == 1 and on_symb and mod_symb == "EMOJI", text='🧪  ', style=s
 plotshape(buy_5 == 1 and on_symb and mod_symb == "EMOJI", text='🗡  ', style=shape.triangleup, location=location.belowbar, color=#32CD32, textcolor=color.black, offset=0, transp=0)
 plotshape(buy_6 == 1 and on_symb and mod_symb == "EMOJI", text='🔫  ', style=shape.triangleup, location=location.belowbar, color=#32CD32, textcolor=color.black, offset=0, transp=0)
 
-// ALERTAS
+plotshape(buy_1 == 1 and on_symb and mod_symb == "TEXT", text='BOMB', style=shape.triangleup, location=location.belowbar, color=#32CD32, textcolor=color.black, offset=0, transp=0, size =size.tiny)
+plotshape(buy_2 == 1 and on_symb and mod_symb == "TEXT", text='DYNAMITE', style=shape.triangleup, location=location.belowbar, color=#32CD32, textcolor=color.black, offset=0, transp=0, size =size.tiny)
+plotshape(buy_3 == 1 and on_symb and mod_symb == "TEXT", text='KNIFE', style=shape.triangleup, location=location.belowbar, color=#32CD32, textcolor=color.black, offset=0, transp=0, size =size.tiny)
+plotshape(buy_4 == 1 and on_symb and mod_symb == "TEXT", text='CHEMICAL', style=shape.triangleup, location=location.belowbar, color=#32CD32, textcolor=color.black, offset=0, transp=0, size =size.tiny)
+plotshape(buy_5 == 1 and on_symb and mod_symb == "TEXT", text='DAGGER', style=shape.triangleup, location=location.belowbar, color=#32CD32, textcolor=color.black, offset=0, transp=0, size =size.tiny)
+plotshape(buy_6 == 1 and on_symb and mod_symb == "TEXT", text='GUN', style=shape.triangleup, location=location.belowbar, color=#32CD32, textcolor=color.black, offset=0, transp=0, size =size.tiny)
+
+
+// ALERTS
 
 alertcondition(buy_1 == 1,title="BOMB",message="BOMB")
 alertcondition(buy_2 == 1,title="DYNAMITE",message="DYNAMITE")
