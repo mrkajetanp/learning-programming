@@ -1,0 +1,17 @@
+//@version=4
+study(title="Kajetan's Multi TF MA", shorttitle="Multi TF MA", overlay=true)
+
+len = input(200, minval=1, title="Moving Average Length")
+
+expr = sma(close, len)
+min_5 = security(syminfo.tickerid, "5", expr)
+min_15 = security(syminfo.tickerid, "15", expr)
+min_60 = security(syminfo.tickerid, "60", expr)
+min_240 = security(syminfo.tickerid, "240", expr)
+day_1 = security(syminfo.tickerid, "1D", expr)
+
+plot(min_5, color=color.green, linewidth=2, transp=0, title="5 min MA")
+plot(min_15, color=color.blue, linewidth=2, transp=0, title="15 min MA")
+plot(min_60, color=color.purple, linewidth=2, transp=0, title="1H MA")
+plot(min_240, color=color.yellow, linewidth=2, transp=0, title="4H MA")
+plot(day_1, color=color.white, linewidth=2, transp=0, title="1D MA")
