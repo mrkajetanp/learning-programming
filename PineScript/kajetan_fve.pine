@@ -1,0 +1,190 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © UberTradingSystems
+//
+// Name:    FVE - Finite Volume Elements [UTS]
+// Created: 2020/01/08
+// Desc:    
+// FVE is a money flow indicator but with two important differences from existing money flow indicators:
+
+// It resolves contradictions between intraday money flow indicators (such as Chaikin’s money flow) and interday money flow indicators (like On Balance Volume) by taking into account both intra- and interday price action.
+// Unlike other money flow indicators which add or subtract all volume even if the security closed just 1 cent higher than the previous close, FVE uses a volatility threshold to take into account minimal price changes.
+
+// [b]General Usage[/b]
+// The FVE provides 3 types of signals:
+// The strongest signal is divergence between price and the indicator. Divergence can provide leading signals of breakouts or warnings of impending corrections. The classic method for detecting divergence is for FVE to make lower highs while price makes higher highs (negative divergence). An alternative method is to draw the linear regression line on both charts, and compare the slopes. A logical buy signal would be for FVE, diverging from price, to rise sharply and make a series higher highs and/or higher lows.
+// The most obvious and coincident signal is the slope of the FVE line. An upward slope indicates that the bulls are in control and the opposite for downward.
+// This is a unique and very important property of this indicator. Values above zero are bullish and indicate accumulation while values below zero indicate distribution. FVE crossing the zero line indicates that the short to intermediate balance of power is changing from the bulls to the bears or vice versa. The best scenario is when a stock is in the process of building a base, and FVE diverges from price and rises to cross the zero line from below, at a sharp angle. Conversely the crossing of the zero line from above is a bearish signal to liquidate positions or initiate a short trade.
+
+// [b]Trend Visualisation[/b]
+// Optional: If the trend direction is [i]DOWN[/i] the moving average is painted red. If the trend direction is [i]UP[/i] the moving average is painted in green.
+// If the movement is [i]FLAT[/i] then the color is grey.
+
+// [b]Moving Averages[/b]
+// Five different types of Moving Averages are available for both FVE and the optional moving average of the FVE.
+// [list]
+// [*] ALMA (Arnaud Legoux Moving Average)
+// [*] Average Value
+// [*] EMA  (Exponential Moving Average)
+// [*] SMA  (Simple Moving Average)
+// [*] WMA  (Weighted Moving Average)
+// [/list]
+
+// [b]Calculation Methods[/b]
+// Since Markos Katsanos presented the first version of the FVE in April 2003. 
+// Since then there have been various adaptions and improvements on this indicator. 
+// The following are choosable for calculating the FVE:
+// [list]
+// [*] Thinkscript [url=https://usethinkscript.com/threads/finite-volume-elements-fve-for-thinkorswim.596/]https://usethinkscript.com/threads/finite-volume-elements-fve-for-thinkorswim.596/
+// [*] Linnsoft [url=https://www.linnsoft.com/techind/finite-volume-elements]https://www.linnsoft.com/techind/finite-volume-elements
+// [*] Volatility Adapted [url=http://traders.com/Documentation/FEEDbk_docs/2003/09/TradersTips/TradersTips.html#investor]http://traders.com/Documentation/FEEDbk_docs/2003/09/TradersTips/TradersTips.html#investor
+// [/list]
+
+
+//@version=4
+study(title="Kajetan's Finite Volume Elements", shorttitle="Kajetan's FVE", format=format.volume)
+
+
+// Const
+kFveColor = color.blue
+kMaColor = color.lime
+kNeutralColor = color.gray
+kBearColor = color.red
+kBullColor = color.green
+
+kAlma = "ALMA"
+kAvg = "Average"
+kEma = "EMA"
+kSma = "SMA"
+kWma = "WMA"
+
+k1 = "thinkscript"
+k2 = "linnsoft"
+k3 = "volatilityAdapted"
+
+// Input
+
+fve_type = input(k3, title="FVE Type", options=[k1, k2, k3])
+fve_length = input(22, title="FVE Period", minval=1)
+fve_smoothType = input(kSma, title="FVE Smoothing", options=[kAlma, kAvg, kEma, kSma, kWma])
+fve_cutoff = input(0.003, title="Volume Cutoff (thinkscript only)", minval=0.0001, step=0.001)
+fve_cIntra = input(0.1, title="Intraday Coef (linnsoft & volatilityAdapted)", minval=0.01, step=0.01)
+fve_cInter = input(0.1, title="Interday Coef (volatilityAdapted only)", minval=0.01, step=0.01)
+fve_showTrend = input(true, title="Visualize Trend")
+fve_showFill = input(true, title="Apply Filling")
+fve_showMa = input(true, title="Show Moving Average")
+fve_maType = input(kSma, title="Moving Average Type", options=[kAlma, kAvg, kEma, kSma, kWma])
+fve_maLength = input(20, title="Moving Average Length", minval=1)
+fve_almaOffset = input(0.85, title="• ALMA - Offset (global setting)", minval=0.0, maxval=1.0, step=0.05) // more smoothness (closer to 1) vs. more responsiveness (closer to 0)
+fve_almaSigma = input(6.0, title="• ALMA - Sigma (global setting)", minval=0.0, step=0.05) // the larger sigma the smoother ALMA
+
+
+// Functionality
+
+isRising(sig) =>
+    sig > sig[1]
+    
+isFlat(sig) =>
+    sig == sig[1]
+
+fve_color(sig) =>
+    isFlat(sig) ? kNeutralColor : isRising(sig) ? kBullColor : kBearColor
+    
+osc_color(sig) =>
+    sig == 0 ? kNeutralColor : sig > 0 ? kBullColor : kBearColor
+
+smooth(t, sig, len) =>
+    ma = float(sig)         // None
+    if t == kAvg            // Average
+        ma := avg(sig, len)
+    if t == kSma            // Simple
+        ma := sma(sig, len)
+    if t == kEma            // Exponential
+        ma := ema(sig, len)
+    if t == kWma            // Weighted
+        ma := wma(sig, len)
+    if t == kAlma           // Arnaud Legoux
+        ma := alma(sig, len, fve_almaOffset, fve_almaSigma)
+    ma
+
+// https://usethinkscript.com/threads/finite-volume-elements-fve-for-thinkorswim.596/
+calc_fveThinkscript(period, smoothType, cutoff) =>
+    tp = nz(hlc3)
+    mid = nz(hl2)
+    cl = nz(close)
+    v = nz(volume)
+    barNum = barssince(barstate.isfirst) + 1
+    mf = cl - mid + tp - tp[1]
+    factor = iff(mf > cutoff * cl, 1, iff(mf < -1 * cutoff * cl, -1, 0))
+    volDelta = v * factor
+    sum = sum(volDelta, period)
+    fve = iff(barNum > period, (sum / (smooth(smoothType, v, period) * period)) * 100, na)
+    fve
+
+// https://www.linnsoft.com/techind/finite-volume-elements
+calc_fveLinnsoft(period, smoothType, cIntra) =>
+    hi = nz(high)
+    lo = nz(low)
+    cl = nz(close)
+    tp = nz(hlc3)
+    v = nz(volume)
+    mid = nz(hl2)
+    barNum = barssince(barstate.isfirst) + 1
+    intra = log(hi) - log(lo)
+    vIntra = stdev(intra, period)
+    inter = log(tp) - log(tp[1])
+    vInter = stdev(inter, period)
+    cutOff = cIntra * (vInter - vIntra) * cl
+    mf = cl - mid + tp - tp[1]
+    ve = iff(mf > cutOff, v, iff(mf < -cutOff, -v, 0))
+    fve = iff(barNum > period, 100 * (sum(ve, period) / (smooth(smoothType, v, period) * period)), na)
+    fve
+
+//http://traders.com/Documentation/FEEDbk_docs/2003/09/TradersTips/TradersTips.html#investor
+calc_fveVolatility(period, cIntra, cInter) =>
+    tp = nz(hlc3)
+    hi = nz(high)
+    lo = nz(low)
+    cl = nz(close)
+    mid = nz(hl2)
+    intra = log(hi) - log(lo)
+    vIntra = stdev(intra, period)
+    inter = iff(tp[1] > 0, log(tp) - log(tp[1]), 0)
+    vInter = stdev(inter, period)
+    cutOff = cIntra * vIntra + cInter * vInter
+    mf = cl - mid + tp - tp[1]
+    volFactor = iff(mf > cutOff * cl, 1, iff(mf < -1 * cutOff * cl, -1, 0))
+
+calc_fveWithVolatilityFactor(period, smoothType, cIntra, cInter) =>
+    barNum = barssince(barstate.isfirst) + 1
+    v = nz(volume)
+    volDelta = v * calc_fveVolatility(period, cIntra, cInter)
+    sum = sum(volDelta, period)
+    fve = iff(barNum > period, (sum / (smooth(smoothType, v, period) * period)) * 100, na)
+    
+fve_selector(t) =>
+    ma = float(na)
+    if t == k1            // Thinkscript
+        ma := calc_fveThinkscript(fve_length, fve_smoothType, fve_cutoff)
+    if t == k2            // Linnsoft
+        ma := calc_fveLinnsoft(fve_length, fve_smoothType, fve_cIntra)
+    if t == k3            // Volatility 
+        ma := calc_fveWithVolatilityFactor(fve_length, fve_smoothType, fve_cIntra, fve_cInter)
+    ma
+    
+value_fve = fve_selector(fve_type)
+value_ma = smooth(fve_maType, value_fve, fve_maLength)
+
+
+line_colour = value_fve >= 0 ? #00ff1c : #ff0000
+color_fve = fve_showTrend ? line_colour : kFveColor
+color_osc = fve_showFill ? osc_color(value_fve) : na
+color_ma = fve_showMa ? kMaColor : na
+
+
+// Drawings
+
+colour = value_fve >= 0 ? #00ce23 : #ff0500
+plot_fve_line = plot(value_fve, title="FVE Line", color=color_fve, linewidth=2, transp=0)
+plot_fve = plot(value_fve, title="FVE", color=colour, style=plot.style_area)
+hline(0, color=color.black, title="Zero Line", linewidth=1, linestyle=hline.style_solid)
+plot(value_ma, title="MA", color=color.blue, linewidth=2, transp=0)
