@@ -1,0 +1,29 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © BURSATRENDBANDCHART
+
+//@version=4
+study(title="TrendBand PriceVolume", shorttitle="TrendbandPriceVol", format=format.volume)
+showMA = input(true)
+Value = input(30)
+barColorsOnPrevClose = input(title="Color bars based on previous close", type=input.bool, defval=false)
+
+color_blue = color.new(#2196f3,0)
+
+palette = barColorsOnPrevClose ? close[1] > close ? color.red : color.green : 
+   open > close ? color.red : color.green
+avdt = (close * volume)
+
+sma_1 = sma(avdt, Value)
+plot(showMA ? sma_1 : na, style=plot.style_line, color=color_blue, title="Volume MA", transp=65)
+plot(avdt, color=palette, title='Volume Bar', style=plot.style_columns)
+
+spike = avdt > highest(avdt, 5)[1] and high > high[1] and close > sma(close, 5) and 
+   close > open and avdt > sma(avdt, 30)
+supply = avdt > avdt[1] and close < open and high > ema(close, 8) and 
+   ema(close, 8) > ema(close, 21)
+
+plotshape(spike, title="bullish", style=shape.diamond, location=location.abovebar, size=size.tiny, color=color_blue)
+plotshape(supply, title="bearish", style=shape.diamond, location=location.abovebar, size=size.tiny, color=color.black)
+
+alertcondition(spike, title='1. Bullish Signal', message='{{ticker}}, Volume increase! Look for possible ♨️ bullish signal')
+alertcondition(supply, title='2. Bearish Signal', message='{{ticker}}, Volume increase! Look for possible ⛔️ bearish signal')
