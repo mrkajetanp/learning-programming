@@ -7,13 +7,18 @@ ma_2 = input(100, title="MA 2")
 ma_3 = input(200, title="MA 3")
 plot(sma(close, ma_1), color=#7705b9, transp=0, linewidth=2, title="MA 1")
 plot(sma(close, ma_2), color=#0090f7, transp=0, linewidth=2, title="MA 2")
-plot(sma(close, ma_3), color=#ffc200, transp=0, linewidth=2, title="MA 3")
+sma_3 = sma(close, ma_3)
+plot(sma_3, color=#ffc200, transp=0, linewidth=2, title="MA 3")
+
+alertcondition(cross(close, sma_3), title="Crossing MA 3", message="Crossing SMA 3")
 
 // EMAs
 ema_1 = input(12, title="EMA 1")
 ema_2 = input(26, title="EMA 2")
+ema_3 = input(200, title="EMA 3")
 plot(ema(close, ema_1), color=#00bfd8, transp=0, linewidth=2, title="EMA 1")
 plot(ema(close, ema_2), color=#ff0057, transp=0, linewidth=2, title="EMA 2")
+plot(ema(close, ema_3), color=#00ff1c, transp=0, linewidth=2, title="EMA 2")
 
 // HMA
 //HMA = WMA(2*WMA(n/2) − WMA(n)),sqrt(n))
