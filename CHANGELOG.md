@@ -16,6 +16,10 @@
 * [PineScript] Kajetan's STF - Secondary Colours
 * [Bash] Misc: Coinbash adjustment
 
+#### 11.1.2020
+
+* [General] Changes & improvements 
+
 #### 22.12.2019
 
 * [Python] Misc: libtorrent - Example - Fixes
