@@ -6,7 +6,7 @@ study("Kajetan's Trend Follower", overlay=true)
 length = input(title="ATR Period", type=input.integer, defval=22)
 mult = input(title="ATR Multiplier", type=input.float, step=0.1, defval=3.0)
 wicks = input(title="Take Wicks into Account ?", type=input.bool, defval=false)
-showLabels = input(title="Show Buy/Sell Labels ?", type=input.bool, defval=true)
+showLabels = input(title="Show Buy/Sell Labels ?", type=input.bool, defval=false)
 highlightState = input(title="Highlight State ?", type=input.bool, defval=true)
 
 atr = mult * atr(length)
@@ -23,19 +23,19 @@ dir = 1
 dir := nz(dir[1], dir)
 dir := dir == -1 and (wicks ? high : close) > shortStopPrev ? 1 : dir == 1 and (wicks ? low : close) < longStopPrev ? -1 : dir
 
-longColor = color.green
-shortColor = color.red
+longColor = #00ff1c
+shortColor = #ff0000
 noneColor = color.new(color.white, 100)
 
 longStopPlot = plot(dir == 1 ? longStop : na, title="Long Stop", style=plot.style_linebr, linewidth=2, color=longColor)
 buySignal = dir == 1 and dir[1] == -1
-plotshape(buySignal ? longStop : na, title="Long Stop Start", location=location.absolute, style=shape.circle, size=size.tiny, color=longColor, transp=0)
-plotshape(buySignal and showLabels ? longStop : na, title="Buy Label", text="Buy", location=location.absolute, style=shape.labelup, size=size.tiny, color=longColor, textcolor=color.white, transp=0)
+plotshape(buySignal ? longStop : na, title="Long Stop Start", location=location.absolute, style=shape.triangleup, size=size.small, color=longColor, transp=0)
+plotshape(buySignal and showLabels ? longStop : na, title="Buy Label", text="Buy", location=location.absolute, style=shape.triangledown, size=size.tiny, color=longColor, textcolor=color.white, transp=0)
 
 shortStopPlot = plot(dir == 1 ? na : shortStop, title="Short Stop", style=plot.style_linebr, linewidth=2, color=shortColor)
 sellSignal = dir == -1 and dir[1] == 1
-plotshape(sellSignal ? shortStop : na, title="Short Stop Start", location=location.absolute, style=shape.circle, size=size.tiny, color=shortColor, transp=0)
-plotshape(sellSignal and showLabels ? shortStop : na, title="Sell Label", text="Sell", location=location.absolute, style=shape.labeldown, size=size.tiny, color=shortColor, textcolor=color.white, transp=0)
+plotshape(sellSignal ? shortStop : na, title="Short Stop Start", location=location.absolute, style=shape.triangledown, size=size.small, color=shortColor, transp=0)
+plotshape(sellSignal and showLabels ? shortStop : na, title="Sell Label", text="Sell", location=location.absolute, style=shape.triangledown, size=size.tiny, color=shortColor, textcolor=color.white, transp=0)
 
 midPricePlot = plot(ohlc4, title="", style=plot.style_circles, linewidth=0)
 
