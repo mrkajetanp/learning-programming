@@ -113,3 +113,12 @@ fill(p3, p4, color=color.red, transp=70, title='Kumo (Cloud)')
 plotarrow(cr1 and cupA ? cupA : na, title="CrossUp Tenkan Kinjun Entry Arrow", colorup=color.yellow, maxheight=90, minheight=50, transp=0)
 plotarrow(cr1 and cdnB * -1 ? cdnB * -1 : na, title="CrossDn Tenkan Kinjun Entry Arrow", colordown=color.yellow, maxheight=90, minheight=50, transp=0)
 
+// *** Forex Sessions ***
+
+t1 = time(timeframe.period, "0300-1200")
+t2 = time(timeframe.period, "0800-1700")
+London = na(t1) ? na : color.green
+NY = na(t2) ? na : color.red
+
+bgcolor(London, title="London")
+bgcolor(NY, title="New York")
