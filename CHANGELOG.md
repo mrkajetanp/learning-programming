@@ -4,6 +4,7 @@
 
 #### 13.1.2020
 
+* [PineScript] Kajetan's STF - Secondary Colours
 * [Bash] Misc: Coinbash adjustment
 
 #### 22.12.2019
