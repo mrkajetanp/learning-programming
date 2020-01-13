@@ -2,6 +2,10 @@
 
 ---
 
+#### 13.1.2020
+
+* [Bash] Misc: Coinbash adjustment
+
 #### 22.12.2019
 
 * [Python] Misc: libtorrent - Example - Fixes
