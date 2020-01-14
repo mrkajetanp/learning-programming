@@ -4,6 +4,10 @@
 
 #### 13.1.2020
 
+* [PineScript] General indicator adjustment
+
+#### 13.1.2020
+
 * [PineScript] Kajetan's STF - Secondary Colours
 * [Bash] Misc: Coinbash adjustment
 
