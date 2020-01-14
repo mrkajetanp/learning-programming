@@ -4,6 +4,7 @@
 
 #### 13.1.2020
 
+* [PineScript] Fixes and analysis
 * [PineScript] General indicator adjustment
 
 #### 13.1.2020
