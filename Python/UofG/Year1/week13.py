@@ -6,3 +6,5 @@
 # [Lecture] CS1S - Basic hardware circuits
 
 # [Lecture] CS1S - Logic gates
+
+# [Lecture] CS1P - Matrices
