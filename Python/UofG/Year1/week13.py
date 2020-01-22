@@ -8,3 +8,5 @@
 # [Lecture] CS1S - Logic gates
 
 # [Lecture] CS1P - Matrices
+
+# [Lecture] CS1P - List operations
