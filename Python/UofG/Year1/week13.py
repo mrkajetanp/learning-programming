@@ -10,3 +10,18 @@
 # [Lecture] CS1P - Matrices
 
 # [Lecture] CS1P - List operations
+
+def occurrences(l):
+    result = {}
+
+    for x in l:
+        if x in result:
+            result[x] = result[x]+1
+        else:
+            result[x] = 1
+
+    return result
+
+print(occurrences([1, 2, 1, 1, 3, 4, 3, 2]))
+
+# [Lecture] CS1S - Boolean algebra
