@@ -36,7 +36,7 @@ def bubble_sort(l):
     result = l
     for i in range(len(result)):
         for j in range(i, len(result)):
-            if result[i] > result[j]:
+            if result[i] < result[j]:
                 result[i], result[j] = result[j], result[i]
     return l
 
