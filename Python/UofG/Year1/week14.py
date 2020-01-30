@@ -6,3 +6,5 @@
 # [Lecture] CS1P - Python review
 
 # [Lecture] CS1P - Basic algorithms
+
+# [Lecture] CS1S - Multiplexers
