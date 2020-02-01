@@ -3,3 +3,5 @@
 # [Revision] CS1S - Circuits - Advanced
 
 # [Revision] CS1S - Circuits - Multiplexers
+
+# [Revision] CS1S - Circuits - Adders
