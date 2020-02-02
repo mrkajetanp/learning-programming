@@ -5,3 +5,5 @@
 # [Revision] CS1S - Circuits - Multiplexers
 
 # [Revision] CS1S - Circuits - Adders
+
+# [Revision] CS1S - Circuits - DFF
