@@ -9,3 +9,5 @@
 # [Revision] CS1S - Circuits - DFF
 
 # [Revision] CS1S - Circuits - Registers
+
+# [Lab] CS1P - Shake Sorting
