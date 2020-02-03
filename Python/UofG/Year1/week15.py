@@ -11,3 +11,5 @@
 # [Revision] CS1S - Circuits - Registers
 
 # [Lab] CS1P - Shake Sorting
+
+# [Lab] CS1P - Alternate Sorting
