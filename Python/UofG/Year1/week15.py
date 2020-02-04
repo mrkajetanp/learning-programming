@@ -13,3 +13,5 @@
 # [Lab] CS1P - Shake Sorting
 
 # [Lab] CS1P - Alternate Sorting
+
+# [Lecture] CS1S - Sigma16 Basics
