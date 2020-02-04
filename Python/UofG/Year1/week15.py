@@ -15,3 +15,5 @@
 # [Lab] CS1P - Alternate Sorting
 
 # [Lecture] CS1S - Sigma16 Basics
+
+# [Lecture] CS1S - Sigma16 - More
