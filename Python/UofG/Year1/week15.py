@@ -19,3 +19,5 @@
 # [Lecture] CS1S - Sigma16 - More
 
 # [Lecture] CS1P - More on sorting
+
+# [Lecture] CS1P - Quicksort
