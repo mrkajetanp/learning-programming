@@ -7,3 +7,5 @@
 # [Lecture] CS1P -  BCD Converter - Mostly
 
 # [Lecture] CS1P -  BCD Converter - Troubleshooting
+
+# [Lecture] CS1P -  BCD Converter - Fixes
