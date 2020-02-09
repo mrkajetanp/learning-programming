@@ -4,8 +4,12 @@
 
 # [Lecture] CS1P - More on sorting
 
-# [Lecture] CS1P -  BCD Converter - Mostly
+# [Other] CS1S -  BCD Converter - Mostly
 
-# [Lecture] CS1P -  BCD Converter - Troubleshooting
+# [Other] CS1S -  BCD Converter - Troubleshooting
 
-# [Lecture] CS1P -  BCD Converter - Fixes
+# [Other] CS1S -  BCD Converter - Fixes
+
+# [Other] CS1P -  Lab preparation
+
+# [Other] CS1P -  Personal analysis
