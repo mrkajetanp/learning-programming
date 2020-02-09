@@ -12,4 +12,4 @@
 
 # [Other] CS1P -  Lab preparation
 
-# [Other] CS1P -  Personal analysis
+# [Other] CS1P -  Personal
