@@ -4,3 +4,5 @@
 # [Lab] CS1P - Binary Search
 
 # [Lecture] CS1S - Sigma16
+
+# [Lecture] CS1S - Sigma16 - Comparisons
