@@ -116,4 +116,8 @@ plotarrow(enabled and pa and codiff2 * -1 ? codiff2 * -1 : na, title="Down Entry
 
 // *** VWAP ***
 
-plot(vwap(hlc3), color=color.white, linewidth=2, trackprice=true, transp=0)
+vwa = vwap(hlc3)
+plot(vwa, color=color.white, linewidth=2, trackprice=true, transp=0)
+alertcondition(cross(close, vwa), title="Crossing VWAP", message="Crossing VWAP")
+
+
