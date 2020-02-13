@@ -6,4 +6,6 @@ len = input(9, minval=1, title="Moving Average Length")
 expr = ema(close, len)
 day_1 = security(syminfo.tickerid, "1D", expr)
 
-plot(day_1, color=#FF5d00, linewidth=2, transp=0, title="1D MA", transp=0)
+plot(day_1, color=#FFFFFF, linewidth=3, transp=0, title="1D MA", transp=0)
+alertcondition(cross(close, day_1), title="9D EMA Crossing", message="9D EMA Crossing")
+
