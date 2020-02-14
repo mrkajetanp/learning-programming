@@ -12,3 +12,5 @@
 # [Lecture] CS1S - Sigma16 - Control Statements
 
 # [Lecture] CS1S - Sigma16 - Arrays
+
+# [Quiz] CS1S - Sigma16
