@@ -14,3 +14,5 @@
 # [Lecture] CS1S - Sigma16 - Arrays
 
 # [Quiz] CS1S - Sigma16
+
+# [Review] CS1P - Exceptions
