@@ -20,3 +20,5 @@
 # [Review] CS1P - Exception Handling
 
 # [Review] CS1P - Weekly review
+
+# [Review] CS1S - Weekly review
