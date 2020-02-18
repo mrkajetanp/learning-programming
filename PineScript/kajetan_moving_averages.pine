@@ -117,7 +117,7 @@ plotarrow(enabled and pa and codiff2 * -1 ? codiff2 * -1 : na, title="Down Entry
 // *** VWAP ***
 
 vwa = vwap(hlc3)
-plot(vwa, color=color.white, linewidth=2, trackprice=true, transp=0)
+plot((timeframe.period == '1' or timeframe.period == '3' or timeframe.period == '5' or timeframe.period == '10' or timeframe.period == '15' or timeframe.period == '60') ? vwa : na, color=color.white, linewidth=2, trackprice=true, transp=0)
 alertcondition(cross(close, vwa), title="Crossing VWAP", message="Crossing VWAP")
 
 
