@@ -6,3 +6,5 @@
 # [Lecture] CS1S - Pointers
 
 # [Lab] CS1S - Pointers
+
+# [Lab] CS1S - Sigma16 Operation Details
