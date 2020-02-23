@@ -16,3 +16,5 @@
 # [Review] CS1S - Memory & Execution
 
 # [Quiz] CS1S - Pointers and Procedures
+
+# [Lecture] CS1P - GUIs with Tkinter
