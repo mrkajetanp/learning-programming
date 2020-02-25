@@ -117,8 +117,10 @@ plotarrow(cr1 and cdnB * -1 ? cdnB * -1 : na, title="CrossDn Tenkan Kinjun Entry
 
 t1 = time(timeframe.period, "0300-1200")
 t2 = time(timeframe.period, "0800-1700")
+t3 = time(timeframe.period, "0200-0300")
 London = na(t1) ? na : #00ff1c
 NY = na(t2) ? na : #ff0000
-
-bgcolor(London, title="London", transp=85)
-bgcolor(NY, title="New York", transp=85)
+PreLondon = na(t3) ? na : #ffff00
+bgcolor((timeframe.period == '1' or timeframe.period == '3' or timeframe.period == '5' or timeframe.period == '10' or timeframe.period == '15' or timeframe.period == '60') ? PreLondon : na, title="Pre-London", transp=75)
+bgcolor((timeframe.period == '1' or timeframe.period == '3' or timeframe.period == '5' or timeframe.period == '10' or timeframe.period == '15' or timeframe.period == '60') ? London : na, title="London", transp=85)
+bgcolor((timeframe.period == '1' or timeframe.period == '3' or timeframe.period == '5' or timeframe.period == '10' or timeframe.period == '15' or timeframe.period == '60') ? NY : na, title="New York", transp=85)
