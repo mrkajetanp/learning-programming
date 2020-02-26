@@ -6,3 +6,5 @@
 # [Lecture] CS1S - Variables
 
 # [Lab] CS1S - References
+
+# [Lab] CS1S - Pointers
