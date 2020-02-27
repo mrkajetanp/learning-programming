@@ -8,3 +8,5 @@
 # [Lab] CS1S - References
 
 # [Lab] CS1S - Pointers
+
+# [Lecture] CS1P - Questions on interfaces
