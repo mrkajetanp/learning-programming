@@ -14,3 +14,5 @@
 # [Lecture] CS1P - Additional questions
 
 # [Lecture] CS1S - Linked Lists
+
+# [Lecture] CS1S - Assembly & factorials
