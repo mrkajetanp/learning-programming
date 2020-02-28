@@ -12,3 +12,5 @@
 # [Lecture] CS1P - Questions on interfaces
 
 # [Lecture] CS1P - Additional questions
+
+# [Lecture] CS1S - Linked Lists
