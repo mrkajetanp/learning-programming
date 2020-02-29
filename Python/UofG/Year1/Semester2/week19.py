@@ -16,3 +16,5 @@
 # [Lecture] CS1S - Linked Lists
 
 # [Lecture] CS1S - Assembly & factorials
+
+# [Review] CS1S - Functioning of memory
