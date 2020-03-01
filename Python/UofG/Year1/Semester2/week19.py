@@ -18,3 +18,5 @@
 # [Lecture] CS1S - Assembly & factorials
 
 # [Review] CS1S - Functioning of memory
+
+# [Review] CS1P - Graphic interfaces
