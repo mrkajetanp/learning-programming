@@ -8,3 +8,5 @@
 # [Lecture] CS1S - Nested conditionals
 
 # [Lecture] CS1P - Object Oriented Programming
+
+# [Review] CS1P - Weekly Review
