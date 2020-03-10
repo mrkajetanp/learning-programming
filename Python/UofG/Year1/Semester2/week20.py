@@ -10,3 +10,5 @@
 # [Lecture] CS1P - Object Oriented Programming
 
 # [Review] CS1P - Weekly Review
+
+# [Lecture] CS1S - Trees
