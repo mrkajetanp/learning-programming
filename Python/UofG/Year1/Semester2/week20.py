@@ -15,6 +15,8 @@
 
 # [Exercise] CS1S - Assessed Exercise Data
 
+# [Lecture] CS1S - Interrupts
+
 # [Lecture] CS1S - Programming languages
 
-# [Lecture] CS1S - Interrupts
+# [Lecture] CS1S - CMOS
