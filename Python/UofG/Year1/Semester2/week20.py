@@ -20,3 +20,5 @@
 # [Lecture] CS1S - Programming languages
 
 # [Lecture] CS1S - CMOS
+
+# [Lecture] CS1S - VLSI
