@@ -22,3 +22,5 @@
 # [Lecture] CS1S - CMOS
 
 # [Lecture] CS1S - VLSI
+
+# [Lecture] CS1P - Revision
