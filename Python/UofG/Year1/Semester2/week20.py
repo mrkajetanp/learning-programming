@@ -24,3 +24,5 @@
 # [Lecture] CS1S - VLSI
 
 # [Lecture] CS1P - Revision
+
+# [Exercise] CS1P - Assessed Exercise - Structure
