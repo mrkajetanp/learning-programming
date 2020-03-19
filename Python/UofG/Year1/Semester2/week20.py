@@ -26,3 +26,5 @@
 # [Lecture] CS1P - Revision
 
 # [Exercise] CS1P - Assessed Exercise - Structure
+
+# [Exercise] CS1P - Assessed Exercise - Details
