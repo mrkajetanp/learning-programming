@@ -1,0 +1,10 @@
+1. Describe any complex data structures you used and explain why you think they are suitable. 
+
+
+2. How did you break down the problem into sub-problems? Explain the sub-problems and explain how they are organized in recommendations.py.
+
+
+3. Are there any parts of your code that you think are difficult to understand? if yes, explain them here. 
+
+
+4. Which possible errors could occur and how have you handled them? Explain whether you have used exception handling or defensive programming and use examples if you like.  

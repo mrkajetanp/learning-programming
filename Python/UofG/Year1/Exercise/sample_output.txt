@@ -1,0 +1,104 @@
+What is your name? Ben
+how many recommendations? 10
+
+Tony similarity with Ben: -81
+Cust4 similarity with Ben: -45
+David similarity with Ben: -15
+Brix similarity with Ben: -13
+McLovin similarity with Ben: -13
+Apollo similarity with Ben: -2
+chrispeh similarity with Ben: -2
+Leah similarity with Ben: 0
+Jaluka similarity with Ben: 6
+Sam similarity with Ben: 6
+Jeremy similarity with Ben: 10
+Alexandra similarity with Ben: 10
+ma similarity with Ben: 15
+crom similarity with Ben: 17
+Rudy Ann similarity with Ben: 17
+Huxil similarity with Ben: 23
+Harry Potter similarity with Ben: 25
+Cust9 similarity with Ben: 26
+dencellia similarity with Ben: 26
+Ella similarity with Ben: 27
+J-Rok similarity with Ben: 27
+NuNu similarity with Ben: 30
+Anna-Carol similarity with Ben: 31
+Rosanna similarity with Ben: 32
+Scream similarity with Ben: 35
+Boxxy similarity with Ben: 35
+Pablo Sanchez similarity with Ben: 38
+Martin similarity with Ben: 40
+Sanity similarity with Ben: 43
+Rudy A similarity with Ben: 44
+sage32 similarity with Ben: 45
+Hamza ALi similarity with Ben: 49
+Nathan similarity with Ben: 49
+Mark similarity with Ben: 54
+Cust7 similarity with Ben: 55
+Dude similarity with Ben: 58
+Joshua similarity with Ben: 58
+Jim C similarity with Ben: 60
+Cust3 similarity with Ben: 60
+Albus Dumbledore similarity with Ben: 60
+Don Wang similarity with Ben: 62
+Don Wang similarity with Ben: 62
+Cedric Jones similarity with Ben: 64
+SubRia similarity with Ben: 67
+YJAM similarity with Ben: 68
+Priscilla similarity with Ben: 71
+I. Ned similarity with Ben: 75
+Zachary similarity with Ben: 75
+Cust10 similarity with Ben: 77
+ender similarity with Ben: 78
+Leslie similarity with Ben: 80
+snoosh similarity with Ben: 81
+Strongbad similarity with Ben: 82
+Cust2 similarity with Ben: 90
+Zax similarity with Ben: 100
+KeeLed similarity with Ben: 101
+NaRwHaLs similarity with Ben: 104
+James similarity with Ben: 104
+Cust6 similarity with Ben: 105
+McLean similarity with Ben: 108
+Hideo similarity with Ben: 110
+hidan similarity with Ben: 114
+Cust1 similarity with Ben: 120
+Francois similarity with Ben: 120
+clipper similarity with Ben: 120
+Iren similarity with Ben: 123
+ParseClaws similarity with Ben: 126
+Mike similarity with Ben: 129
+Brian similarity with Ben: 129
+Douglas Anderson similarity with Ben: 129
+Moose similarity with Ben: 134
+Cust5 similarity with Ben: 134
+joe similarity with Ben: 135
+Ocelot similarity with Ben: 142
+Sidney similarity with Ben: 142
+andrew similarity with Ben: 143
+Reuven similarity with Ben: 145
+Mike Williams similarity with Ben: 154
+Shannon similarity with Ben: 190
+Cust8 similarity with Ben: 191
+ROFLOL similarity with Ben: 194
+matt c similarity with Ben: 200
+Megan similarity with Ben: 201
+Tiffany similarity with Ben: 206
+Claire similarity with Ben: 211
+
+Recommending based on similarity algorithm
++++++++++++++++++++++++++++++++++++
+Recommended by user: Claire
+        Watership Down by Richard Adams
+        Lord of the Flies by William Golding
+        Flowers For Algernon by Daniel Keyes
+        Sabriel by Garth Nix
+        The Lord of the Rings by J R R Tolkien
+Recommended by user: Tiffany
+        The Great Gatsby by F. Scott Fitzgerald
+        The Princess Bride by William Goldman
+        My Sister's Keeper by Jodi Picoult
+Recommended by user: Megan
+        Naruto by Masashi Kishimoto
+        The Bourne Series by Robert Ludlum
