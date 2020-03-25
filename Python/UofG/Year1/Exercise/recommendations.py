@@ -62,6 +62,43 @@ def add_to_ratings_file(name, ratings):
         rating_file.write(name + "\n")
         rating_file.write(" ".join([str(x) for x in ratings]) + "\n")
 
+def get_recommendations(books, ratings, name, number):
+    similarities = [(x, dot_product(ratings[x], ratings[name])) for x in ratings if x != name]
+    similarities = sorted(similarities, key=lambda x: x[1])
+
+    for x in similarities:
+        print(x[0], "similarity with", name + ":", x[1])
+    print()
+
+    print("Recommending based on similarity algorithm")
+    print("+++++++++++++++++++++++++++++++++++")
+
+    recommended = set()
+    i = 1
+    while len(recommended) < number:
+        user = ""
+        try:
+            user = similarities[-i][0]
+        except IndexError:
+            break
+
+        recommendations = get_users_recommended_books(books, ratings, name, user)
+        if len(vector_difference(recommendations, recommended)) > 0:
+            print("Recommended by user:", user)
+
+        for r in recommendations:
+            if r in recommended:
+                continue
+
+            print("        ", r)
+
+            recommended.add(r)
+
+            if len(recommended) == number:
+                break
+        i += 1
+
+
 books = []
 with open("books.txt") as book_list:
     books = [l.strip().split(",") for l in book_list]
@@ -76,3 +113,22 @@ with open("ratings.txt") as rating_list:
         else:
             ratings[last_name] = [int(x) for x in l.strip().split(" ")]
 
+name = input("What is your name? ")
+number = 0
+
+if name not in ratings:
+    print("User", name, "is not in the database, please rate the following books first.")
+    new_ratings = rate_random_books(books, ratings, 11)
+    add_to_ratings_file(name, new_ratings)
+    ratings[name] = new_ratings
+
+while True:
+    try:
+        number = int(input("How many recommendations? "))
+        break
+    except ValueError:
+        print("Incorrect number, try again")
+
+print()
+
+get_recommendations(books, ratings, name, number)
