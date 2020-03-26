@@ -11,33 +11,41 @@ class Book:
     def __repr__(self):
         return self.author + " - " + self.title
 
+# Calculates the dot product of vectors a and b
 def dot_product(a, b):
     return sum([x*y for x, y in zip(a, b)])
 
-def vector_difference(a, b):
+# Returns the difference of a and b
+def difference(a, b):
     return [x for x in a if x not in b]
 
-def get_similarity(ratings, name_a, name_b):
-    a = ratings[name_a]
-    b = ratings[name_b]
-    return dot_product(a, b)
-
-def get_users_recommended_books(books, ratings, name, user):
+# Returns a list of books recommended for "user_name" by "other_user_name"
+def get_users_recommended_books(books, ratings, user_name, other_user_name):
     result = []
-    for i, rating in enumerate(ratings[user]):
-        if rating > 2 and ratings[name][i] == 0:
+    for i, rating in enumerate(ratings[other_user_name]):
+        # Only pick "other_user_name"s books rated 3 or 5 that "user_name" didn't read yet
+        if rating > 2 and ratings[user_name][i] == 0:
             result.append(books[i])
     return result
 
+# Returns a list of 55 integers containing user-given ratings for randomly chosen books
+# Used for new users to fill in their database entry
+# Puts in books that weren't covered by the random search as 0 (not read)
+# Keeps giving books to rate until user name has rated "number" of books differently than 0
 def rate_random_books(books, ratings, number):
+    # List with 55 0s, just like in the ratings.txt file
     ratings = [0] * 55
+    # Set with books already rated by the user
     rated = set()
 
+    # Keep iterating until the user rates the required number of books
     while len(rated) < number:
         next_book = random.randint(0, 54)
+        # Make sure books aren't repeated
         if books[next_book] in rated:
             continue
 
+        # Make sure that user gives an acceptable rating, keep asking until that happens
         acceptable_ratings = [-5, -3, 0, 1, 3, 5]
         rating = 0
         while True:
@@ -49,6 +57,7 @@ def rate_random_books(books, ratings, number):
             except ValueError:
                 print("Incorrect rating, try again")
 
+        # Don't consider the book 'rated' if the user hasn't read it
         if rating == 0:
             continue
 
@@ -57,71 +66,91 @@ def rate_random_books(books, ratings, number):
 
     return ratings
 
-def add_to_ratings_file(name, ratings):
+## Writes an entry to the ratings file in accordance with the already existing pattern
+def add_to_ratings_file(user_name, ratings):
     with open("ratings.txt", "a") as rating_file:
-        rating_file.write(name + "\n")
+        rating_file.write(user_name + "\n")
         rating_file.write(" ".join([str(x) for x in ratings]) + "\n")
 
-def get_recommendations(books, ratings, name, number):
-    similarities = [(x, dot_product(ratings[x], ratings[name])) for x in ratings if x != name]
+## Main function in the program, gets "number" recommendations for user with name "user_name"
+def get_recommendations(books, ratings, user_name, number):
+    # Get similarity scores with all the other users using the dot product and sort them
+    similarities = [(x, dot_product(ratings[x], ratings[user_name]))
+                    for x in ratings if x != user_name]
     similarities = sorted(similarities, key=lambda x: x[1])
 
     for x in similarities:
-        print(x[0], "similarity with", name + ":", x[1])
+        print(x[0], "similarity with", user_name + ":", x[1])
     print()
 
     print("Recommending based on similarity algorithm")
     print("+++++++++++++++++++++++++++++++++++")
 
+    # Set containing already recommended books
     recommended = set()
+    # Counter for incrementally choosing users from the end of the similarities list
     i = 1
     while len(recommended) < number:
-        user = ""
+        # Guard against program crashing if user wants more recommendations than available books
+        other_user_name = ""
         try:
-            user = similarities[-i][0]
+            other_user_name = similarities[-i][0]
         except IndexError:
             break
 
-        recommendations = get_users_recommended_books(books, ratings, name, user)
-        if len(vector_difference(recommendations, recommended)) > 0:
-            print("Recommended by user:", user)
+        recommendations = get_users_recommended_books(
+            books, ratings, user_name, other_user_name
+        )
+        # Don't print the line if there are no books to be recommended by "other_user_name"
+        if len(difference(recommendations, recommended)) > 0:
+            print("Recommended by other_user_name:", other_user_name)
 
         for r in recommendations:
+            # Skip if the book has already been recommended
             if r in recommended:
                 continue
 
+            # Print the indented recommendation
             print("        ", r)
 
-            recommended.add(r)
 
+            recommended.add(r)
+            ## Stop iterating if you reach enough recommendations
             if len(recommended) == number:
                 break
         i += 1
 
 
+# Read books from file and store them in a list
 books = []
 with open("books.txt") as book_list:
     books = [l.strip().split(",") for l in book_list]
     books = [Book(x[0], x[1]) for x in books]
 
+# Read ratings from file and store them in a map mapping names to lists of ratings
 ratings = {}
 with open("ratings.txt") as rating_list:
     last_name = ""
     for l in rating_list:
+        # If a line starts with a letter, it's a name, otherwise it's the rating list
         if l.strip()[0].isalpha():
+            # Store the name for next iteration
             last_name = l.strip()
         else:
+            # Encountered a list of ratings, add it to the map using the last encountered name
             ratings[last_name] = [int(x) for x in l.strip().split(" ")]
 
-name = input("What is your name? ")
+user_name = input("What is your user_name? ")
 number = 0
 
-if name not in ratings:
-    print("User", name, "is not in the database, please rate the following books first.")
+# Update the database if the user name is not in it yet
+if user_name not in ratings:
+    print("User", user_name, "is not in the database, please rate the following books first.")
     new_ratings = rate_random_books(books, ratings, 11)
-    add_to_ratings_file(name, new_ratings)
-    ratings[name] = new_ratings
+    add_to_ratings_file(user_name, new_ratings)
+    ratings[user_name] = new_ratings
 
+# Make sure that user gives a valid number as the number of recommendations
 while True:
     try:
         number = int(input("How many recommendations? "))
@@ -131,4 +160,4 @@ while True:
 
 print()
 
-get_recommendations(books, ratings, name, number)
+get_recommendations(books, ratings, user_name, number)
