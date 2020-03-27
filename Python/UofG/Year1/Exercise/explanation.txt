@@ -1,10 +1,31 @@
 1. Describe any complex data structures you used and explain why you think they are suitable. 
 
+Main data structures that I used in this program are lists, sets and a map.
+I think a map is the most natural way to represent a relationship in which a user name corresponds to a list of book ratings.
+The best way to represent ratings is as a list given that their order really matters.
+Employing sets is a very good way of avoid duplicate recommendations or duplicate ratings.
 
 2. How did you break down the problem into sub-problems? Explain the sub-problems and explain how they are organized in recommendations.py.
 
+First of all I split the necessary functionality into 3 main categories:
+Utility functions, database functions and recommendations functions.
+The sub problems were: reading the database, updating the database and giving recommendations.
+Out of those, updating the database could be divided into:
+Choosing random books for the user to rate, making sure the ratings are acceptable, making sure the user rates an appropriate number of books.
+Giving recommendations could be divided into:
+Calculating similarity scores and sorting users by them, recommending user 'a' books that user 'b' has liked but 'a' hasn't read and outputting an appropriate number of recommendations.
 
 3. Are there any parts of your code that you think are difficult to understand? if yes, explain them here. 
 
+I think all the parts of my code that could be slightly unclear at first are explained well enough by the comments accompanying them.
+
 
 4. Which possible errors could occur and how have you handled them? Explain whether you have used exception handling or defensive programming and use examples if you like.  
+
+All the errors that could occur are largely due to user input, as is usual.
+I've chosen to handle them using exception handling, for example with asking for the number of recommendations.
+The program will be stuck in an infinite loop until user provides a valid, positive number.
+If the user provides a string, Python will throw a ValueError which will go to next iteration.
+If the user provides a 0 or a negative number, the program will raise a ValueError.
+If the user provides a valid number, the loop will break and the program will continue.
+
