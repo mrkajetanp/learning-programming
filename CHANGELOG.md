@@ -2,6 +2,10 @@
 
 ---
 
+#### 28.3.2020
+
+* [General] Content review
+
 #### 13.1.2020
 
 * [PineScript] Fixes and analysis
