@@ -3,7 +3,7 @@
 
 # Code Learning
 
-Repository with source files I created while learning to program.
+Just lots of random learning-related code
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
