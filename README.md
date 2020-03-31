@@ -49,6 +49,10 @@ Just lots of random learning-related code
 
 * Rust ...
 
+### Ruby ###
+
+* Ruby ...
+
 ### Java ###
 
 * Java ...
