@@ -53,7 +53,7 @@
 [3 n 5]
 (setq aa [3 4 5])
 (fillarray aa nil)
-(length (vector 7 5 3))
+(length (vector 7 5 4))
 (aref ["a" "b" "c"] 0)
 (elt ["a" "b" "c"] 1)
 (aset aa 0 "b")
@@ -77,7 +77,7 @@
 
 (sequencep 1)
 (sequencep '(1))
-(elt '(1 2 3 4 5) 1)
+(elt '(1 2 3 4 5) 4)
 (reverse '(1 2 3))
 
 (defun predicate-rising(a b)
@@ -232,7 +232,6 @@ x
 
 ;; test
 (gethash "joe" myHash ) ; 3
-
 (puthash "joe" 19 myHash)
 (puthash "john" 22 myHash)
 (gethash "joe" myHash)

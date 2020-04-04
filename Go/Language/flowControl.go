@@ -94,4 +94,6 @@ func FlowControl() {
 	ifs()
 	switches()
 	deferring()
+
+	fmt.Println()
 }

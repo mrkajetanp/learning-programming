@@ -4,4 +4,5 @@ func main() {
 	HelloWorld()
 	Basics()
 	FlowControl()
+	MoreTypes()
 }
