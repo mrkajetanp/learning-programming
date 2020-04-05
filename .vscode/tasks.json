@@ -1,0 +1,13 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Go Language Run",
+            "type": "shell",
+            "command": "go run Go/Language/tour_of_go.go Go/Language/helloWorld.go Go/Language/flowControl.go Go/Language/basics.go Go/Language/moreTypes.go",
+            "problemMatcher": []
+        }
+    ]
+}

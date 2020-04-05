@@ -28,6 +28,7 @@ func split(sum int) (x, y int) {
 
 var c, python, java = true, false, "no!"
 
+// Basics is the main function running all the content
 func Basics() {
 	fmt.Println("My favourite number is:", rand.Intn(20))
 	fmt.Printf("You now have %g issues\n", math.Sqrt(7))
@@ -55,8 +56,8 @@ func Basics() {
 	fmt.Printf("Type: %T Value: %v\n", MaxInt, MaxInt)
 	fmt.Printf("Type: %T Value: %v\n", z, z)
 
-	var new_i int = 12
-	var x uint = uint(new_i)
+	var newI int = 12
+	var x uint = uint(newI)
 	fmt.Println("x: ", x)
 
 	const word = "helloo"

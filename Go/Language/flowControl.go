@@ -45,8 +45,9 @@ func pow(x, n, lim float64) float64 {
 	if v := math.Pow(x, n); v < lim {
 		return v
 	} else {
-		// something else with v
+		fmt.Println(v * 2)
 	}
+
 	return lim
 }
 
@@ -86,8 +87,10 @@ func deferring() {
 	fmt.Println("hello")
 }
 
+// FlowControl executes all the functions in this file
 func FlowControl() {
-	fmt.Println("*** Flow Control ***\n")
+	fmt.Println("*** Flow Control ***")
+	fmt.Println()
 
 	forLoop()
 	whileLoop()

@@ -12,14 +12,16 @@ def print_none():
 
 
 def lambdas():
-        a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        print(list(filter(lambda x, l=3, h=7: l < x <= h, a_list)))
+    a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    print(list(filter(lambda x, l=3, h=7: l < x <= h, a_list)))
 
 
 def updown(n):
-    for x in range(1, n): yield x
-    for x in range(n, 0, -1): yield x
+    for x in range(1, n):
+        yield x
 
+    for x in range(n, 0, -1):
+        yield x
 
 
 print_one("ArOne", "AreTwo")
