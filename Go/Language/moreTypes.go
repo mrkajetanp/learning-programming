@@ -20,6 +20,7 @@ func pointers() {
 	fmt.Println(j)
 }
 
+// Vertex simply represents a vertex
 type Vertex struct {
 	X int
 	Y int
@@ -206,8 +207,10 @@ func closures() {
 	fmt.Println(ad(5))
 }
 
+// MoreTypes executes functions in this file
 func MoreTypes() {
-	fmt.Println("*** Flow Control ***\n")
+	fmt.Println("*** Flow Control ***")
+	fmt.Println()
 
 	pointers()
 	structs()

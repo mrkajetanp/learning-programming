@@ -44,9 +44,9 @@ func sqrt(x float64) string {
 func pow(x, n, lim float64) float64 {
 	if v := math.Pow(x, n); v < lim {
 		return v
-	} else {
-		fmt.Println(v * 2)
-	}
+	} // else {
+	// fmt.Println(v * 2)
+	// }
 
 	return lim
 }
