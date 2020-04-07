@@ -10,7 +10,7 @@ class Greeter
   end
 
   def sayBye
-    puts "Bye #{@name}, come back soon."
+    pts "Bye #{@name}, come back soon."
   end
 end
 
