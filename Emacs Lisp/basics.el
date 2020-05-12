@@ -87,7 +87,9 @@ x
 y
 
 (defun bar()
-  (setq x 8))
+  ("test"))
+
+(bar)
 
 (defun foo()
   (let ((x 6))

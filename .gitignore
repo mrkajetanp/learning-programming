@@ -6,6 +6,7 @@ a.out
 *.a
 build
 node_modules
+.ccls-cache
 jspm_packages
 typings
 target

@@ -9,8 +9,6 @@ int main(int argc, char *argv[]) {
   color.green = 0x2828;
   color.blue = 0x2828;
 
-  gtk_init(&argc, &argv);
-
   window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title(GTK_WINDOW(window), "Hello Title!");
   gtk_widget_modify_bg(window, GTK_STATE_NORMAL, &color);
@@ -23,4 +21,3 @@ int main(int argc, char *argv[]) {
 
   return 0;
 }
-

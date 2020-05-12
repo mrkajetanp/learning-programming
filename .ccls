@@ -1,0 +1,2 @@
+clang
+-I/usr/include/glib-2.0/
