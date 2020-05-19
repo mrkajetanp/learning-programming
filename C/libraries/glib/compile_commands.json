@@ -1,0 +1,15 @@
+[
+    {
+        "arguments": [
+            "gcc",
+            "-c",
+            "-I/usr/include/glib-2.0",
+            "-I/usr/lib/glib-2.0/include",
+            "-o",
+            "basics",
+            "glib_basics.c"
+        ],
+        "directory": "/home/kajetan/Programming/learning/C/libraries/glib",
+        "file": "glib_basics.c"
+    }
+]
