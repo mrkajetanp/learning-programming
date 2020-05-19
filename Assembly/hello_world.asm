@@ -1,3 +1,6 @@
+    ;; Prints "Hello, World!"
+    ;;
+    ;; nasm -felf64 hello_world.asm && ld hello_world.o && ./a.out
 
     global _start
 
