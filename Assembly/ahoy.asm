@@ -7,8 +7,9 @@
 
     section .text
 main:
-    lea rdi, [rel message]
-    call puts WRT ..plt
+    lea rdi, [rel message]      ; set first argument to str pointer
+    call puts WRT ..plt         ; puts(message);
+    xor rax, rax                ; set exit code to 0
     ret
 
     section .rodata
