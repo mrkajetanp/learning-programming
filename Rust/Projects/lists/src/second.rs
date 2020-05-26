@@ -114,7 +114,7 @@ mod tests {
     use super::List;
 
     #[test]
-    fn basics() {
+    fn push_pop() {
         let mut list = List::new();
 
         // Empty list behaves
