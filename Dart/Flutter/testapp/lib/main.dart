@@ -24,28 +24,27 @@ class _RandomWordsState extends State<RandomWords> {
 
   Widget _buildRow(WordPair pair) {
     return ListTile(
-      title: Text(
-        pair.asPascalCase,
-        style: _biggerFont,
-      )
-    );
+        title: Text(
+      pair.asPascalCase,
+      style: _biggerFont,
+    ));
   }
 
   Widget _buildSuggestions() {
     return ListView.builder(
-      padding: EdgeInsets.all(16.0),
-      itemBuilder: (context, i) {
-        if (i.isOdd) {
-          return Divider();
-        }
+        padding: EdgeInsets.all(16.0),
+        itemBuilder: (context, i) {
+          if (i.isOdd) {
+            return Divider();
+          }
 
-        final index = i ~/ 2;
-        if (index >= _suggestions.length) {
-          _suggestions.addAll(generateWordPairs().take(10));
-        }
+          final index = i ~/ 2;
+          if (index >= _suggestions.length) {
+            _suggestions.addAll(generateWordPairs().take(10));
+          }
 
-        return _buildRow(_suggestions[index]);
-      });
+          return _buildRow(_suggestions[index]);
+        });
   }
 
   @override
