@@ -2,6 +2,10 @@
 
 ---
 
+#### 17.7.2020
+
+* [Dart] Flutter - Animations
+
 #### 28.3.2020
 
 * [General] Content review
