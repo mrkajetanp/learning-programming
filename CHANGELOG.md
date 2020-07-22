@@ -2,6 +2,10 @@
 
 ---
 
+#### 22.7.2020
+
+* [Flutter] Docs - Data & backend
+
 #### 17.7.2020
 
 * [Dart] Flutter - Animations
