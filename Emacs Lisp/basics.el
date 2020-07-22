@@ -87,7 +87,7 @@ x
 y
 
 (defun bar()
-  ("test"))
+  "test")
 
 (bar)
 
@@ -175,7 +175,6 @@ y
 (equal '(3 4 5) '(3 4 5))
 
 (setq x "XXX")
-x
 
 ;; checks whether it's the same lisp object
 (eq "e" "e")

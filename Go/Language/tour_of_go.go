@@ -6,4 +6,5 @@ func main() {
 	FlowControl()
 	MoreTypes()
 	Methods()
+	Interfaces()
 }
