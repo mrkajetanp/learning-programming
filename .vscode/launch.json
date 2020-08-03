@@ -17,5 +17,11 @@
             "request": "launch",
             "type": "dart"
         }
+        {
+            "name": "Flutter Intl App",
+            "program": "Dart/Flutter/interapp/lib/main.dart",
+            "request": "launch",
+            "type": "dart"
+        }
     ]
 }

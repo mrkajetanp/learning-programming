@@ -63,6 +63,18 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            RaisedButton(
+              child: Text('French'),
+              onPressed: () {
+                context.locale = Locale("fr", "FR");
+              },
+            ),
+            RaisedButton(
+              child: Text('English'),
+              onPressed: () {
+                context.locale = Locale("en", "US");
+              },
+            ),
             Text('title').tr(),
             Text(
               '$_counter',
