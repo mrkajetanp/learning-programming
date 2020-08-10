@@ -1,0 +1,12 @@
+/mnt/work/Programming/Learning/C#/.NET/sample1/bin/Debug/netcoreapp2.1/sample1.dll
+/mnt/work/Programming/Learning/C#/.NET/sample1/bin/Debug/netcoreapp2.1/sample1.pdb
+/mnt/work/Programming/Learning/C#/.NET/sample1/obj/Debug/netcoreapp2.1/sample1.csprojAssemblyReference.cache
+/mnt/work/Programming/Learning/C#/.NET/sample1/obj/Debug/netcoreapp2.1/sample1.AssemblyInfoInputs.cache
+/mnt/work/Programming/Learning/C#/.NET/sample1/obj/Debug/netcoreapp2.1/sample1.AssemblyInfo.cs
+/mnt/work/Programming/Learning/C#/.NET/sample1/obj/Debug/netcoreapp2.1/sample1.csproj.CoreCompileInputs.cache
+/mnt/work/Programming/Learning/C#/.NET/sample1/obj/Debug/netcoreapp2.1/sample1.dll
+/mnt/work/Programming/Learning/C#/.NET/sample1/obj/Debug/netcoreapp2.1/sample1.pdb
+/mnt/work/Programming/Learning/C#/.NET/sample1/bin/Debug/netcoreapp2.1/sample1.deps.json
+/mnt/work/Programming/Learning/C#/.NET/sample1/bin/Debug/netcoreapp2.1/sample1.runtimeconfig.json
+/mnt/work/Programming/Learning/C#/.NET/sample1/bin/Debug/netcoreapp2.1/sample1.runtimeconfig.dev.json
+/mnt/work/Programming/Learning/C#/.NET/sample1/obj/Debug/netcoreapp2.1/sample1.genruntimeconfig.cache
