@@ -2,10 +2,6 @@
 
 ---
 
-= [Rails] Docs - Articles Model
-
-#### 12.8.2020
-
 #### 22.7.2020
 
 * [Flutter] Docs - Data & backend
