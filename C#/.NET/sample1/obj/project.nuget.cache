@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "kfLdP3NObwxM7/hkSKp7NwW1uyryUifXgQl0XaBxS3T8Vw+jLCgegDKpVRTHu+8NkarwFkv4pVEKXMxe7Lc8NA==",
+  "success": true,
+  "projectFilePath": "/mnt/work/Programming/Learning/C#/.NET/sample1/sample1.csproj",
+  "expectedPackageFiles": [
+    "/home/kajetan/.nuget/packages/microsoft.netcore.app/2.1.0/microsoft.netcore.app.2.1.0.nupkg.sha512",
+    "/home/kajetan/.nuget/packages/microsoft.netcore.dotnetapphost/2.1.0/microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",
+    "/home/kajetan/.nuget/packages/microsoft.netcore.dotnethostpolicy/2.1.0/microsoft.netcore.dotnethostpolicy.2.1.0.nupkg.sha512",
+    "/home/kajetan/.nuget/packages/microsoft.netcore.dotnethostresolver/2.1.0/microsoft.netcore.dotnethostresolver.2.1.0.nupkg.sha512",
+    "/home/kajetan/.nuget/packages/microsoft.netcore.platforms/2.1.0/microsoft.netcore.platforms.2.1.0.nupkg.sha512",
+    "/home/kajetan/.nuget/packages/microsoft.netcore.targets/2.1.0/microsoft.netcore.targets.2.1.0.nupkg.sha512",
+    "/home/kajetan/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

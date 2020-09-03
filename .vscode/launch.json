@@ -4,11 +4,22 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
+        {
+            "name": "Flutter Cookbook App",
+            "program": "Dart/Flutter/cookbookapp/lib/main.dart",
+            "request": "launch",
+            "type": "dart"
+        }
 
         {
             "name": "Flutter Docs App",
             "program": "Dart/Flutter/docsapp/lib/main.dart",
+            "request": "launch",
+            "type": "dart"
+        }
+        {
+            "name": "Flutter Intl App",
+            "program": "Dart/Flutter/interapp/lib/main.dart",
             "request": "launch",
             "type": "dart"
         }
