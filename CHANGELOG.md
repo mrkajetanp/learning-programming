@@ -2,6 +2,10 @@
 
 ---
 
+#### 1.10.2020
+
+* [DWM] config.h & general functionality
+
 #### 22.7.2020
 
 * [Flutter] Docs - Data & backend
