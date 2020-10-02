@@ -2,6 +2,10 @@
 
 ---
 
+#### 2.10.2020
+
+* [DWM] Initial patches
+
 #### 1.10.2020
 
 * [DWM] config.h & general functionality
