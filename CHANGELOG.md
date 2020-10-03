@@ -2,6 +2,10 @@
 
 ---
 
+#### 3.10.2020
+
+* [DWM] Further patches
+
 #### 2.10.2020
 
 * [DWM] Initial patches
