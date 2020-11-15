@@ -41,5 +41,5 @@ def merge_sort_2(arr):
     return merge(merge_sort_2(arr[:mid]), merge_sort_2(arr[mid:]))
 
 
-print(merge_sort([6, 3, 5, 1, 4, 7, 10, 10, 1, 8, 13, 11]))
+# print(merge_sort([6, 3, 5, 1, 4, 7, 10, 10, 1, 8, 13, 11]))
 print(merge_sort_2([6, 3, 5, 1, 4, 7, 10, 10, 1, 8, 13, 11]))
