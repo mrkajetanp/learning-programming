@@ -6,7 +6,7 @@ def counting_sort(arr, maxval):
     for x in arr:
         counts[x] += 1
 
-    result =  [-1] * len(arr)
+    result = [-1] * len(arr)
 
     for i in range(1, len(counts)):
         counts[i] = counts[i-1] + counts[i]
