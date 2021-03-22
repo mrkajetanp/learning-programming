@@ -1,0 +1,1037 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/kajetan/Programming/learning-programming/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210110.0/
+ARCHITECTURE_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#   define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define ARCHITECTURE_ID$/;"	d	file:
+ARCHITECTURE_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID /;"	d	file:
+ARCHITECTURE_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID$/;"	d	file:
+Align	C/ansi_c/chapter_8/memory_allocation.c	/^typedef long Align;		\/* alignment based on long *\/$/;"	t	typeref:typename:long	file:
+AlsoFiveThirds	C++/Language/Standard Library/Utilities/FractionalArithmetic.cpp	/^    typedef std::ratio<25,15> AlsoFiveThirds;$/;"	t	function:ratios	typeref:typename:std::ratio<25,15>	file:
+BAR_EXCEPTION	C/language/dyn_mem_and_program_utils/memutils.c	/^#define BAR_EXCEPTION /;"	d	file:
+BAZ_EXCEPTION	C/language/dyn_mem_and_program_utils/memutils.c	/^#define BAZ_EXCEPTION /;"	d	file:
+BFS	C++/Data Structures And Algorithms/Graphs/Connected Components/UndirectedIfConnectedBFS.cpp	/^void Graph::BFS(int s, bool visited[]) {$/;"	f	class:Graph	typeref:typename:void
+BLUE	C/language/pointers/pointers.c	/^  enum colors { RED, YELLOW, GREEN=12, BLUE};$/;"	e	enum:main::colors	file:
+BUFSIZ	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define BUFSIZ /;"	d	file:
+BUFSIZE	C/ansi_c/chapter_3/reverse_polish_notation.c	/^#define BUFSIZE /;"	d	file:
+BUFSIZE	C/ansi_c/chapter_8/unix_cat.c	/^#define BUFSIZE /;"	d	file:
+CATCH	C/language/dyn_mem_and_program_utils/memutils.c	/^#define CATCH(/;"	d	file:
+CFLAGS	C/libraries/glib/makefile	/^CFLAGS = `pkg-config glib-2.0 --cflags`$/;"	m
+CLIBS	C/libraries/glib/makefile	/^CLIBS = `pkg-config glib-2.0 --libs`$/;"	m
+COMPARE	C/algorithms/data_structures/lists/single_linked_list.h	/^typedef int(*COMPARE)(void*, void*);$/;"	t	typeref:typename:int (*)(void *,void *)
+COMPARE	C/algorithms/data_structures/trees/tree.h	/^typedef int(*COMPARE)(void*, void*);$/;"	t	typeref:typename:int (*)(void *,void *)
+COMPILER_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_ID /;"	d	file:
+COMPILER_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_ID /;"	d	file:
+COMPILER_VERSION_INTERNAL	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_INTERNAL	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_INTERNAL	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_INTERNAL	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_INTERNAL /;"	d	file:
+COMPILER_VERSION_MAJOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MAJOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_MAJOR /;"	d	file:
+COMPILER_VERSION_MINOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_MINOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_MINOR /;"	d	file:
+COMPILER_VERSION_PATCH	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^  # define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#   define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  # define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#   define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_PATCH	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_PATCH /;"	d	file:
+COMPILER_VERSION_TWEAK	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define COMPILER_VERSION_TWEAK /;"	d	file:
+COMPILER_VERSION_TWEAK	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define COMPILER_VERSION_TWEAK /;"	d	file:
+CXX_STD	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#      define CXX_STD /;"	d	file:
+CXX_STD	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#    define CXX_STD /;"	d	file:
+CXX_STD	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define CXX_STD /;"	d	file:
+C_DIALECT	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define C_DIALECT /;"	d	file:
+C_DIALECT	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define C_DIALECT$/;"	d	file:
+C_DIALECT	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^# define C_DIALECT /;"	d	file:
+Color	C++/Language/A Tour Of C++/User-DefinedTypes/Enumerations.cpp	/^enum class Color { red, blue, green };$/;"	g	file:
+Color2	C++/Language/A Tour Of C++/User-DefinedTypes/Enumerations.cpp	/^enum Color2 { red, green, blue };$/;"	g	file:
+Complex	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		Complex () : re(0), im(0) {}$/;"	f	class:Complex	file:
+Complex	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		Complex (double r) : re(r), im(0) {}$/;"	f	class:Complex	file:
+Complex	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		Complex (double r, double i) : re(r), im(i) {}$/;"	f	class:Complex	file:
+Complex	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^class Complex {$/;"	c	file:
+Container	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^class Container {$/;"	c	file:
+DEC	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#define DEC(/;"	d	file:
+DEC	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define DEC(/;"	d	file:
+DELAY	C/libraries/gui/ncurses/examples/demo_curses.c	/^#define DELAY /;"	d	file:
+DIR	C/ansi_c/chapter_8/listing_directories.c	/^} DIR;$/;"	t	typeref:struct:__anoncbc902e70208	file:
+DISPLAY	C/algorithms/data_structures/lists/single_linked_list.h	/^typedef void(*DISPLAY)(void*);$/;"	t	typeref:typename:void (*)(void *)
+DISPLAY	C/algorithms/data_structures/trees/tree.h	/^typedef void(*DISPLAY)(void*);$/;"	t	typeref:typename:void (*)(void *)
+DLinkedList	C++/Data Structures And Algorithms/Linked List/DoublyLinkedList.cpp	/^DLinkedList::DLinkedList() {$/;"	f	class:DLinkedList
+DLinkedList	C++/Data Structures And Algorithms/Linked List/DoublyLinkedList.cpp	/^class DLinkedList {$/;"	c	file:
+DNode	C++/Data Structures And Algorithms/Linked List/DoublyLinkedList.cpp	/^class DNode {$/;"	c	file:
+Dirent	C/ansi_c/chapter_8/listing_directories.c	/^} Dirent;$/;"	t	typeref:struct:__anoncbc902e70108	file:
+EOF	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define EOF /;"	d	file:
+ETRY	C/language/dyn_mem_and_program_utils/memutils.c	/^#define ETRY /;"	d	file:
+EXPECT_EQUAL	Build Systems/CMake/src/main.cpp	/^#define EXPECT_EQUAL(/;"	d	file:
+EXTERNAL	C/ansi_c/chapter_6/unions_and_bit_fields.c	/^	EXTERNAL = 02,$/;"	e	enum:__anonccbcbe310103	file:
+Entry	C++/Language/A Tour Of C++/Algorithms/General.cpp	/^typedef struct Entry {$/;"	s	file:
+Entry	C++/Language/A Tour Of C++/Algorithms/General.cpp	/^} Entry;$/;"	t	typeref:struct:Entry	file:
+Entry	C++/Language/A Tour Of C++/Containers/Lists.cpp	/^typedef struct Entry {$/;"	s	file:
+Entry	C++/Language/A Tour Of C++/Containers/Lists.cpp	/^} Entry;$/;"	t	typeref:struct:Entry	file:
+Entry	C++/Language/A Tour Of C++/Containers/Vectors.cpp	/^typedef struct Entry {$/;"	s	file:
+Entry	C++/Language/A Tour Of C++/Containers/Vectors.cpp	/^} Entry;$/;"	t	typeref:struct:Entry	file:
+Entry	C++/Language/A Tour Of C++/Iostreams/IoUserTypes.cpp	/^struct Entry {$/;"	s	file:
+Entry	C++/Language/A Tour Of C++/User-DefinedTypes/Unions.cpp	/^struct Entry {$/;"	s	file:
+F	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^		F (const std::vector<double>& vv, double* p) : v (vv), res (p) {  }$/;"	f	class:F	file:
+F	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^class F {$/;"	c	file:
+FILE	C/ansi_c/chapter_8/fopen_and_getc.c	/^} FILE;$/;"	t	typeref:struct:_iobuf	file:
+FINALLY	C/language/dyn_mem_and_program_utils/memutils.c	/^#define FINALLY /;"	d	file:
+FLUTTER_MY_APPLICATION_H_	Dart/Flutter/linuxapp/linux/my_application.h	/^#define FLUTTER_MY_APPLICATION_H_$/;"	d
+FOO_EXCEPTION	C/language/dyn_mem_and_program_utils/memutils.c	/^#define FOO_EXCEPTION /;"	d	file:
+FiveThirds	C++/Language/Standard Library/Utilities/FractionalArithmetic.cpp	/^    typedef std::ratio<5,3> FiveThirds;$/;"	t	function:ratios	typeref:typename:std::ratio<5,3>	file:
+GENERATED_PLUGIN_REGISTRANT_	Dart/Flutter/linuxapp/linux/flutter/generated_plugin_registrant.h	/^#define GENERATED_PLUGIN_REGISTRANT_$/;"	d
+GEORGERINGO_DECL	Build Systems/CommandLine/HelloBeatles/src/georgeringo/georgeringo.hpp	/^		#define GEORGERINGO_DECL /;"	d
+GEORGERINGO_DECL	Build Systems/CommandLine/HelloBeatles/src/georgeringo/georgeringo.hpp	/^#define GEORGERINGO_DECL$/;"	d
+GEORGERINGO_HPP_INCLUDED	Build Systems/CommandLine/HelloBeatles/src/georgeringo/georgeringo.hpp	/^#define GEORGERINGO_HPP_INCLUDED$/;"	d
+GEORGE_HPP_INCLUDED	Build Systems/CommandLine/HelloBeatles/src/georgeringo/george.hpp	/^#define GEORGE_HPP_INCLUDED$/;"	d
+GREEN	C/language/pointers/pointers.c	/^  enum colors { RED, YELLOW, GREEN=12, BLUE};$/;"	e	enum:main::colors	file:
+G_DEFINE_TYPE	Dart/Flutter/linuxapp/linux/my_application.cc	/^G_DEFINE_TYPE(MyApplication, my_application, GTK_TYPE_APPLICATION)$/;"	f	file:
+Graph	C++/Data Structures And Algorithms/Graphs/Connected Components/UndirectedIfConnectedBFS.cpp	/^  Graph(int V) {$/;"	f	class:Graph	file:
+Graph	C++/Data Structures And Algorithms/Graphs/Connected Components/UndirectedIfConnectedBFS.cpp	/^class Graph {$/;"	c	file:
+GreaterThan	C++/Language/A Tour Of C++/Algorithms/Predicates.cpp	/^	GreaterThan (int v) : val (v) {}$/;"	f	struct:GreaterThan	file:
+GreaterThan	C++/Language/A Tour Of C++/Algorithms/Predicates.cpp	/^struct GreaterThan {$/;"	s	file:
+HASHSIZE	C/ansi_c/chapter_6/table_searching.c	/^#define HASHSIZE /;"	d	file:
+HEHE	C/others/memory_leak_test.h	/^#define HEHE /;"	d
+HEIGHT	C/libraries/gui/ncurses/basics/interfacing_keyboard.c	/^#define HEIGHT /;"	d	file:
+HEX	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#define HEX(/;"	d	file:
+HEX	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define HEX(/;"	d	file:
+Header	C/ansi_c/chapter_8/memory_allocation.c	/^} Header;$/;"	t	typeref:union:header	file:
+HighArray	C++/Data Structures And Algorithms/Arrays/HighArray.cpp	/^HighArray::HighArray (int max) {$/;"	f	class:HighArray
+HighArray	C++/Data Structures And Algorithms/Arrays/HighArray.cpp	/^class HighArray {$/;"	c	file:
+ID_VOID_MAIN	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^# define ID_VOID_MAIN$/;"	d	file:
+IN	C/ansi_c/chapter_1/word_count.c	/^#define IN /;"	d	file:
+IN	C/ansi_c/chapter_1/word_length_histogram.c	/^#define IN /;"	d	file:
+IN	C/ansi_c/chapter_1/word_separate_line.c	/^#define IN /;"	d	file:
+IN	C/language/word_count/mywc.c	/^#define IN /;"	d	file:
+INDENT	C/ansi_c/chapter_1/detab.c	/^#define INDENT /;"	d	file:
+INDENT	C/ansi_c/chapter_1/entab.c	/^#define INDENT /;"	d	file:
+JOHNPAUL_HPP_INCLUDED	Build Systems/CommandLine/HelloBeatles/src/johnpaul/johnpaul.hpp	/^#define JOHNPAUL_HPP_INCLUDED$/;"	d
+JOHN_HPP_INCLUDED	Build Systems/CommandLine/HelloBeatles/src/johnpaul/john.hpp	/^#define JOHN_HPP_INCLUDED$/;"	d
+KEYWORD	C/ansi_c/chapter_6/unions_and_bit_fields.c	/^	KEYWORD = 01,$/;"	e	enum:__anonccbcbe310103	file:
+LOWER	C/language/getting_started/gstarted.c	/^#define LOWER /;"	d	file:
+LessThan	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^		LessThan (const T& v) : val (v) {}$/;"	f	class:LessThan	file:
+LessThan	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^class LessThan {$/;"	c	file:
+List	C/algorithms/data_structures/lists/doubly_linked_lists.c	/^typedef struct List {$/;"	s	file:
+List	C/algorithms/data_structures/lists/doubly_linked_lists.c	/^} List;$/;"	t	typeref:struct:List	file:
+List	C/algorithms/data_structures/lists/single_linked_list_other.c	/^typedef struct List {$/;"	s	file:
+List	C/algorithms/data_structures/lists/single_linked_list_other.c	/^} List;$/;"	t	typeref:struct:List	file:
+MAXLINE	C/ansi_c/chapter_1/comment_remover.c	/^#define MAXLINE /;"	d	file:
+MAXLINE	C/ansi_c/chapter_1/longest_line.c	/^#define MAXLINE /;"	d	file:
+MAXLINE	C/ansi_c/chapter_1/reverser.c	/^#define MAXLINE /;"	d	file:
+MAXLINE	C/ansi_c/chapter_1/split_line.c	/^#define MAXLINE /;"	d	file:
+MAXLINE	C/ansi_c/chapter_7/file_difference.c	/^#define MAXLINE /;"	d	file:
+MAXOP	C/ansi_c/chapter_3/reverse_polish_notation.c	/^#define MAXOP /;"	d	file:
+MAXVAL	C/ansi_c/chapter_3/reverse_polish_notation.c	/^#define MAXVAL /;"	d	file:
+MAXWORD	C/ansi_c/chapter_6/recursive_structures.c	/^#define MAXWORD /;"	d	file:
+MAXWORD	C/ansi_c/chapter_6/structure_arrays.c	/^#define MAXWORD /;"	d	file:
+MAX_PATH	C/ansi_c/chapter_8/listing_directories.c	/^#define MAX_PATH /;"	d	file:
+Map	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^class Map {$/;"	c	file:
+MyClass	C++/Language/Standard Library/NewLanguageFeatures/OldNew.cpp	/^class MyClass {$/;"	c	file:
+NALLOC	C/ansi_c/chapter_8/memory_allocation.c	/^#define NALLOC /;"	d	file:
+NAME_MAX	C/ansi_c/chapter_8/listing_directories.c	/^#define NAME_MAX /;"	d	file:
+NKEYS	C/ansi_c/chapter_6/structure_arrays.c	/^#define NKEYS /;"	d	file:
+NLimitsTypeTraitsUtils	C++/Language/Standard Library/Utilities/Makefile	/^NLimitsTypeTraitsUtils : NLimitsTypeTraitsUtils.cpp$/;"	t
+NULL	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define NULL /;"	d	file:
+NUMBER	C/ansi_c/chapter_3/reverse_polish_notation.c	/^#define NUMBER /;"	d	file:
+NodeQ	C/algorithms/data_structures/queues/queue_sll.c	/^typedef struct NodeQ {$/;"	s	file:
+NodeQ	C/algorithms/data_structures/queues/queue_sll.c	/^} NodeQ;$/;"	t	typeref:struct:NodeQ	file:
+OK	C/others/memory_leak_test.h	/^#define OK /;"	d
+OPEN_MAX	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define OPEN_MAX /;"	d	file:
+OUT	C/ansi_c/chapter_1/word_count.c	/^#define OUT /;"	d	file:
+OUT	C/ansi_c/chapter_1/word_length_histogram.c	/^#define OUT /;"	d	file:
+OUT	C/ansi_c/chapter_1/word_separate_line.c	/^#define OUT /;"	d	file:
+OUT	C/language/word_count/mywc.c	/^#define OUT /;"	d	file:
+OUT	C/libraries/glib/makefile	/^OUT = basics$/;"	m
+PAUL_HPP_INCLUDED	Build Systems/CommandLine/HelloBeatles/src/johnpaul/paul.hpp	/^#define PAUL_HPP_INCLUDED$/;"	d
+PERMS	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define PERMS /;"	d	file:
+PERMS	C/ansi_c/chapter_8/unix_cp.c	/^#define PERMS /;"	d	file:
+PLATFORM_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define PLATFORM_ID$/;"	d	file:
+PLATFORM_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^# define PLATFORM_ID$/;"	d	file:
+PLATFORM_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID$/;"	d	file:
+PLATFORM_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID /;"	d	file:
+PLATFORM_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID$/;"	d	file:
+Person	C++/Language/Standard Library/Utilities/SmartPointers.cpp	/^	Person (const string& n, std::shared_ptr<Person> m = nullptr,$/;"	f	class:Person	file:
+Person	C++/Language/Standard Library/Utilities/SmartPointers.cpp	/^class Person {$/;"	c	file:
+Q	C/language/preprocessor_voodoo.c	/^#define Q(/;"	d	file:
+QUEUE_H	C/algorithms/data_structures/queues/queue.h	/^#define QUEUE_H$/;"	d
+Queue	C/algorithms/data_structures/queues/queue.h	/^typedef SLinkedList Queue;$/;"	t	typeref:typename:SLinkedList
+Queue	C/algorithms/data_structures/queues/queue_sll.c	/^typedef struct Queue {$/;"	s	file:
+Queue	C/algorithms/data_structures/queues/queue_sll.c	/^} Queue;$/;"	t	typeref:struct:Queue	file:
+RED	C/language/pointers/pointers.c	/^  enum colors { RED, YELLOW, GREEN=12, BLUE};$/;"	e	enum:main::colors	file:
+RESET	C/ansi_c/chapter_7/other_functions.c	/^#define RESET(/;"	d	file:
+RHash	C++/Language/A Tour Of C++/Containers/Maps.cpp	/^struct RHash { \/\/ custom hash function for Record$/;"	s	file:
+RINGO_HPP_INCLUDED	Build Systems/CommandLine/HelloBeatles/src/georgeringo/ringo.hpp	/^#define RINGO_HPP_INCLUDED$/;"	d
+RandInt	C++/Language/A Tour Of C++/Numerics/NumAlgsComplexRandom.cpp	/^		RandInt (int low, int high) : dist { low, high } {  }$/;"	f	class:RandInt	file:
+RandInt	C++/Language/A Tour Of C++/Numerics/NumAlgsComplexRandom.cpp	/^class RandInt {$/;"	c	file:
+Record	C++/Language/A Tour Of C++/Containers/Maps.cpp	/^struct Record {$/;"	s	file:
+SIMULATE_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_ID /;"	d	file:
+SIMULATE_ID	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_ID /;"	d	file:
+SIMULATE_VERSION_MAJOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MAJOR /;"	d	file:
+SIMULATE_VERSION_MAJOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_MAJOR /;"	d	file:
+SIMULATE_VERSION_MINOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_MINOR /;"	d	file:
+SIMULATE_VERSION_MINOR	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_MINOR /;"	d	file:
+SIMULATE_VERSION_PATCH	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#  define SIMULATE_VERSION_PATCH /;"	d	file:
+SIMULATE_VERSION_PATCH	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define SIMULATE_VERSION_PATCH /;"	d	file:
+SINGLE_LINKED_LIST_H	C/algorithms/data_structures/lists/single_linked_list.h	/^#define SINGLE_LINKED_LIST_H$/;"	d
+SLinkedList	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^SLinkedList<T>::SLinkedList() : head(NULL) { }$/;"	f	class:SLinkedList
+SLinkedList	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^class SLinkedList {$/;"	c	file:
+SLinkedList	C/algorithms/data_structures/lists/single_linked_list.h	/^} SLinkedList;$/;"	t	typeref:struct:_SLinkedList
+SLinkedListNode	C/algorithms/data_structures/lists/single_linked_list.h	/^} SLinkedListNode;$/;"	t	typeref:struct:_sListNode
+SNode	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^class SNode {$/;"	c	file:
+SPLITL	C/ansi_c/chapter_1/split_line.c	/^#define SPLITL /;"	d	file:
+SRC	C/libraries/glib/makefile	/^SRC = glib_basics.c$/;"	m
+STACK_H	C/algorithms/data_structures/stacks/stack.h	/^#define STACK_H$/;"	d
+START_TEST	C/libraries/unit_test/check/simple_check.c	/^START_TEST (test_foo_simple) {$/;"	f
+STATIC	C/ansi_c/chapter_6/unions_and_bit_fields.c	/^	STATIC = 04$/;"	e	enum:__anonccbcbe310103	file:
+STRINGIFY	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY(/;"	d	file:
+STRINGIFY	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY(/;"	d	file:
+STRINGIFY_HELPER	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^#define STRINGIFY_HELPER(/;"	d	file:
+STRINGIFY_HELPER	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#define STRINGIFY_HELPER(/;"	d	file:
+Shape	C++/Language/A Tour Of C++/Utilities/FunctionAdaptors.cpp	/^typedef struct Shape {$/;"	s	file:
+Shape	C++/Language/A Tour Of C++/Utilities/FunctionAdaptors.cpp	/^} Shape;$/;"	t	typeref:struct:Shape	file:
+Stack	C/algorithms/data_structures/stacks/stack.h	/^typedef SLinkedList Stack;$/;"	t	typeref:typename:SLinkedList
+Stack	C/algorithms/data_structures/stacks/stacks.c	/^} Stack;$/;"	t	typeref:struct:__anon85d4f49e0108	file:
+StringMap	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^using StringMap = Map<string, Value>;$/;"	t	typeref:typename:Map<string,Value>	file:
+TARGETS	C++/Language/Standard Library/Utilities/Makefile	/^TARGETS = NLimitsTypeTraitsUtils$/;"	m
+THROW	C/language/dyn_mem_and_program_utils/memutils.c	/^#define THROW(/;"	d	file:
+TODO_H	Build Systems/CMake/src/ToDoCore/ToDo.hpp	/^#define TODO_H$/;"	d
+TREE_H	C/algorithms/data_structures/trees/tree.h	/^#define TREE_H$/;"	d
+TRY	C/language/dyn_mem_and_program_utils/memutils.c	/^#define TRY /;"	d	file:
+TestS	C/others/structure_padding_test.c	/^} TestS;$/;"	t	typeref:struct:_testS	file:
+ToDo	Build Systems/CMake/src/ToDoCore/ToDo.cpp	/^ToDo::ToDo()$/;"	f	class:ToDoCore::ToDo
+ToDo	Build Systems/CMake/src/ToDoCore/ToDo.hpp	/^class ToDo$/;"	c	namespace:ToDoCore
+ToDoCore	Build Systems/CMake/src/ToDoCore/ToDo.cpp	/^namespace ToDoCore$/;"	n	file:
+ToDoCore	Build Systems/CMake/src/ToDoCore/ToDo.hpp	/^namespace ToDoCore$/;"	n
+TrafficLight	C++/Language/A Tour Of C++/User-DefinedTypes/Enumerations.cpp	/^enum class TrafficLight { green, yellow, red };$/;"	g	file:
+TreeNode	C/algorithms/data_structures/trees/tree.h	/^} TreeNode;$/;"	t	typeref:struct:_treeNode
+Type	C++/Language/A Tour Of C++/User-DefinedTypes/Unions.cpp	/^enum Type { str, num };$/;"	g	file:
+V	C++/Data Structures And Algorithms/Graphs/Connected Components/UndirectedIfConnectedBFS.cpp	/^  int V;$/;"	m	class:Graph	typeref:typename:int	file:
+Value	C++/Language/A Tour Of C++/User-DefinedTypes/Unions.cpp	/^union Value {$/;"	u	file:
+Vec	C++/Language/A Tour Of C++/Containers/Vectors.cpp	/^class Vec : public std::vector<T> {$/;"	c	file:
+Vector	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^Vector<T>::Vector (int s) {$/;"	f	class:Vector
+Vector	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^class Vector {$/;"	c	file:
+Vector	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		Vector () : elem (new double[1]), sz(1) {$/;"	f	class:Vector	file:
+Vector	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		Vector (const Vector& a) : elem (new double[a.sz]), sz(a.sz) {$/;"	f	class:Vector	file:
+Vector	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		Vector (int s) : elem (new double [s]), sz (s) {$/;"	f	class:Vector	file:
+Vector	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		Vector (std::initializer_list<double> lst) :$/;"	f	class:Vector	file:
+Vector	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^class Vector {$/;"	c	file:
+Vector	C++/Language/A Tour Of C++/User-DefinedTypes/Structures.cpp	/^struct Vector {$/;"	s	file:
+VectorContainer	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		VectorContainer (int s) : v (s) {}$/;"	f	class:VectorContainer	file:
+VectorContainer	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^class VectorContainer : public Container {$/;"	c	file:
+WIDTH	C/libraries/gui/ncurses/basics/interfacing_keyboard.c	/^#define WIDTH /;"	d	file:
+Win	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^} Win;$/;"	t	typeref:struct:_winStruct	file:
+WinBorder	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^} WinBorder;$/;"	t	typeref:struct:_winBorderStruct	file:
+X	C++/Language/A Tour Of C++/Utilities/ResourceManagement.cpp	/^	X () {}$/;"	f	struct:X	file:
+X	C++/Language/A Tour Of C++/Utilities/ResourceManagement.cpp	/^	X (int x) : a(x) {  }$/;"	f	struct:X	file:
+X	C++/Language/A Tour Of C++/Utilities/ResourceManagement.cpp	/^typedef struct X {$/;"	s	file:
+X	C++/Language/A Tour Of C++/Utilities/ResourceManagement.cpp	/^} X;$/;"	t	typeref:struct:X	file:
+YELLOW	C/language/pointers/pointers.c	/^  enum colors { RED, YELLOW, GREEN=12, BLUE};$/;"	e	enum:main::colors	file:
+_EOF	C/ansi_c/chapter_8/fopen_and_getc.c	/^	_EOF = 010,		\/* end of file *\/$/;"	e	enum:_flags	file:
+_ERR	C/ansi_c/chapter_8/fopen_and_getc.c	/^	_ERR = 020		\/* error *\/$/;"	e	enum:_flags	file:
+_MyApplication	Dart/Flutter/linuxapp/linux/my_application.cc	/^struct _MyApplication {$/;"	s	file:
+_Q	C/language/preprocessor_voodoo.c	/^#define _Q(/;"	d	file:
+_READ	C/ansi_c/chapter_8/fopen_and_getc.c	/^	_READ = 01, 	\/* file opened for reading *\/$/;"	e	enum:_flags	file:
+_SLinkedList	C/algorithms/data_structures/lists/single_linked_list.h	/^typedef struct _SLinkedList {$/;"	s
+_UNBUF	C/ansi_c/chapter_8/fopen_and_getc.c	/^	_UNBUF = 04,	\/* unbuffered file *\/$/;"	e	enum:_flags	file:
+_WRITE	C/ansi_c/chapter_8/fopen_and_getc.c	/^	_WRITE = 02,	\/* file opened for writing *\/$/;"	e	enum:_flags	file:
+__anon1923df540108	C/ansi_c/chapter_6/structure_basics.c	/^struct {$/;"	s	file:
+__anon85d4f49e0108	C/algorithms/data_structures/stacks/stacks.c	/^typedef struct {$/;"	s	file:
+__anon944f34ef0108	C/ansi_c/chapter_8/memory_allocation.c	/^	struct {$/;"	s	union:header	file:
+__anonae2c330c0102	C++/Language/Standard Library/Utilities/SmartPointers.cpp	/^	std::shared_ptr<string> pNico2 (new string ("nico"), [] (string* p) {$/;"	f	function:sharedPtrs	file:
+__anonae2c330c0202	C++/Language/Standard Library/Utilities/SmartPointers.cpp	/^	std::shared_ptr<int> p (new int[10], [] (int* p) {$/;"	f	function:sharedPtrs	file:
+__anonb3d5ecc60102	C++/Language/A Tour Of C++/Utilities/FunctionsTypeFns.cpp	/^	fct = [] (double d) { return d*3; };$/;"	f	function:functions	file:
+__anoncbc902e70108	C/ansi_c/chapter_8/listing_directories.c	/^typedef struct {	\/* directory entry, system independent *\/$/;"	s	file:
+__anoncbc902e70208	C/ansi_c/chapter_8/listing_directories.c	/^typedef struct {$/;"	s	file:
+__anonccbcbe310103	C/ansi_c/chapter_6/unions_and_bit_fields.c	/^enum {$/;"	g	file:
+__anonccbcbe310208	C/ansi_c/chapter_6/unions_and_bit_fields.c	/^	struct {$/;"	s	function:main	file:
+__anonf4e8cfa60102	C++/Language/A Tour Of C++/Algorithms/Predicates.cpp	/^	auto gtThan = [] (const std::pair<string, int>& r) {$/;"	f	function:f	file:
+__anonf4f3db560102	C++/Language/Standard Library/NewLanguageFeatures/Lambdas.cpp	/^	return [] (int x, int y) {$/;"	f	function:returnLambda	file:
+__anonf4f3db560202	C++/Language/Standard Library/NewLanguageFeatures/Lambdas.cpp	/^	[] {$/;"	f	function:main	file:
+__anonf4f3db560302	C++/Language/Standard Library/NewLanguageFeatures/Lambdas.cpp	/^	auto l2 = [] {$/;"	f	function:main	file:
+__anonf4f3db560402	C++/Language/Standard Library/NewLanguageFeatures/Lambdas.cpp	/^	auto l3 = [] (const string& s) {$/;"	f	function:main	file:
+__anonf4f3db560502	C++/Language/Standard Library/NewLanguageFeatures/Lambdas.cpp	/^	auto l4 = [] {$/;"	f	function:main	file:
+__anonf4f3db560602	C++/Language/Standard Library/NewLanguageFeatures/Lambdas.cpp	/^	auto l5 = [] () -> double { \/\/ lamba with explicit return value$/;"	f	function:main	typeref:typename:double	file:
+__anonf4f3db560702	C++/Language/Standard Library/NewLanguageFeatures/Lambdas.cpp	/^	[=] { \/\/ outer scope is passed by value, vars are read-only$/;"	f	function:main	file:
+__anonf4f3db560802	C++/Language/Standard Library/NewLanguageFeatures/Lambdas.cpp	/^	[&] { \/\/ passed by reference, read-write access$/;"	f	function:main	file:
+__anonf4f3db560902	C++/Language/Standard Library/NewLanguageFeatures/Lambdas.cpp	/^	auto qqq = [x, &y] { \/\/ can write to y but not to x \/\/ [=, &y]$/;"	f	function:main	file:
+__anonf4f3db560a02	C++/Language/Standard Library/NewLanguageFeatures/Lambdas.cpp	/^	auto f = [id] () mutable {$/;"	f	function:main	file:
+_fillbuf	C/ansi_c/chapter_8/fopen_and_getc.c	/^int _fillbuf (FILE *fp) {$/;"	f	typeref:typename:int
+_flags	C/ansi_c/chapter_8/fopen_and_getc.c	/^enum _flags {$/;"	g	file:
+_iob	C/ansi_c/chapter_8/fopen_and_getc.c	/^FILE _iob[OPEN_MAX] = {$/;"	v	typeref:typename:FILE[]
+_iobuf	C/ansi_c/chapter_8/fopen_and_getc.c	/^typedef struct _iobuf {$/;"	s	file:
+_item	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^        T _item;$/;"	m	class:SNode	typeref:typename:T	file:
+_next	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^        SNode<T>* _next;$/;"	m	class:SNode	typeref:typename:SNode<T> *	file:
+_sListNode	C/algorithms/data_structures/lists/single_linked_list.h	/^typedef struct _sListNode {$/;"	s
+_testS	C/others/structure_padding_test.c	/^typedef struct _testS {$/;"	s	file:
+_treeNode	C/algorithms/data_structures/trees/tree.h	/^typedef struct _treeNode {$/;"	s
+_winBorderStruct	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^typedef struct _winBorderStruct {$/;"	s	file:
+_winStruct	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^typedef struct _winStruct {$/;"	s	file:
+a	C++/Language/A Tour Of C++/Utilities/ResourceManagement.cpp	/^	int a;$/;"	m	struct:X	typeref:typename:int	file:
+add	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^void SLinkedList<T>::add (const T& x) {$/;"	f	class:SLinkedList	typeref:typename:void
+add	C++/Language/Standard Library/NewLanguageFeatures/Lambdas.cpp	/^auto add (T1 x, T2 y) -> decltype (x+y) {$/;"	f	typeref:typename:decltype (x+y)
+add	C++/Language/Standard Library/Utilities/PairsAndTuples.cpp	/^int add (int a, int b) {$/;"	f	typeref:typename:int
+add	C/pointers/pointers_and_functions.c	/^int add (int a, int b) {$/;"	f	typeref:typename:int
+addEdge	C++/Data Structures And Algorithms/Graphs/Connected Components/UndirectedIfConnectedBFS.cpp	/^void Graph::addEdge(int v, int w) {$/;"	f	class:Graph	typeref:typename:void
+addTask	Build Systems/CMake/src/ToDoCore/ToDo.cpp	/^void ToDo::addTask($/;"	f	class:ToDoCore::ToDo	typeref:typename:void
+addTree	C/ansi_c/chapter_6/recursive_structures.c	/^struct tnode *addTree (struct tnode *p, char *w) {$/;"	f	typeref:struct:tnode *
+addpoint	C/ansi_c/chapter_6/structure_basics.c	/^struct point addpoint (struct point p1, struct point p2) {$/;"	f	typeref:struct:point
+adj	C++/Data Structures And Algorithms/Graphs/Connected Components/UndirectedIfConnectedBFS.cpp	/^  list<int> *adj;$/;"	m	class:Graph	typeref:typename:list<int> *	file:
+age	C/language/struct_union/structunion.c	/^    int age;$/;"	m	struct:main::student	typeref:typename:int	file:
+age	C/language/struct_union/structunion.c	/^    int age;$/;"	m	union:main::worker	typeref:typename:int	file:
+alTest	C/others/memory_leak_test.c	/^int *alTest () {$/;"	f	typeref:typename:int *
+all	C++/Language/Standard Library/Utilities/Makefile	/^all : $(TARGETS)$/;"	t
+antiDeadlock	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^void antiDeadlock () {$/;"	f	typeref:typename:void
+any	C/ansi_c/chapter_2/string_operations.c	/^int any (char s1[], char s2[]) {$/;"	f	typeref:typename:int
+arr	C++/Data Structures And Algorithms/Arrays/HighArray.cpp	/^		long *arr;$/;"	m	class:HighArray	typeref:typename:long *	file:
+arr	C/others/structure_padding_test.c	/^    int arr[2];$/;"	m	struct:_testS	typeref:typename:int[2]	file:
+arrays	C++/Language/A Tour Of C++/Utilities/SpecializedContainers.cpp	/^void arrays () {$/;"	f	typeref:typename:void
+b	C++/Language/A Tour Of C++/Utilities/ResourceManagement.cpp	/^	string b;$/;"	m	struct:X	typeref:typename:string	file:
+back	C++/Data Structures And Algorithms/Linked List/DoublyLinkedList.cpp	/^const listItem& DLinkedList::back () const {$/;"	f	class:DLinkedList	typeref:typename:const listItem &
+base	C/ansi_c/chapter_8/fopen_and_getc.c	/^	char *base;	\/* buffer *\/$/;"	m	struct:_iobuf	typeref:typename:char *	file:
+base	C/ansi_c/chapter_8/memory_allocation.c	/^static Header base; \/* empty list at the beginning *\/$/;"	v	typeref:typename:Header	file:
+basicAssertions	C++/Frameworks/Testing/GTest/GoogleTest.cpp	/^void basicAssertions () {$/;"	f	typeref:typename:void
+begin	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^T* begin (Vector<T>& x) {$/;"	f	typeref:typename:T *
+binarySearch	C/algorithms/searching/binary_search.c	/^int binarySearch (int arr[], int key, int low, int high) {$/;"	f	typeref:typename:int
+binarySearch	C/ansi_c/chapter_2/string_operations.c	/^int binarySearch (int x, int v[], int n) {$/;"	f	typeref:typename:int
+binds	C++/Language/A Tour Of C++/Utilities/FunctionAdaptors.cpp	/^	void binds () {$/;"	f	typeref:typename:void
+binsearch	C/ansi_c/chapter_6/structure_arrays.c	/^int binsearch (char *word, struct key tab[], int n) {$/;"	f	typeref:typename:int
+bitcount	C/ansi_c/chapter_2/string_operations.c	/^int bitcount (unsigned x) {$/;"	f	typeref:typename:int
+bitsets	C++/Language/A Tour Of C++/Utilities/SpecializedContainers.cpp	/^void bitsets () {$/;"	f	typeref:typename:void
+bl	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^    chtype tl, tr, bl, br; \/* corners *\/$/;"	m	struct:_winBorderStruct	typeref:typename:chtype	file:
+blue	C++/Language/A Tour Of C++/User-DefinedTypes/Enumerations.cpp	/^enum Color2 { red, green, blue };$/;"	e	enum:Color2	file:
+blue	C++/Language/A Tour Of C++/User-DefinedTypes/Enumerations.cpp	/^enum class Color { red, blue, green };$/;"	e	enum:Color	file:
+border	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^    WinBorder border;$/;"	m	struct:_winStruct	typeref:typename:WinBorder	file:
+br	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^    chtype tl, tr, bl, br; \/* corners *\/$/;"	m	struct:_winBorderStruct	typeref:typename:chtype	file:
+bs	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^    chtype ls, rs, ts, bs; \/* sides *\/$/;"	m	struct:_winBorderStruct	typeref:typename:chtype	file:
+buf	C/ansi_c/chapter_3/reverse_polish_notation.c	/^char buf[BUFSIZE];$/;"	v	typeref:typename:char[]
+bufp	C/ansi_c/chapter_3/reverse_polish_notation.c	/^int bufp = 0;$/;"	v	typeref:typename:int
+build	C/language/dyn_mem_and_program_utils/makefile	/^build:$/;"	t
+build	C/language/error_handling/makefile	/^build:$/;"	t
+build	C/language/getting_started/makefile	/^build:$/;"	t
+build	C/language/hello_world/makefile	/^build:$/;"	t
+build	C/language/ios/makefile	/^build:$/;"	t
+build	C/language/pointers/makefile	/^build:$/;"	t
+build	C/language/string_lib/makefile	/^build:$/;"	t
+build	C/language/struct_union/makefile	/^build:$/;"	t
+build	C/language/type_support/makefile	/^build:$/;"	t
+build	C/language/var_date_time/makefile	/^build:$/;"	t
+build	C/language/word_count/makefile	/^build:$/;"	t
+build	C/learn_to_solve_it/arrays/makefile	/^build:$/;"	t
+build	C/learn_to_solve_it/histograms/makefile	/^build:$/;"	t
+build	C/libraries/glib/makefile	/^build:$/;"	t
+build	C/libraries/gui/gtk/makefile	/^build:$/;"	t
+canonrect	C/ansi_c/chapter_6/structure_basics.c	/^struct rect canonrect (struct rect r) {$/;"	f	typeref:struct:rect
+catch_function	C/language/error_handling/errorh.c	/^static void catch_function(int signal) {$/;"	f	typeref:typename:void	file:
+celToFahr	C/ansi_c/chapter_1/celcius_to_fahr.c	/^float celToFahr (int cel) {$/;"	f	typeref:typename:float
+choices	C/libraries/gui/ncurses/basics/interfacing_keyboard.c	/^char* choices[] = {$/;"	v	typeref:typename:char * []
+cinStringsWithNesting	C++/Language/A Tour Of C++/Iostreams/Ostreams.cpp	/^void cinStringsWithNesting () {$/;"	f	typeref:typename:void
+class	C/language/struct_union/structunion.c	/^    char class;$/;"	m	struct:main::student	typeref:typename:char	file:
+clean	C++/Language/Standard Library/Utilities/Makefile	/^clean :$/;"	t
+clean	C/language/dyn_mem_and_program_utils/makefile	/^clean:$/;"	t
+clean	C/language/error_handling/makefile	/^clean:$/;"	t
+clean	C/language/pointers/makefile	/^clean:$/;"	t
+clean	C/language/string_lib/makefile	/^clean:$/;"	t
+clean	C/language/type_support/makefile	/^clean:$/;"	t
+clean	C/language/var_date_time/makefile	/^clean:$/;"	t
+clean	C/learn_to_solve_it/arrays/makefile	/^clean:$/;"	t
+clean	C/learn_to_solve_it/histograms/makefile	/^clean:$/;"	t
+clean	C/libraries/glib/makefile	/^clean:$/;"	t
+clean	C/libraries/gui/gtk/makefile	/^clean:$/;"	t
+clocks	C++/Language/Standard Library/Utilities/ClocksAndTimers.cpp	/^void clocks () {$/;"	f	typeref:typename:void
+closedir	C/ansi_c/chapter_8/listing_directories.c	/^void closedir (DIR *dp) {$/;"	f	typeref:typename:void
+cnt	C/ansi_c/chapter_8/fopen_and_getc.c	/^	int cnt;	\/* remaining characters *\/$/;"	m	struct:_iobuf	typeref:typename:int	file:
+colors	C/language/pointers/pointers.c	/^  enum colors { RED, YELLOW, GREEN=12, BLUE};$/;"	g	function:main	file:
+communicatingTasks	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^void communicatingTasks () {$/;"	f	typeref:typename:void
+comp	C/pointers/pointers_and_functions.c	/^int comp (fptrOperation operation, int a, int b) {$/;"	f	typeref:typename:int
+complex	C++/Language/A Tour Of C++/Utilities/FunctionsTypeFns.cpp	/^class complex {$/;"	c	file:
+compose	C++/Language/A Tour Of C++/StringAndRegex/Strings.cpp	/^string compose (const string& name, const string& domain) {$/;"	f	typeref:typename:string
+const	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^# define const$/;"	d	file:
+contents	C/algorithms/data_structures/stacks/stacks.c	/^  stackElement *contents;$/;"	m	struct:__anon85d4f49e0108	typeref:typename:stackElement *	file:
+copy	C/ansi_c/chapter_1/longest_line.c	/^void copy (char to[], char from[]) {$/;"	f	typeref:typename:void
+copy	C/ansi_c/chapter_1/reverser.c	/^void copy (char to[], char from[]) {$/;"	f	typeref:typename:void
+count	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^int count (const C& c, P pred) {$/;"	f	typeref:typename:int
+count	C/ansi_c/chapter_6/recursive_structures.c	/^	int count;	\/* occurrence counter *\/$/;"	m	struct:tnode	typeref:typename:int	file:
+count	C/ansi_c/chapter_6/structure_arrays.c	/^    int count;$/;"	m	struct:key	typeref:typename:int	file:
+cpu_time_used	C/algorithms/sorting/quicksort.c	/^double cpu_time_used;$/;"	v	typeref:typename:double
+createAndInsert	C++/Language/Standard Library/NewLanguageFeatures/MoveAndRvalues.cpp	/^void createAndInsert (std::set<int>& coll) {$/;"	f	typeref:typename:void
+createQueue	C/algorithms/data_structures/queues/queue_sll.c	/^Queue * createQueue() {$/;"	f	typeref:typename:Queue *
+create_box	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^void create_box(Win* p_win, bool flag) {$/;"	f	typeref:typename:void
+create_new_win	C/libraries/gui/ncurses/basics/windows_borders.c	/^WINDOW* create_new_win(int height, int width, int starty, int startx) {$/;"	f	typeref:typename:WINDOW *
+cube	C++/Language/A Tour Of C++/Utilities/FunctionAdaptors.cpp	/^double cube (double d) {$/;"	f	typeref:typename:double
+current	C/algorithms/data_structures/lists/single_linked_list.h	/^    SLinkedListNode *current;$/;"	m	struct:_SLinkedList	typeref:typename:SLinkedListNode *
+d	C/ansi_c/chapter_8/listing_directories.c	/^	Dirent d;	\/* file entry *\/$/;"	m	struct:__anoncbc902e70208	typeref:typename:Dirent	file:
+deEscape	C/ansi_c/chapter_2/string_operations.c	/^void deEscape (char s[], char t[]) {$/;"	f	typeref:typename:void
+defn	C/ansi_c/chapter_6/table_searching.c	/^	char *defn; \/* replacing text *\/$/;"	m	struct:nlist	typeref:typename:char *	file:
+delete_list	C/algorithms/data_structures/lists/doubly_linked_lists.c	/^void delete_list(List **l, listItem x) {$/;"	f	typeref:typename:void
+delete_list	C/algorithms/data_structures/lists/single_linked_list_other.c	/^void delete_list(List **l, listItem x) {$/;"	f	typeref:typename:void
+dequeue	C/algorithms/data_structures/queues/queue_sll.c	/^queueItem dequeue(Queue *q) {$/;"	f	typeref:typename:queueItem
+destroy_win	C/libraries/gui/ncurses/basics/windows_borders.c	/^void destroy_win(WINDOW* local_win) {$/;"	f	typeref:typename:void
+dirwalk	C/ansi_c/chapter_8/listing_directories.c	/^void dirwalk (char *dir, void (*fcn)(char *)) {$/;"	f	typeref:typename:void
+display	C++/Data Structures And Algorithms/Arrays/HighArray.cpp	/^void HighArray::display () {$/;"	f	class:HighArray	typeref:typename:void
+dist	C++/Language/A Tour Of C++/Numerics/NumAlgsComplexRandom.cpp	/^		std::uniform_int_distribution<> dist;$/;"	m	class:RandInt	typeref:typename:std::uniform_int_distribution<>	file:
+doWork	C++/Language/A Tour Of C++/Utilities/Time.cpp	/^void doWork () {$/;"	f	typeref:typename:void
+draw	C++/Language/A Tour Of C++/Utilities/FunctionAdaptors.cpp	/^	void draw () { cout << "draw!" << endl; }$/;"	f	struct:Shape	typeref:typename:void	file:
+drawAll	C++/Language/A Tour Of C++/Utilities/FunctionAdaptors.cpp	/^void drawAll (std::vector<Shape*>& v) {$/;"	f	typeref:typename:void
+echoAsArray	C/ansi_c/chapter_5/pointers.c	/^void echoAsArray (int argc, char *argv[]) {$/;"	f	typeref:typename:void
+echoAsPointer	C/ansi_c/chapter_5/pointers.c	/^void echoAsPointer (int argc, char *argv[]) {$/;"	f	typeref:typename:void
+elem	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^		T* elem;	\/\/ points to an array of sz elements of type T$/;"	m	class:Vector	typeref:typename:T *	file:
+elem	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		double* elem;$/;"	m	class:Vector	typeref:typename:double *	file:
+elem	C++/Language/A Tour Of C++/User-DefinedTypes/Structures.cpp	/^	double* elem;	\/\/ pointer to elements$/;"	m	struct:Vector	typeref:typename:double *	file:
+emptyQueue	C/algorithms/data_structures/queues/queue_sll.c	/^int emptyQueue(Queue *q) {$/;"	f	typeref:typename:int
+enEscape	C/ansi_c/chapter_2/string_operations.c	/^void enEscape (char s[], char t[]) {$/;"	f	typeref:typename:void
+end	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^T* end (Vector<T>& x) {$/;"	f	typeref:typename:T *
+end	C/algorithms/sorting/quicksort.c	/^clock_t start, end;$/;"	v	typeref:typename:clock_t
+enqueue	C/algorithms/data_structures/queues/queue_sll.c	/^void enqueue(Queue *q, int x) {$/;"	f	typeref:typename:void
+equalityTest	Build Systems/CMake/src/main.cpp	/^int equalityTest($/;"	f	typeref:typename:int
+evaluate	C/pointers/pointers_and_functions.c	/^int evaluate (char opcode, int a, int b) {$/;"	f	typeref:typename:int
+exchanges	C++/Language/Standard Library/Utilities/SwapForwardMove.cpp	/^void exchanges () {$/;"	f	typeref:typename:void
+expand	C/ansi_c/chapter_2/string_operations.c	/^void expand (char s1[], char s2[]) {$/;"	f	typeref:typename:void
+f	C++/Frameworks/Testing/GTest/GoogleTest.cpp	/^int f (int a) {$/;"	f	typeref:typename:int
+f	C++/Language/A Tour Of C++/Algorithms/Predicates.cpp	/^void f (std::map<string, int>& m) {$/;"	f	typeref:typename:void
+f	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^void f (const std::vector<double>& v, double* res) { \/\/ take input from v, place result in *re/;"	f	typeref:typename:void
+f	C++/Language/A Tour Of C++/Containers/Lists.cpp	/^void f (std::list<Entry> phoneBook, const Entry& ee, std::list<Entry>::iterator p, std::list<Ent/;"	f	typeref:typename:void
+f	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^void f () {} \/\/ do nothing$/;"	f	typeref:typename:void
+f	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^void f (T head, Tail... tail) {$/;"	f	typeref:typename:void
+f	C++/Language/A Tour Of C++/User-DefinedTypes/Unions.cpp	/^void f (Entry& p) {$/;"	f	typeref:typename:void
+f	C++/Language/A Tour Of C++/Utilities/FunctionAdaptors.cpp	/^void f (int a, const string& s) {$/;"	f	typeref:typename:void
+f	C++/Language/A Tour Of C++/Utilities/ResourceManagement.cpp	/^void f (int i, int j) {$/;"	f	typeref:typename:void
+f	C++/Language/Standard Library/NewLanguageFeatures/OldNew.cpp	/^void f () {$/;"	f	typeref:typename:void
+f1	C++/Language/A Tour Of C++/Numerics/MathematicalFunctions.cpp	/^void f1 () {$/;"	f	typeref:typename:void
+f1	C++/Language/A Tour Of C++/Numerics/VArithNumLimits.cpp	/^void f1 (std::valarray<double>& a1, std::valarray<double>& a2) {$/;"	f	typeref:typename:void
+f1	C++/Language/A Tour Of C++/Utilities/FunctionsTypeFns.cpp	/^int f1 (double a) {$/;"	f	typeref:typename:int
+f1	C++/Language/A Tour Of C++/Utilities/SpecializedContainers.cpp	/^void f1 (int* p, int s) {$/;"	f	typeref:typename:void
+f2	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^void f2 () {$/;"	f	typeref:typename:void
+fahrToC	C/ansi_c/chapter_1/fahr_to_celcius.c	/^float fahrToC (int fahr) {$/;"	f	typeref:typename:float
+false	C/ansi_c/chapter_1/basic_linter.c	/^#define false /;"	d	file:
+false	C/ansi_c/chapter_1/comment_remover.c	/^#define false /;"	d	file:
+false	C/ansi_c/chapter_5/program_with_options.c	/^#define false /;"	d	file:
+father	C++/Language/Standard Library/Utilities/SmartPointers.cpp	/^		std::shared_ptr<Person> father;$/;"	m	class:Person	typeref:typename:std::shared_ptr<Person>	file:
+fd	C/ansi_c/chapter_8/fopen_and_getc.c	/^	int fd;		\/* file descriptor *\/$/;"	m	struct:_iobuf	typeref:typename:int	file:
+fd	C/ansi_c/chapter_8/listing_directories.c	/^	int fd;		\/* directory file descriptor *\/$/;"	m	struct:__anoncbc902e70208	typeref:typename:int	file:
+feof	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define feof(/;"	d	file:
+ferror	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define ferror(/;"	d	file:
+fgets2	C/ansi_c/chapter_7/line_input_output.c	/^char *fgets2 (char *s, int n, FILE *iop) {$/;"	f	typeref:typename:char *
+fileStreams	C++/Language/A Tour Of C++/Iostreams/FormatFstreamsSstreams.cpp	/^void fileStreams () {$/;"	f	typeref:typename:void
+filecopy	C/ansi_c/chapter_7/file_access.c	/^void filecopy (FILE *ifp, FILE *ofp) {$/;"	f	typeref:typename:void
+fileno	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define fileno(/;"	d	file:
+find	C++/Data Structures And Algorithms/Arrays/HighArray.cpp	/^bool HighArray::find (long searchKey) {$/;"	f	class:HighArray	typeref:typename:bool
+findAll	C++/Language/A Tour Of C++/Algorithms/Iterators.cpp	/^std::vector<string::iterator> findAll (string& s, char c) {$/;"	f	typeref:typename:std::vector<string::iterator>
+findAllGeneral	C++/Language/A Tour Of C++/Algorithms/Iterators.cpp	/^std::vector<typename C::iterator> findAllGeneral (C& c, V v) {$/;"	f	typeref:typename:std::vector<typename C::iterator>
+first	C++/Language/Standard Library/Utilities/PairsAndTuples.cpp	/^	T1 first;$/;"	m	struct:myPair	typeref:typename:T1	file:
+fl_register_plugins	Dart/Flutter/linuxapp/linux/flutter/generated_plugin_registrant.cc	/^void fl_register_plugins(FlPluginRegistry* registry) {$/;"	f	typeref:typename:void
+flag	C/ansi_c/chapter_8/fopen_and_getc.c	/^	int flag;	\/* access mode flag *\/$/;"	m	struct:_iobuf	typeref:typename:int	file:
+flushinput	C/learn_to_solve_it/histograms/histograms.c	/^void flushinput() {$/;"	f	typeref:typename:void
+foo	C++/Language/Standard Library/Utilities/NLimitsTypeTraitsUtils.cpp	/^void foo (const T& val) {$/;"	f	typeref:typename:void
+foo	C/libraries/unit_test/check/simple_check.c	/^int foo (int x) {$/;"	f	typeref:typename:int
+foo2	C++/Language/Standard Library/Utilities/NLimitsTypeTraitsUtils.cpp	/^void foo2 (T val) {$/;"	f	typeref:typename:void
+foo2_impl	C++/Language/Standard Library/Utilities/NLimitsTypeTraitsUtils.cpp	/^void foo2_impl (T val, std::false_type) {$/;"	f	typeref:typename:void
+foo2_impl	C++/Language/Standard Library/Utilities/NLimitsTypeTraitsUtils.cpp	/^void foo2_impl (T val, std::true_type) {$/;"	f	typeref:typename:void
+fooSuite	C/libraries/unit_test/check/simple_check.c	/^Suite* fooSuite (void) {$/;"	f	typeref:typename:END_TEST Suite *
+fopen	C/ansi_c/chapter_8/fopen_and_getc.c	/^FILE *fopen (char *name, char *mode) {$/;"	f	typeref:typename:FILE *
+formatting	C++/Language/A Tour Of C++/Iostreams/FormatFstreamsSstreams.cpp	/^void formatting () {$/;"	f	typeref:typename:void
+fptr	C/pointers/pointers_and_functions.c	/^typedef int (*fptr)(int);$/;"	t	typeref:typename:int (*)(int)	file:
+fptrOperation	C/pointers/pointers_and_functions.c	/^typedef int (*fptrOperation)(int, int);$/;"	t	typeref:typename:int (*)(int,int)	file:
+fputs2	C/ansi_c/chapter_7/line_input_output.c	/^int fputs2 (char *s, FILE *iop) {$/;"	f	typeref:typename:int
+free	C/ansi_c/chapter_8/memory_allocation.c	/^void free (void *ap) {$/;"	f	typeref:typename:void
+freeQueue	C/algorithms/data_structures/queues/queue_sll.c	/^void freeQueue(Queue *q) {$/;"	f	typeref:typename:void
+freep	C/ansi_c/chapter_8/memory_allocation.c	/^static Header *freep = NULL;	\/* beginning of the list of empty blocks *\/$/;"	v	typeref:typename:Header *	file:
+front	C++/Data Structures And Algorithms/Linked List/DoublyLinkedList.cpp	/^const listItem& DLinkedList::front () const {$/;"	f	class:DLinkedList	typeref:typename:const listItem &
+front	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^const T& SLinkedList<T>::front() const {$/;"	f	class:SLinkedList	typeref:typename:const T &
+front	C/algorithms/data_structures/queues/queue_sll.c	/^  NodeQ* front;$/;"	m	struct:Queue	typeref:typename:NodeQ *	file:
+frontQueue	C/algorithms/data_structures/queues/queue_sll.c	/^queueItem frontQueue(Queue *q) {$/;"	f	typeref:typename:queueItem
+fsize	C/ansi_c/chapter_8/listing_directories.c	/^void fsize (char *name) {	\/* prints file size *\/$/;"	f	typeref:typename:void
+funct	C/language/pointers/pointers.c	/^int funct(int a, int b) {$/;"	f	typeref:typename:int
+functions	C++/Language/A Tour Of C++/Utilities/FunctionsTypeFns.cpp	/^void functions () {$/;"	f	typeref:typename:void
+g	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^void g (T x) {$/;"	f	typeref:typename:void
+g	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^void g () {$/;"	f	typeref:typename:void
+gSignalStatus	C/language/dyn_mem_and_program_utils/memutils.c	/^volatile sig_atomic_t gSignalStatus;$/;"	v	typeref:typename:volatile sig_atomic_t
+george	Build Systems/CommandLine/HelloBeatles/src/georgeringo/george.cpp	/^void george () {$/;"	f	typeref:typename:void
+georgeringo	Build Systems/CommandLine/HelloBeatles/src/georgeringo/georgeringo.cpp	/^void georgeringo () {$/;"	f	typeref:typename:void
+get	C/ansi_c/chapter_8/low_level_io.c	/^int get (int fd, long pos, char *buf, int n) {$/;"	f	typeref:typename:int
+getLine	C/ansi_c/chapter_1/comment_remover.c	/^int getLine (char s[], int lim) {$/;"	f	typeref:typename:int
+getLine	C/ansi_c/chapter_1/longest_line.c	/^int getLine (char s[], int lim) {$/;"	f	typeref:typename:int
+getLine	C/ansi_c/chapter_1/reverser.c	/^int getLine (char s[], int lim) {$/;"	f	typeref:typename:int
+getLine	C/ansi_c/chapter_1/split_line.c	/^int getLine (char s[], int lim) {$/;"	f	typeref:typename:int
+getMax	C++/Data Structures And Algorithms/Arrays/HighArray.cpp	/^long HighArray::getMax () {$/;"	f	class:HighArray	typeref:typename:long
+getMyTuple	C++/Language/Standard Library/Utilities/PairsAndTuples.cpp	/^std::tuple<double, char, std::string> getMyTuple () {$/;"	f	typeref:typename:std::tuple<double,char,std::string>
+getNumber	C++/Language/A Tour Of C++/Containers/Lists.cpp	/^int getNumber (std::list<Entry>& phoneBook, const string& s) { \/\/ searching a list$/;"	f	typeref:typename:int
+getNumberIterators	C++/Language/A Tour Of C++/Containers/Lists.cpp	/^int getNumberIterators (std::list<Entry> phoneBook, const string& s) {$/;"	f	typeref:typename:int
+getTask	Build Systems/CMake/src/ToDoCore/ToDo.cpp	/^std::string ToDo::getTask($/;"	f	class:ToDoCore::ToDo	typeref:typename:std::string
+getc	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define getc(/;"	d	file:
+getch	C/ansi_c/chapter_3/reverse_polish_notation.c	/^int getch (void) {$/;"	f	typeref:typename:int
+getchar	C/ansi_c/chapter_7/file_access.c	/^#define getchar(/;"	d	file:
+getchar	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define getchar(/;"	d	file:
+getline2	C/ansi_c/chapter_7/line_input_output.c	/^int getline2 (char *line, int max) {$/;"	f	typeref:typename:int
+getop	C/ansi_c/chapter_3/reverse_polish_notation.c	/^int getop (char s[]) {$/;"	f	typeref:typename:int
+getword	C/ansi_c/chapter_6/structure_arrays.c	/^int getword (char *word, int lim) {$/;"	f	typeref:typename:int
+green	C++/Language/A Tour Of C++/User-DefinedTypes/Enumerations.cpp	/^enum Color2 { red, green, blue };$/;"	e	enum:Color2	file:
+green	C++/Language/A Tour Of C++/User-DefinedTypes/Enumerations.cpp	/^enum class Color { red, blue, green };$/;"	e	enum:Color	file:
+green	C++/Language/A Tour Of C++/User-DefinedTypes/Enumerations.cpp	/^enum class TrafficLight { green, yellow, red };$/;"	e	enum:TrafficLight	file:
+hasC	C++/Language/A Tour Of C++/Algorithms/Iterators.cpp	/^bool hasC (const string& s, char c) {$/;"	f	typeref:typename:bool
+hasC2	C++/Language/A Tour Of C++/Algorithms/Iterators.cpp	/^bool hasC2 (const string& s, char c) {$/;"	f	typeref:typename:bool
+hash	C/ansi_c/chapter_6/table_searching.c	/^unsigned hash (char *s) {$/;"	f	typeref:typename:unsigned
+hashtab	C/ansi_c/chapter_6/table_searching.c	/^static struct nlist *hashtab[HASHSIZE];  \/* array of pointers *\/$/;"	v	typeref:struct:nlist * []	file:
+head	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^        SNode<T>* head;$/;"	m	class:SLinkedList	typeref:typename:SNode<T> *	file:
+head	C/algorithms/data_structures/lists/single_linked_list.h	/^    SLinkedListNode *head;$/;"	m	struct:_SLinkedList	typeref:typename:SLinkedListNode *
+header	C++/Data Structures And Algorithms/Linked List/DoublyLinkedList.cpp	/^        DNode* header;$/;"	m	class:DLinkedList	typeref:typename:DNode *	file:
+header	C/ansi_c/chapter_8/memory_allocation.c	/^typedef union header { 	\/* block header *\/$/;"	u	file:
+height	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^    int height, width;$/;"	m	struct:_winStruct	typeref:typename:int	file:
+hey	C/ansi_c/chapter_6/structure_basics.c	/^} hey, *p = &hey;$/;"	v	typeref:struct:__anon1923df540108
+htoi	C/ansi_c/chapter_2/hex_to_dec.c	/^int htoi (char s[]) {$/;"	f	typeref:typename:int
+i	C++/Language/A Tour Of C++/User-DefinedTypes/Unions.cpp	/^	int i;$/;"	m	union:Value	typeref:typename:int	file:
+im	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		double re, im;$/;"	m	class:Complex	typeref:typename:double	file:
+im	C++/Language/A Tour Of C++/Utilities/FunctionsTypeFns.cpp	/^		Scalar re, im;$/;"	m	class:complex	typeref:typename:Scalar	file:
+imag	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		double imag () const { return im; }$/;"	f	class:Complex	typeref:typename:double	file:
+imag	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		void imag (double d) { im = d; }$/;"	f	class:Complex	typeref:typename:void	file:
+info_arch	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
+info_arch	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v	typeref:typename:char const *
+info_compiler	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v	typeref:typename:char const *
+info_compiler	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v	typeref:typename:char const *
+info_cray	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v	typeref:typename:char const *
+info_cray	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";$/;"	v	typeref:typename:char const *
+info_language_dialect_default	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^const char* info_language_dialect_default =$/;"	v	typeref:typename:const char *
+info_language_dialect_default	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^const char* info_language_dialect_default = "INFO" ":" "dialect_default["$/;"	v	typeref:typename:const char *
+info_platform	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v	typeref:typename:char const *
+info_platform	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v	typeref:typename:char const *
+info_simulate	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v	typeref:typename:char const *
+info_simulate	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v	typeref:typename:char const *
+info_simulate_version	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^char const info_simulate_version[] = {$/;"	v	typeref:typename:char const[]
+info_simulate_version	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_simulate_version[] = {$/;"	v	typeref:typename:char const[]
+info_version	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v	typeref:typename:char const[]
+info_version	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version[] = {$/;"	v	typeref:typename:char const[]
+info_version_internal	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^char const info_version_internal[] = {$/;"	v	typeref:typename:char const[]
+info_version_internal	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version_internal[] = {$/;"	v	typeref:typename:char const[]
+initFamily	C++/Language/Standard Library/Utilities/SmartPointers.cpp	/^std::shared_ptr<Person> initFamily (const string& name) {$/;"	f	typeref:typename:std::shared_ptr<Person>
+init_win_params	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^void init_win_params(Win* p_win) {$/;"	f	typeref:typename:void
+initializations	C++/Language/Standard Library/NewLanguageFeatures/InitializationLists.cpp	/^void initializations () {$/;"	f	typeref:typename:void
+ino	C/ansi_c/chapter_8/listing_directories.c	/^	long ino;	\/* i-node number *\/$/;"	m	struct:__anoncbc902e70108	typeref:typename:long	file:
+insert	C++/Data Structures And Algorithms/Arrays/HighArray.cpp	/^void HighArray::insert (long value) {$/;"	f	class:HighArray	typeref:typename:void
+insert_list	C/algorithms/data_structures/lists/doubly_linked_lists.c	/^void insert_list(List **l, listItem x) {$/;"	f	typeref:typename:void
+insert_list	C/algorithms/data_structures/lists/single_linked_list_other.c	/^void insert_list(List **l, listItem x) {$/;"	f	typeref:typename:void
+insertionSort	C/algorithms/sorting/exercise.c	/^void insertionSort (int arr[], int n) {$/;"	f	typeref:typename:void
+insertion_sort	C/algorithms/sorting/quicksort.c	/^void insertion_sort(int arr[], int n) {$/;"	f	typeref:typename:void
+insertion_sort	C/algorithms/sorting/sorting.c	/^void insertion_sort(int arr[], int n) {$/;"	f	typeref:typename:void
+install	C/ansi_c/chapter_6/table_searching.c	/^struct nlist *install (char *name, char *defn) {$/;"	f	typeref:struct:nlist *
+isEmpty	C++/Data Structures And Algorithms/Linked List/DoublyLinkedList.cpp	/^bool DLinkedList::isEmpty () const {$/;"	f	class:DLinkedList	typeref:typename:bool
+isEmpty	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^bool SLinkedList<T>::isEmpty() const {$/;"	f	class:SLinkedList	typeref:typename:bool
+is_extern	C/ansi_c/chapter_6/unions_and_bit_fields.c	/^		unsigned int is_extern : 1;$/;"	m	struct:main::__anonccbcbe310208	typeref:typename:unsigned int:1	file:
+is_keyword	C/ansi_c/chapter_6/unions_and_bit_fields.c	/^		unsigned int is_keyword : 1;$/;"	m	struct:main::__anonccbcbe310208	typeref:typename:unsigned int:1	file:
+is_static	C/ansi_c/chapter_6/unions_and_bit_fields.c	/^		unsigned int is_static : 1;$/;"	m	struct:main::__anonccbcbe310208	typeref:typename:unsigned int:1	file:
+item	C++/Data Structures And Algorithms/Linked List/DoublyLinkedList.cpp	/^        listItem item;$/;"	m	class:DNode	typeref:typename:listItem	file:
+item	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^T SNode<T>::item () {$/;"	f	class:SNode	typeref:typename:T
+item	C/algorithms/data_structures/lists/doubly_linked_lists.c	/^  listItem item;       \/\/ data item$/;"	m	struct:List	typeref:typename:listItem	file:
+item	C/algorithms/data_structures/lists/single_linked_list.h	/^    void *item;$/;"	m	struct:_sListNode	typeref:typename:void *
+item	C/algorithms/data_structures/lists/single_linked_list_other.c	/^  listItem item;       \/\/ data item$/;"	m	struct:List	typeref:typename:listItem	file:
+item	C/algorithms/data_structures/queues/queue_sll.c	/^  queueItem item;$/;"	m	struct:NodeQ	typeref:typename:queueItem	file:
+item	C/algorithms/data_structures/trees/tree.h	/^    void *item;$/;"	m	struct:_treeNode	typeref:typename:void *
+iter	C++/Language/A Tour Of C++/Utilities/FunctionsTypeFns.cpp	/^	using iter = typename C::Iterator;$/;"	t	function:mySort	typeref:typename:C::Iterator	file:
+itob	C/ansi_c/chapter_2/string_operations.c	/^void itob (int n, char s[], int b) {$/;"	f	typeref:typename:void
+john	Build Systems/CommandLine/HelloBeatles/src/johnpaul/john.cpp	/^void john () {$/;"	f	typeref:typename:void
+johnpaul	Build Systems/CommandLine/HelloBeatles/src/johnpaul/johnpaul.cpp	/^void johnpaul () {$/;"	f	typeref:typename:void
+key	C/ansi_c/chapter_6/structure_arrays.c	/^struct key {$/;"	s	file:
+keytab	C/ansi_c/chapter_6/structure_arrays.c	/^struct key keytab[] = {$/;"	v	typeref:struct:key[]
+kids	C++/Language/Standard Library/Utilities/SmartPointers.cpp	/^		std::vector<std::weak_ptr<Person>> kids;$/;"	m	class:Person	typeref:typename:std::vector<std::weak_ptr<Person>>	file:
+left	C/algorithms/data_structures/trees/tree.h	/^    struct _treeNode* left;$/;"	m	struct:_treeNode	typeref:struct:_treeNode *
+left	C/ansi_c/chapter_6/recursive_structures.c	/^	struct tnode *left;		\/* left child *\/$/;"	m	struct:tnode	typeref:struct:tnode *	file:
+len	C/ansi_c/chapter_6/structure_basics.c	/^    int len;$/;"	m	struct:__anon1923df540108	typeref:typename:int	file:
+listItem	C++/Data Structures And Algorithms/Linked List/DoublyLinkedList.cpp	/^typedef int listItem;$/;"	t	typeref:typename:int	file:
+listItem	C/algorithms/data_structures/lists/doubly_linked_lists.c	/^typedef int listItem;$/;"	t	typeref:typename:int	file:
+listItem	C/algorithms/data_structures/lists/single_linked_list_other.c	/^typedef int listItem;$/;"	t	typeref:typename:int	file:
+lookup	C/ansi_c/chapter_6/table_searching.c	/^struct nlist *lookup (char *s) {$/;"	f	typeref:struct:nlist *
+lower	C/ansi_c/chapter_2/string_operations.c	/^char lower (char c) {$/;"	f	typeref:typename:char
+ls	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^    chtype ls, rs, ts, bs; \/* sides *\/$/;"	m	struct:_winBorderStruct	typeref:typename:chtype	file:
+m	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^std::mutex m, m1, m2, m3; \/\/ controlling mutex$/;"	v	typeref:typename:std::mutex
+m	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^StringMap<int> m; \/\/ m is a Map<string, int>$/;"	v	typeref:typename:StringMap<int>
+m1	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^std::mutex m, m1, m2, m3; \/\/ controlling mutex$/;"	v	typeref:typename:std::mutex
+m2	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^std::mutex m, m1, m2, m3; \/\/ controlling mutex$/;"	v	typeref:typename:std::mutex
+m3	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^std::mutex m, m1, m2, m3; \/\/ controlling mutex$/;"	v	typeref:typename:std::mutex
+m3	C++/Language/A Tour Of C++/StringAndRegex/Strings.cpp	/^void m3 () {$/;"	f	typeref:typename:void
+main	Assembly/callmaxofthree.c	/^int main() {$/;"	f	typeref:typename:int
+main	Build Systems/CMake/src/main.cpp	/^int main($/;"	f	typeref:typename:int
+main	Build Systems/CommandLine/HelloBeatles/src/hellobeatles/hellobeatles.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Data Structures And Algorithms/Arrays/HighArray.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Data Structures And Algorithms/Graphs/Connected Components/UndirectedIfConnectedBFS.cpp	/^int main() {$/;"	f	typeref:typename:int
+main	C++/Data Structures And Algorithms/Linked List/DoublyLinkedList.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Frameworks/Boost/Hello.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Frameworks/Testing/GTest/GoogleTest.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Algorithms/General.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Algorithms/Iterators.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Algorithms/Predicates.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^int main() {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Containers/Lists.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Containers/Maps.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Containers/Others.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Containers/Vectors.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Iostreams/FormatFstreamsSstreams.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Iostreams/IoUserTypes.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Iostreams/Ostreams.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Numerics/MathematicalFunctions.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Numerics/NumAlgsComplexRandom.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Numerics/VArithNumLimits.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/StringAndRegex/Regexes.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/StringAndRegex/Strings.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/User-DefinedTypes/Enumerations.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/User-DefinedTypes/Structures.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/User-DefinedTypes/Unions.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Utilities/FunctionAdaptors.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Utilities/FunctionsTypeFns.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Utilities/ResourceManagement.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Utilities/SpecializedContainers.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/A Tour Of C++/Utilities/Time.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
+main	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f	typeref:typename:void
+main	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f	typeref:typename:int
+main	C++/Language/Effective Modern/main.cpp	/^int main()$/;"	f	typeref:typename:int
+main	C++/Language/Standard Library/NewLanguageFeatures/InitializationLists.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/Standard Library/NewLanguageFeatures/Lambdas.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/Standard Library/NewLanguageFeatures/MoveAndRvalues.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/Standard Library/NewLanguageFeatures/OldNew.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/Standard Library/Utilities/ClocksAndTimers.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/Standard Library/Utilities/FractionalArithmetic.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/Standard Library/Utilities/IntegerSequence.cpp	/^int main(int argc, char const *argv[]) {$/;"	f	typeref:typename:int
+main	C++/Language/Standard Library/Utilities/NLimitsTypeTraitsUtils.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/Standard Library/Utilities/PairsAndTuples.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/Standard Library/Utilities/SmartPointers.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C++/Language/Standard Library/Utilities/SwapForwardMove.cpp	/^int main () {$/;"	f	typeref:typename:int
+main	C/algorithms/data_structures/dictionaries/hashtable.c	/^int main(int argc, char **argv) {$/;"	f	typeref:typename:int
+main	C/algorithms/data_structures/lists/doubly_linked_lists.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/algorithms/data_structures/lists/single_linked_list_other.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/algorithms/data_structures/stacks/stacks.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/algorithms/searching/binary_search.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/algorithms/sorting/exercise.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/algorithms/sorting/mergesort.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/algorithms/sorting/quicksort.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/algorithms/sorting/sorting.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/basic_linter.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/celcius_to_fahr.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/comment_remover.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/detab.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/entab.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/fahr_to_celcius.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/in_out_chars.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/longest_line.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/reverser.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/space_remover.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/split_line.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/white_space_counter.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/white_space_shower.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/word_count.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/word_length_histogram.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_1/word_separate_line.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_2/hex_to_dec.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_2/string_operations.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_2/type_limits.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_3/reverse_polish_notation.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_5/pointers.c	/^int main (int argc, char *argv[]) {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_5/program_with_options.c	/^int main (int argc, char *argv[]) {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_6/recursive_structures.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_6/structure_arrays.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_6/structure_basics.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_6/table_searching.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_6/unions_and_bit_fields.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_7/char_converter.c	/^int main (int argc, char *argv[]) {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_7/file_access.c	/^int main (int argc, char *argv[]) {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_7/file_difference.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_7/line_input_output.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_7/other_functions.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_7/printfs.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_7/scanfs.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_8/listing_directories.c	/^int main (int argc, char **argv) {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_8/low_level_io.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_8/memory_allocation.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_8/open_create_close_unlink.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_8/unix_cat.c	/^int main (int argc, char *argv[]) {$/;"	f	typeref:typename:int
+main	C/ansi_c/chapter_8/unix_cp.c	/^int main (int argc, char *argv[]) {$/;"	f	typeref:typename:int
+main	C/language/dyn_mem_and_program_utils/memutils.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/language/error_handling/errorh.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/language/getting_started/gstarted.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/language/hello_world/hello.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/language/ios/ios.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/language/negation.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/language/pointers/pointers.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/language/preprocessor_voodoo.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/language/string_lib/strl.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/language/struct_union/structunion.c	/^int main(int argc, char* argv[]) {$/;"	f	typeref:typename:int
+main	C/language/type_support/typesupport.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/language/var_date_time/vdt.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/language/word_count/mywc.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/learn_to_solve_it/arrays/countdwo.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/learn_to_solve_it/histograms/histograms.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/libraries/glib/glib_basics.c	/^int main(int argc, char *argv[]) {$/;"	f	typeref:typename:int
+main	C/libraries/gui/gtk/gtk_basic.c	/^int main(int argc, char *argv[]) {$/;"	f	typeref:typename:int
+main	C/libraries/gui/ncurses/basics/attributes.c	/^int main(int argc, char** argv) {$/;"	f	typeref:typename:int
+main	C/libraries/gui/ncurses/basics/chgat.c	/^int main(int arcg, char** argv) {$/;"	f	typeref:typename:int
+main	C/libraries/gui/ncurses/basics/colours.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/libraries/gui/ncurses/basics/hello_curses.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/libraries/gui/ncurses/basics/initialization.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/libraries/gui/ncurses/basics/input_functions.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/libraries/gui/ncurses/basics/interfacing_keyboard.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/libraries/gui/ncurses/basics/miscellaneous.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/libraries/gui/ncurses/basics/output_functions.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/libraries/gui/ncurses/basics/subwins.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/libraries/gui/ncurses/basics/windows_borders.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/libraries/gui/ncurses/examples/demo_curses.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/libraries/gui/ncurses/others/unit_testing.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/libraries/unit_test/check/simple_check.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/others/cleanup_gcc_attribute.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/others/memory_leak_test.c	/^int main () {$/;"	f	typeref:typename:int
+main	C/others/structure_padding_test.c	/^int main() {$/;"	f	typeref:typename:int
+main	C/pointers/pointers_and_functions.c	/^int main () {$/;"	f	typeref:typename:int
+main	Dart/Flutter/linuxapp/linux/main.cc	/^int main(int argc, char** argv) {$/;"	f	typeref:typename:int
+makeX	C++/Language/A Tour Of C++/Utilities/ResourceManagement.cpp	/^std::unique_ptr<X> makeX (int i) {$/;"	f	typeref:typename:std::unique_ptr<X>
+makepoint	C/ansi_c/chapter_6/structure_basics.c	/^struct point makepoint (int x, int y) {$/;"	f	typeref:struct:point
+malloc	C/ansi_c/chapter_8/memory_allocation.c	/^void *malloc (unsigned nbytes) {$/;"	f	typeref:typename:void *
+max	C/ansi_c/chapter_6/structure_basics.c	/^#define max(/;"	d	file:
+maxSize	C/algorithms/data_structures/stacks/stacks.c	/^  int maxSize;$/;"	m	struct:__anon85d4f49e0108	typeref:typename:int	file:
+mem_fns	C++/Language/A Tour Of C++/Utilities/FunctionAdaptors.cpp	/^void mem_fns () {$/;"	f	typeref:typename:void
+merge	C/algorithms/sorting/mergesort.c	/^void merge (int a[], int low, int mid, int high) {$/;"	f	typeref:typename:void
+mergeSort	C/algorithms/sorting/mergesort.c	/^void mergeSort (int a[], int low, int high) {$/;"	f	typeref:typename:void
+min	C++/Language/Standard Library/Utilities/NLimitsTypeTraitsUtils.cpp	/^typename std::common_type<T1,T2>::type min (const T1& x, const T2& y) {$/;"	f	typeref:typename:std::common_type<T1,T2>::type
+min	C/ansi_c/chapter_6/structure_basics.c	/^#define min(/;"	d	file:
+minprintf	C/ansi_c/chapter_7/printfs.c	/^void minprintf (char *fmt, ...) {$/;"	f	typeref:typename:void
+monthName	C/ansi_c/chapter_5/pointers.c	/^char *monthName (int n) {$/;"	f	typeref:typename:char *
+morecore	C/ansi_c/chapter_8/memory_allocation.c	/^static Header *morecore (unsigned nu) {$/;"	f	typeref:typename:Header *	file:
+mother	C++/Language/Standard Library/Utilities/SmartPointers.cpp	/^		std::shared_ptr<Person> mother;$/;"	m	class:Person	typeref:typename:std::shared_ptr<Person>	file:
+myCompare	C/algorithms/sorting/sorting.c	/^static int myCompare (const void * a, const void * b) {$/;"	f	typeref:typename:int	file:
+myDistribution	C++/Language/A Tour Of C++/Numerics/NumAlgsComplexRandom.cpp	/^	using myDistribution = std::uniform_int_distribution<>; \/\/ type of distribution$/;"	t	function:randomNumbers	typeref:typename:std::uniform_int_distribution<>	file:
+myEngine	C++/Language/A Tour Of C++/Numerics/NumAlgsComplexRandom.cpp	/^	using myEngine = std::default_random_engine; \/\/ type of randomization engine$/;"	t	function:randomNumbers	typeref:typename:std::default_random_engine	file:
+myFunction	C/ansi_c/chapter_5/program_with_options.c	/^void myFunction (int a) {$/;"	f	typeref:typename:void
+myPair	C++/Language/Standard Library/Utilities/PairsAndTuples.cpp	/^struct myPair {$/;"	s	file:
+myRatio	C++/Language/Standard Library/Utilities/FractionalArithmetic.cpp	/^    typedef std::ratio_add<std::ratio<2,7>,std::ratio<2,6>>::type myRatio;$/;"	t	function:ratios	typeref:typename:std::ratio_add<std::ratio<2,7>,std::ratio<2,6>>::type	file:
+mySort	C++/Language/A Tour Of C++/Utilities/FunctionsTypeFns.cpp	/^void mySort (C& c) {$/;"	f	typeref:typename:void
+my_application_class_init	Dart/Flutter/linuxapp/linux/my_application.cc	/^static void my_application_class_init(MyApplicationClass* klass) {$/;"	f	typeref:typename:void	file:
+my_application_init	Dart/Flutter/linuxapp/linux/my_application.cc	/^static void my_application_init(MyApplication* self) {}$/;"	f	typeref:typename:void	file:
+my_application_new	Dart/Flutter/linuxapp/linux/my_application.cc	/^MyApplication* my_application_new() {$/;"	f	typeref:typename:MyApplication *
+nItems	C++/Data Structures And Algorithms/Arrays/HighArray.cpp	/^		int nItems;$/;"	m	class:HighArray	typeref:typename:int	file:
+nItems	C/algorithms/data_structures/lists/single_linked_list.h	/^    int nItems;$/;"	m	struct:_SLinkedList	typeref:typename:int
+n_choices	C/libraries/gui/ncurses/basics/interfacing_keyboard.c	/^int n_choices = sizeof(choices) \/ sizeof(char*);$/;"	v	typeref:typename:int
+name	C++/Language/A Tour Of C++/Algorithms/General.cpp	/^	string name;$/;"	m	struct:Entry	typeref:typename:string	file:
+name	C++/Language/A Tour Of C++/Containers/Lists.cpp	/^	string name;$/;"	m	struct:Entry	typeref:typename:string	file:
+name	C++/Language/A Tour Of C++/Containers/Maps.cpp	/^	string name;$/;"	m	struct:Record	typeref:typename:string	file:
+name	C++/Language/A Tour Of C++/Containers/Vectors.cpp	/^	string name;$/;"	m	struct:Entry	typeref:typename:string	file:
+name	C++/Language/A Tour Of C++/Iostreams/IoUserTypes.cpp	/^	string name;$/;"	m	struct:Entry	typeref:typename:string	file:
+name	C++/Language/A Tour Of C++/StringAndRegex/Strings.cpp	/^string name = "Cajetan Puchalski";$/;"	v	typeref:typename:string
+name	C++/Language/A Tour Of C++/User-DefinedTypes/Unions.cpp	/^	char* name;$/;"	m	struct:Entry	typeref:typename:char *	file:
+name	C++/Language/Standard Library/Utilities/SmartPointers.cpp	/^		string name;$/;"	m	class:Person	typeref:typename:string	file:
+name	C/ansi_c/chapter_6/table_searching.c	/^	char *name; \/* defined name *\/$/;"	m	struct:nlist	typeref:typename:char *	file:
+name	C/ansi_c/chapter_8/listing_directories.c	/^	char name[NAME_MAX+1];	\/* name + '\\0' *\/$/;"	m	struct:__anoncbc902e70108	typeref:typename:char[]	file:
+name	C/language/struct_union/structunion.c	/^    char name[25];$/;"	m	struct:main::student	typeref:typename:char[25]	file:
+name	C/language/struct_union/structunion.c	/^    char name[25];$/;"	m	union:main::worker	typeref:typename:char[25]	file:
+neg	C++/Language/Standard Library/Utilities/FractionalArithmetic.cpp	/^    typedef std::ratio<7, -3> neg;$/;"	t	function:ratios	typeref:typename:std::ratio<7,-3>	file:
+next	C++/Data Structures And Algorithms/Linked List/DoublyLinkedList.cpp	/^        DNode* next;$/;"	m	class:DNode	typeref:typename:DNode *	file:
+next	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^SNode<T>* SNode<T>::next () {$/;"	f	class:SNode	typeref:typename:SNode<T> *
+next	C/algorithms/data_structures/lists/doubly_linked_lists.c	/^  struct List *next;   \/\/ ptr to successor$/;"	m	struct:List	typeref:struct:List *	file:
+next	C/algorithms/data_structures/lists/single_linked_list.h	/^    struct _sListNode *next;$/;"	m	struct:_sListNode	typeref:struct:_sListNode *
+next	C/algorithms/data_structures/lists/single_linked_list_other.c	/^  struct List *next;   \/\/ ptr to successor$/;"	m	struct:List	typeref:struct:List *	file:
+next	C/algorithms/data_structures/queues/queue_sll.c	/^  struct NodeQ *next;$/;"	m	struct:NodeQ	typeref:struct:NodeQ *	file:
+next	C/ansi_c/chapter_6/table_searching.c	/^	struct nlist *next; \/* next record *\/$/;"	m	struct:nlist	typeref:struct:nlist *	file:
+nlist	C/ansi_c/chapter_6/table_searching.c	/^struct nlist {	\/* array record *\/$/;"	s	file:
+num	C++/Language/A Tour Of C++/User-DefinedTypes/Unions.cpp	/^enum Type { str, num };$/;"	e	enum:Type	file:
+number	C++/Language/A Tour Of C++/Algorithms/General.cpp	/^	int number;$/;"	m	struct:Entry	typeref:typename:int	file:
+number	C++/Language/A Tour Of C++/Containers/Lists.cpp	/^	int number;$/;"	m	struct:Entry	typeref:typename:int	file:
+number	C++/Language/A Tour Of C++/Containers/Vectors.cpp	/^	int number;$/;"	m	struct:Entry	typeref:typename:int	file:
+number	C++/Language/A Tour Of C++/Iostreams/IoUserTypes.cpp	/^	int number;$/;"	m	struct:Entry	typeref:typename:int	file:
+numericLimits	C++/Language/A Tour Of C++/Numerics/VArithNumLimits.cpp	/^void numericLimits () {$/;"	f	typeref:typename:void
+numericLimits	C++/Language/Standard Library/Utilities/NLimitsTypeTraitsUtils.cpp	/^void numericLimits () {$/;"	f	typeref:typename:void
+numericalAlgorithms	C++/Language/A Tour Of C++/Numerics/NumAlgsComplexRandom.cpp	/^void numericalAlgorithms () {$/;"	f	typeref:typename:void
+one	C++/Language/Standard Library/Utilities/FractionalArithmetic.cpp	/^    typedef std::ratio<42,42> one;$/;"	t	function:ratios	typeref:typename:std::ratio<42,42>	file:
+opendir	C/ansi_c/chapter_8/listing_directories.c	/^DIR *opendir (char *dirname) {$/;"	f	typeref:typename:DIR *
+operator !=	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^bool operator!= (Complex a, Complex b) {$/;"	f	typeref:typename:bool
+operator ()	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^		void operator()() {$/;"	f	class:F	typeref:typename:void	file:
+operator ()	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^		bool operator()(const T& x) const { return x < val; } \/\/ call operator$/;"	f	class:LessThan	typeref:typename:bool	file:
+operator () 	C++/Language/A Tour Of C++/Algorithms/Predicates.cpp	/^	bool operator() (const std::pair<string, int>& r) {$/;"	f	struct:GreaterThan	typeref:typename:bool	file:
+operator () 	C++/Language/A Tour Of C++/Containers/Maps.cpp	/^	size_t operator() (const Record& r) const {$/;"	f	struct:RHash	typeref:typename:size_t	file:
+operator () 	C++/Language/A Tour Of C++/Numerics/NumAlgsComplexRandom.cpp	/^		int operator() () { return dist(re); }$/;"	f	class:RandInt	typeref:typename:int	file:
+operator *	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^Complex operator*(Complex a, Complex b) { return a*=b; }$/;"	f	typeref:typename:Complex
+operator *=	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		Complex& operator*=(Complex z) { re *= z.re, im *= z.im; return *this; }$/;"	f	class:Complex	typeref:typename:Complex &	file:
+operator +	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^Complex operator+(Complex a, Complex b) { return a+=b; }$/;"	f	typeref:typename:Complex
+operator ++	C++/Language/A Tour Of C++/User-DefinedTypes/Enumerations.cpp	/^Color& operator++ (Color& t) {$/;"	f	typeref:typename:Color &
+operator +=	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		Complex& operator+=(Complex z) { re += z.re, im +=z.im; return *this; }$/;"	f	class:Complex	typeref:typename:Complex &	file:
+operator -	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^Complex operator-(Complex a) { return {-a.real(), -a.imag()}; }$/;"	f	typeref:typename:Complex
+operator -	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^Complex operator-(Complex a, Complex b) { return a+=b; }$/;"	f	typeref:typename:Complex
+operator -=	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		Complex& operator-=(Complex z) { re -= z.re, im -= z.im; return *this; }$/;"	f	class:Complex	typeref:typename:Complex &	file:
+operator /	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^Complex operator\/(Complex a, Complex b) { return a\/=b; }$/;"	f	typeref:typename:Complex
+operator /=	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		Complex& operator\/=(Complex z) { re \/= z.re, im \/= z.im; return *this; }$/;"	f	class:Complex	typeref:typename:Complex &	file:
+operator <	C++/Language/A Tour Of C++/Algorithms/General.cpp	/^bool operator< (const Entry& x, const Entry& y) {$/;"	f	typeref:typename:bool
+operator <<	C++/Language/A Tour Of C++/Containers/Lists.cpp	/^std::ostream& operator<< (std::ostream& os, Entry e) {$/;"	f	typeref:typename:std::ostream &
+operator <<	C++/Language/A Tour Of C++/Containers/Vectors.cpp	/^std::ostream& operator<< (std::ostream& os, Entry e) {$/;"	f	typeref:typename:std::ostream &
+operator <<	C++/Language/A Tour Of C++/Iostreams/IoUserTypes.cpp	/^ostream& operator<<(ostream& os, const Entry& e) {$/;"	f	typeref:typename:ostream &
+operator <<	C++/Language/Standard Library/Utilities/PairsAndTuples.cpp	/^std::ostream& operator << (std::ostream& os, const std::pair<T1, T2>& p) {$/;"	f	typeref:typename:std::ostream &
+operator =	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		Vector& operator= (const Vector& a) {$/;"	f	class:Vector	typeref:typename:Vector &	file:
+operator ==	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^bool operator== (Complex a, Complex b) {$/;"	f	typeref:typename:bool
+operator >>	C++/Language/A Tour Of C++/Iostreams/IoUserTypes.cpp	/^istream& operator>>(istream& is, Entry& e) {$/;"	f	typeref:typename:istream &
+operator [] 	C++/Language/A Tour Of C++/Containers/Vectors.cpp	/^		T& operator[] (int i) {$/;"	f	class:Vec	typeref:typename:T &	file:
+operator [] 	C++/Language/A Tour Of C++/Containers/Vectors.cpp	/^		const T& operator[] (int i) const {$/;"	f	class:Vec	typeref:typename:const T &	file:
+operator [] 	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^const T& Vector<T>::operator[] (int i) const {$/;"	f	class:Vector	typeref:typename:const T &
+operator [] 	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		double& operator[] (int i) { return elem[i]; } \/\/ element access$/;"	f	class:Vector	typeref:typename:double &	file:
+operator [] 	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		double& operator[] (int i) { return v[i]; }$/;"	f	class:VectorContainer	typeref:typename:double &	file:
+p	C/ansi_c/chapter_6/recursive_structures.c	/^	struct s *p;	\/* pointer to s *\/$/;"	m	struct:t	typeref:struct:s *	file:
+p	C/ansi_c/chapter_6/structure_basics.c	/^} hey, *p = &hey;$/;"	v	typeref:struct:__anon1923df540108 *
+pairs	C++/Language/Standard Library/Utilities/PairsAndTuples.cpp	/^void pairs () {$/;"	f	typeref:typename:void
+pairsAndTuples	C++/Language/A Tour Of C++/Utilities/SpecializedContainers.cpp	/^void pairsAndTuples () {$/;"	f	typeref:typename:void
+parent_instance	Dart/Flutter/linuxapp/linux/my_application.cc	/^  GtkApplication parent_instance;$/;"	m	struct:_MyApplication	typeref:typename:GtkApplication	file:
+partition	C/algorithms/sorting/quicksort.c	/^int partition(int s[], int l, int h) {$/;"	f	typeref:typename:int
+paul	Build Systems/CommandLine/HelloBeatles/src/johnpaul/paul.cpp	/^void paul () {$/;"	f	typeref:typename:void
+peek	C/ansi_c/chapter_3/reverse_polish_notation.c	/^double peek (void) {$/;"	f	typeref:typename:double
+pick	C/pointers/pointers_and_functions.c	/^fptrOperation pick(char opcode) {$/;"	f	typeref:typename:fptrOperation
+point	C/ansi_c/chapter_6/structure_basics.c	/^struct point {$/;"	s	file:
+pop	C/ansi_c/chapter_3/reverse_polish_notation.c	/^double pop (void) {$/;"	f	typeref:typename:double
+pow	C++/Language/A Tour Of C++/Utilities/FunctionAdaptors.cpp	/^double pow (double a, double b) { \/\/ same here$/;"	f	typeref:typename:double
+pow	C++/Language/A Tour Of C++/Utilities/FunctionAdaptors.cpp	/^int pow (int a, int b) { \/\/ not a power, doesn't matter$/;"	f	typeref:typename:int
+predecessor_list	C/algorithms/data_structures/lists/single_linked_list_other.c	/^List *predecessor_list(List *l, listItem x) {$/;"	f	typeref:typename:List *
+prev	C++/Data Structures And Algorithms/Linked List/DoublyLinkedList.cpp	/^        DNode* prev;$/;"	m	class:DNode	typeref:typename:DNode *	file:
+prev	C/algorithms/data_structures/lists/doubly_linked_lists.c	/^  struct List *prev;   \/\/ ptr to predecessor$/;"	m	struct:List	typeref:struct:List *	file:
+print	C++/Language/A Tour Of C++/Algorithms/General.cpp	/^void print (std::list<int>& lst) {$/;"	f	typeref:typename:void
+print	C++/Language/A Tour Of C++/Algorithms/General.cpp	/^void print (std::vector<int>& vec) {$/;"	f	typeref:typename:void
+print	C++/Language/Standard Library/NewLanguageFeatures/InitializationLists.cpp	/^void print (std::initializer_list<int> vals) {$/;"	f	typeref:typename:void
+printArray	C/algorithms/sorting/exercise.c	/^void printArray (int arr[], int n) {$/;"	f	typeref:typename:void
+printArray	C/algorithms/sorting/mergesort.c	/^void printArray(int A[], int size) {$/;"	f	typeref:typename:void
+printGraph	C++/Data Structures And Algorithms/Graphs/Connected Components/UndirectedIfConnectedBFS.cpp	/^void Graph::printGraph() {$/;"	f	class:Graph	typeref:typename:void
+printIntKeyStrValue	C/algorithms/data_structures/dictionaries/hashtable.c	/^void printIntKeyStrValue(gpointer key, gpointer value, gpointer userData) {$/;"	f	typeref:typename:void
+printList	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^void SLinkedList<T>::printList () {$/;"	f	class:SLinkedList	typeref:typename:void
+printQueue	C/algorithms/data_structures/queues/queue_sll.c	/^void printQueue(Queue *q) {$/;"	f	typeref:typename:void
+printStringKeyIntValue	C/algorithms/data_structures/dictionaries/hashtable.c	/^void printStringKeyIntValue( gpointer key, gpointer value, gpointer userData ) {$/;"	f	typeref:typename:void
+printTree	C/ansi_c/chapter_6/recursive_structures.c	/^void printTree (struct tnode *p) {$/;"	f	typeref:typename:void
+print_block	C/language/preprocessor_voodoo.c	/^#define print_block(/;"	d	file:
+print_block_div	C/language/preprocessor_voodoo.c	/^#define print_block_div(/;"	d	file:
+print_calc	C/language/preprocessor_voodoo.c	/^#define print_calc(/;"	d	file:
+print_calc_div	C/language/preprocessor_voodoo.c	/^#define print_calc_div(/;"	d	file:
+print_in_middle	C/libraries/gui/ncurses/basics/colours.c	/^void print_in_middle(WINDOW* win, int starty, int startx, int width, char* string) {$/;"	f	typeref:typename:void
+print_list	C/algorithms/data_structures/lists/doubly_linked_lists.c	/^void print_list(List *start) {$/;"	f	typeref:typename:void
+print_list	C/algorithms/data_structures/lists/single_linked_list_other.c	/^void print_list(List *start) {$/;"	f	typeref:typename:void
+print_menu	C/libraries/gui/ncurses/basics/interfacing_keyboard.c	/^void print_menu(WINDOW* menu_win, int highlight) {$/;"	f	typeref:typename:void
+print_win_params	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^void print_win_params(Win* p_win) {$/;"	f	typeref:typename:void
+printnl	C/language/word_count/mywc.c	/^void printnl() {$/;"	f	typeref:typename:void
+product_code	C++/Language/A Tour Of C++/Containers/Maps.cpp	/^	int product_code;$/;"	m	struct:Record	typeref:typename:int	file:
+pt1	C/ansi_c/chapter_6/structure_basics.c	/^    struct point pt1;$/;"	m	struct:rect	typeref:struct:point	file:
+pt2	C/ansi_c/chapter_6/structure_basics.c	/^    struct point pt2;$/;"	m	struct:rect	typeref:struct:point	file:
+ptinrect	C/ansi_c/chapter_6/structure_basics.c	/^int ptinrect (struct point p, struct rect r) {$/;"	f	typeref:typename:int
+ptr	C++/Language/Standard Library/NewLanguageFeatures/OldNew.cpp	/^	typename T::SubType * ptr;$/;"	m	class:MyClass	typeref:typename:T::SubType *	file:
+ptr	C/ansi_c/chapter_8/fopen_and_getc.c	/^	char *ptr;	\/* next position *\/$/;"	m	struct:_iobuf	typeref:typename:char *	file:
+ptr	C/ansi_c/chapter_8/memory_allocation.c	/^		union header *ptr;	\/* next block on the list *\/$/;"	m	struct:header::__anon944f34ef0108	typeref:union:header *	file:
+push	C/ansi_c/chapter_3/reverse_polish_notation.c	/^void push (double f) {$/;"	f	typeref:typename:void
+pushBack	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		void pushBack (double) {$/;"	f	class:Vector	typeref:typename:void	file:
+putc	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define putc(/;"	d	file:
+putchar	C/ansi_c/chapter_7/file_access.c	/^#define putchar(/;"	d	file:
+putchar	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define putchar(/;"	d	file:
+q	C/ansi_c/chapter_6/recursive_structures.c	/^	struct t *q;	\/* pointer to t *\/$/;"	m	struct:s	typeref:struct:t *	file:
+qnxnto	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
+qnxnto	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
+queueDequeue	C/algorithms/data_structures/queues/queue.c	/^void queueDequeue(Queue* queue) {$/;"	f	typeref:typename:void
+queueEnqueue	C/algorithms/data_structures/queues/queue.c	/^void queueEnqueue(Queue* queue, void* node) {$/;"	f	typeref:typename:void
+queueInitialize	C/algorithms/data_structures/queues/queue.c	/^void queueInitialize(Queue* queue) {$/;"	f	typeref:typename:void
+queueItem	C/algorithms/data_structures/queues/queue_sll.c	/^typedef int queueItem;$/;"	t	typeref:typename:int	file:
+quicksort	C/algorithms/sorting/quicksort.c	/^void quicksort(int s[], int l, int h) {$/;"	f	typeref:typename:void
+rFSEDW	C++/Language/A Tour Of C++/Algorithms/Iterators.cpp	/^void rFSEDW () { \/\/ this is weird$/;"	f	typeref:typename:void
+rand_num	C/language/preprocessor_voodoo.c	/^#define rand_num(/;"	d	file:
+randn	C/ansi_c/chapter_7/other_functions.c	/^	#define randn(/;"	d	file:
+randomNumbers	C++/Language/A Tour Of C++/Numerics/NumAlgsComplexRandom.cpp	/^void randomNumbers () {$/;"	f	typeref:typename:void
+ratios	C++/Language/Standard Library/Utilities/FractionalArithmetic.cpp	/^void ratios () {$/;"	f	typeref:typename:void
+re	C++/Language/A Tour Of C++/Numerics/NumAlgsComplexRandom.cpp	/^		std::default_random_engine re;$/;"	m	class:RandInt	typeref:typename:std::default_random_engine	file:
+re	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		double re, im;$/;"	m	class:Complex	typeref:typename:double	file:
+re	C++/Language/A Tour Of C++/Utilities/FunctionsTypeFns.cpp	/^		Scalar re, im;$/;"	m	class:complex	typeref:typename:Scalar	file:
+read	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^Vector read (std::istream& is) {$/;"	f	typeref:typename:Vector
+readAndSum	C++/Language/A Tour Of C++/User-DefinedTypes/Structures.cpp	/^double readAndSum (int s) {$/;"	f	typeref:typename:double
+readInts	C++/Language/A Tour Of C++/Iostreams/Ostreams.cpp	/^vector<int> readInts (std::istream& is) {$/;"	f	typeref:typename:vector<int>
+read_data	C/others/structure_padding_test.c	/^void read_data(char* name) {$/;"	f	typeref:typename:void
+readdir	C/ansi_c/chapter_8/listing_directories.c	/^Dirent *readdir (DIR *dp) {$/;"	f	typeref:typename:Dirent *
+real	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		double real () const { return re; }$/;"	f	class:Complex	typeref:typename:double	file:
+real	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		void real (double d) { re = d; }$/;"	f	class:Complex	typeref:typename:void	file:
+rear	C/algorithms/data_structures/queues/queue_sll.c	/^  NodeQ* rear;$/;"	m	struct:Queue	typeref:typename:NodeQ *	file:
+rearQueue	C/algorithms/data_structures/queues/queue_sll.c	/^queueItem rearQueue(Queue *q) {$/;"	f	typeref:typename:queueItem
+rect	C/ansi_c/chapter_6/structure_basics.c	/^struct rect {$/;"	s	file:
+red	C++/Language/A Tour Of C++/User-DefinedTypes/Enumerations.cpp	/^enum Color2 { red, green, blue };$/;"	e	enum:Color2	file:
+red	C++/Language/A Tour Of C++/User-DefinedTypes/Enumerations.cpp	/^enum class Color { red, blue, green };$/;"	e	enum:Color	file:
+red	C++/Language/A Tour Of C++/User-DefinedTypes/Enumerations.cpp	/^enum class TrafficLight { green, yellow, red };$/;"	e	enum:TrafficLight	file:
+remove	C++/Data Structures And Algorithms/Arrays/HighArray.cpp	/^bool HighArray::remove (long value) {$/;"	f	class:HighArray	typeref:typename:bool
+removeComments	C/ansi_c/chapter_1/comment_remover.c	/^void removeComments (char s[], int len) {$/;"	f	typeref:typename:void
+removeFront	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^void SLinkedList<T>::removeFront () {$/;"	f	class:SLinkedList	typeref:typename:void
+removeMax	C++/Data Structures And Algorithms/Arrays/HighArray.cpp	/^long HighArray::removeMax () {$/;"	f	class:HighArray	typeref:typename:long
+res	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^		double* res; \/\/ target of output$/;"	m	class:F	typeref:typename:double *	file:
+resetStr	C/ansi_c/chapter_7/other_functions.c	/^void resetStr (char s1[], char b[]) {$/;"	f	typeref:typename:void
+respond	C++/Language/A Tour Of C++/StringAndRegex/Strings.cpp	/^void respond (const string& answer) {$/;"	f	typeref:typename:void
+returnLambda	C++/Language/Standard Library/NewLanguageFeatures/Lambdas.cpp	/^std::function<int(int, int)> returnLambda () {$/;"	f	typeref:typename:std::function<int (int,int)>
+reverse	C/ansi_c/chapter_1/reverser.c	/^char* reverse (char str[], int len) {$/;"	f	typeref:typename:char *
+reverse	C/ansi_c/chapter_2/string_operations.c	/^void reverse (char s[]) {$/;"	f	typeref:typename:void
+right	C/algorithms/data_structures/trees/tree.h	/^    struct _treeNode* right;$/;"	m	struct:_treeNode	typeref:struct:_treeNode *
+right	C/ansi_c/chapter_6/recursive_structures.c	/^	struct tnode *right;	\/* right child *\/$/;"	m	struct:tnode	typeref:struct:tnode *	file:
+ringo	Build Systems/CommandLine/HelloBeatles/src/georgeringo/ringo.cpp	/^void ringo () {$/;"	f	typeref:typename:void
+rs	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^    chtype ls, rs, ts, bs; \/* sides *\/$/;"	m	struct:_winBorderStruct	typeref:typename:chtype	file:
+run	C++/Language/Standard Library/Utilities/Makefile	/^run :$/;"	t
+run	C/language/dyn_mem_and_program_utils/makefile	/^run:$/;"	t
+run	C/language/error_handling/makefile	/^run:$/;"	t
+run	C/language/getting_started/makefile	/^run:$/;"	t
+run	C/language/hello_world/makefile	/^run:$/;"	t
+run	C/language/ios/makefile	/^run:$/;"	t
+run	C/language/pointers/makefile	/^run:$/;"	t
+run	C/language/string_lib/makefile	/^run:$/;"	t
+run	C/language/struct_union/makefile	/^run:$/;"	t
+run	C/language/type_support/makefile	/^run:$/;"	t
+run	C/language/var_date_time/makefile	/^run:$/;"	t
+run	C/language/word_count/makefile	/^run:$/;"	t
+run	C/learn_to_solve_it/arrays/makefile	/^run:$/;"	t
+run	C/learn_to_solve_it/histograms/makefile	/^run:$/;"	t
+run	C/libraries/glib/makefile	/^run:$/;"	t
+run	C/libraries/gui/gtk/makefile	/^run:$/;"	t
+s	C++/Language/A Tour Of C++/User-DefinedTypes/Unions.cpp	/^	char* s;$/;"	m	union:Value	typeref:typename:char *	file:
+s	C/ansi_c/chapter_6/recursive_structures.c	/^struct s {$/;"	s	file:
+s	C/ansi_c/chapter_8/memory_allocation.c	/^	} s;$/;"	m	union:header	typeref:struct:header::__anon944f34ef0108	file:
+sLinkedListAddHead	C/algorithms/data_structures/lists/single_linked_list.c	/^void sLinkedListAddHead(SLinkedList* list, void* item) {$/;"	f	typeref:typename:void
+sLinkedListAddTail	C/algorithms/data_structures/lists/single_linked_list.c	/^void sLinkedListAddTail(SLinkedList* list, void* item) {$/;"	f	typeref:typename:void
+sLinkedListDelete	C/algorithms/data_structures/lists/single_linked_list.c	/^void sLinkedListDelete(SLinkedList* list, SLinkedListNode* node) {$/;"	f	typeref:typename:void
+sLinkedListDisplay	C/algorithms/data_structures/lists/single_linked_list.c	/^void sLinkedListDisplay(SLinkedList* list, DISPLAY display) {$/;"	f	typeref:typename:void
+sLinkedListGetNode	C/algorithms/data_structures/lists/single_linked_list.c	/^SLinkedListNode* sLinkedListGetNode(SLinkedList* list, COMPARE compare, void* item) {$/;"	f	typeref:typename:SLinkedListNode *
+sLinkedListInitialize	C/algorithms/data_structures/lists/single_linked_list.c	/^void sLinkedListInitialize(SLinkedList* list) {$/;"	f	typeref:typename:void
+salary	C/language/struct_union/structunion.c	/^    int salary;$/;"	m	union:main::worker	typeref:typename:int	file:
+save_data	C/others/structure_padding_test.c	/^void save_data(char* name) {$/;"	f	typeref:typename:void
+scoped	C/others/cleanup_gcc_attribute.c	/^void scoped (int *pvar) {$/;"	f	typeref:typename:void
+searchList	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^SNode<T>* SLinkedList<T>::searchList (const T& x) {$/;"	f	class:SLinkedList	typeref:typename:SNode<T> *
+search_list	C/algorithms/data_structures/lists/doubly_linked_lists.c	/^List *search_list(List *l, listItem x) {$/;"	f	typeref:typename:List *
+search_list	C/algorithms/data_structures/lists/single_linked_list_other.c	/^List *search_list(List *l, listItem x) {$/;"	f	typeref:typename:List *
+second	C++/Language/Standard Library/Utilities/PairsAndTuples.cpp	/^	T2 second;$/;"	m	struct:myPair	typeref:typename:T2	file:
+sh	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^int sh = 0; \/\/ shared data$/;"	v	typeref:typename:int
+sharedPtrs	C++/Language/Standard Library/Utilities/SmartPointers.cpp	/^void sharedPtrs () {$/;"	f	typeref:typename:void
+sharingData	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^void sharingData () {$/;"	f	typeref:typename:void
+signal_handler	C/language/dyn_mem_and_program_utils/memutils.c	/^void signal_handler(int signal) {$/;"	f	typeref:typename:void
+simpleCalc	C/ansi_c/chapter_7/scanfs.c	/^void simpleCalc () {$/;"	f	typeref:typename:void
+simple_printf	C/language/var_date_time/vdt.c	/^void simple_printf(const char* fmt, ...) {$/;"	f	typeref:typename:void
+size	Build Systems/CMake/src/ToDoCore/ToDo.cpp	/^size_t ToDo::size() const$/;"	f	class:ToDoCore::ToDo	typeref:typename:size_t
+size	C++/Data Structures And Algorithms/Arrays/HighArray.cpp	/^int HighArray::size () {$/;"	f	class:HighArray	typeref:typename:int
+size	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^		int size() const { return sz; }$/;"	f	class:Vector	typeref:typename:int	file:
+size	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		int size() const { return sz; }$/;"	f	class:Vector	typeref:typename:int	file:
+size	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		int size() const { return v.size(); }$/;"	f	class:VectorContainer	typeref:typename:int	file:
+size	C++/Language/A Tour Of C++/User-DefinedTypes/Structures.cpp	/^	int size;	\/\/ number of elements$/;"	m	struct:Vector	typeref:typename:int	file:
+size	C/algorithms/data_structures/queues/queue_sll.c	/^  int size;$/;"	m	struct:Queue	typeref:typename:int	file:
+size	C/ansi_c/chapter_8/memory_allocation.c	/^		unsigned size;	\/* block size *\/$/;"	m	struct:header::__anon944f34ef0108	typeref:typename:unsigned	file:
+sortAndExtractUnique	C++/Language/A Tour Of C++/Algorithms/General.cpp	/^void sortAndExtractUnique (std::vector<int>& vec, std::list<int>& lst) {$/;"	f	typeref:typename:void
+sortAndReturnUniqueList	C++/Language/A Tour Of C++/Algorithms/General.cpp	/^std::list<int> sortAndReturnUniqueList (std::vector<int>& vec) {$/;"	f	typeref:typename:std::list<int>
+sortHelper	C++/Language/A Tour Of C++/Utilities/FunctionsTypeFns.cpp	/^void sortHelper (For beg, For end, std::forward_iterator_tag) {$/;"	f	typeref:typename:void
+sortHelper	C++/Language/A Tour Of C++/Utilities/FunctionsTypeFns.cpp	/^void sortHelper (Ran beg, Ran end, std::random_access_iterator_tag) {$/;"	f	typeref:typename:void
+sp	C/ansi_c/chapter_3/reverse_polish_notation.c	/^int sp = 0; \/* next empty stack position *\/$/;"	v	typeref:typename:int
+square	C/pointers/pointers_and_functions.c	/^int square (int a) {$/;"	f	typeref:typename:int
+squeeze	C/ansi_c/chapter_2/string_operations.c	/^void squeeze(char s1[], char s2[]) {$/;"	f	typeref:typename:void
+stackDestroy	C/algorithms/data_structures/stacks/stacks.c	/^void stackDestroy(Stack *stack) {$/;"	f	typeref:typename:void
+stackElement	C/algorithms/data_structures/stacks/stacks.c	/^typedef int stackElement;$/;"	t	typeref:typename:int	file:
+stackInit	C/algorithms/data_structures/stacks/stacks.c	/^void stackInit(Stack *stack, int maxSize) {$/;"	f	typeref:typename:void
+stackInitialize	C/algorithms/data_structures/stacks/stack.c	/^void stackInitialize(Stack* stack) {$/;"	f	typeref:typename:void
+stackIsEmpty	C/algorithms/data_structures/stacks/stacks.c	/^int stackIsEmpty(Stack *stack) {$/;"	f	typeref:typename:int
+stackIsFull	C/algorithms/data_structures/stacks/stacks.c	/^int stackIsFull(Stack *stack) {$/;"	f	typeref:typename:int
+stackPop	C/algorithms/data_structures/stacks/stack.c	/^void* stackPop(Stack* stack) {$/;"	f	typeref:typename:void *
+stackPop	C/algorithms/data_structures/stacks/stacks.c	/^stackElement stackPop(Stack *stack) {$/;"	f	typeref:typename:stackElement
+stackPrint	C/algorithms/data_structures/stacks/stacks.c	/^void stackPrint(Stack *stack) {$/;"	f	typeref:typename:void
+stackPush	C/algorithms/data_structures/stacks/stack.c	/^void stackPush(Stack* stack, void* item) {$/;"	f	typeref:typename:void
+stackPush	C/algorithms/data_structures/stacks/stacks.c	/^void stackPush(Stack *stack, stackElement element) {$/;"	f	typeref:typename:void
+start	C/algorithms/sorting/quicksort.c	/^clock_t start, end;$/;"	v	typeref:typename:clock_t
+startx	C/libraries/gui/ncurses/basics/interfacing_keyboard.c	/^int startx = 0;$/;"	v	typeref:typename:int
+startx	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^    int startx, starty;$/;"	m	struct:_winStruct	typeref:typename:int	file:
+starty	C/libraries/gui/ncurses/basics/interfacing_keyboard.c	/^int starty = 0;$/;"	v	typeref:typename:int
+starty	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^    int startx, starty;$/;"	m	struct:_winStruct	typeref:typename:int	file:
+stderr	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define stderr /;"	d	file:
+stdin	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define stdin /;"	d	file:
+stdout	C/ansi_c/chapter_8/fopen_and_getc.c	/^#define stdout /;"	d	file:
+str	C++/Language/A Tour Of C++/User-DefinedTypes/Unions.cpp	/^enum Type { str, num };$/;"	e	enum:Type	file:
+str	C/ansi_c/chapter_6/structure_basics.c	/^    char *str;$/;"	m	struct:__anon1923df540108	typeref:typename:char *	file:
+strdup	C/ansi_c/chapter_6/recursive_structures.c	/^char *strdup (char *s) {$/;"	f	typeref:typename:char *
+streamIterators	C++/Language/A Tour Of C++/Algorithms/Iterators.cpp	/^void streamIterators () {$/;"	f	typeref:typename:void
+stringStreams	C++/Language/A Tour Of C++/Iostreams/FormatFstreamsSstreams.cpp	/^void stringStreams () {$/;"	f	typeref:typename:void
+string_sort	C/algorithms/sorting/sorting.c	/^void string_sort(const char *arr[], int n) {$/;"	f	typeref:typename:void
+student	C/language/struct_union/structunion.c	/^  struct student {$/;"	s	function:main	file:
+sub	C/pointers/pointers_and_functions.c	/^int sub (int a, int b) {$/;"	f	typeref:typename:int
+swap	C/algorithms/sorting/exercise.c	/^void swap (int *a, int *b) {$/;"	f	typeref:typename:void
+swap	C/algorithms/sorting/quicksort.c	/^void swap(int *a, int *b) {$/;"	f	typeref:typename:void
+swap	C/algorithms/sorting/sorting.c	/^void swap(int* a, int* b) {$/;"	f	typeref:typename:void
+swaps	C++/Language/Standard Library/Utilities/SwapForwardMove.cpp	/^void swaps () {$/;"	f	typeref:typename:void
+sz	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^		int sz;$/;"	m	class:Vector	typeref:typename:int	file:
+sz	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		int sz;$/;"	m	class:Vector	typeref:typename:int	file:
+t	C++/Language/A Tour Of C++/User-DefinedTypes/Unions.cpp	/^	Type t;$/;"	m	struct:Entry	typeref:typename:Type	file:
+t	C/ansi_c/chapter_6/recursive_structures.c	/^struct t {$/;"	s	file:
+tail	C/algorithms/data_structures/lists/single_linked_list.h	/^    SLinkedListNode *tail;$/;"	m	struct:_SLinkedList	typeref:typename:SLinkedListNode *
+talloc	C/ansi_c/chapter_6/recursive_structures.c	/^struct tnode *talloc (void) {$/;"	f	typeref:struct:tnode *
+tasksAndThreads	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^void tasksAndThreads () {$/;"	f	typeref:typename:void
+test1	C/language/error_handling/errorh.c	/^jmp_buf test1;$/;"	v	typeref:typename:jmp_buf
+testFindAll	C++/Language/A Tour Of C++/Algorithms/Iterators.cpp	/^void testFindAll () {$/;"	f	typeref:typename:void
+testFindAllGeneral	C++/Language/A Tour Of C++/Algorithms/Iterators.cpp	/^void testFindAllGeneral () {$/;"	f	typeref:typename:void
+text	C/others/structure_padding_test.c	/^    char text[8];$/;"	m	struct:_testS	typeref:typename:char[8]	file:
+this_tasks	Build Systems/CMake/src/ToDoCore/ToDo.hpp	/^    std::vector< std::string > this_tasks;$/;"	m	class:ToDoCore::ToDo	typeref:typename:std::vector<std::string>
+tl	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^    chtype tl, tr, bl, br; \/* corners *\/$/;"	m	struct:_winBorderStruct	typeref:typename:chtype	file:
+tnode	C/ansi_c/chapter_6/recursive_structures.c	/^struct tnode {	\/* tree node *\/$/;"	s	file:
+top	C/algorithms/data_structures/stacks/stacks.c	/^  int top;$/;"	m	struct:__anon85d4f49e0108	typeref:typename:int	file:
+tr	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^    chtype tl, tr, bl, br; \/* corners *\/$/;"	m	struct:_winBorderStruct	typeref:typename:chtype	file:
+trailer	C++/Data Structures And Algorithms/Linked List/DoublyLinkedList.cpp	/^        DNode* trailer;$/;"	m	class:DLinkedList	typeref:typename:DNode *	file:
+treeInsertNode	C/algorithms/data_structures/trees/tree.c	/^void treeInsertNode(TreeNode** root, COMPARE compare, void* item) {$/;"	f	typeref:typename:void
+treeTraverseInOrder	C/algorithms/data_structures/trees/tree.c	/^void treeTraverseInOrder(TreeNode* root, DISPLAY display) {$/;"	f	typeref:typename:void
+treeTraversePostOrder	C/algorithms/data_structures/trees/tree.c	/^void treeTraversePostOrder(TreeNode* root, DISPLAY display) {$/;"	f	typeref:typename:void
+treeTraversePreOrder	C/algorithms/data_structures/trees/tree.c	/^void treeTraversePreOrder(TreeNode* root, DISPLAY display) {$/;"	f	typeref:typename:void
+true	C/ansi_c/chapter_1/basic_linter.c	/^#define true /;"	d	file:
+true	C/ansi_c/chapter_1/comment_remover.c	/^#define true /;"	d	file:
+true	C/ansi_c/chapter_5/program_with_options.c	/^#define true /;"	d	file:
+tryjump	C/language/error_handling/errorh.c	/^void tryjump() {$/;"	f	typeref:typename:void
+ts	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^    chtype ls, rs, ts, bs; \/* sides *\/$/;"	m	struct:_winBorderStruct	typeref:typename:chtype	file:
+tuples	C++/Language/Standard Library/Utilities/PairsAndTuples.cpp	/^void tuples () {$/;"	f	typeref:typename:void
+typeFunctions	C++/Language/A Tour Of C++/Utilities/FunctionsTypeFns.cpp	/^void typeFunctions () {$/;"	f	typeref:typename:void
+typePredicates	C++/Language/A Tour Of C++/Utilities/FunctionsTypeFns.cpp	/^void typePredicates () {$/;"	f	typeref:typename:void
+typeTraits	C++/Language/Standard Library/Utilities/NLimitsTypeTraitsUtils.cpp	/^void typeTraits () {$/;"	f	typeref:typename:void
+undef	C/ansi_c/chapter_6/table_searching.c	/^void undef (char *name) {$/;"	f	typeref:typename:void
+ungetch	C/ansi_c/chapter_3/reverse_polish_notation.c	/^void ungetch (int c) {$/;"	f	typeref:typename:void
+uniquePtrs	C++/Language/Standard Library/Utilities/SmartPointers.cpp	/^void uniquePtrs () {$/;"	f	typeref:typename:void
+use	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^void use (Container &c) {$/;"	f	typeref:typename:void
+user	C++/Language/A Tour Of C++/Utilities/FunctionAdaptors.cpp	/^void user (Shape *p) {$/;"	f	typeref:typename:void
+usingListClass	C++/Language/Standard Library/NewLanguageFeatures/InitializationLists.cpp	/^void usingListClass () {$/;"	f	typeref:typename:void
+v	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^		const vector<double>& v; \/\/ source of input$/;"	m	class:F	typeref:typename:const vector<double> &	file:
+v	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^	Vector v;$/;"	m	class:VectorContainer	typeref:typename:Vector	file:
+v	C++/Language/A Tour Of C++/User-DefinedTypes/Unions.cpp	/^	Value v;	\/\/ use v.s if t==str, use v.i if t==num$/;"	m	struct:Entry	typeref:typename:Value	file:
+val	C++/Language/A Tour Of C++/Algorithms/Predicates.cpp	/^	int val;$/;"	m	struct:GreaterThan	typeref:typename:int	file:
+val	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^		const T val;$/;"	m	class:LessThan	typeref:typename:const T	file:
+val	C/ansi_c/chapter_3/reverse_polish_notation.c	/^double val[MAXVAL]; \/* stack *\/$/;"	v	typeref:typename:double[]
+vectorInit	C++/Language/A Tour Of C++/User-DefinedTypes/Structures.cpp	/^void vectorInit (Vector& v, int s) {$/;"	f	typeref:typename:void
+volatile	C++/Language/Effective Modern/build/CMakeFiles/3.19.7/CompilerIdC/CMakeCCompilerId.c	/^# define volatile$/;"	d	file:
+waitingForEvents	C++/Language/A Tour Of C++/Concurrency/Concurrency.cpp	/^void waitingForEvents () {$/;"	f	typeref:typename:void
+weakPtrs	C++/Language/Standard Library/Utilities/SmartPointers.cpp	/^void weakPtrs () {$/;"	f	typeref:typename:void
+width	C/libraries/gui/ncurses/basics/windows_borders_efficient.c	/^    int height, width;$/;"	m	struct:_winStruct	typeref:typename:int	file:
+word	C/ansi_c/chapter_6/recursive_structures.c	/^	char *word; \/* pointer to the word *\/$/;"	m	struct:tnode	typeref:typename:char *	file:
+word	C/ansi_c/chapter_6/structure_arrays.c	/^    char *word;$/;"	m	struct:key	typeref:typename:char *	file:
+worker	C/language/struct_union/structunion.c	/^  union worker {$/;"	u	function:main	file:
+write	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^void write (const Vector<string>& vs) {$/;"	f	typeref:typename:void
+x	C/ansi_c/chapter_6/structure_basics.c	/^    int x;$/;"	m	struct:point	typeref:typename:int	file:
+x	C/ansi_c/chapter_8/memory_allocation.c	/^	Align x;	\/* force block alignment *\/$/;"	m	union:header	typeref:typename:Align	file:
+y	C/ansi_c/chapter_6/structure_basics.c	/^    int y;$/;"	m	struct:point	typeref:typename:int	file:
+yellow	C++/Language/A Tour Of C++/User-DefinedTypes/Enumerations.cpp	/^enum class TrafficLight { green, yellow, red };$/;"	e	enum:TrafficLight	file:
+zero	C++/Language/Standard Library/Utilities/FractionalArithmetic.cpp	/^    typedef std::ratio<0> zero;$/;"	t	function:ratios	typeref:typename:std::ratio<0>	file:
+~Container	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		virtual ~Container () {}$/;"	f	class:Container	file:
+~DLinkedList	C++/Data Structures And Algorithms/Linked List/DoublyLinkedList.cpp	/^DLinkedList::~DLinkedList() {$/;"	f	class:DLinkedList
+~HighArray	C++/Data Structures And Algorithms/Arrays/HighArray.cpp	/^HighArray::~HighArray () {$/;"	f	class:HighArray
+~Person	C++/Language/Standard Library/Utilities/SmartPointers.cpp	/^	~Person () {$/;"	f	class:Person	file:
+~SLinkedList	C++/Data Structures And Algorithms/Linked List/SinglyLinkedList.cpp	/^SLinkedList<T>::~SLinkedList() {$/;"	f	class:SLinkedList
+~ToDo	Build Systems/CMake/src/ToDoCore/ToDo.cpp	/^ToDo::~ToDo()$/;"	f	class:ToDoCore::ToDo
+~Vector	C++/Language/A Tour Of C++/Templates/Vector.cpp	/^		~Vector() { delete[] elem; }$/;"	f	class:Vector	file:
+~Vector	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		~Vector () { delete[] elem; }$/;"	f	class:Vector	file:
+~VectorContainer	C++/Language/A Tour Of C++/User-DefinedTypes/Classes.cpp	/^		~VectorContainer () {}$/;"	f	class:VectorContainer	file:
